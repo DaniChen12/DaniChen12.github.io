@@ -16,6 +16,7 @@
     margin: 10px;
 }
 
+
 .words{
     width: 160px;
     height: 16px;
@@ -82,7 +83,7 @@ p span{
 }
 .tag-box{
     background-color: #d5d5d5;
-    padding: 4px;
+    padding: 6px;
     position:bottom;
     text-align: right;
 }
