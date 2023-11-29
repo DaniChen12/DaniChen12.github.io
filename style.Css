@@ -19,11 +19,11 @@ body {
     align-items: center;
     margin-bottom: 64px;
 } */
-.itemLeft .img {
+.item .img {
     width: 45%;
 }
 
-.itemLeft .p {
+.item .p {
     width: 45%;
 }
 
@@ -73,7 +73,7 @@ body {
     width: auto;
 }
 
-.itemLeft {
+.item {
     width: 1071px;
     flex-direction: row;
     line-height: 1.5;
@@ -82,8 +82,11 @@ body {
     align-items: center;
     margin-bottom: 70px
 }
+.main .item:nth-child(odd){
+    flex-direction: row-reverse;
+}
 
-.itemRight {
+/* .itemRight {
     width: 1071px;
     flex-direction:row-reverse;
     line-height: 1.5;
@@ -91,9 +94,9 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 70px
-}
+} */
 
-h3 {
+.main h2 {
     font-size: 175%;
     font-weight: bold;
     margin-bottom: 24px;
@@ -173,7 +176,7 @@ a span {
     padding-bottom: 70px;
     background-color: #f7f8f9;
 }
-.last h3{
+.last h2{
     width: 100%;
     font-size: 175%;
     font-weight: bold;
@@ -190,7 +193,7 @@ div.last-item{
  width: 335.5px; 
  margin: 58px 10px 0;
 }
-.last h5{
+.last h3{
     line-height: 1.5;
     font-size: 125%;
     margin-bottom: 16px;
