@@ -1,0 +1,130 @@
+.card-group{
+    width: 1152px;
+    border-bottom: 1px dotted #aaa;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+.card-group2{
+    width: 1152px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+.card{
+    width: 172px;
+    margin: 10px;
+}
+
+
+.words{
+    width: 160px;
+    height: 16px;
+    text-align: left;
+    margin: 1px auto;
+    line-height: 20px;
+    font-size: 12px;
+    color: red;
+    overflow: hidden;
+}
+/* .words p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+} */
+.card img{
+    padding: 4px 0px;
+    width:100%;
+}
+
+.title {
+    color: #696666;
+    line-height: 20px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* white-space: nowrap; */
+    box-sizing: border-box;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    
+}
+
+
+p{
+    font-size: 12px;
+    color: #aaa
+}
+p span{
+    font-size: 12px;
+    line-height: 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.price{
+    width: 160px;
+    height: 30px;
+    margin: 0px auto;
+    font-size: 22px;
+    color: red;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.price span:last-child{
+    color: #aaa
+    
+}
+.stars img{
+    width: 50%;
+}
+.stars{
+    display: flex;
+}
+.tag-box{
+    background-color: #d5d5d5;
+    padding: 6px;
+    position:bottom;
+    text-align: right;
+}
+.tag-box span {
+    color: white;
+    background-color: #f5419b;
+    text-align: center;
+    padding:  2px 2px;
+    border-radius: 4px;
+}
+.tags p span.special-tag{
+    background-color:rgb(191, 9, 9);
+}
+.tags-words  {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #aaa;
+}
+.counts{
+    display: block;
+    line-height: 15px;
+    text-align: center;
+    list-style-position: outside;
+    width: 20px;
+    height: 15px;
+}
+.number{
+    font-size: 11px;
+    color: #aaa;
+    padding-top: 10px;
+    display: inline-block;
+    line-height: 15px;
+    text-align: center;
+}
+.sales{
+    padding: 4px 4px;
+    display: block;
+    min-height: 18px;
+    font-size: 12px;
+    text-align: left;
+}
