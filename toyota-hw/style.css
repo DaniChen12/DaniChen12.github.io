@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@200;300;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@200;300;500;600;700&family=Ubuntu:wght@300&display=swap');
+
+*{font-family: 'Noto Sans TC', 'Ubuntu', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 35px auto;
+    padding: 100px 0px;
+}
+
+section.toyota{
+    font-family: 'Noto Sans TC', sans-serif;
+    box-sizing: border-box;
+    /* outline: 2px solid red; */
+    width:960px;
+    margin: auto;
+    position: relative;
+    padding-bottom: 20%;  
+}
+section.toyota:nth-child(2){
+    padding-bottom: 0%;
+}
+
+.main-group{
+    width: 355px;
+    /* outline: 1px solid blue; */
+    background-color: red;
+    color: white;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+.num-name{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 120px;
+    font-weight: 300;
+    transform: rotate(90deg);
+    padding: 10px 0px 0px;
+}
+.name{
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 45px;
+    font-weight: 200;
+}
+.num-name,.name{
+    display: inline-block;
+    /* align-items: center; */
+}
+.slogan{
+    background-color: black;
+    color: white;
+    width: 355px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 20px 40px 40px;
+    line-height: 22px;
+    text-align: left;
+}
+.slogan h3{
+    font-size: 20px;
+    font-weight: 400;   
+    line-height: 50px;
+    
+}
+.slogan p{
+    font-size: 16px;
+    font-weight: 200;
+}
+
+.icon{
+    padding: 5px 18px;
+    background-color:red;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    bottom: 210px;
+    left: -50px;
+}
+.icon::after{
+    content: '▶';
+    color: white;
+}
+.icon-R{
+    padding: 5px 18px;
+    background-color:red;
+    align-items: center;
+    position: relative;
+    left: -75%;
+    bottom: 210px;
+    z-index: 1;
+}
+.icon-R::after{
+    content: '▶';
+    color: white;
+}
+
+
+.info-list{
+    background-color: aliceblue;
+    width: 682px;
+    list-style-type: none;
+    padding: 20px;
+    position: absolute;
+    top: 535px;
+    left: 4%;
+    z-index: 1;
+}
+.info-list-R{
+    background-color: aliceblue;
+    width: 682px;
+    list-style-type: none;
+    padding: 20px;
+    position: inherit;
+    bottom: -100px;
+    left: 20%;
+    z-index: 1;
+}
+.info-list-R h3.title{
+    color: red;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 50px;
+    text-align: center;
+}
+
+.info-list h3.title{
+    color: red;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 50px;
+    text-align: center;
+}
+
+.line{
+border:1px solid red;
+border-radius: 10px;
+width: 70%;
+display: inline-block;
+}
+.card-group{
+    position: absolute;
+    /* bottom: 530px; */
+}
+.card-group-R{
+    position: absolute;
+    left: 63%;
+}
+.item-img{
+    position: relative;
+    z-index: -1;
+    left: 130px;
+    top: 130px;
+}
+
+.black-title{
+    background-color: black;
+    color: aliceblue;
+    font-size: 15px;
+    font-weight: 300;
+    display: inline-block;
+    padding: 4px 6px 6px 4px;
+    border-radius: 4px;
+
+
+}
+.lists{
+    display: flex;
+    flex-wrap: wrap;
+}
+.info p{
+    display: block;
+    color:#707074;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 6px;
+    margin-left: 10px;
+}
+.info p::before{
+    content: '▪';
+    color:darkred;
+   display: inline-block;
+   text-indent: -20px;
+}
+
+.block::after{
+    content: '';
+    background-color: aliceblue;
+    position: relative;
+    width: 490px;
+    height: 290px;
+    /* border:1px solid red; */
+    display: block;
+    z-index: -2;
+    bottom: 400px;
+    left: 420px;
+}
+.block-R::after{
+    content: '';
+    background-color: aliceblue;
+    position: relative;
+    width: 490px;
+    height: 290px;
+    /* border:1px solid red; */
+    display: inline-block;
+    z-index: -2;
+    bottom: 580px;
+    left: 30px;
+}
