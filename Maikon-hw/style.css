@@ -15,7 +15,6 @@ body{
     top: 0;
     z-index: 100;
     background-color: #ffff;
-
 }
 .menu{
 display: flex;
@@ -42,11 +41,21 @@ img{
     margin: auto;
     
 }
-.text-group{
+.site-header .text-group{
     display: flex;
     text-align: center;
     justify-content: center;
     gap: 20px;
+}
+
+.site-header .text-group .text:not(:hover):first-child {
+    border-bottom: none;
+}
+.site-header .text-group .text:hover{
+    border-bottom:1px solid #3b3d42;
+}
+.site-header .text-group .text:first-child{
+    border-bottom:1px solid #3b3d42;
 }
 .menu .button{
     display: flex;
@@ -66,7 +75,9 @@ img{
     cursor: pointer;
 }
 a{
+    display: inline-block;
     text-decoration: none;
+    padding: 10px 20px;
     cursor: pointer;
     font-weight: 300;
     font-size: 16px;
@@ -646,21 +657,26 @@ input.submit{
     font-size: 14px;
     padding: 10px;
     line-height: 1.5;
+    
 }
 .card-icon{
-    padding: 10px;
+    padding: 10px 0px;
     display: flex;
     flex-direction: row;
+    align-items: center; 
 }
+
 .bottom-card .card-icon a{
     border:1px solid #5d6678;
-    border-radius: 50%;
+    border-radius: 100px;
     width: 10px; 
     height: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: 10px;
 }
+
 /* ---------------------------------footer02---------------------------------------------- */
 .footer{
     display: flex;
@@ -668,5 +684,10 @@ input.submit{
 }
 .footer-link{
     font-size: 14px;
+    font-weight: 300;
     color: #484a4f;
+}
+.footer-link span.link-text{
+    /* padding-right: 20px; */
+    margin-left: 20px;
 }
