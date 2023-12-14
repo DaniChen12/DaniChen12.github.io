@@ -483,12 +483,10 @@ padding: 20px;
     padding: 20px 0px 20px 0px;
 }
 .image-group{
-    width: 1200px;
-    padding: 20px;
+    width: 1140px;
+    padding: 20px 0px;
     display: flex;
-    justify-content: space-evenly;
-    /* grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px; */
+    justify-content: space-between;
 }
 a.portfolio{
     padding: 0px;
