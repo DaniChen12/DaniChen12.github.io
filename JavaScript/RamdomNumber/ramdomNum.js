@@ -31,8 +31,18 @@ buttons.forEach(button => {
 });
 
 // ----------------------------點擊確認後的邏輯--------------------------------------------
+// var steps = 0;
+// var guesses = [];
+
 EnterButton.addEventListener('click', function (e) {
-    if((isNaN(inputValue.value) || inputValue.value > max || inputValue.value < min)){
+    //var guess = Number(inputValue.value);
+
+    // 無論猜測是否正確，都增加步驟計數並記錄猜測
+    //steps++;
+    //guesses.push(guess);
+    // let temp = Number(inputValue.value);
+
+    if((isNaN(inputValue.value) || inputValue.value > 100 || inputValue.value < 1)){
         alert("拜託輸入數字，謝謝!");
     }
     
@@ -41,10 +51,14 @@ EnterButton.addEventListener('click', function (e) {
         location.reload()
     }
     else if((inputValue.value > randomNumber)){
-        text.textContent=`請輸入'${min}'~'${inputValue.value}'之間的數字`
+        max = Number(inputValue.value);
+        text.textContent=`請輸入'${min}'~'${max}'之間的數字`
     }
     
-    else{text.textContent=`請輸入'${inputValue.value}'~'${max}'之間的數字'`}
+    else{
+        min = Number(inputValue.value);
+        text.textContent=`請輸入'${min}'~'${max}'之間的數字'`
+    }
         
     })
 
