@@ -43,7 +43,7 @@ EnterButton.addEventListener('click', function (e) {
     // let temp = Number(inputValue.value);
 
     if((isNaN(inputValue.value) || inputValue.value > 100 || inputValue.value < 1)){
-        alert("拜託輸入數字，謝謝!");
+        alert("不識字?!請輸入範圍數字，謝謝!");
     }
     
     else if ((inputValue.value == randomNumber)){
