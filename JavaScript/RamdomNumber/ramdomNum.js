@@ -42,7 +42,7 @@ EnterButton.addEventListener('click', function (e) {
     //guesses.push(guess);
     // let temp = Number(inputValue.value);
 
-    if((isNaN(inputValue.value) || inputValue.value > 100 || inputValue.value < 1)){
+    if((isNaN(inputValue.value) || inputValue.value > max || inputValue.value < min)){
         alert("不識字?!請輸入範圍數字，謝謝!");
     }
     

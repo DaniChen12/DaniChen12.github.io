@@ -6,6 +6,7 @@
     <title>GuessGame</title>
     <link rel="javaScrip" href="javascrip.js">
     <style>
+      
       body {
         margin: 0;
         padding: 0;
@@ -17,10 +18,17 @@
         height: 100vh;
         
         background-image: 
-                  linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5));
+                  linear-gradient(#43CBFF,#9708CC);
         background-size: cover;
       }
-
+      
+      p,h1{
+        color: aliceblue;
+      }
+      p{
+        font-size: 20px;
+        margin: 20px 5px;
+      }
       button {
         padding: 10px 20px;
         font-size: 16px;
@@ -33,12 +41,12 @@
         width: 40px;
         height: 40px;
         font-size: 20px;
-        background-color: rgb(192, 255, 217);
+        background-color: #43CBFF;
         border-radius: 50%;
       }
 
       .btnGroup:hover {
-        background-color: rgb(0, 128, 102);
+        background-color: #9708CC;
         border-radius: 50%;
         color: aliceblue;
       }
@@ -50,7 +58,9 @@
         margin-right: 8px;
         text-align: center;
       }
-
+      input{
+        border-radius: 20px;
+      }
       #result {
         font-size: 18px;
         margin-top: 10px;
@@ -64,7 +74,7 @@
   </head>
   <body>
     <div id="game-container">
-      <h1>猜數字遊戲-練習版</h1>
+      <h1>猜數字遊戲</h1>
       <div>
         <input type="button"  class="btnGroup" value="1" />
         <input type="button"  class="btnGroup" value="2" />
@@ -81,7 +91,7 @@
       <input type="text" id="guess-input" readonly value="" />
       <input type="button" value="確認" />
       <input type="button" value="清除" onclick=""/>
-      <p id="result">Fighting</p>
+      <p id="result">(輸入數字後世界會改變)</p>
       <p class="highlight">請輸入1~100之間的數字</p>
       
     </div>
