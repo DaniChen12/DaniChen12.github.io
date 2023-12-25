@@ -59,6 +59,9 @@ EnterButton.addEventListener('click', function (e) {
         min = Number(inputValue.value);
         text.textContent=`請輸入'${min}'~'${max}'之間的數字'`
     }
+    
+     // 清除輸入框的值
+     inputValue.value = '';
         
     })
 
