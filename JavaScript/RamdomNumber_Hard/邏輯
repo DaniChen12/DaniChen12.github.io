@@ -1,0 +1,42 @@
+開始鍵:按下 開始鍵 =>取得按鈕的DOM元素，在DOM元素加上監聽事件
+=>取得四個不重複亂數
+
+重置鍵:取得按鈕的DOM元素=>在DOM元素加上監聽事件=>重新整理網頁
+
+Answer:取得按鈕的DOM元素=>在DOM元素加上監聽事件=>直接看答案(前面產生的不重複亂數)
+
+按下輸入鍵後=>
+先把輸入框文字，轉換為數字int
+把答案陣列轉為數字
+
+1.取得輸入的值，取得輸入的數值與答案做比對
+2.每次猜後，輸入框清空
+3.猜的邏輯:
+假設不是數字=>alert
+四個數字答案與猜得數字與順序都一樣=>在JS中產生新的NODE背景顏色使用綠色顯示4A0B 與 猜的數字，並且顯示遊戲結束的畫面，不清空紀錄。
+
+<!-- <ol class="list-group mx-auto mt-2 border border-primary" style="width: 500px;">
+    <li class="list-group-item d-flex align-items-center ">
+        <span class="badge bg-success px-3">1A2B</span>
+        <div class="ms-2 me-auto text-primary">
+            1234
+        </div>
+    </li>
+</ol> -->
+
+
+猜的數字不一樣 =>在JS中產生新的NODE背景顏色使用紅色顯示4A0B 與 猜的數字
+<!-- <ol class="list-group mx-auto mt-2 border border-danger" style="width: 500px;">
+    <li class="list-group-item d-flex align-items-center ">
+        <span class="badge bg-danger px-3">1A2B</span>
+        <div class="ms-2 me-auto text-danger">
+            1234
+        </div>      
+    </li>
+</ol> -->
+
+判斷邏輯為=>判斷幾A幾B
+A = 數字及位置都對，1234=>4A0B
+B = 數字對位置不對，1243=>2A2B
+C = 數字完全不對，5896 =>0A0B
+
