@@ -61,7 +61,7 @@ EnterButton.addEventListener('click', function (e) {
     }
     
      // 清除輸入框的值
-     inputValue.value = '';
+    inputValue.value = '';
         
     })
 
