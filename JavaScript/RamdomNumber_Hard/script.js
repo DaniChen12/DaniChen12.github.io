@@ -116,10 +116,10 @@ function createList() {
     if (aCount == 4) {
         span.classList.add('bg-success');
     }
-    else{
-      span.classList.add('bg-danger');  
+    else {
+        span.classList.add('bg-danger');
     }
-    
+
     span.classList.add('px-3');
     span.textContent = (`${aCount}A${bCount}B`);
     let div = document.createElement(`div`);
@@ -140,7 +140,7 @@ function createList() {
     console.log(ol);
     ol.appendChild(li);
     input.value = '';
-    aCount=bCount=0;
+    aCount = bCount = 0;
 }
 
 // ----------------------------判斷數字函式=>--------------------------------------------
@@ -152,19 +152,21 @@ function gameRules() {
     2.這個函數(x)=>parseInt(x)是一個箭頭函數，它的作用是將字串轉換為整數。parseInt是JavaScript中的內建函數，用於將字串轉換為整數。
     3.map方法處理完每個元素後，返回一個新的包含整數的陣列。
     */
-    inputArr = inputArr.map((x)=>parseInt(x));
+   //用map方法將陣列中的'字串'轉成'數字'
+    inputArr = inputArr.map((x) => parseInt(x));
     console.log(inputArr)
-    for (let i =0 ;i<4;i++){
-        console.log(inputArr.includes(answer[i])+':'+answer[i])
+    for (let i = 0; i < 4; i++) {
+        // console.log(inputArr.includes(answer[i]) + ':' + answer[i])
         if (inputArr[i] == answer[i]) {
             aCount++;
         }
         else if (answer.includes(inputArr[i])) {
-            
+
             bCount++;
         }
-        if (aCount == 4){
+        if (aCount == 4) {
             alert('恭喜過關!')
+            enterBtn.disabled = true;
         }
     }
 
