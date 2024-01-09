@@ -26,15 +26,15 @@
 <body>
     <!-- ----------------top--------------------- -->
     <div id="top" class="mx-auto mt-4 d-flex align-items-center" style="width: 80%;">
-        <button id="plus" type="button" class="btn btn-primary rounded px-4" style="height:60px;"data-bs-toggle="modal"
+        <button id="addEvent" type="button" class="btn btn-primary rounded px-4" style="height:60px;"data-bs-toggle="modal"
             data-bs-target="#plus-modal">+</button>
         <div id="month-buttons" class="mx-auto d-flex justify-content-evenly align-items-center" style="width: 100%;">
-            <button id="prev" type="button" class="btn">⟪</button>
+            <button id="btnPrev" type="button" class="btn">⟪</button>
             <div>
                 <h1 id="month"></h1>
                 <p id="year" class="d-flex justify-content-center"></p>
             </div>
-            <button id="next" type="button" class="btn">⟫</button>
+            <button id="btnNext" type="button" class="btn">⟫</button>
         </div>
     </div>
     <!-- ----------------modal--------------------- -->
@@ -43,20 +43,23 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="Modal-title">新增事項</h1>
+                    <h1 class="modal-title fs-5" id="Modal_title" >新增事項</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body gap-2 d-flex flex-column">
-                    <input type="text" placeholder="新增標題">
-                    <input type="date">
-                    <input type="time">
-                    <textarea class="form-control" aria-label="With textarea" id="message"
+                    <input id="title" type="text" placeholder="新增標題">
+                    <input id="date" type="date">
+                    <input id="time" type="time">
+                    <textarea id="desc" class="form-control" aria-label="With textarea" 
                         placeholder="新增事項說明"></textarea>
-                    <input type="color">
+                    <input id="color" type="color">
+                    <input id="key-input" type="hidden">
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button id="btnClose" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button id="btnSave" type="button" class="btn btn-primary" >Save changes</button>
+                    <button id="btnDelete" type="button" class="btn btn-primary" >Delete</button>
+                    <button id="btnAdd" type="button" class="btn btn-primary">Add</button>
                 </div>
             </div>
         </div>
@@ -77,67 +80,7 @@
             </tr>
         </thead>
         <tbody id="days" class="container">
-            <tr>
-                <td>1
-                    <ul id="list" class="list-unstyled gap-2 d-flex flex-column  overflow-y-auto; ps-0">
-                        <!-- <li class="btn btn-primary text-start text-truncate"
-                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem; ">
-                            12u一格三1316
-                        </li> -->
-                    </ul>
-                </td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-                <td>6</td>
-                <td>7</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-                <td>6</td>
-                <td>7</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-                <td>6</td>
-                <td>7</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-                <td>6</td>
-                <td>7</td>
-            </tr>
-            <tr>
-                <td>5</th>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-                <td>6</td>
-                <td>7</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-                <td>6</td>
-                <td>7</td>
-            </tr>
+
         </tbody>
     </table>
 
@@ -145,6 +88,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
+
+        <script src="data.js"></script>
     <script src="JS_calendar.js"></script>
 </body>
 

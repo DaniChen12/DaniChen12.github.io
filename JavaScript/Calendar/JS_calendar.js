@@ -1,7 +1,6 @@
 // --------------------DOM的家園-------------------------
-const btnPrev = document.getElementById("prev");
-const btnNext = document.getElementById("next");
-const btnPlus = document.getElementById("plus");
+const btnPrev = document.getElementById("btnPrev");
+const btnNext = document.getElementById("btnNext");
 const month = document.getElementById("month");
 const year = document.getElementById("year");
 const today = document.getElementsByClassName("today");
@@ -12,8 +11,11 @@ const today = document.getElementsByClassName("today");
 let now = new Date();
 let currentYear = now.getFullYear();
 let currentMonth = now.getMonth();
+let currentDay = now.getDate();
 
 function generateCalendar(year, month) {
+    var obj = {'2014-12-20':"aaaaa"}
+    console.log("obj->2014-12-20:"+obj[2014+"-"+12+"-"+20]);
     // 取得指定年份和月份的第一天是星期幾
     let startingDay = new Date(year, month, 1).getDay();
 
@@ -24,7 +26,11 @@ function generateCalendar(year, month) {
 
     let calendar = '';
     let day = 1;
-    for (let i = 0; i < 6; i++) {
+    // for (let i = 0; i < 6; i++) {
+
+    //取得日期資料需要幾Row
+    let rowAmount = Math.ceil((endingDate+startingDay)/7); //console.log("rowAmount:"+rowAmount+" , endingDate:"+endingDate);
+    for (let i = 0; i < rowAmount; i++) {
         calendar += '<tr>'; // 開始一個新的行
         for (let j = 0; j < 7; j++) {
             if (i === 0 && j < startingDay) {
@@ -37,7 +43,22 @@ function generateCalendar(year, month) {
                 day++;
             } else {
                 // 否則，我們顯示本月的日期
-                calendar += '<td>' + day + '</td>';
+                calendar += '<td>' + day;
+                let dateKey = currentYear + "-" + String(currentMonth + 1).padStart(2, "0") + "-" + String(day).padStart(2, "0");
+                let events = calendarData[dateKey];
+                if (events) {
+                    console.log("had data->" + dateKey + ":" + calendarData[dateKey]);
+                    calendar += '<ul id="list" class="list-unstyled gap-2 d-flex flex-column  overflow-y-auto; ps-0">';
+                    for (let k = 0; k < events.length; k++) {
+                        let classStr = '"btn btn-primary event-list text-start text-truncate"';
+                        let styleStr = '"--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem; "';
+                        let evo = events[k]; //把資料暫時塞在Attribute中
+                        calendar += '<li class=' + classStr + ' style=' + styleStr + ' key="' + k + '" desc="' + evo.desc + '" time="' + evo.time + '" date="' + dateKey + '" color="' + evo.color + '">' + evo.title + '</li>';
+                    }
+
+                    calendar += '</ul>';
+                }
+                calendar += '</td>';
                 day++;
             }
         }
@@ -45,15 +66,16 @@ function generateCalendar(year, month) {
     }
     // 將日曆添加到頁面中
     document.getElementById('days').innerHTML = calendar;
+    addListEvent();
 }
 
-// 生成當前年份和月份的日曆
-generateCalendar(currentYear, currentMonth);
-month.textContent=(currentMonth + 1) + "月";
-year.textContent=currentYear;
+
+month.textContent = (currentMonth + 1) + "月";
+year.textContent = currentYear;
 
 
 // --------------------上個月與下個月切換-----------------
+
 function previousMonth() {
     currentMonth--;  // 減少一個月
     if (currentMonth < 0) {
@@ -63,7 +85,7 @@ function previousMonth() {
     generateCalendar(currentYear, currentMonth);
     // 更新顯示當前的年份和月份
     month.textContent = (currentMonth + 1) + "月";
-    year.textContent = (currentYear );
+    year.textContent = (currentYear);
     highlightToday();
 
 }
@@ -80,17 +102,13 @@ function nextMonth() {
     year.textContent = (currentYear);
     highlightToday();
 }
-btnNext.addEventListener("click",nextMonth);
+btnNext.addEventListener("click", nextMonth);
 
 
 // --------------------當天日期-----------------
 
 
 function highlightToday() {
-    let currentDay = now.getDate();
-    let currentYear = now.getFullYear();
-    let currentMonth = now.getMonth();
-
     let table = document.getElementById('calendarTable');
     let rows = table.getElementsByTagName('tr');
     for (let i = 0; i < rows.length; i++) {
@@ -100,15 +118,17 @@ function highlightToday() {
             // 檢查單元格文本不是空的，且不是來自上個或下個月的（灰色的）
             if (cellText && cells[j].style.color !== 'rgb(153, 153, 153)') {
                 let cellDay = parseInt(cellText);
-               // 檢查單元格是否表示今天的日期
+                // 檢查單元格是否表示今天的日期
                 if (cellDay === currentDay && currentYear === now.getFullYear() && currentMonth === now.getMonth()) {
                     cells[j].classList.add('today');
-                    cells[j].style.backgroundColor = "#9CEFFF"; // 突出顯示今天的日期
+                    cells[j].style.backgroundColor = "#FFECD2"; // 突出顯示今天的日期
                 }
             }
         }
     }
 }
-// 生成日曆然後突出顯示今天
+initData();
+// 生成當前年份和月份的日曆
 generateCalendar(currentYear, currentMonth);
+// 生成日曆然後突出顯示今天
 highlightToday();
