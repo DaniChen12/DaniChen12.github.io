@@ -50,9 +50,10 @@ function generateCalendar(year, month) {
                     console.log("had data->" + dateKey + ":" + calendarData[dateKey]);
                     calendar += '<ul id="list" class="list-unstyled gap-2 d-flex flex-column  overflow-y-auto; ps-0">';
                     for (let k = 0; k < events.length; k++) {
-                        let classStr = '"btn btn-primary event-list text-start text-truncate"';
-                        let styleStr = '"--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem; "';
-                        let evo = events[k]; //把資料暫時塞在Attribute中
+                        let evo = events[k];
+                        let classStr = '"btn event-list text-start text-truncate"';
+                        let styleStr = '"--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem; color:#FFFFFF; background-color:'+evo.color+' ; "';
+                         //把資料暫時塞在Attribute中
                         calendar += '<li class=' + classStr + ' style=' + styleStr + ' key="' + k + '" desc="' + evo.desc + '" time="' + evo.time + '" date="' + dateKey + '" color="' + evo.color + '">' + evo.title + '</li>';
                     }
 

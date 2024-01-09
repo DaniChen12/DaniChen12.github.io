@@ -143,12 +143,12 @@ function DeleteDataModalHandler(e) {
 
     modal.hide();
 }
-function deleteData(date, key) {
-   // 假設資料是以日期和鍵值的組合作為localStorage中的鍵存儲
-    let storageKey = date + '_' + key;
-
-    // 刪除localStorage中的特定項目
-    localStorage.removeItem(storageKey);
+function deleteData(date,key){
+    //calendarData[date] <-- 找出那一天的資料
+    //splice(key, 1); 是把key那筆開始做刪除 後面1是代表是刪一筆
+    //然後再把calenderData存到localStorage 我直接包成saveDataToStorage();
+    calendarData[date].splice(key, 1);
+    saveDataToStorage();
 }
 
 // -----------------清空欄位資炓--------------------
@@ -187,7 +187,7 @@ let calendarData =
         },
         {
             title: "Title",
-            time: "2:00",
+            time: "02:00",
             desc: "Description",
             color: "#000000"
         }
@@ -214,6 +214,7 @@ const localStorageKey = "CalanderData";
 function addData(date, obj) {
     if (calendarData[date]) {
         calendarData[date].push(obj);
+        //排序 看時間排序
         calendarData[date].sort(function (t1, t2) {
             return t1.time.localeCompare(t2.time);
         });
@@ -230,6 +231,7 @@ function saveDataToStorage() {
 // ----------------localStorage拿取資料---------------
 
 function initData() {
+    //return;
     let localStorageData = localStorage.getItem(localStorageKey);
     if (localStorageData) {
         calendarData = JSON.parse(localStorageData);
@@ -243,15 +245,6 @@ function getData(date, key) {
 }
 // ----------------修改資料---------------
 function modifyData(date, key, obj) {
-    /*if(calendarData[date]){
-        calendarData[date].push(obj);
-        calendarData[date].sort(function(t1, t2) {
-            return t1.time.localeCompare(t2.time);
-        });
-    }else{
-        calendarData[date] = [obj];
-    }*/
-
     calendarData[date][key] = obj;
     saveDataToStorage();
 }
