@@ -125,6 +125,8 @@ function showTitle(year, month) {
 const localStorageKey = "my-todo";
 let todoItemObj = {};
 function setTodoToStorage(dateStr, content) {
+    //向特定日期的待辦事項列表中添加新內容之前，確保該日期已經有一個可用的陣列來存儲待辦事項。
+    //如果沒有，則創建一個空陣列以便後續使用。
     if (!Array.isArray(todoItemObj[dateStr])) {
         todoItemObj[dateStr] = [];
     }
