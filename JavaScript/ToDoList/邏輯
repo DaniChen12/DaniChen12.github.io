@@ -15,7 +15,7 @@ list左邊是checkbox，右邊分別是編輯與刪除。
 
 儲存的資料格式:
 儲存資料以陣列包物件方式，再轉換成json。
-[{"todo":"遛狗","done":"false"},{"todo":"散步","done":"true"}]
+[{"content":"遛狗","done":"false"},{"content":"散步","done":"true"}]
 
 
 畫面:

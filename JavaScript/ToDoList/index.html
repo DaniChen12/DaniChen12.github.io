@@ -7,22 +7,57 @@
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <style>
+            .top{
+                width: 700px;
+                padding-top: 40px;
+                margin: auto;
+                color: #002765;
+                text-align: center;
+            }
+            h1{
+                display:inline-block;
+                font-weight: bold;
+                font-size: 40px;
+                
+
+            }
+        </style>
 </head>
 
 <body>
-    <div class="input-group mb-3">
-        <div class="input-group-text">
-            <input class="form-check-input mt-0" type="checkbox" value=""
-                aria-label="Checkbox for following text input">
-        </div>
-        <input type="text" class="form-control" aria-label="Text input with checkbox">
+
+<div class="top">
+    <h1>To Do List</h1>
+</div>
+    <div class="input-group mb-3 mx-auto mt-3" style="width: 700px;">
+        
+        <input id="input" type="text" class="form-control" placeholder="Add Your To Do List" aria-label="Add Your To Do List">
+        <button id="btnAddList"type="button" class="btn btn-primary">Add</button>
     </div>
+    <ul id="list-group"class="list-group mx-auto " style="width: 700px;">
+        <!-- <li class="todoList d-flex mb-2">
+            <div class="input-group">
+                <div class="input-group-text">
+                    <input id="checkbox" class="form-check-input" type="checkbox" value="">
+                </div>
+                <input id="key-input" type="hidden">
+                <input id="toDoInfo" type="text" class="form-control "
+                    placeholder="Your To Do List">
+                <button id="btnEdit" type="button" class="btn btn-primary">Edit</button>
+                <button id="btnSave" type="button" class="btn btn-success">Save</button>
+                <button id="btnDelete" type="button" class="btn btn-danger">Delete</button>
+        </li> -->
+    </ul>
+    </div>
+
 
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
+        <script src="data.js" ></script>
     <script src="main.js"></script>
 </body>
 
