@@ -9,7 +9,7 @@ const ul = document.getElementById("list-group");
 // const btnDelete = document.getElementById("btnDelete");
 //---------------------------------------------------------
 
-//-----------------建立資料--------------------------------
+//-----------------建立畫面--------------------------------
 function createList() {
     ul.innerHTML = "";
     for (let index = 0; index < toDoListData.length; index++) {
@@ -32,7 +32,7 @@ function createList() {
         Checkbox.type = "checkbox";
         Checkbox.id = "checkbox";
         Checkbox.checked = todoData.done;
-        Checkbox.addEventListener('click', checkbox_display);
+        Checkbox.addEventListener('click', checkBoxClickHandler);
 
         //input-key_input
         let key_input = document.createElement("input");
@@ -45,8 +45,13 @@ function createList() {
         toDoInfo.type = "text";
         toDoInfo.classList.add("form-control");
         toDoInfo.id = "toDoInfo";
-        toDoInfo.value = todoData.task.trim();//input_Text.value;
+        toDoInfo.value = todoData.task.trim();
         toDoInfo.disabled = true;
+
+        if (Checkbox.checked) {
+            console.log('done is true')
+            toDoInfo.classList.add("text-decoration-line-through", "text-body-tertiary", "text-opacity-25");
+        }
 
         //button-Edit
         let buttonEdit = document.createElement("button");
@@ -70,10 +75,14 @@ function createList() {
         buttonSave.style.display = 'none';
         buttonSave.onclick = function (e) {
             let editIndex = e.target.parentNode.parentNode.getAttribute('index');
-            saveData(editIndex);
-            toDoInfo.disabled = true;
-            buttonEdit.style.display = 'block';
-            buttonSave.style.display = 'none';
+
+            let obj = {
+                "task": toDoInfo.value,
+                "done": Checkbox.checked
+            };
+
+            saveData(editIndex,obj);
+            createList();
         };
 
         //button-Delete
@@ -84,7 +93,7 @@ function createList() {
         buttonDelete.textContent = "Delete";
         buttonDelete.addEventListener('click', deleteDataClickHandler);
 
-        //append all
+        //append All
         li.appendChild(inputGroup);
         inputGroup.appendChild(div)
         div.appendChild(Checkbox);
@@ -99,30 +108,28 @@ function createList() {
 }
 //------------------------------------------------------
 
-//-----------------刪除按鈕-----------------------------
+//-----------------刪除按鈕控制--------------------------
 function deleteDataClickHandler(e) {
     let delIndex = e.target.parentNode.parentNode.getAttribute('index');
     console.log('index:', delIndex);
     deleleDataByIndex(delIndex);
     createList();
 }
-//------------------------------------------------------
-function checkbox_display(e) {
+//----------------------checkbox控制---------------------
+function checkBoxClickHandler(e) {
     let index = e.target.parentNode.parentNode.parentNode.getAttribute('index');
     console.log(index);
     let todoData = toDoListData[index];
-    let checkbox = e.target;
-    let toDoInfo = e.target.parentNode.parentNode.querySelector(".form-control");
-    
-    if (checkbox.checked) {
-        console.log('done is true')
-        toDoInfo.classList.add("text-decoration-line-through","text-body-tertiary","text-opacity-25");
-    } else {
-        console.log('done is false')
-        toDoInfo.classList.remove("text-decoration-line-through", "text-opacity-25","text-body-tertiary");
-    }
+    todoData.done = e.target.checked;
+
+    saveData(index, todoData);
+    createList();
+    //let checkbox = e.target;
+    // let toDoInfo = e.target.parentNode.parentNode.querySelector(".form-control");
+
+
 }
-// //-----------------編輯按鈕-----------------------------
+// //-----------------編輯按鈕控制------------------------
 function modifyDataClickHandler(e) {
     let obj = {
         "task": input_Text.value,
@@ -133,21 +140,7 @@ function modifyDataClickHandler(e) {
     saveData(editIndex, obj);
     createList();
 }
-//------------------------------------------------------
-
-//-----------------儲存按鈕-----------------------------
-function saveData(editIndex, obj) {
-    if (!toDoListData[editIndex]) {
-        return;
-    }
-
-    console.log(editIndex)
-    toDoListData[editIndex].task = obj;
-
-}
-//------------------------------------------------------
-
-//-----------------建立list畫面-----------------------------
+//-------------------輸入資料控制--------------------------
 btnAddList.addEventListener('click', addDataClickHanlder);
 function addDataClickHanlder() {
     if (input_Text.value === '') {
@@ -162,50 +155,37 @@ function addDataClickHanlder() {
         input_Text.value = "";
         createList();
 
-        /*buttonEdit.addEventListener('click', function() {
-                toDoInfo.disabled = false; 
-                toDoInfo.focus(); 
-            });*/
-
-
-        //---------------------------------------------------------
-        //建立監聽事件去判斷是否是編輯狀態
-        /*buttonEdit.addEventListener('click', function() {
-            toDoInfo.disabled = false; 
-            toDoInfo.focus();
-            buttonEdit.style.display = 'none'; 
-            buttonSave.style.display = 'block'; 
-        });
-
-        buttonSave.addEventListener('click', function() {
-            toDoInfo.disabled = true;
-            buttonEdit.style.display = 'block'; 
-            buttonSave.style.display = 'none'; 
-        });*/
-        //----------------------------------------------------------
-
 
         /**/
     }
     input_Text.value = "";
 }
+initData();
+createList();
+
+
+
+
 //---------------------------------------------------------
 
+/*buttonEdit.addEventListener('click', function() {
+                toDoInfo.disabled = false;
+                toDoInfo.focus();
+            });*/
 
+//---------------------------------------------------------
+//建立監聽事件去判斷是否是編輯狀態
+/*buttonEdit.addEventListener('click', function() {
+    toDoInfo.disabled = false;
+    toDoInfo.focus();
+    buttonEdit.style.display = 'none';
+    buttonSave.style.display = 'block';
+});
 
-//--------------------完成事項---------------------------
-// checkbox.addEventListener("change", function(event) {
-//     // 檢查 checkbox 是否被選中
-//     if (event.target.checked) {
-//         // 如果被選中，執行相應的操作
-//         console.log("Checkbox is checked");
-//         // 在這裡可以添加其他你想要執行的代碼
-//     } else {
-//         // 如果沒有被選中，執行其他操作
-//         console.log("Checkbox is unchecked");
-//         // 在這裡可以添加其他你想要執行的代碼
-//     }
-// });
+buttonSave.addEventListener('click', function() {
+    toDoInfo.disabled = true;
+    buttonEdit.style.display = 'block';
+    buttonSave.style.display = 'none';
+});*/
+//----------------------------------------------------------
 
-
-createList();
