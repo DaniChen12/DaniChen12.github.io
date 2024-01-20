@@ -8,9 +8,16 @@ $(document).ready(function () {
     }).done((cityData) => {
         // console.log(cityData);
         //<option value="">選擇縣市</option>
-        cityData.forEach((item) => {
+        /*cityData.forEach((item) => {
             const option = $(
                 `<option value=${item.City}>${item.City}</option>`
+            );
+            $("#city_select").append(option);
+        });*/
+
+        Object.keys(youBikeDataSet).forEach((item) => {
+            const option = $(
+                `<option value=${item}>${item}</option>`
             );
             $("#city_select").append(option);
         });
@@ -61,6 +68,7 @@ function getYouBikeData(cityName, ta) {
         .done((data) => {
             //console.log(data);
             //渲染表格資料
+            if(cityName==='桃園市') data = data.result.records;
             renderingTable(data);
         })
         .fail((err) => {
@@ -143,4 +151,6 @@ function setMarker(touBikeDataArr) {
     });
 
     map.addLayer(markers);
+    map.flyTo([touBikeDataArr[0].lat,touBikeDataArr[0].lng]);
+    
 }
