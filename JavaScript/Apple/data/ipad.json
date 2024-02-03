@@ -1,0 +1,183 @@
+{
+    "title": "購買 iPad",
+    "name": "ipad",
+    "images": {
+        "blue": [
+            "./images/iPad/ipad-10th-gen-storage-select-202212-blue.jpg",
+            "./images/iPad/ipad-10th-gen-finish-select-202212-blue_AV1.jpg",
+            "./images/iPad/ipad-10th-gen-finish-select-202212-blue_AV2.jpg"
+        ],
+        "pink": [
+            "./images/iPad/ipad-10th-gen-finish-select-202212-pink.jpg",
+            "./images/iPad/ipad-10th-gen-finish-select-202212-pink_AV1.jpg",
+            "./images/iPad/ipad-10th-gen-finish-select-202212-pink_AV2.jpg"
+        ],
+        "silver": [
+            "./images/iPad/ipad-10th-gen-finish-select-202212-silver.jpg",
+            "./images/iPad/ipad-10th-gen-finish-select-202212-silver_AV1.jpg",
+            "./images/iPad/ipad-10th-gen-finish-select-202212-silver_AV2.jpg"
+        ],
+        "yellow": [
+            "./images/iPad/ipad-10th-gen-finish-select-202212-yellow.jpg",
+            "./images/iPad/ipad-10th-gen-finish-select-202212-yellow_AV1.jpg",
+            "./images/iPad/ipad-10th-gen-finish-select-202212-yellow_AV2.jpg"
+        ]
+    },
+    "widgets": [
+        {
+            "title": "連線能力",
+            "subTitle": "選擇連線方式",
+            "type": "wifi",
+            "col": 1
+        },
+        {
+            "title": "外觀",
+            "subTitle": "挑選你喜愛的外觀。",
+            "type": "color",
+            "col": 2
+        },
+        {
+            "title": "儲存裝置",
+            "subTitle": "你需要多少儲存空間？",
+            "type": "storage",
+            "col": 1
+        }
+        
+    ],
+    "colors": [
+        {
+            "colorName": "藍色",
+            "colorCode": "blue",
+            "colorImg": "./images/iPad/ipad-10th-gen-finish-blue-2022.png"
+        },
+        {
+            "colorName": "粉色",
+            "colorCode": "pink",
+            "colorImg": "./images/iPad/ipad-10th-gen-finish-pink-2022.png"
+        },
+        {
+            "colorName": "銀色",
+            "colorCode": "silver",
+            "colorImg": "./images/iPad/ipad-10th-gen-finish-silver-2022.png"
+        },
+        {
+            "colorName": "黃色",
+            "colorCode": "yellow",
+            "colorImg": "./images/iPad/ipad-10th-gen-finish-yellow-2022.png"
+        }
+    ],
+    "specifications": [
+        {
+            "sku": "ipad-10th-blue-64",
+            "storage": "64GB",
+            "color": "blue",
+            "wifi": "Wi-Fi",
+            "price": 14900
+        },
+        {
+            "sku": "ipad-10th-blue-256",
+            "storage": "256GB",
+            "color": "blue",
+            "wifi": "Wi-Fi",
+            "price": 19900
+        },
+        {
+            "sku": "ipad-10th-blue-64",
+            "storage": "64GB",
+            "color": "blue",
+            "wifi": "Wi-Fi + 行動網路",
+            "price": 19900
+        },
+        {
+            "sku": "ipad-10th-blue-256",
+            "storage": "256GB",
+            "color": "blue",
+            "wifi": "Wi-Fi + 行動網路",
+            "price": 24900
+        },
+        {
+            "sku": "ipad-10th-pink-64",
+            "storage": "64GB",
+            "color": "pink",
+            "wifi": "Wi-Fi",
+            "price": 14900
+        },
+        {
+            "sku": "ipad-10th-pink-256",
+            "storage": "256GB",
+            "color": "pink",
+            "wifi": "Wi-Fi",
+            "price": 19900
+        },
+        {
+            "sku": "ipad-10th-pink-64",
+            "storage": "64GB",
+            "color": "pink",
+            "wifi": "Wi-Fi + 行動網路",
+            "price": 19900
+        },
+        {
+            "sku": "ipad-10th-pink-256",
+            "storage": "256GB",
+            "color": "pink",
+            "wifi": "Wi-Fi + 行動網路",
+            "price": 24900
+        },
+        {
+            "sku": "ipad-10th-silver-64",
+            "storage": "64GB",
+            "color": "silver",
+            "wifi": "Wi-Fi",
+            "price": 14900
+        },
+        {
+            "sku": "ipad-10th-silver-256",
+            "storage": "256GB",
+            "color": "silver",
+            "wifi": "Wi-Fi",
+            "price": 19900
+        },
+        {
+            "sku": "ipad-10th-silver-64",
+            "storage": "64GB",
+            "color": "silver",
+            "wifi": "Wi-Fi + 行動網路",
+            "price": 19900
+        },
+        {
+            "sku": "ipad-10th-silver-256",
+            "storage": "256GB",
+            "color": "silver",
+            "wifi": "Wi-Fi + 行動網路",
+            "price": 24900
+        },
+        {
+            "sku": "ipad-10th-yellow-64",
+            "storage": "64GB",
+            "color": "yellow",
+            "wifi": "Wi-Fi",
+            "price": 14900
+        },
+        {
+            "sku": "ipad-10th-yellow-256",
+            "storage": "256GB",
+            "color": "yellow",
+            "wifi": "Wi-Fi",
+            "price": 19900
+        },
+        {
+            "sku": "ipad-10th-yellow-64",
+            "storage": "64GB",
+            "color": "yellow",
+            "wifi": "Wi-Fi + 行動網路",
+            "price": 19900
+        },
+        {
+            "sku": "ipad-10th-yellow-256",
+            "storage": "256GB",
+            "color": "yellow",
+            "wifi": "Wi-Fi + 行動網路",
+            "price": 24900
+        }
+    ]
+}

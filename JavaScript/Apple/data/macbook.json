@@ -1,0 +1,134 @@
+{
+    "title": "購買 MacBook Pro",
+    "name": "MacBook Pro",
+    "images": {
+        "silver": [
+            "./images/macBook/mbp13touch-silver.png",
+            "./images/macBook/mbp14-silver-select-202310.jpg",
+            "./images/macBook/mbp13touch-space-gallery1-201907.png"
+        ],
+        "spaceblack": [
+            "./images/macBook/mbp13touch-space.png",
+            "./images/macBook/mbp14-spacegray-select-202310.jpg",
+            "./images/macBook/mbp13touch-space-gallery1-201907.png"
+        ]
+    },
+    "widgets": [
+        {
+            "title": "晶片",
+            "subTitle": "哪一款最適合你？",
+            "type": "model",
+            "col": 1
+        },
+        {
+            "title": "外觀",
+            "subTitle": "挑選你喜愛的外觀。",
+            "type": "color",
+            "col": 2
+        },
+        {
+            "title": "儲存裝置",
+            "subTitle": "你需要多少儲存空間？",
+            "type": "storage",
+            "col": 1
+        }
+    ],
+    "colors": [
+        {
+            "colorName": "銀色",
+            "colorCode": "silver",
+            "colorImg": "./images/macBook/mbp-14-m3-max-pro-silver-cto-hero-202310_SW_COLOR.jpg"
+        },
+        {
+            "colorName": "太空黑色",
+            "colorCode": "spaceblack",
+            "colorImg": "./images/macBook/mbp-14-m3-max-pro-spaceblack-cto-hero-202310_SW_COLOR.jpg"
+        }
+    ],
+    "specifications": [
+        {
+            "sku": "Macbook-Pro-M3-silver-512GB-SSD",
+            "model": "MacBook Pro M3",
+            "storage": "512GB",
+            "color": "silver",
+            "price": 54900
+        },
+        {
+            "sku": "Macbook-Pro-M3-spaceblack-512GB-SSD",
+            "model": "MacBook Pro M3",
+            "storage": "512GB",
+            "color": "spaceblack",
+            "price": 54900
+        },
+        {
+            "sku": "Macbook-Pro-M3-silver-1TB-SSD",
+            "model": "MacBook Pro M3",
+            "storage": "1TB",
+            "color": "silver",
+            "price": 60900
+        },
+        {
+            "sku": "Macbook-Pro-M3-spaceblack-1TB-SSD",
+            "model": "MacBook Pro M3",
+            "storage": "1TB",
+            "color": "spaceblack",
+            "price": 60900
+        },
+        {
+            "sku": "Macbook-Pro-M3-Pro-silver-512GB-SSD",
+            "model": "MacBook Pro M3-Pro",
+            "storage": "512GB",
+            "color": "silver",
+            "price": 69900
+        },
+        {
+            "sku": "Macbook-Pro-M3-Pro-spaceblack-512GB-SSD",
+            "model": "MacBook Pro M3-Pro",
+            "storage": "512GB",
+            "color": "spaceblack",
+            "price": 69900
+        },
+        {
+            "sku": "Macbook-Pro-M3-Pro-silver-1TB-SSD",
+            "model": "MacBook Pro M3-Pro",
+            "storage": "1TB",
+            "color": "silver",
+            "price": 81900
+        },
+        {
+            "sku": "Macbook-Pro-M3-Pro-spaceblack-1TB-SSD",
+            "model": "MacBook Pro M3-Pro",
+            "storage": "1TB",
+            "color": "spaceblack",
+            "price": 81900
+        },
+        {
+            "sku": "Macbook-Pro-M3-Max-silver-1TB-SSD",
+            "model": "MacBook Pro M3-Max",
+            "storage": "1TB",
+            "color": "silver",
+            "price": 105900
+        },
+        {
+            "sku": "Macbook-Pro-M3-Max-spaceblack-1TB-SSD",
+            "model": "MacBook Pro M3-Max",
+            "storage": "1TB",
+            "color": "spaceblack",
+            "price": 105900
+        },
+        {
+            "sku": "Macbook-Pro-M3-Max-silver-512GB-SSD",
+            "model": "MacBook Pro M3-Max",
+            "storage": "512GB",
+            "color": "silver",
+            "price":"無銷售"
+        },
+        {
+            "sku": "Macbook-Pro-M3-Max-spaceblack-512GB-SSD",
+            "model": "MacBook Pro M3-Max",
+            "storage": "512GB",
+            "color": "spaceblack",
+            "price":"無銷售"
+        }
+    ]
+}
