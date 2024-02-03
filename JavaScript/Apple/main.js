@@ -470,12 +470,13 @@ function renderingMacShop(shop) {
     const priceArr = shop.specifications.map((spec) => spec.price);
     const minPrice = Math.min(...priceArr);
     const title = shop.title;
+    console.log(priceArr)
 
     document.querySelector(".shop-content .title-area").innerHTML = `<h1>
                 ${title}
             </h1>
             <div class="total-price">
-                NT$ ${minPrice} 起
+                NT$ 54900 起
             </div>`;
 
     const defaultImages = Object.values(shop.images)[0]
