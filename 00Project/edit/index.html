@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UserEdit</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://fonts.cdnfonts.com/css/helvetica-neue-5" rel="stylesheet">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="wrap">
+        <div id="" class="mainWrap ">
+
+            <!-- Insert Navigation -->
+            <!--  Account Navigation -->
+            <ul class="nav nav-tabs mt-3 mb-3">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">帳號設定</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">報名預填資料</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">修改密碼</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">身份認證</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">個人帳務清單</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">成為粉絲的組織</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">訂單歸戶</a>
+                </li>
+            </ul>
+            <!-- Account Navigation End-->
+
+            <!----------- Title------------>
+            <div class="title">
+                <h1 id="title">修改帳號設定</h1>
+            </div>
+
+            <!----------- Form------------>
+            <form id="edit_user" action="">
+                <!-- <div class="main-form col-8 form-horizontal"> -->
+                <div class="main-form wrap-col-1">
+                    <div class="content-wrapper">
+                        <div class="form_contaner">
+                            <!-- --------------使用者名稱--------------  -->
+                            <label for="">使用者名稱</label>
+                            <div class="form-content input-group-sm">
+                                <input class="form-control col-12" id="" type="text" name="" placeholder="">
+                                <p class="caption">您可以用此帳號登入 KKTIX帳號只 能使用字母、數字或底線且不能與其他 會員重複。</p>
+                            </div>
+                            <!-- ----------------暱稱-----------------  -->
+                            <label for="">暱稱</label>
+                            <div class="form-content input-group-sm">
+                                <input class="form-control col-12" id="" type="text" name="" placeholder="">
+                                <p class="caption">您的暱稱會顯示在個人頁面、活動頁面等地方</p>
+                            </div>
+                            <!--  --------------聯絡方式----------------  -->
+                            <label for="">聯絡方式</label>
+                            <div class="form-content">
+                                <div class="contect-group input-group-sm">
+                                    <label for="Email">Email</label>
+                                    <input type="email" class="form-control mb-4" id="" type="text" name=""
+                                        placeholder="Email">
+                                    <p></p>
+                                </div>
+                                <div class="contect-group">
+                                    <label for="phoneNumber">手機號碼</label>
+                                    <div class="numGroup">
+                                        <div class="phoneNum">
+                                            <div class="CountryCodes">
+                                                <select name="" id="" aria-placeholder="">
+                                                    <option value="+886">+886</option>
+                                                </select>
+                                            </div>
+                                            <div class="numbers input-group-sm">
+                                                <input class="form-control" type="tel" id="" type="text" name=""
+                                                    placeholder="phone number">
+                                            </div>
+                                        </div>
+                                        <p>修改聯絡資料需要重新驗證方能啟用。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- --------------出生年月日---------------  -->
+                            <label for="">出生年月日</label>
+                            <div class="form-content input-group-sm">
+                                <input class="form-control" id="" type="date" name="">
+                            </div>
+                            <!-- ----------------生理性別-------------------- -->
+                            <label for="">生理性別</label>
+                            <div class="form-content input-group-sm">
+                                <select name="sex" id="sex">
+                                    <option value="男">男</option>
+                                    <option value="女">女</option>
+                                </select>
+                            </div>
+                            <!-- ------------------偏好活動地區-------------- -->
+                            <label for="">偏好活動地區</label>
+                            <div class="form-content input-group-sm">
+                                <div class="optionGroup">
+                                    <ul>
+                                        <li><input class="addOption" id="northernRegion" type="radio"
+                                                name="addressOption" value="northernRegion"><label
+                                                for="northernRegion">北北基宜地區</label></li>
+                                        <li><input class="addOption" id="TaozhumiaoArea" type="radio"
+                                                name="addressOption" value="TaozhumiaoArea"><label
+                                                for="TaozhumiaoArea">桃竹苗地區</label></li>
+                                        <li><input class="addOption" id="YunjiananArea" type="radio"
+                                                name="addressOption" value="YunjiananArea"><label
+                                                for="YunjiananArea">雲嘉南地區</label></li>
+                                        <li><input class="addOption" id="southernRegion " type="radio"
+                                                name="addressOption" value="southernRegion "><label
+                                                for="southernRegion ">高屏地區</label></li>
+                                        <li><input class="addOption" id="CentralRegion" type="radio"
+                                                name="addressOption" value="CentralRegion"><label
+                                                for="CentralRegion">中彰投地區</label></li>
+                                        <li><input class="addOption" id="EastArea" type="radio" name="addressOption"
+                                                value="EastArea"><label for="EastArea">花東地區</label></li>
+                                        <li><input class="addOption" id="outerIslandArea" type="radio"
+                                                name="addressOption" value="outerIslandArea"><label
+                                                for="outerIslandArea">澎金馬地區</label></li>
+                                        <li><input class="addOption" id="Hongkong" type="radio" name="addressOption"
+                                                value="Hongkong"><label for="Hongkong">香港</label></li>
+                                        <li><input class="addOption" id="Macao" type="radio" name="addressOption"
+                                                value="Macao"><label for="Macao">澳門</label></li>
+                                        <li><input class="addOption" id="other" type="radio" name="addressOption"
+                                                value="other"><label for="other">其他地區</label></li>
+                                    </ul>
+                                </div>
+                                <p>我們將以此為您推薦該地區活動</p>
+                            </div>
+                            <!-- ------------------個人網站------------------ -->
+                            <label for="">個人網站</label>
+                            <div class="form-content input-group-sm">
+                                <input class="form-control" id="" type="url" name="" placeholder="">
+                            </div>
+                            <!-- ------------------個人簡介------------------ -->
+                            <label for="">個人簡介</label>
+                            <div class="form-content form-floating input-group-sm">
+                                <textarea name="" class="description-content form-control" placeholder="個人簡介輸入這裡"
+                                    id="floatingTextarea" rows="6"></textarea>
+                                <label for="floatingTextarea">個人簡介輸入這裡</label>
+                                <p id="" class="caption">剩餘160字</p>
+                            </div>
+                            <!-- ----------------國家與時區----------------- -->
+                            <label for="">國家與時區</label>
+                            <div class="form-content input-group-sm">
+                                <select name="area" id="area">
+                                    <option value="台灣">台灣</option>
+                                </select>
+                                <select name="GMT" id="">
+                                    <option value="GMT08">(GMT+08:00)</option>
+                                </select>
+                            </div>
+                            <!-- -------------------連結-------------------- -->
+                            <label for="">連結</label>
+                            <div class="form-content input-group-sm">
+                                <div class="link-oauth link-fb mt-2">
+                                    <span class="name">Facebook</span>
+                                    <a href="#" type="button" class="btn btn-primary">連結</a>
+                                </div>
+                                <div class="link-oauth link-kkbox">
+                                    <span class="name">KK ID</span>
+                                    <a href="#" type="button" class="kkLink btn btn-info">連結</a>
+                                </div>
+                            </div>
+                            <!-- ---------------進階帳號管理----------------- -->
+                            <label for="">進階帳號管理</label>
+                            <div class="form-content input-group-sm">
+                                <div class="checkboxGroup">
+                                    <a class="deleteAcc" href="#">我要刪除帳號</a>
+                                    <div class="subscribeGroup mt-2">
+                                        <ul>
+                                            <li>
+                                                <input class="subOption" id="subNews" type="checkbox"
+                                                    name="subscribeOption" value="subNews"><label class=""
+                                                    for="subNews">訂閱 KKTIX 的最新消息</label>
+                                            </li>
+                                            <li>
+                                                <input class="subOption" id="restricOpt" type="checkbox"
+                                                    name="SearchRestricOption" value="restricOpt"><label class=""
+                                                    for="restricOpt">搜尋時，排除限制級活動</label>
+                                            </li>
+                                            <li>
+                                                <input class="subOption" id="persPage" type="checkbox"
+                                                    name="personalPage" value="persPage"><label class=""
+                                                    for="restricOpt">啟用個人頁面</label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border"></div>
+                        <!-- ---------------儲存個人資料按鈕-------------- -->
+                        <div class="btnSave">
+                            <button type="button" class=" mt-4 mb-4 btn "
+                                style="background-color:var(--main-color);color: white;border:none;">儲存個人資料</button>
+                        </div>
+                    </div>
+                    <div class="imageUpload col-4 col-last mt-3">
+                        <div class="Upload-controls">
+                            <div class="img-container pb-2">
+                                <img src="https://picsum.photos/200/150/?random=10">
+                            </div>
+                            <div class=" pb-2" role="">
+                                <a class="file-input ">
+                                    <input class="file-upload" type="file" name="" id="">
+                                </a>
+                            </div>
+                            <span class="help-block">
+                                <p>建議圖片尺寸為 250x250 以上正方形圖片，最大檔案容量為2MB。如果沒有上傳，會使用系統預設圖片。</p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
