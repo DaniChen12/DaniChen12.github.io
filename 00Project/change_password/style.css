@@ -1,0 +1,150 @@
+:root {
+    --main-color: #77A88D;
+    --main-color-hover: #77A88D;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Helvetica Neue", Arial, "Heiti TC", "Apple LiGothic Medium", "新微軟正黑體", "微軟正黑體", sans-serif;
+    font-size: 15px;
+    color: #333333;
+}
+
+/* change bootstrap nav color start */
+.nav-tabs {
+    --bs-nav-tabs-link-active-color: var(--bs-emphasis-color);
+    --bs-emphasis-color: #333333
+}
+
+ul.nav li a,
+ul.nav li a:visited {
+    color: #77A88D;
+}
+
+ul.nav li a:hover,
+ul.nav li a:active {
+    color: #77A88D;
+    background-color: #FAFAFA;
+}
+
+ul.nav li.active a {
+    color: #77A88D;
+}
+
+/* change bootstrap nav color end */
+
+
+/* main Body */
+.mainWrap {
+    width: 75%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.title {
+    display: block;
+    line-height: 2;
+    align-items: center;
+    vertical-align: middle;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+
+.content-wrapper input{
+    width: 50%;
+}
+
+.form-content {
+    margin-bottom: 10px;
+}
+
+.content-wrapper{
+    padding-top: 20px;
+}
+
+.form_contaner {
+    display: grid;
+    grid-template-columns: 3fr 8fr;
+    margin-bottom: 10px;
+}
+.form-content{
+    padding-bottom: 10px;
+}
+
+label {
+    display: inline-block;
+    padding: 10px 0px;
+    margin-right: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: right;
+}
+label::before{
+    content: "*";
+    position: relative; 
+    left: -5px;
+    color:#c07525;
+}
+label::after{
+    content: "";
+}
+p {
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    color: gray;
+    font-size: 14px;
+}
+
+div.border{
+    border-bottom:1px solid #333333;
+    margin-top: 20px;
+}
+.btnSave {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0px;
+}
+.divWrap{
+    display: grid;
+    grid-template-columns: 5.8fr 3fr;
+}
+.wrap {
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+}
+
+@media only screen and (max-device-width:768px) {
+    .wrap {
+        max-width: 960px;
+    }
+    .title{
+        text-align: center;
+    }
+    .form_contaner{
+        display: flex;
+        flex-direction: column;
+        /* margin: auto; */
+    }
+    .form_contaner input{
+        width: 100%;
+    }
+    label {
+        min-width: 98px;
+        display: flex;
+        text-align: left;
+    }
+    .divWrap{
+        display: block;
+    }
+}
