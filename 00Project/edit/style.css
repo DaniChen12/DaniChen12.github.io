@@ -145,14 +145,22 @@ select#sex {
     flex-wrap: wrap;
     flex-direction: column;
 }
-
+/* #birthday{
+    cursor: pointer;
+} */
 .optionGroup div+div {
     margin-top: 10px;
 }
-
+select{
+    cursor: pointer;
+}
 .optionGroup li {
     display: flex;
     text-decoration: none;
+    cursor: pointer;
+}
+.optionGroup li label{
+    cursor: pointer;
 }
 
 .subscribeGroup li {
@@ -162,6 +170,7 @@ select#sex {
 
 .subscribeGroup li label {
     margin-left: 5px;
+    cursor: pointer;
 }
 
 .link-oauth {
@@ -200,7 +209,8 @@ div.border {
 
 .btnSave {
     display: flex;
-    justify-content: center;
+    justify-content: center;  
+    padding-bottom: 20px;
 }
 
 .img-container img{
@@ -213,14 +223,14 @@ div.border {
     width: 100%;
 
 }
+.imageUpload input{
+    cursor: pointer;
+}
 
 .wrap {
     width: 100%;
     max-width: 1400px;
     margin: auto;
-}
-.btnSave{
-    padding-bottom: 20px;
 }
 
 @media only screen and (max-device-width:768px) {
