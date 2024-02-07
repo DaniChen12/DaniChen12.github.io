@@ -145,21 +145,32 @@ select#sex {
     flex-wrap: wrap;
     flex-direction: column;
 }
+
 /* #birthday{
     cursor: pointer;
 } */
 .optionGroup div+div {
     margin-top: 10px;
 }
-select{
+
+select {
     cursor: pointer;
 }
+
+select:focus {
+    outline: none;
+    border: 1px solid #e0e0e0;
+}
+
 .optionGroup li {
     display: flex;
     text-decoration: none;
     cursor: pointer;
 }
-.optionGroup li label{
+li input{
+    margin-right: 5px;
+}
+.optionGroup li label {
     cursor: pointer;
 }
 
@@ -203,17 +214,27 @@ a {
     color: var(--main-color);
 }
 
+a:hover {
+    color: rgb(85, 212, 104);
+    text-decoration: underline solid rgb(85, 212, 104);
+}
+
 div.border {
     border: 1px solid gray;
 }
 
 .btnSave {
     display: flex;
-    justify-content: center;  
-    padding-bottom: 20px;
+    justify-content: center;
+    padding: 20px 0px;
 }
 
-.img-container img{
+.divWrap {
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+}
+
+.img-container img {
     width: fit-content;
 }
 
@@ -223,8 +244,12 @@ div.border {
     width: 100%;
 
 }
-.imageUpload input{
+
+.imageUpload input {
     cursor: pointer;
+}
+.file-upload{
+    width: 85%;
 }
 
 .wrap {
@@ -234,9 +259,10 @@ div.border {
 }
 
 @media only screen and (max-device-width:768px) {
-    .wrap{
+    .wrap {
         max-width: 960px;
     }
+
     .main-form {
         display: flex;
         flex-direction: column;
@@ -249,38 +275,30 @@ div.border {
     }
 
     .mainWrap {
-        width: 80%;
-        /* width: 80%; */
+        width: 90%;
     }
 
     .imageUpload {
-        max-width: 80%;
-        margin: auto;
-        align-items: center;
+        max-width: 33.333%;
         justify-content: center;
     }
-
-
-    .file-upload {
-        max-width: 90%;
-    }
-
-    .help-block p {
-        max-width: 20%;
-    }
-    .img-container{
-    max-width: 50%;
+#form-control-sm{
+    min-width: 100%;
+}
+    .img-container {
+        max-width: 50%;
     }
 
     label {
-        min-width: 60px;
+        min-width: 90px;
+    }
+
+    div.border {
+        margin: 10px 0px;
+    }
+
+    .divWrap {
+        display: block;
     }
 
 }
-
-/* import { DayPicker } from 'react-day-picker';
-import 'react-day-picker/dist/style.css';
-
-function Component() {
-  return <DayPicker />;
-} */
