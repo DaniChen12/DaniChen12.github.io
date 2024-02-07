@@ -51,26 +51,26 @@
             <!----------- Form------------>
             <form id="edit_user" action="">
                 <!-- <div class="main-form col-8 form-horizontal"> -->
-                <div class="main-form wrap-col-1">
+                <div class="main-form">
                     <div class="content-wrapper">
                         <div class="form_contaner">
-                            <!-- --------------使用者名稱--------------  -->
+                            <!-- ----------------使用者名稱----------------  -->
                             <label for="">使用者名稱</label>
                             <div class="form-content input-group-sm">
                                 <input class="form-control col-12" id="" type="text" name="" placeholder="">
                                 <p class="caption">您可以用此帳號登入 KKTIX帳號只 能使用字母、數字或底線且不能與其他 會員重複。</p>
                             </div>
-                            <!-- ----------------暱稱-----------------  -->
+                            <!-- -------------------暱稱-------------------  -->
                             <label for="">暱稱</label>
                             <div class="form-content input-group-sm">
                                 <input class="form-control col-12" id="" type="text" name="" placeholder="">
                                 <p class="caption">您的暱稱會顯示在個人頁面、活動頁面等地方</p>
                             </div>
-                            <!--  --------------聯絡方式----------------  -->
+                            <!--  ----------------聯絡方式------------------  -->
                             <label for="">聯絡方式</label>
                             <div class="form-content">
                                 <div class="contect-group input-group-sm">
-                                    <label for="Email">Email</label>
+                                    <label class="px-2" for="Email">Email</label>
                                     <input type="email" class="form-control mb-4" id="" type="text" name=""
                                         placeholder="Email">
                                     <p></p>
@@ -79,21 +79,21 @@
                                     <label for="phoneNumber">手機號碼</label>
                                     <div class="numGroup">
                                         <div class="phoneNum">
-                                            <div class="CountryCodes">
+                                            <span class="CountryCodes">
                                                 <select name="" id="" aria-placeholder="">
                                                     <option value="+886">+886</option>
                                                 </select>
-                                            </div>
-                                            <div class="numbers input-group-sm">
+                                            </span>
+                                            <span class="numbers input-group-sm">
                                                 <input class="form-control" type="tel" id="" type="text" name=""
                                                     placeholder="phone number">
-                                            </div>
+                                            </span>
                                         </div>
                                         <p>修改聯絡資料需要重新驗證方能啟用。</p>
                                     </div>
                                 </div>
                             </div>
-                            <!-- --------------出生年月日---------------  -->
+                            <!-- ---------------出生年月日------------------  -->
                             <label for="">出生年月日</label>
                             <div class="form-content input-group-sm">
                                 <input class="form-control" id="" type="date" name="">
@@ -206,28 +206,27 @@
                         <div class="border"></div>
                         <!-- ---------------儲存個人資料按鈕-------------- -->
                         <div class="btnSave">
-                            <button type="button" class=" mt-4 mb-4 btn "
+                            <button type="button" class=" mt-4 btn "
                                 style="background-color:var(--main-color);color: white;border:none;">儲存個人資料</button>
                         </div>
                     </div>
-                    <div class="imageUpload col-4 col-last mt-3">
-                        <div class="Upload-controls">
-                            <div class="img-container pb-2">
-                                <img src="https://picsum.photos/200/150/?random=10">
-                            </div>
-                            <div class=" pb-2" role="">
-                                <a class="file-input ">
-                                    <input class="file-upload" type="file" name="" id="">
-                                </a>
-                            </div>
-                            <span class="help-block">
-                                <p>建議圖片尺寸為 250x250 以上正方形圖片，最大檔案容量為2MB。如果沒有上傳，會使用系統預設圖片。</p>
-                            </span>
+                    <div class="imageUpload">
+                        <div class="img-container">
+                            <img src="https://picsum.photos/200/150/?random=10">
                         </div>
+                        <a class="file-input ">
+                            <input class="file-upload" type="file" name="" id="">
+                        </a>
+                        <span class="help-block pb-4">
+                            <p>建議圖片尺寸為 250x250 以上正方形圖片，最大檔案容量為2MB。如果沒有上傳，會使用系統預設圖片。</p>
+                        </span>
                     </div>
-                </div>
 
-            </form>
+                </div>
+        </div>
+        </div>
+
+        </form>
         </div>
     </section>
 
