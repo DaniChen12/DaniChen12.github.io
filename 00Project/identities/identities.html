@@ -60,21 +60,45 @@
                                     <button class="identCollapse btn" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseExample" aria-expanded="false"
                                         aria-controls="collapseExample">
-                                       進行認證
-                                       <p>使用身心障礙者身份進行購票，請於購票前一日完成身份認證，入場時出示身心障礙證明，需與陪同者同時入場</p>
+                                        進行認證
+                                        <p>使用身心障礙者身份進行購票，請於購票前一日完成身份認證，入場時出示身心障礙證明，需與陪同者同時入場</p>
                                     </button>
                                 </p>
                                 <div class="collapse" id="collapseExample">
-                                    <div class="card card-body">
-                                        Some placeholder content for the collapse component. This panel is hidden by
-                                        default but revealed when the user activates the relevant trigger.
+                                    <div class="idContaner">
+                                        <label for="">身份證字號</label>
+                                        <div class="form-content input-group-sm">
+                                            <input class="form-control" id="idNumber" type="text" name="idNumber"
+                                                placeholder="請輸入身心障礙者身分證字號">
+                                            <div class="disabledPeopleCheck mt-2">
+                                                <ul>
+                                                    <li>
+                                                        <div class="CheckboxGroup">
+                                                            <input class="disabledCheck" id="wheelchairSeat"
+                                                                type="checkbox" name="wheelchairSeat"
+                                                                value="wheelchairSeat"><label
+                                                                for="wheelchairSeat">需購買輪椅席</label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="CheckboxGroup">
+                                                            <input class="disabledCheck" id="consent" type="checkbox"
+                                                                name="consent" value="consent">
+                                                            <label for="consent">我瞭解並同意
+                                                                ShowNet利用本人之個人資料向主管機關進行線上身心障礙者身份認證</label>
+                                                        </div>
+                                                    </li>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <!-- ---------------儲存個人資料按鈕-------------- -->
                         </div>
+                    </div>
             </form>
+            <!-- ---------------界線-------------- -->
             <div class="border"></div>
+            <!-- ---------------儲存個人資料按鈕-------------- -->
             <div class="divWrap">
                 <div class="btnSave">
                     <button type="button" class="btn"

@@ -59,10 +59,36 @@ h2 {
     font-size: 30px;
 }
 
-.form_contaner {
+.form_contaner{
     display: grid;
     grid-template-columns: 3fr 8fr;
     margin-bottom: 10px;
+}
+.idContaner{
+    padding-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+}
+.idContaner input{
+    margin-top: 10px;
+    margin-right: 3px;
+}
+.disabledPeopleCheck{
+    text-align: left;
+    padding: 10px;
+   
+}
+.disabledPeopleCheck .CheckboxGroup{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items:baseline;
+}
+.disabledPeopleCheck ul{
+    list-style: none;
+}
+.disabledPeopleCheck li label {
+    text-align: left;
+    cursor: pointer;
 }
 
 label {
@@ -73,6 +99,7 @@ label {
     font-weight: bold;
     text-align: right;
     color: #333333;
+    min-width: 80px;
 }
 .collapseGroup button{
     color: var(--main-color);
@@ -129,13 +156,20 @@ div.border{
         flex-direction: column;
         /* margin: auto; */
     }
+    .idContaner{
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
     .form_contaner input{
         width: 100%;
     }
     label {
-        min-width: 98px;
-        display: flex;
-        text-align: left;
+        min-width: 75px;
+        text-align:center;
+    }
+    .disabledPeopleCheck .CheckboxGroup input{
+        width: auto;
     }
     .divWrap{
         display: block;
