@@ -52,40 +52,48 @@ ul.nav li.active a {
     align-items: center;
     vertical-align: middle;
 }
-.btn{
+
+.btn {
     text-align: left;
 }
+
 h2 {
     font-size: 30px;
 }
 
-.form_contaner{
+.form_contaner {
     display: grid;
     grid-template-columns: 3fr 8fr;
     margin-bottom: 10px;
 }
-.idContaner{
+
+.idContaner {
     padding-top: 10px;
     display: grid;
     grid-template-columns: 1fr 6fr;
 }
-.idContaner input{
+
+.idContaner input {
     margin-top: 10px;
     margin-right: 3px;
 }
-.disabledPeopleCheck{
+
+.disabledPeopleCheck {
     text-align: left;
     padding: 10px;
-   
+
 }
-.disabledPeopleCheck .CheckboxGroup{
+
+.disabledPeopleCheck .CheckboxGroup {
     display: flex;
     flex-wrap: nowrap;
-    align-items:baseline;
+    align-items: baseline;
 }
-.disabledPeopleCheck ul{
+
+.disabledPeopleCheck ul {
     list-style: none;
 }
+
 .disabledPeopleCheck li label {
     text-align: left;
     cursor: pointer;
@@ -101,16 +109,20 @@ label {
     color: #333333;
     min-width: 80px;
 }
-.collapseGroup button{
+
+.collapseGroup button {
     color: var(--main-color);
 }
-.collapseGroup button:hover{
-    color:rgb(85, 212, 104);
+
+.collapseGroup button:hover {
+    color: rgb(85, 212, 104);
 }
+
 .identCollapse.btn.collapsed::before {
     content: "▿";
     left: -5px;
 }
+
 .identCollapse.btn::before {
     content: "▵";
     left: -5px;
@@ -125,19 +137,22 @@ p {
     font-size: 15px;
 }
 
-div.border{
-    border-bottom:1px solid #333333;
+div.border {
+    border-bottom: 1px solid #333333;
     margin-top: 20px;
 }
+
 .btnSave {
     display: flex;
     justify-content: center;
     padding: 20px 0px;
 }
-.divWrap{
+
+.divWrap {
     display: grid;
     grid-template-columns: 5.8fr 3fr;
 }
+
 .wrap {
     width: 100%;
     max-width: 1400px;
@@ -148,30 +163,37 @@ div.border{
     .wrap {
         max-width: 960px;
     }
-    .title{
+
+    .title {
         text-align: center;
     }
-    .form_contaner{
+
+    .form_contaner {
         display: flex;
         flex-direction: column;
         /* margin: auto; */
     }
-    .idContaner{
+
+    .idContaner {
         display: flex;
         flex-direction: column;
         text-align: left;
     }
-    .form_contaner input{
+
+    .form_contaner input {
         width: 100%;
     }
+
     label {
         min-width: 75px;
-        text-align:center;
+        text-align: center;
     }
-    .disabledPeopleCheck .CheckboxGroup input{
+
+    .disabledPeopleCheck .CheckboxGroup input {
         width: auto;
     }
-    .divWrap{
+
+    .divWrap {
         display: block;
     }
 }
