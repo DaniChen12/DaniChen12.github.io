@@ -1,0 +1,149 @@
+:root {
+    --main-color: #77A88D;
+    --main-color-hover: #77A88D;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Helvetica Neue", Arial, "Heiti TC", "Apple LiGothic Medium", "新微軟正黑體", "微軟正黑體", sans-serif;
+    font-size: 15px;
+    color: #333333;
+}
+
+/* change bootstrap nav color start */
+.nav-tabs {
+    --bs-nav-tabs-link-active-color: var(--bs-emphasis-color);
+    --bs-emphasis-color: #333333
+}
+
+ul.nav li a,
+ul.nav li a:visited {
+    color: #77A88D;
+}
+
+ul.nav li a:hover,
+ul.nav li a:active {
+    color: #77A88D;
+    background-color: #FAFAFA;
+}
+
+ul.nav li.active a {
+    color: #77A88D;
+}
+
+/* change bootstrap nav color end */
+
+
+/* main Body */
+.mainWrap {
+    width: 75%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.title {
+    display: block;
+    line-height: 2;
+    align-items: center;
+    vertical-align: middle;
+}
+
+h2 {
+    font-size: 30px;
+}
+.org-list-title{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid rgb(184, 179, 179);
+}
+.listNames{
+    display: flex;
+    flex-direction: row;
+}
+.listNames p{
+    font-weight: 400;
+}
+.buttonGroup{
+    padding-right: 10px;
+    padding-top: 10px;
+}
+.buttonGroup .btn{
+    border:1px solid #FAFAFA;
+    box-shadow: 0px 0px 2px 1px rgb(184, 179, 179) ;
+    margin-right: 5px;
+    color: var(--main-color);
+}
+.btn:hover{
+    color:rgb(85, 212, 104) ;
+}
+.btn i{
+    padding-right:5px ;
+}
+
+p {
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 8px;
+    line-height: 1;
+    color: #333333;
+    font-size: 15px;
+    font-weight: bold;
+}
+.mainContent{
+    display: flex;
+    flex-direction: column;
+}
+.pages{
+    padding: 10px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.wrap {
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+}
+
+@media only screen and (max-device-width:768px) {
+    .wrap {
+        max-width: 960px;
+    }
+    .title{
+        text-align: center;
+    }
+    #account_prefills{
+        display: flex;
+        flex-direction: column;
+    }
+    .form_contaner{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: auto;
+    }
+    .expository{
+        width: 100%;
+        padding-bottom: 10px;
+    }
+    
+    label {
+        min-width: 98px;
+        display: flex;
+        text-align: left;
+    }
+    .divWrap{
+        display: block;
+    }
+}
+@media only screen and (max-device-width:1200px) {
+    #account_prefills{
+        display: flex;
+        flex-direction: column;
+    }
+}
