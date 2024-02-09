@@ -1,5 +1,5 @@
 :root {
-    --main-color: #77A88D;
+    --main-color: #1d5545;
     --main-color-hover: #77A88D;
 }
 
@@ -23,24 +23,25 @@ body {
 
 ul.nav li a,
 ul.nav li a:visited {
-    color: #77A88D;
+    color: var(--main-color);
 }
 
 ul.nav li a:hover,
 ul.nav li a:active {
-    color: #77A88D;
+    color: var(--main-color);
     background-color: #FAFAFA;
+    text-decoration: none;
 }
 
 ul.nav li.active a {
-    color: #77A88D;
+    color: var(--main-color);
 }
 
 /* change bootstrap nav color end */
 
 
 /* main Body */
-.mainWrap {
+.main-wrap {
     width: 75%;
     margin: auto;
     margin-top: 20px;
@@ -109,12 +110,12 @@ div.border{
     border-bottom:1px solid #333333;
     margin-top: 20px;
 }
-.btnSave {
+.btn-save {
     display: flex;
     justify-content: center;
     padding: 20px 0px;
 }
-.divWrap{
+.div-wrap{
     display: grid;
     grid-template-columns: 5.8fr 3fr;
 }
@@ -144,7 +145,7 @@ div.border{
         display: flex;
         text-align: left;
     }
-    .divWrap{
+    .div-wrap{
         display: block;
     }
 }
