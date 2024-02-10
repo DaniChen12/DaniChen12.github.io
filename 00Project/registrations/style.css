@@ -51,6 +51,7 @@ ul.nav li.active a {
     display: block;
     line-height: 2;
     align-items: center;
+    vertical-align: middle;
 }
 
 h2 {
