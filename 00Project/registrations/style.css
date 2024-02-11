@@ -1,5 +1,5 @@
 :root {
-    --main-color:#1d5545 ;
+    --main-color: #1d5545;
     --main-color-hover: #77A88D;
 }
 
@@ -17,15 +17,17 @@ body {
 
 /* main Body */
 .count_down_group {
-background-color: rgb(240, 240, 240);
+    background-color: rgb(240, 240, 240);
 }
+
 .main_wrap {
     width: 75%;
     margin: auto;
     margin-top: 20px;
     line-height: 1.5em;
 }
-.count_down_timer{
+
+.count_down_timer {
     background-color: #DB4455;
     color: #fff;
     height: 2.5em;
@@ -36,11 +38,13 @@ background-color: rgb(240, 240, 240);
     justify-content: center;
     width: 75%;
 }
-h2{
+
+h2 {
     font-weight: 500;
     font-size: 24px;
     margin-bottom: 20px;
 }
+
 p {
     display: inline-block;
     margin-top: 5px;
@@ -49,60 +53,73 @@ p {
     color: #888;
     font-size: 15px;
 }
-.event_detail_collapse{
+
+.event_detail_collapse {
     color: var(--main-color);
 }
-.event_detail_collapse.btn::after{
+
+.event_detail_collapse.btn::after {
     content: "▵";
     left: -5px;
 }
-.event_detail_collapse.btn.collapsed::after{
+
+.event_detail_collapse.btn.collapsed::after {
     content: "▿";
     left: -5px;
 }
-.collapse a{
-    color:rgb(85, 212, 104) ;
+
+.collapse a {
+    color: rgb(85, 212, 104);
     text-decoration: none;
 }
-.collapse a:hover{
+
+.collapse a:hover {
     color: var(--main-color-hover);
 }
-.collapse th{
+
+.collapse th {
     padding: 2px 15px 2px 0;
     color: #888;
     min-width: 75px;
     font-weight: bold;
 }
-.collapse td{
+
+.collapse td {
     padding: 2px 0 2px 15px;
     font-weight: 400;
 }
-.collapse tr{
+
+.collapse tr {
     display: table-row;
     vertical-align: top;
     color: #333333;
 }
-.btn_cancel.btn{
-    border:1px solid #FAFAFA;
-    box-shadow: 0px 0px 2px 1px rgb(184, 179, 179) ;
+
+.btn_cancel.btn {
+    border: 1px solid #FAFAFA;
+    box-shadow: 0px 0px 2px 1px rgb(184, 179, 179);
     margin-right: 5px;
     color: var(--main-color);
 }
-.btn:hover{
-    color:rgb(85, 212, 104) ;
+
+.btn:hover {
+    color: rgb(85, 212, 104);
 }
-.progress_container{
+
+.progress_container {
     margin: 20px auto 0 auto;
     padding: 40px;
 }
-.step_progress_bar{
+
+.step_progress_bar {
     display: flex;
     margin: 0 auto;
     margin-bottom: 40px;
     justify-content: space-evenly;
     gap: 20px;
 }
-.step{
+
+.step {
     text-align: center;
     background-color: rgb(240, 240, 240);
     /* padding-right: 35px; */
@@ -110,10 +127,11 @@ p {
     align-items: center;
     border-radius: 50px;
     position: relative;
-    border: 3px solid  rgb(218, 218, 218);
+    border: 3px solid rgb(218, 218, 218);
 
 }
-p.step_text{
+
+p.step_text {
     margin-top: 10px;
     color: rgb(85, 212, 104);
     line-height: 2;
@@ -123,30 +141,35 @@ p.step_text{
     text-align: left;
     padding-left: 8px;
 }
-.number{
+
+.number {
     margin-left: 10px;
     width: 20px;
     border-radius: 100%;
     line-height: 2;
     width: 30px;
     border: 1px solid rgb(85, 212, 104);
-    background-color:white;
+    background-color: white;
     color: #333333;
     display: inline-block;
     transition: background-color 500ms;
 }
-.step.progressing{
-    color:rgb(85, 212, 104);
-    background-color:rgb(85, 212, 104);
+
+.step.progressing {
+    color: rgb(85, 212, 104);
+    background-color: rgb(85, 212, 104);
     border: 3px solid var(--main-color-hover);
 }
-.step.progressing p{
-    color:white;
+
+.step.progressing p {
+    color: white;
 }
-.step.progressing span{
-    color:rgb(85, 212, 104) ;
+
+.step.progressing span {
+    color: rgb(85, 212, 104);
 }
-.step.progressing::after{
+
+.step.progressing::after {
     content: '';
     position: absolute;
     height: 6px;
@@ -156,39 +179,112 @@ p.step_text{
     bottom: 22px;
     z-index: -1;
 }
-.step.display::after{
+
+.step.display::after {
     content: '';
     position: absolute;
     height: 6px;
     width: 50px;
-    background-color: rgb(184, 179, 179);
+    background-color: hsla(0, 3%, 71%, 0.5);
     left: 193px;
     bottom: 22px;
     z-index: -1;
 }
-.display{
-    color:hsl(129, 60%, 80%);
+
+.display {
+    color: hsl(129, 60%, 80%);
     border: 3px solid hsl(147, 22%, 80%);
-    background-color:hsl(129, 60%, 80%);
+    background-color: hsl(129, 60%, 80%);
 }
-.display .number{
-    color:rgb(85, 212, 104);
+
+.display .number {
+    color: rgb(85, 212, 104);
 }
-.display p{
-    color:white;
+
+.display p {
+    color: white;
 }
+.order_details{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.order_details ul {
+    list-style: none;
+}
+
+.order_details tr {
+    display: table-row;
+    vertical-align: top;
+    color: #333333;
+}
+
+.highlight th{
+    background-color: hsla(60, 100%, 50%, 0.104);
+}
+.highlight td{
+    background-color: hsla(60, 100%, 50%, 0.104);
+}
+
+.table thead {
+    font-weight: bold;
+}
+
+tr.greyarea th {
+    background-color: gray;
+    color: white;
+}
+th.seat{
+    padding-left: 100px;
+}
+th.ticket_type{
+    padding-left: 20px;
+}
+td.ticket_name{
+    padding-left: 20px;
+}
+td.price_total {
+    text-align: right;
+    color: #888;
+    font-weight: 300;
+    padding-right: 20px;
+}
+td.price_count span{
+    text-align: right;
+    padding-left: 150px;
+}
+
+.cart_ticket_list_subtable_with_seat tr {
+    color: #888;
+    font-weight: 300;
+}
+.seat_detail_group{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+li.seat-info{
+    padding-left: 90px;
+}
+
+th.price {
+    text-align: right;
+    padding-right: 20px;
+}
+th.total{
+    padding-left: 20px;
+    font-weight: bold;
+}
+td.tfoot_price_total {
+    text-align: right;
+    padding-right: 20px;
+}
+
 @media only screen and (max-device-width:768px) {
     .section_wrap {
         max-width: 960px;
     }
-    .title{
+
+    .title {
         text-align: center;
     }
-    
-    .pages{
-        display: flex;
-        flex-direction: column;
-        padding-top: 50px;
-        align-items: center;
-    }
+
 }

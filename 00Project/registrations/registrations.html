@@ -99,40 +99,122 @@
                 </div>
                 <button class="btn_cancel btn" id="btn_cancel">取消購票</button>
                 <div class="order_details">
-                    <table class="table data-list cart-ticket-list">
+                    <table class="ticket_table_data_list table cart-ticket-list">
                         <thead>
-                            <tr>
+                            <tr class="greyarea">
                                 <th class="ticket_type">票種</th>
-                                <th class="ticket_price">金額</th>
+                                <th class="seat">座位</th>
+                                <th class="price ">金額</th>
                             </tr>
                         </thead>
-                        <!-- item in order.items -->
-                        <tbody class="in_order_items">
+                        <tbody class="item_in_order">
                             <tr>
-                                <td class="type_name">預售票</td>
-                                <td class="ticket_data">
-                                    <table class="cart-ticket-list-subtable">
+                                <td class="ticket_name">全票</td>
+                                <td class="ticket-data">
+                                    <table class="seat_detail_group cart_ticket_list_subtable_with_seat">
                                         <tbody>
                                             <tr>
-                                                <td class="price_count ">
-                                                    <span class="price_count">TWD$1,000</span> x 1
+                                                <td class="seat_details">
+                                                    <ul>
+                                                        <li class="seat-info">B2 區 17 排 8 號</li>
+                                                    </ul>
                                                 </td>
-                                                <td class="price">
-                                                    TWD$1,000
+                                            </tr>
+                                        </tbody>
+                                        <tbody class="price_group">
+                                            <tr>
+                                                <td class="price_count">
+                                                    <span class="seat_price">TWD$3,680</span> x 1
                                                 </td>
                                             </tr>
                                         </tbody>
                                     </table>
                                 </td>
+                                <td class="price_total ">TWD$3,680</td>
                             </tr>
                         </tbody>
                         <tfoot>
                             <tr class="highlight">
-                                <th class="price_total">總金額</th>
-                                <td class="align-right total">TWD$1,000</td>
+                                <th class="total">總金額</th>
+                                <td></td>
+                                <td class="tfoot_price_total">TWD$3,680</td>
                             </tr>
                         </tfoot>
                     </table>
+                </div>
+                <div class="registration_info">
+                    <div class="contact-info" >
+                        <div class="clearfix ng-isolate-scope" data-contact-fields="fields" data-contact-model="contact"
+                            data-errors-model="errors" data-order-model="order" data-hide-header="false"
+                            data-editing="formEditing" contact-editor="">
+                            <h4 ng-hide="hideHeader" class="ng-binding">
+                                聯絡人資料
+                            </h4>
+                            <div id="field_text_869774" class="control-group text" ng-repeat="field in contactFields"
+                                ng-hide="field.field_type == 'html' &amp;&amp; !editing">
+                                <label class="control-label ng-binding" ng-hide="field.field_type == 'html'">
+                                    <abbr ng-show="editing &amp;&amp; field.is_required" title="required">*</abbr>
+                                    姓名
+                                </label>
+
+
+                                <div class="controls form-inline ng-scope" ng-if="editing" ng-switch="field.field_type">
+ 
+                                    <div ng-switch-default="" class="ng-scope">
+                                        <input type="text" ng-model="contactModel[field.field_key]"
+                                            name="contact[field_text_869774]"
+                                            class="col-6 ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-maxlength"
+                                            maxlength="1024">
+                                    </div>
+                                    <span class="formError ng-binding ng-hide"
+                                        ng-show="errorsModel[field.field_key]"></span>
+                                </div>
+                            </div>
+                            <div id="field_email_869775" class="control-group email" ng-repeat="field in contactFields"
+                                ng-hide="field.field_type == 'html' &amp;&amp; !editing">
+                                <label class="control-label ng-binding" ng-hide="field.field_type == 'html'">
+                                    <abbr ng-show="editing &amp;&amp; field.is_required" title="required">*</abbr>
+                                    Email
+                                </label>
+                                <div class="controls form-inline ng-scope" ng-if="editing" ng-switch="field.field_type">
+
+                                    <div ng-switch-when="email" class="ng-scope">
+                                        <input type="text" email-suggestion="" ng-model="contactModel[field.field_key]"
+                                            name="contact[field_email_869775]"
+                                            class="col-6 ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-maxlength"
+                                            maxlength="1024">
+                                        <!-- ngIf: isEmailSuggested -->
+                                    </div><!-- end ngSwitchWhen: -->
+
+                                    <!-- ngSwitchWhen: idnumber -->
+
+                                    <!-- ngSwitchDefault: -->
+                                    <span class="formError ng-binding ng-hide"
+                                        ng-show="errorsModel[field.field_key]"></span>
+                                </div><!-- end ngIf: editing -->
+                            </div><!-- end ngRepeat: field in contactFields -->
+                            <div id="field_text_869776" class="control-group text" ng-repeat="field in contactFields"
+                                ng-hide="field.field_type == 'html' &amp;&amp; !editing">
+                                <label class="control-label ng-binding" ng-hide="field.field_type == 'html'">
+                                    <abbr ng-show="editing &amp;&amp; field.is_required" title="required">*</abbr>
+                                    手機
+                                </label>
+
+
+                                <div class="controls form-inline ng-scope" ng-if="editing" ng-switch="field.field_type">
+
+                                    <div ng-switch-default="" class="ng-scope">
+                                        <input type="text" ng-model="contactModel[field.field_key]"
+                                            name="contact[field_text_869776]"
+                                            class="col-6 ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-maxlength"
+                                            maxlength="1024">
+                                    </div><!-- end ngSwitchWhen: -->
+                                    <span class="formError ng-binding ng-hide"
+                                        ng-show="errorsModel[field.field_key]"></span>
+                                </div><!-- end ngIf: editing -->
+                            </div><!-- end ngRepeat: field in contactFields -->
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
