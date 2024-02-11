@@ -13,11 +13,13 @@ body {
     font-family: "Helvetica Neue", Arial, "Heiti TC", "Apple LiGothic Medium", "新微軟正黑體", "微軟正黑體", sans-serif;
     font-size: 15px;
     color: #333333;
+    background-color: #f1f1f18b;
 }
 
 /* main Body */
 .count_down_group {
     background-color: rgb(240, 240, 240);
+    padding: 10px;
 }
 
 .main_wrap {
@@ -37,12 +39,19 @@ body {
     text-align: center;
     justify-content: center;
     width: 75%;
+    min-width: 633px;
 }
 
 h2 {
     font-weight: 500;
     font-size: 24px;
     margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 p {
@@ -52,6 +61,15 @@ p {
     line-height: 1;
     color: #888;
     font-size: 15px;
+}
+
+label {
+    font-weight: bold;
+    padding: 8px 0;
+}
+
+.control-group {
+    margin-bottom: 15px;
 }
 
 .event_detail_collapse {
@@ -122,7 +140,6 @@ p {
 .step {
     text-align: center;
     background-color: rgb(240, 240, 240);
-    /* padding-right: 35px; */
     display: flex;
     align-items: center;
     border-radius: 50px;
@@ -144,7 +161,6 @@ p.step_text {
 
 .number {
     margin-left: 10px;
-    width: 20px;
     border-radius: 100%;
     line-height: 2;
     width: 30px;
@@ -173,10 +189,10 @@ p.step_text {
     content: '';
     position: absolute;
     height: 6px;
-    width: 50px;
+    width: 67%;
     background-color: rgb(184, 179, 179);
-    left: 193px;
-    bottom: 22px;
+    left: 100%;
+    bottom: 43%;
     z-index: -1;
 }
 
@@ -184,10 +200,10 @@ p.step_text {
     content: '';
     position: absolute;
     height: 6px;
-    width: 50px;
+    width: 67%;
     background-color: hsla(0, 3%, 71%, 0.5);
-    left: 193px;
-    bottom: 22px;
+    left: 100%;
+    bottom: 43%;
     z-index: -1;
 }
 
@@ -204,10 +220,13 @@ p.step_text {
 .display p {
     color: white;
 }
-.order_details{
+
+.order_details {
     padding-top: 20px;
     padding-bottom: 20px;
+    min-width: 965px;
 }
+
 .order_details ul {
     list-style: none;
 }
@@ -218,10 +237,11 @@ p.step_text {
     color: #333333;
 }
 
-.highlight th{
+.highlight th {
     background-color: hsla(60, 100%, 50%, 0.104);
 }
-.highlight td{
+
+.highlight td {
     background-color: hsla(60, 100%, 50%, 0.104);
 }
 
@@ -229,26 +249,31 @@ p.step_text {
     font-weight: bold;
 }
 
-tr.greyarea th {
+tr.gray_block th {
     background-color: gray;
     color: white;
 }
-th.seat{
+
+th.seat {
     padding-left: 100px;
 }
-th.ticket_type{
+
+th.ticket_type {
     padding-left: 20px;
 }
-td.ticket_name{
+
+td.ticket_name {
     padding-left: 20px;
 }
+
 td.price_total {
     text-align: right;
     color: #888;
     font-weight: 300;
     padding-right: 20px;
 }
-td.price_count span{
+
+td.price_count span {
     text-align: right;
     padding-left: 150px;
 }
@@ -257,11 +282,13 @@ td.price_count span{
     color: #888;
     font-weight: 300;
 }
-.seat_detail_group{
+
+.seat_detail_group {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
-li.seat-info{
+
+li.seat-info {
     padding-left: 90px;
 }
 
@@ -269,22 +296,226 @@ th.price {
     text-align: right;
     padding-right: 20px;
 }
-th.total{
+
+th.total {
     padding-left: 20px;
     font-weight: bold;
 }
+
 td.tfoot_price_total {
     text-align: right;
     padding-right: 20px;
 }
 
+abbr {
+    color: #c07525;
+}
+
+.contact_info {
+    background: #fff;
+    border-left: #00aed6 40px solid;
+    padding: 15px 15px 5px;
+    position: relative;
+    padding-bottom: 30px
+}
+
+.contact_info:before {
+    content: '\f007';
+    font-family: 'FontAwesome';
+    font-weight: normal;
+    color: #fff;
+    /* color: #333333; */
+    position: absolute;
+    display: block;
+    width: 40px;
+    text-align: center;
+    top: 50%;
+    left: -40px;
+    font-size: 26px;
+    margin-top: -17px
+}
+
+.registration_info {
+    padding-bottom: 20px;
+}
+
+.control-group label {
+    cursor: pointer;
+}
+
+.btn_save {
+    display: flex;
+    justify-content: center;
+    padding: 11px 70px;
+    min-width: 263px;
+}
+
+.section_wrap {
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+}
+
 @media only screen and (max-device-width:768px) {
+    body{
+        position: relative;
+    }
     .section_wrap {
         max-width: 960px;
     }
 
     .title {
         text-align: center;
+        line-height: 1.5;
+    }
+    .btn_save{
+        width: 100%;
+        min-width: 100px;
+    }
+    .btn_save button{
+        width: 466px;
+        display: inline-block;
+        position: fixed;
+        left: -27px;
+        bottom: 514px;
+        z-index: 2;
+    }
+
+}
+
+@media only screen and (max-device-width:1200px) {
+
+    /* -------progress bar--------- */
+    .progress_container {
+        margin: 0;
+        padding: 20px 0;
+    }
+
+    .step_progress_bar {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0px;
+    }
+
+    .step {
+        border: none;
+        padding: 10px 0px;
+        border-radius: 0px;
+    }
+
+    .step:first-child {
+        border-radius: 10px 10px 0 0;
+    }
+
+    .step:last-child {
+        border-radius: 0 0 10px 10px;
+    }
+
+    p.step_text {
+        margin-top: 10px;
+        color: rgb(85, 212, 104);
+        line-height: 0;
+        /* width: 100%; */
+        font-weight: bold;
+        text-align: left;
+        padding-left: 8px;
+    }
+
+    .number {
+        margin-left: 10px;
+        border-radius: 100%;
+        border: 1px solid rgb(85, 212, 104);
+        background-color: white;
+        color: #333333;
+    }
+
+    .step.progressing {
+        border: none;
+    }
+
+    .step.progressing::after {
+        display: none;
+    }
+
+    .step.display::after {
+        display: none;
+    }
+
+    /* -------------order details---------------- */
+    table.cart-ticket-list,
+    table.cart-ticket-list>thead,
+    table.cart-ticket-list>tbody,
+    table.cart-ticket-list>tfoot,
+    table.cart-ticket-list>*>tr {
+        display: block;
+        width: 70%;
+        overflow: hidden;
+        align-items: center;
+    }
+
+    /* table.cart-ticket-list thead th,
+    table.cart-ticket-list tfoot th,
+    table.cart-ticket-list tfoot td {
+        display: block;
+        width: 50%;
+        float: left
+    } */
+    .order_details>*{
+        width: 10%;
+    }
+    .gray_block th {
+        /* display: flex;
+        flex-direction: column; */
+        background-color: ;
+    }
+    
+
+    th.seat {
+        display: none;
+        visibility: hidden;
+    }
+
+    th.ticket_type {
+        padding-left: 20px;
+    }
+
+    td.ticket_name {
+        padding-left: 20px;
+        width: 100%;
+        display: block;
+        background-color: hsla(0, 0%, 53%, 0.2);
+    }
+
+    td.price_total {
+        padding-right: 20px;
+    }
+
+    td.price_count span {
+        padding-left: 20px;
+    }
+
+    .seat_detail_group {
+        display: flex;
+
+    }
+
+    li.seat-info {
+        padding-left: 20px;
+    }
+
+    th.price {
+        padding-right: 20px;
+    }
+
+    th.total {
+        padding-left: 20px;
+        font-weight: bold;
+    }
+
+    td.tfoot_price_total {
+        text-align: right;
+        padding-right: 20px;
     }
 
 }

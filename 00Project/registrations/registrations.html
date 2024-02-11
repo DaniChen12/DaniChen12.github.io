@@ -20,7 +20,7 @@
                 您的訂單已保留，請在 10:00 內完成填寫資料並確認訂單。若超過時限，系統將自動取消。
             </div>
         </div>
-        <div class="main_event main_wrap">
+        <div class="main_event">
             <div class="title main_wrap">
                 <h2>【ALTA】theLOOP presents : PSY.P 臺灣個人巡演預熱戰</h2>
             </div>
@@ -101,7 +101,7 @@
                 <div class="order_details">
                     <table class="ticket_table_data_list table cart-ticket-list">
                         <thead>
-                            <tr class="greyarea">
+                            <tr class="gray_block">
                                 <th class="ticket_type">票種</th>
                                 <th class="seat">座位</th>
                                 <th class="price ">金額</th>
@@ -124,13 +124,13 @@
                                         <tbody class="price_group">
                                             <tr>
                                                 <td class="price_count">
-                                                    <span class="seat_price">TWD$3,680</span> x 1
+                                                    <span class="seat_price">TWD $3,680</span> x 1
                                                 </td>
                                             </tr>
                                         </tbody>
                                     </table>
                                 </td>
-                                <td class="price_total ">TWD$3,680</td>
+                                <td class="price_total ">TWD $3,680</td>
                             </tr>
                         </tbody>
                         <tfoot>
@@ -143,77 +143,66 @@
                     </table>
                 </div>
                 <div class="registration_info">
-                    <div class="contact-info" >
-                        <div class="clearfix ng-isolate-scope" data-contact-fields="fields" data-contact-model="contact"
-                            data-errors-model="errors" data-order-model="order" data-hide-header="false"
-                            data-editing="formEditing" contact-editor="">
-                            <h4 ng-hide="hideHeader" class="ng-binding">
-                                聯絡人資料
-                            </h4>
-                            <div id="field_text_869774" class="control-group text" ng-repeat="field in contactFields"
-                                ng-hide="field.field_type == 'html' &amp;&amp; !editing">
-                                <label class="control-label ng-binding" ng-hide="field.field_type == 'html'">
-                                    <abbr ng-show="editing &amp;&amp; field.is_required" title="required">*</abbr>
+                    <div class="contact_info">
+                        <div class="contact_name">
+                            <h3 class="contact_title">聯絡人資料</h3>
+                            <div id="label_name" class="control-group name">
+                                <label class="control-label ">
+                                    <abbr title="required">*</abbr>
                                     姓名
                                 </label>
-
-
-                                <div class="controls form-inline ng-scope" ng-if="editing" ng-switch="field.field_type">
- 
-                                    <div ng-switch-default="" class="ng-scope">
-                                        <input type="text" ng-model="contactModel[field.field_key]"
-                                            name="contact[field_text_869774]"
-                                            class="col-6 ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-maxlength"
-                                            maxlength="1024">
+                                <div class="controls form-inline">
+                                    <div>
+                                        <input type="text" id="contact_name" name="contact_name"
+                                            class="contact_name col-6" maxlength="1024">
                                     </div>
-                                    <span class="formError ng-binding ng-hide"
-                                        ng-show="errorsModel[field.field_key]"></span>
+                                    <span class="formError" aria-hidden="true"></span>
                                 </div>
                             </div>
-                            <div id="field_email_869775" class="control-group email" ng-repeat="field in contactFields"
-                                ng-hide="field.field_type == 'html' &amp;&amp; !editing">
-                                <label class="control-label ng-binding" ng-hide="field.field_type == 'html'">
-                                    <abbr ng-show="editing &amp;&amp; field.is_required" title="required">*</abbr>
+                            <div id="label_email" class="control-group email">
+                                <label class="control-label">
+                                    <abbr title="required">*</abbr>
                                     Email
                                 </label>
-                                <div class="controls form-inline ng-scope" ng-if="editing" ng-switch="field.field_type">
-
-                                    <div ng-switch-when="email" class="ng-scope">
-                                        <input type="text" email-suggestion="" ng-model="contactModel[field.field_key]"
-                                            name="contact[field_email_869775]"
-                                            class="col-6 ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-maxlength"
-                                            maxlength="1024">
-                                        <!-- ngIf: isEmailSuggested -->
-                                    </div><!-- end ngSwitchWhen: -->
-
-                                    <!-- ngSwitchWhen: idnumber -->
-
-                                    <!-- ngSwitchDefault: -->
-                                    <span class="formError ng-binding ng-hide"
-                                        ng-show="errorsModel[field.field_key]"></span>
-                                </div><!-- end ngIf: editing -->
-                            </div><!-- end ngRepeat: field in contactFields -->
-                            <div id="field_text_869776" class="control-group text" ng-repeat="field in contactFields"
-                                ng-hide="field.field_type == 'html' &amp;&amp; !editing">
-                                <label class="control-label ng-binding" ng-hide="field.field_type == 'html'">
-                                    <abbr ng-show="editing &amp;&amp; field.is_required" title="required">*</abbr>
+                                <div class="controls form-inline">
+                                    <div class="contact_email">
+                                        <input type="text" id="contact_email" email-suggestion="" name="contact_email"
+                                            class="contact_email col-6" maxlength="1024">
+                                    </div>
+                                    <span class="formError" aria-hidden="true"></span>
+                                </div>
+                            </div>
+                            <div id="label_tel" class="control-group">
+                                <label class="control-label">
+                                    <abbr title="required">*</abbr>
                                     手機
                                 </label>
-
-
-                                <div class="controls form-inline ng-scope" ng-if="editing" ng-switch="field.field_type">
-
-                                    <div ng-switch-default="" class="ng-scope">
-                                        <input type="text" ng-model="contactModel[field.field_key]"
-                                            name="contact[field_text_869776]"
-                                            class="col-6 ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-maxlength"
+                                <div class="controls form-inline">
+                                    <div class="ng-scope">
+                                        <input type="text" id="contact_tel" name="contact_tel" class="contact_tel col-6"
                                             maxlength="1024">
-                                    </div><!-- end ngSwitchWhen: -->
-                                    <span class="formError ng-binding ng-hide"
-                                        ng-show="errorsModel[field.field_key]"></span>
-                                </div><!-- end ngIf: editing -->
-                            </div><!-- end ngRepeat: field in contactFields -->
+                                    </div>
+                                    <span class="formError" aria-hidden="true"></span>
+                                </div>
+                            </div>
                         </div>
+                    </div>
+                </div>
+                <div class="additional_info">
+                    <div class="control-group">
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="additional_check" class="additional_check">
+                            在公開頁面顯示您參加了本活動
+                            <i class="fa fa-info-circle fa-last" rel="tooltip"
+                                title="勾選後，可以讓別人從活動頁或您的個人頁面上得知您參加了這個活動。"></i>
+                        </label>
+                    </div>
+                </div>
+                <div class="save_group control-group">
+                    <div class="btn_save">
+                        <button type="button" class="btn btn_save" id="btn_save"
+                            style="background-color:var(--main-color);color: white;border:none;">確認表單資料
+                        </button>
                     </div>
                 </div>
             </div>
