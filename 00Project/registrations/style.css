@@ -167,10 +167,9 @@ p.step_text{
     z-index: -1;
 }
 .display{
-    color:rgb(85, 212, 104);
-    border: 3px solid var(--main-color-hover);
-    background-color:rgb(85, 212, 104);
-    opacity: 50%;
+    color:hsl(129, 60%, 80%);
+    border: 3px solid hsl(147, 22%, 80%);
+    background-color:hsl(129, 60%, 80%);
 }
 .display .number{
     color:rgb(85, 212, 104);
