@@ -79,11 +79,11 @@
                 </div>
                 <div class="progress_container">
                     <div class="step_progress_bar" id="step_progress_bar">
-                        <span class="step display">
+                        <span class="step disabled">
                             <span class="number ">1</span>
                             <p class="step_text">選擇票種</p>
                         </span>
-                        <span class="step display">
+                        <span class="step disabled">
                             <span class="number ">2</span>
                             <p class="step_text">劃位</p>
                         </span>
@@ -144,7 +144,7 @@
                 </div>
                 <div class="registration_info">
                     <div class="contact_info">
-                        <div class="contact_name">
+                        <div class=" input-group-sm">
                             <h3 class="contact_title">聯絡人資料</h3>
                             <div id="label_name" class="control-group name">
                                 <label class="control-label ">
@@ -152,9 +152,9 @@
                                     姓名
                                 </label>
                                 <div class="controls form-inline">
-                                    <div>
+                                    <div class="input-group-sm">
                                         <input type="text" id="contact_name" name="contact_name"
-                                            class="contact_name col-6" maxlength="1024">
+                                            class="contact_name form-control" maxlength="1024">
                                     </div>
                                     <span class="formError" aria-hidden="true"></span>
                                 </div>
@@ -165,9 +165,9 @@
                                     Email
                                 </label>
                                 <div class="controls form-inline">
-                                    <div class="contact_email">
-                                        <input type="text" id="contact_email" email-suggestion="" name="contact_email"
-                                            class="contact_email col-6" maxlength="1024">
+                                    <div class="input-group-sm">
+                                        <input type="text" id="contact_email" email-suggestion="1234@gmail.com" name="contact_email"
+                                            class="contact_email form-control " maxlength="1024">
                                     </div>
                                     <span class="formError" aria-hidden="true"></span>
                                 </div>
@@ -178,8 +178,8 @@
                                     手機
                                 </label>
                                 <div class="controls form-inline">
-                                    <div class="ng-scope">
-                                        <input type="text" id="contact_tel" name="contact_tel" class="contact_tel col-6"
+                                    <div class="input-group-sm">
+                                        <input type="text" id="contact_tel" name="contact_tel" class="contact_tel form-control"
                                             maxlength="1024">
                                     </div>
                                     <span class="formError" aria-hidden="true"></span>
@@ -198,13 +198,14 @@
                         </label>
                     </div>
                 </div>
-                <div class="save_group control-group">
-                    <div class="btn_save">
-                        <button type="button" class="btn btn_save" id="btn_save"
-                            style="background-color:var(--main-color);color: white;border:none;">確認表單資料
-                        </button>
-                    </div>
-                </div>
+            </div>
+            
+        </div>
+        <div class="save_group control-group">
+            <div class="btn_save">
+                <button type="button" class="btn btn_save" id="btn_save"
+                    style="background-color:var(--main-color);color: white;border:none;">確認表單資料
+                </button>
             </div>
         </div>
 

@@ -39,7 +39,7 @@ body {
     text-align: center;
     justify-content: center;
     width: 75%;
-    min-width: 633px;
+    /* min-width: 633px; */
 }
 
 h2 {
@@ -196,7 +196,7 @@ p.step_text {
     z-index: -1;
 }
 
-.step.display::after {
+.step.disabled::after {
     content: '';
     position: absolute;
     height: 6px;
@@ -207,24 +207,23 @@ p.step_text {
     z-index: -1;
 }
 
-.display {
+.disabled {
     color: hsl(129, 60%, 80%);
     border: 3px solid hsl(147, 22%, 80%);
     background-color: hsl(129, 60%, 80%);
 }
 
-.display .number {
+.disabled .number {
     color: rgb(85, 212, 104);
 }
 
-.display p {
+.disabled p {
     color: white;
 }
 
 .order_details {
     padding-top: 20px;
     padding-bottom: 20px;
-    min-width: 965px;
 }
 
 .order_details ul {
@@ -307,6 +306,10 @@ td.tfoot_price_total {
     padding-right: 20px;
 }
 
+.contact_info input {
+    width: 50%;
+}
+
 abbr {
     color: #c07525;
 }
@@ -347,7 +350,10 @@ abbr {
     display: flex;
     justify-content: center;
     padding: 11px 70px;
-    min-width: 263px;
+}
+
+button.btn_save {
+    min-width: 293px;
 }
 
 .section_wrap {
@@ -357,38 +363,62 @@ abbr {
 }
 
 @media only screen and (max-device-width:768px) {
-    body{
+    body {
         position: relative;
     }
+
     .section_wrap {
         max-width: 960px;
     }
+
+    th.seat {
+        border-collapse: collapse;
+    }
+
+}
+
+@media only screen and (max-device-width:1000px) {
 
     .title {
         text-align: center;
         line-height: 1.5;
     }
-    .btn_save{
+
+    .contact_info input {
         width: 100%;
-        min-width: 100px;
     }
-    .btn_save button{
-        width: 466px;
+
+    .count_down_timer {
+        width: 100%;
+        max-width: 1070px;
+        line-height: 1.5;
+        flex-wrap: wrap;
+        align-content: center;
+        padding: 40px 20px;
+        min-width: 254px;
+    }
+
+    /* -------save button--------- */
+    .btn_save {
+        width: 100%;
+    }
+
+    button#btn_save {
+        width: 100%;
         display: inline-block;
-        position: fixed;
-        left: -27px;
-        bottom: 514px;
-        z-index: 2;
+        position: sticky;
+        font-size: 1.2rem;
     }
-
-}
-
-@media only screen and (max-device-width:1200px) {
 
     /* -------progress bar--------- */
     .progress_container {
         margin: 0;
         padding: 20px 0;
+    }
+
+    .registration_info {
+        width: 100%;
+        min-width: 210px;
     }
 
     .step_progress_bar {
@@ -438,12 +468,12 @@ abbr {
         display: none;
     }
 
-    .step.display::after {
+    .step.disabled::after {
         display: none;
     }
 
     /* -------------order details---------------- */
-    table.cart-ticket-list,
+    /* table.cart-ticket-list,
     table.cart-ticket-list>thead,
     table.cart-ticket-list>tbody,
     table.cart-ticket-list>tfoot,
@@ -452,32 +482,20 @@ abbr {
         width: 70%;
         overflow: hidden;
         align-items: center;
-    }
-
-    /* table.cart-ticket-list thead th,
-    table.cart-ticket-list tfoot th,
-    table.cart-ticket-list tfoot td {
-        display: block;
-        width: 50%;
-        float: left
     } */
-    .order_details>*{
+
+    /* .order_details>*{
         width: 10%;
-    }
+    } */
     .gray_block th {
         /* display: flex;
         flex-direction: column; */
     }
-    
 
     th.seat {
-        display: none;
-        visibility: hidden;
+        padding-left: 55px;
     }
 
-    th.ticket_type {
-        padding-left: 20px;
-    }
 
     td.ticket_name {
         padding-left: 20px;
@@ -486,35 +504,16 @@ abbr {
         background-color: hsla(0, 0%, 53%, 0.2);
     }
 
-    td.price_total {
-        padding-right: 20px;
-    }
-
     td.price_count span {
-        padding-left: 20px;
+        padding-left: 50px;
     }
 
     .seat_detail_group {
         display: flex;
-
     }
 
     li.seat-info {
-        padding-left: 20px;
-    }
-
-    th.price {
-        padding-right: 20px;
-    }
-
-    th.total {
-        padding-left: 20px;
-        font-weight: bold;
-    }
-
-    td.tfoot_price_total {
-        text-align: right;
-        padding-right: 20px;
+        padding-left: 50px;
     }
 
 }
