@@ -346,6 +346,14 @@ abbr {
     cursor: pointer;
 }
 
+span.formError {
+    color: #c07525;
+}
+
+.input-group-sm {
+    padding-bottom: 8px;
+}
+
 .btn_save {
     display: flex;
     justify-content: center;
@@ -358,24 +366,10 @@ button.btn_save {
 
 .section_wrap {
     width: 100%;
-    max-width: 1400px;
+    max-width: 1200px;
     margin: auto;
 }
 
-@media only screen and (max-device-width:768px) {
-    body {
-        position: relative;
-    }
-
-    .section_wrap {
-        max-width: 960px;
-    }
-
-    th.seat {
-        border-collapse: collapse;
-    }
-
-}
 
 @media only screen and (max-device-width:1000px) {
 
@@ -406,8 +400,14 @@ button.btn_save {
     button#btn_save {
         width: 100%;
         display: inline-block;
-        position: sticky;
         font-size: 1.2rem;
+        position: fixed;
+        bottom: 0%;
+        border-radius: 0px;
+    }
+
+    .save_group {
+        padding-top: 20px;
     }
 
     /* -------progress bar--------- */
@@ -473,25 +473,6 @@ button.btn_save {
     }
 
     /* -------------order details---------------- */
-    /* table.cart-ticket-list,
-    table.cart-ticket-list>thead,
-    table.cart-ticket-list>tbody,
-    table.cart-ticket-list>tfoot,
-    table.cart-ticket-list>*>tr {
-        display: block;
-        width: 70%;
-        overflow: hidden;
-        align-items: center;
-    } */
-
-    /* .order_details>*{
-        width: 10%;
-    } */
-    .gray_block th {
-        /* display: flex;
-        flex-direction: column; */
-    }
-
     th.seat {
         padding-left: 55px;
     }
@@ -516,4 +497,85 @@ button.btn_save {
         padding-left: 50px;
     }
 
+}
+
+@media only screen and (max-device-width:768px) {
+    body {
+        position: relative;
+    }
+
+    .section_wrap {
+        max-width: 960px;
+    }
+    th,td{
+        display: table-cell;
+        vertical-align: middle;
+        padding: 8px
+    }
+    th.seat {
+        display: none
+    }
+    table {
+        display: table;
+        width: 100%
+    }
+
+    td.price_total,
+    td.ticket_name,
+    li.seat-info,
+    td.price_count,
+    td.ticket-data,
+    tr.gray_block{
+        display: block;
+    }
+    td.price-count,
+    td.price-total{
+        width: 50%;
+    }
+
+    .ticket_name {
+        background: #eee;
+        width: 100%
+    }
+
+    table.ticket_table_data_list tr {
+        display: block;
+        width: 100%;
+        overflow: hidden
+    }
+
+    .highlight td:nth-last-of-type(2) {
+        display: none;
+    }
+    td.price_count,
+    td.price_total{
+        border-top: #ddd 1px solid  ;
+    }
+    tbody{
+        width: 100%;
+        display: table-row-group;
+    }
+    .ticket-data td{
+        padding: 10px 0;
+    }
+    li.seat-info {
+        padding-left: 10px;
+    }
+    td.price_count span{
+        text-align: left;
+        padding-left:10px;
+    }
+    th.total,
+    td.tfoot_price_total {
+        width: 10%;
+        display: table-cell;
+    }
+    .seat_detail_group {
+        display: flex;
+        flex-direction: column;
+    }
+    th.price,th.ticket_type{
+        width: 10%;
+        display: table-cell;
+    }
 }
