@@ -1,6 +1,10 @@
 :root {
-    --main-color: #1d5545;
-    --main-color-hover: #77A88D;
+    --main-color: #3b7555;
+    --main-color-hover: #3b7555;
+    --main-font-size: 15px;
+    --common-border: 1px #ddd solid;
+    --function-color-hover: #518f6d;
+    --button-clicked-color: #1d5545;
 }
 
 * {
@@ -147,9 +151,6 @@ select#sex {
     flex-direction: column;
 }
 
-/* #birthday{
-    cursor: pointer;
-} */
 .option-group div+div {
     margin-top: 10px;
 }
@@ -162,7 +163,9 @@ select:focus {
     outline: none;
     border: 1px solid #e0e0e0;
 }
-
+.option-group ul{
+    list-style: none;
+}
 .option-group li {
     display: flex;
     text-decoration: none;
@@ -263,7 +266,7 @@ div.border {
     margin: auto;
 }
 
-@media only screen and (max-device-width:768px) {
+@media screen and (max-width:768px) {
     .wrap {
         max-width: 960px;
     }

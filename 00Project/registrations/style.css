@@ -1,6 +1,10 @@
 :root {
-    --main-color: #1d5545;
-    --main-color-hover: #77A88D;
+    --main-color: #3b7555;
+    --main-color-hover: #3b7555;
+    --main-font-size: 15px;
+    --common-border: 1px #ddd solid;
+    --function-color-hover: #518f6d;
+    --button-clicked-color: #1d5545;
 }
 
 * {
@@ -38,8 +42,7 @@ body {
     margin: auto;
     text-align: center;
     justify-content: center;
-    width: 75%;
-    /* min-width: 633px; */
+    width:75%;
 }
 
 h2 {
@@ -87,7 +90,7 @@ label {
 }
 
 .collapse a {
-    color: rgb(85, 212, 104);
+    color: var(--main-color);
     text-decoration: none;
 }
 
@@ -114,14 +117,13 @@ label {
 }
 
 .btn_cancel.btn {
-    border: 1px solid #FAFAFA;
     box-shadow: 0px 0px 2px 1px rgb(184, 179, 179);
     margin-right: 5px;
-    color: var(--main-color);
+    color: #333333;
 }
 
 .btn:hover {
-    color: rgb(85, 212, 104);
+    background-color: #ddd;
 }
 
 .progress_container {
@@ -150,7 +152,7 @@ label {
 
 p.step_text {
     margin-top: 10px;
-    color: rgb(85, 212, 104);
+    color: var(--main-color);
     line-height: 2;
     width: 150px;
     vertical-align: bottom;
@@ -164,17 +166,17 @@ p.step_text {
     border-radius: 100%;
     line-height: 2;
     width: 30px;
-    border: 1px solid rgb(85, 212, 104);
+    border: 1px solid var(--function-color-hover);
     background-color: white;
-    color: #333333;
+    color: var(--button-clicked-color);
     display: inline-block;
     transition: background-color 500ms;
 }
 
 .step.progressing {
-    color: rgb(85, 212, 104);
-    background-color: rgb(85, 212, 104);
-    border: 3px solid var(--main-color-hover);
+    color: var(--main-color);
+    background-color: var(--main-color);
+    border: 3px solid var(--button-clicked-color);
 }
 
 .step.progressing p {
@@ -182,7 +184,7 @@ p.step_text {
 }
 
 .step.progressing span {
-    color: rgb(85, 212, 104);
+    color: var(--function-color-hover);
 }
 
 .step.progressing::after {
@@ -208,17 +210,19 @@ p.step_text {
 }
 
 .disabled {
-    color: hsl(129, 60%, 80%);
-    border: 3px solid hsl(147, 22%, 80%);
-    background-color: hsl(129, 60%, 80%);
+    color:#FBFBFB;
+    border: 3px solid hsl(162, 17%, 50%);
+    background-color: hsl(148, 17%, 60%);
 }
 
 .disabled .number {
-    color: rgb(85, 212, 104);
+    color: var(--function-color-hover);
 }
 
 .disabled p {
     color: white;
+    font-weight: 400;
+
 }
 
 .order_details {
@@ -347,7 +351,7 @@ abbr {
 }
 
 span.formError {
-    color: #c07525;
+    color: hsl(31, 68%, 45%);
 }
 
 .input-group-sm {
@@ -371,7 +375,7 @@ button.btn_save {
 }
 
 
-@media only screen and (max-device-width:1000px) {
+@media screen and (max-width:900px) {
 
     .title {
         text-align: center;
@@ -444,9 +448,7 @@ button.btn_save {
 
     p.step_text {
         margin-top: 10px;
-        color: rgb(85, 212, 104);
         line-height: 0;
-        /* width: 100%; */
         font-weight: bold;
         text-align: left;
         padding-left: 8px;
@@ -455,9 +457,9 @@ button.btn_save {
     .number {
         margin-left: 10px;
         border-radius: 100%;
-        border: 1px solid rgb(85, 212, 104);
+        border: 1px solid var(--button-clicked-color);
         background-color: white;
-        color: #333333;
+        color: var(--button-clicked-color);
     }
 
     .step.progressing {
@@ -499,7 +501,7 @@ button.btn_save {
 
 }
 
-@media only screen and (max-device-width:768px) {
+@media screen and (max-width:768px) {
     body {
         position: relative;
     }
