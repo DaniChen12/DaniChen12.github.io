@@ -1,6 +1,10 @@
 :root {
-    --main-color: #1d5545;
-    --main-color-hover: #77A88D;
+    --main-color: #3b7555;
+    --main-color-hover: #3b7555;
+    --main-font-size: 15px;
+    --common-border: 1px #ddd solid;
+    --function-color-hover: #518f6d;
+    --button-clicked-color: #1d5545;
 }
 
 * {
@@ -88,15 +92,18 @@ label {
     font-weight: bold;
     text-align: right;
 }
-label::before{
+/* label::before{
     content: "*";
     position: relative; 
     left: -5px;
     color:#c07525;
+} */
+
+abbr {
+    color: #c07525;
 }
-label::after{
-    content: "";
-}
+
+
 p {
     display: inline-block;
     margin-top: 5px;
@@ -125,7 +132,7 @@ div.border{
     margin: auto;
 }
 
-@media only screen and (max-device-width:768px) {
+@media screen and (max-width:768px) {
     .wrap {
         max-width: 960px;
     }
