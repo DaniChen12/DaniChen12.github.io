@@ -1,6 +1,10 @@
 :root {
-    --main-color: #1d5545;
-    --main-color-hover: #77A88D;
+    --main-color: #3b7555;
+    --main-color-hover: #3b7555;
+    --main-font-size: 15px;
+    --common-border: 1px #ddd solid;
+    --function-color-hover: #518f6d;
+    --button-clicked-color: #1d5545;
 }
 
 * {
@@ -59,13 +63,13 @@ h2 {
 
 h3 {
     font-size: 24px;
-    /* border: 1px solid red; */
     display: block;
 }
 
 #account_prefills{
     display: flex;
     justify-content: space-evenly;
+    gap: 20px;
 }
 
 
@@ -102,7 +106,6 @@ label {
     font-size: 14px;
     font-weight: bold;
     text-align: right;
-    /* max-width: 100%; */
 }
 
 p {
@@ -177,20 +180,27 @@ div.border{
 }
 .wrap {
     width: 100%;
-    max-width: 1400px;
+    max-width: 1200px;
     margin: auto;
 }
-
-@media only screen and (max-device-width:768px) {
-    .wrap {
-        max-width: 960px;
-    }
-    .title{
-        text-align: center;
-    }
+@media screen and (max-width:900px) {
     #account_prefills{
         display: flex;
         flex-direction: column;
+        align-items: center;
+    }
+    .expository{
+        width: 100%;
+        padding-bottom:20px
+    }
+    .gray-wrap p{
+        text-align: left;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .title{
+        text-align: center;
     }
     .form_contaner{
         display: flex;
@@ -210,11 +220,5 @@ div.border{
     }
     .div-wrap{
         display: block;
-    }
-}
-@media only screen and (max-device-width:1200px) {
-    #account_prefills{
-        display: flex;
-        flex-direction: column;
     }
 }
