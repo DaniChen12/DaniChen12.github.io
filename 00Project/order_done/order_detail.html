@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>order_detail_canceled</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://fonts.cdnfonts.com/css/helvetica-neue-5" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/930226d30a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="section_wrap">
+        <div class="main_event_order">
+            <div class="order_statius main_wrap">
+                <div class="register_message">
+                    <div class="display-table-row">
+                        <div class="icon_wrapper order_canceled">
+                            <i class="fa fa-info-circle"></i>
+                        </div>
+                        <div class="message_wrapper">
+                            <h1 class="statius_title">您的訂單已取消。</h1>
+                            <p class="statius_content">您的訂單已取消。如果需要退款，請與 KKTIX 聯絡退款事宜。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="title main_wrap">
+                <h2>【ALTA】theLOOP presents : PSY.P 臺灣個人巡演預熱戰</h2>
+                <a class="event_link" target="_blank" href="#">
+                    <i class="fa fa-external-link fa-front"></i>
+                    活動頁面
+                </a>
+            </div>
+            <div class="event_details main_wrap">
+                <div class="collapse_group">
+                    <p class="d-inline-flex gap-1">
+                        <button class="event_detail_collapse btn" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse-example" aria-expanded="false" aria-controls="collapse-example">
+                            顯示活動詳細資料
+                        </button>
+                    </p>
+                    <table class="show_detail" id="showDetailTable">
+                        <tbody>
+                            <tr>
+                                <th class="start_time">開始時間</th>
+                                <td class="time">
+                                    2024/02/16 22:30 (+0800)
+                                    <a class="is_following binding" href="#" target="_blank" href="#">
+                                        <i class="fa fa-calendar fa-front"></i>
+                                        加入行事曆
+                                    </a>
+                                </td>
+                            </tr>
+                            <!-- location -->
+                            <tr class="">
+                                <th class="event_location">活動地點</th>
+                                <td class="location">
+                                    ALTA NIGHTCLUB / 台中市西屯區青海南街59號
+                                    <a class="is_following binding " target="_blank" href="#">
+                                        <i class="fa fa-map-marker fa-front"></i>
+                                        檢視地圖
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="collapse" id="collapse-example">
+                        <table class="details">
+                            <tbody>
+                                <tr>
+                                    <th class="start_time">開始時間</th>
+                                    <td class="time">
+                                        2024/02/16 22:30 (+0800)
+                                        <a class="is_following binding" href="#" target="_blank" href="#">
+                                            <i class="fa fa-calendar fa-front"></i>
+                                            加入行事曆
+                                        </a>
+                                    </td>
+                                </tr>
+                                <!-- location -->
+                                <tr class="">
+                                    <th class="event_location">活動地點</th>
+                                    <td class="location">
+                                        ALTA NIGHTCLUB / 台中市西屯區青海南街59號
+                                        <a class="is_following binding " target="_blank" href="#">
+                                            <i class="fa fa-map-marker fa-front"></i>
+                                            檢視地圖
+                                        </a>
+                                    </td>
+                                </tr>
+                                <!-- event.co_organizer -->
+                                <tr>
+                                    <th class="co_organizer">主辦單位</th>
+                                    <td class="co_organizer_name">歐達休閒娛樂有限公司</td>
+                                </tr>
+                                <!--  pickup_types -->
+                                <tr class="pickup_types_group">
+                                    <th class="pickup_types">票券種類</th>
+                                    <td class="type_names">台灣全家 FamiPort 取票</td>
+                                </tr>
+                                <!--payment_terms -->
+                                <tr class="payment_terms_group">
+                                    <th class="payment_terms">付款方式</th>
+                                    <td class="payment_names">
+                                        ATM 虛擬帳號、信用卡
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="order_number ">
+                    <h2>訂單編號 : #135502876</h2>
+                </div>
+                <div class="collapse_group">
+                    <p class="d-inline-flex gap-1">
+                        <button class="event_detail_collapse btn" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse-example" aria-expanded="false" aria-controls="collapse-example">
+                            顯示訂單詳細資料
+                        </button>
+                    </p>
+                    <div class="order_detail_collapse" id="collapse-example">
+                        <table class="order_detail">
+                            <tbody id="ticket-info-list" ng-controller="OrderItemListCtrl" class="">
+                                <tr>
+                                    <th class="ticket_type">票券</th>
+                                    <td colspan="2" class="ticket_wrapper_td">
+                                        <table class="cart-ticket-list">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="ticket_name ">全票</td>
+                                                    <td class="ticket-data" colspan="2">
+                                                        <table class="cart-ticket-list-subtable with-seat">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>
+                                                                        <ul>
+                                                                            <li class="seat">
+                                                                                B2 區 16 排 4 號
+                                                                            </li>
+                                                                        </ul>
+                                                                    </td>
+                                                                    <td class="price_count ">
+                                                                        <span class="price">TWD$3,680</span> x 1
+                                                                    </td>
+                                                                    <td class="price_total ">TWD$3,680</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tbody class="pickup-and-payment-block">
+                                <tr class="pickup_type">
+                                    <th class="pickup_type">票券種類</th>
+                                    <td colspan="2">
+                                        <div class="purchase-options">
+                                            <div class="data-body">
+                                                <div class="pickup ">
+                                                    台灣全家 FamiPort 取票
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="payment_method">
+                                    <th class="payment">付款方式</th>
+                                    <td class="" colspan="2">
+                                        <div class="purchase_options">
+                                            <div class="data-body">
+                                                <div class="paymentMethodType">
+                                                    ATM 虛擬帳號
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr class="highlight">
+                                    <th class="total">總金額</th>
+                                    <td class="total_price " colspan="2">
+                                        <strong>TWD$3,680</strong>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+                <button class="btn_print btn" id="btn_print">列印報名資料</button>
+                <div class="contact_info_contaner">
+                    <div class="contact_info">
+                        <h3 class="contact_title">聯絡人資料</h3>
+                        <div class="contact_info_group">
+                            <div class="name">
+                                <label id="label_name" class="label_name">
+                                    姓名
+                                </label>
+                                <div id="contact_name" name="contact_name" class="contact_name">
+                                    <span class="name">張靚瑩</span>
+                                </div>
+                            </div>
+                            <div class="email">
+                                <label id="label_email" class="label_email">
+                                    Email
+                                </label>
+                                <div id="contact_email" name="contact_email" class="contact_email">
+                                    <span class="email">1234@gmail.com</span>
+                                </div>
+                            </div>
+                            <div class="tel">
+                                <label id="label_tel" class="label_tel">
+                                    手機
+                                </label>
+                                <div id="contact_tel" name="contact_tel" class="contact_tel">
+                                    <span class="tel">0912345678</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tickets_with_info_contaner">
+                    <ul class="tickets_with_info ">
+                        <li class=" icon">
+                            <div>
+                                <div class="attendee-info">
+                                    <h3 class="Header">
+                                        全票 第 1 張
+                                    </h3>
+                                    <div class="">
+                                        <div class="control-group">
+                                            <label class="control-label">活動名稱</label>
+                                            <div class="controls">【ALTA】theLOOP presents : PSY.P 臺灣個人巡演預熱戰</div>
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <div class="control-group">
+                                            <label class="control-label ">座位資訊</label>
+                                            <div class="controls  ">B2 區 16 排 4 號</div>
+                                        </div>
+                                    </div>
+                                    <div class="number_check">
+                                        <div class="control-group">
+                                            <label class="control-label ">檢查碼</label>
+                                            <div class="controls ">7288</div>
+                                        </div>
+                                    </div>
+                                    <div class="fee_tex">
+                                        <div class="control-group">
+                                            <label class="control-label ">娛樂稅</label>
+                                            <div class="controls ">
+                                                <br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="control-group">
+                                            <label class="control-label " for="">注意事項</label>
+                                            <div class="controls ">
+                                                主辦：EVE FUN TOGETHER/星月文創執行
+                                                <br>
+                                                禁止外食及違禁物，禁止全場錄影及直播，未盡事宜詳閱開售頁面
+                                                <br>
+                                                一人一票，憑票入場，票券視同有價票券，遺失、損毀等無法辨識狀況，恕不補發或退換
+                                                <br>
+                                                退票限購票後3日內，以郵戳為憑，酌收票面金額5%手續費，請詳閱該節目頁退換票規定
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ticket-status cancelled  ">
+                                已退票
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
