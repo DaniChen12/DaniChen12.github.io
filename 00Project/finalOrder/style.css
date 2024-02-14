@@ -1,0 +1,569 @@
+:root {
+    --main-color: #3b7555;
+    --main-color-hover: #3b7555;
+    --main-font-size: 15px;
+    --common-border: 1px #ddd solid;
+    --function-color-hover: #518f6d;
+    --button-clicked-color: #1d5545;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Helvetica Neue", Arial, "Heiti TC", "Apple LiGothic Medium", "新微軟正黑體", "微軟正黑體", sans-serif;
+    font-size: 15px;
+    color: #333333;
+    background-color: #f1f1f18b;
+}
+
+/* main Body */
+.count_down_group {
+    background-color: rgb(240, 240, 240);
+    padding: 10px;
+}
+
+.main_wrap {
+    width: 75%;
+    margin: auto;
+    margin-top: 20px;
+    line-height: 1.5em;
+}
+
+.count_down_timer {
+    background-color: #DB4455;
+    color: #fff;
+    height: 2.5em;
+    line-height: 2.5em;
+    border-radius: 4px;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    width: 75%;
+}
+
+h2 {
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+p {
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    line-height: 1;
+    color: #888;
+    font-size: 15px;
+}
+
+label {
+    font-weight: bold;
+    padding: 8px 0;
+}
+
+.control-group {
+    margin-bottom: 15px;
+}
+
+.event_detail_collapse {
+    color: var(--main-color);
+}
+
+.event_detail_collapse.btn::after {
+    content: "▵";
+    left: -5px;
+}
+
+.event_detail_collapse.btn.collapsed::after {
+    content: "▿";
+    left: -5px;
+}
+
+.final_order_list_title {
+    background: #666;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 10px 10px 0 0;
+}
+
+.final_order_list_title h3 {
+    padding-left: 10px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.cart_ticket_list {
+    width: 100%;
+    border: none;
+}
+
+.ticket_wrapper_td {
+    padding: 8px 0;
+}
+
+.ticket_info_list,
+.pickup-and-payment-block,
+.fee_group {
+    border-bottom: 2px solid #333333;
+}
+
+td.price_total {
+    width: 5%;
+    text-align: right;
+    color: #888;
+    font-weight: 300;
+    padding-right: 20px;
+}
+
+.seat {
+    padding-left: 100px;
+}
+
+td.price_count span {
+    text-align: right;
+    padding-left: 160px;
+}
+
+li {
+    list-style: none;
+}
+
+.highlight th {
+    background-color: hsla(60, 100%, 50%, 0.104);
+}
+
+.highlight td {
+    background-color: hsla(60, 100%, 50%, 0.104);
+}
+
+.table thead {
+    font-weight: bold;
+}
+
+.id_number input {
+    width: 30%;
+}
+
+.text_warning {
+    color: #c07525;
+    padding-top: 10px;
+}
+
+.form-wrapper {
+    background: #eee;
+    border: #ddd 1px solid;
+    border-radius: 4px;
+    margin-top: 5px;
+    padding: 15px;
+    color: #333333
+}
+
+label {
+    color: #333333;
+}
+
+.fee_text {
+    color: #888;
+}
+
+.payments label {
+    font-weight: 400;
+}
+
+.payment-method-label {
+    cursor: pointer;
+}
+
+th,
+th.fee,
+th.ticket {
+    padding-left: 20px;
+    font-weight: bold;
+}
+
+.required::before {
+    content: "*";
+    color: #c07525;
+}
+
+.checkbox label {
+    cursor: pointer;
+}
+
+/* -------collapse---------- */
+.collapse a {
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+.collapse a:hover {
+    color: var(--main-color-hover);
+}
+
+.collapse th {
+    padding: 2px 15px 2px 0;
+    color: #888;
+    min-width: 75px;
+    font-weight: bold;
+}
+
+.collapse td {
+    padding: 2px 0 2px 15px;
+    font-weight: 400;
+}
+
+.collapse tr {
+    display: table-row;
+    vertical-align: top;
+    color: #333333;
+}
+
+/* -------progress container---------- */
+.progress_container {
+    margin: 20px auto 0 auto;
+    padding: 40px;
+}
+
+.step_progress_bar {
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.step {
+    text-align: center;
+    background-color: rgb(240, 240, 240);
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    position: relative;
+    border: 3px solid rgb(218, 218, 218);
+
+}
+
+p.step_text {
+    margin-top: 10px;
+    color: var(--main-color);
+    line-height: 2;
+    width: 150px;
+    vertical-align: bottom;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 8px;
+}
+
+.number {
+    margin-left: 10px;
+    border-radius: 100%;
+    line-height: 2;
+    width: 30px;
+    border: 1px solid var(--function-color-hover);
+    background-color: white;
+    color: var(--button-clicked-color);
+    display: inline-block;
+    transition: background-color 500ms;
+}
+
+.step.progressing {
+    color: var(--main-color);
+    background-color: var(--main-color);
+    border: 3px solid var(--button-clicked-color);
+}
+
+.step.progressing p {
+    color: white;
+}
+
+.step.progressing span {
+    color: var(--function-color-hover);
+}
+
+.step.disabled::after {
+    content: '';
+    position: absolute;
+    height: 6px;
+    width: 67%;
+    background-color: hsla(0, 3%, 71%, 0.5);
+    left: 100%;
+    bottom: 43%;
+    z-index: -1;
+}
+
+.disabled {
+    color: #FBFBFB;
+    border: 3px solid hsl(162, 17%, 50%);
+    background-color: hsl(148, 17%, 60%);
+}
+
+.disabled .number {
+    color: var(--function-color-hover);
+}
+
+.disabled p {
+    color: white;
+    font-weight: 400;
+
+}
+
+/* -------btn submit---------- */
+
+.btn_submit {
+    display: flex;
+    justify-content: center;
+    padding: 11px 70px;
+}
+
+.btn_submit i,
+.confirm,
+button {
+    padding-right: 8px;
+    letter-spacing: 1px;
+}
+
+button.btn_submit {
+    min-width: 293px;
+}
+
+/* -------section_wrap---------- */
+.section_wrap {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+@media screen and (max-width:1000px) {
+    .title {
+        text-align: center;
+        line-height: 1.5;
+    }
+
+    .count_down_timer {
+        width: 100%;
+        max-width: 1070px;
+        line-height: 1.5;
+        flex-wrap: wrap;
+        align-content: center;
+        padding: 40px 20px;
+        min-width: 254px;
+    }
+    input.idNumber{
+        width: 60%;
+    }
+    /* -------save button--------- */
+    .btn_submit {
+        width: 100%;
+    }
+
+    button#btn_submit {
+        width: 100%;
+        display: inline-block;
+        font-size: 1.2rem;
+        position: fixed;
+        bottom: 0%;
+        border-radius: 0px;
+    }
+
+    .submit_group {
+        padding-top: 20px;
+    }
+
+    /* -------progress bar--------- */
+    .progress_container {
+        margin: 0;
+        padding: 20px 0;
+    }
+
+    .registration_info {
+        width: 100%;
+        min-width: 210px;
+    }
+
+    .step_progress_bar {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0px;
+    }
+
+    .step {
+        border: none;
+        padding: 10px 0px;
+        border-radius: 0px;
+    }
+
+    .step:first-child {
+        border-radius: 10px 10px 0 0;
+    }
+
+    .step:last-child {
+        border-radius: 0 0 10px 10px;
+    }
+
+    p.step_text {
+        margin-top: 10px;
+        line-height: 0;
+        font-weight: bold;
+        text-align: left;
+        padding-left: 8px;
+    }
+
+    .number {
+        margin-left: 10px;
+        border-radius: 100%;
+        border: 1px solid var(--button-clicked-color);
+        background-color: white;
+        color: var(--button-clicked-color);
+    }
+
+    .step.progressing {
+        border: none;
+    }
+
+    .step.progressing::after {
+        display: none;
+    }
+
+    .step.disabled::after {
+        display: none;
+    }
+
+    /* -------------final Order details---------------- */
+
+    .ticket_info_list th {
+        background-color: #ddd;
+    }
+    td.ticket_name {
+        padding-left: 20px;
+        width: 100%;
+        display: block;
+        background-color: hsla(0, 0%, 53%, 0.2);
+    }
+
+    th,
+    td {
+        display: table-cell;
+        vertical-align: middle;
+        padding: 8px
+    }
+
+    table th,
+    tfoot th {
+        background: #ddd
+    }
+
+    .cart-ticket-list-subtable tr {
+        display: table-row
+    }
+
+    .cart-ticket-list-subtable tbody {
+        display: table-row-group
+    }
+
+    .cart-ticket-list-subtable th,
+    .cart-ticket-list-subtable td {
+        display: table-cell;
+        vertical-align: middle;
+        padding: 8px
+    }
+
+    table {
+        display: table;
+        width: 100%
+    }
+
+    .final_order_list tbody,
+    tfoot,
+    tr,
+    th,
+    td {
+        display: block
+    }
+
+    td.price-count,
+    td.price-total {
+        width: 50%;
+    }
+
+    .ticket_name {
+        background: #eee;
+        width: 100%
+    }
+
+    tbody {
+        width: 100%;
+        display: table-row-group;
+    }
+
+    .ticket-data td {
+        padding: 10px 0;
+    }
+
+    .seat {
+        padding-left: 10px;
+    }
+
+    td.price_count span {
+        text-align: left;
+        padding-left: 10px;
+    }
+
+    .highlight th,.highlight td{
+        display: table-cell;
+        width: 100%;
+        padding: 8px 8px;
+    }
+
+    th.price,
+    th.ticket_type {
+        width: 100%;
+        display: table-cell;
+        display: block;
+        padding-left: 20px;
+    }
+    td.price_total {
+        width: 100%;
+        text-align: right;
+        color: #888;
+        padding-right: 20px;
+    }
+    .fee_group th,.fee_group td{
+        display: table-cell;
+        width: 100%;
+        padding: 8px 8px;
+    }
+    
+    .purchase_options{
+        padding: 8px;
+    }
+
+    td.ticket_wrapper_td {
+        display: block;
+        padding: 0px;
+    }
+    tr.seat_info_group {
+        display: flex;
+        flex-direction: column;
+    }
+    .seat_info_group td{
+        border-bottom:1px solid #ddd ;
+        vertical-align: middle;
+    }
+    .seat_info_group td:last-child{
+        border-bottom:none;
+    }
+}
