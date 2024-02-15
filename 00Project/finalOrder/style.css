@@ -69,6 +69,7 @@ p {
 label {
     font-weight: bold;
     padding: 8px 0;
+    color: #333333;
 }
 
 .control-group {
@@ -169,9 +170,31 @@ li {
     padding: 15px;
     color: #333333
 }
-
-label {
-    color: #333333;
+.control-group label{
+    font-weight: bold;
+}
+.card_number_input input{
+    width: 40%;
+}
+.three_number input{
+    width: 20%;
+}
+.card_year,.card_month,
+.card_year,.card_month select{
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+.caption{
+display: inline-block;
+padding-left: 8px;
+}
+.card-type .mastercard {
+    background-image: url(https://t.kfs.io/assets/cards/mastercard-8e3bd2d7300c84ec68d979cba903738ad06a8a389a1d91eb5ec34368d3224554.png)
+}
+.card-type.visa {
+    background-image: url(https://t.kfs.io/assets/cards/visa-7df49b8101977f250a9b1ad20b6a303fd243943800ddd3d43fbdd4033418fe6f.png)
 }
 
 .fee_text {
@@ -362,6 +385,12 @@ button.btn_submit {
         min-width: 254px;
     }
     input.idNumber{
+        width: 60%;
+    }
+    .card_number_input input{
+        width: 80%;
+    }
+    .three_number input{
         width: 60%;
     }
     /* -------save button--------- */

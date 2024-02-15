@@ -117,7 +117,7 @@
                                                 <td class="ticket-data" colspan="2">
                                                     <table class="cart-ticket-list-subtable with-seat">
                                                         <tbody>
-                                                            <tr  class="seat_info_group">
+                                                            <tr class="seat_info_group">
                                                                 <td class="seat_info">
                                                                     <ul>
                                                                         <li>
@@ -146,7 +146,7 @@
                         </tbody>
                         <tbody class="pickup-and-payment-block">
                             <tr>
-                                <th class="required" >
+                                <th class="required">
                                     取票方式
                                 </th>
                                 <td colspan="2">
@@ -175,7 +175,7 @@
                                                                                 </strong>
                                                                             </label>
                                                                             <div class="id_number">
-                                                                                <input class="idNumber form-control"
+                                                                                <input class="form-control idNumber"
                                                                                     name="idNumber" type="text"
                                                                                     required="">
                                                                                 <div class="text_warning">
@@ -206,14 +206,116 @@
                                                 <ul>
                                                     <li>
                                                         <div class="payments_radio">
-                                                            <label  class="radio payment-method-label">
+                                                            <label class="radio payment-method-label">
                                                                 <input type="radio" value="CREDITCARD"
                                                                     name="paymentMethodType" required="">
                                                                 信用卡
                                                             </label>
+                                                            <div class="form-wrapper order_cardtype">
+                                                                <div class="control-group">
+                                                                    <label class="control-label">
+                                                                        信用卡卡號
+                                                                    </label>
+                                                                    <div class="card_number_input">
+                                                                        <input name="card_number_input" required=""
+                                                                            type="text" class="card-number form-control">
+                                                                        <div class="card-type supported-type">
+                                                                            <span class="visa"></span>
+                                                                            <span class="mastercard"></span>
+                                                                            <span class="jcb"></span>
+                                                                        </div>
+                                                                        <div class="card-status" style="display: block">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="control-group">
+                                                                    <label class="control-label">
+                                                                        有效期限
+                                                                    </label>
+                                                                    <div class="controls">
+                                                                        <select name="CardMonth" class="card_month">
+                                                                            <option label="01" value="number:1"
+                                                                                selected="selected">01</option>
+                                                                            <option label="02" value="number:2">02
+                                                                            </option>
+                                                                            <option label="03" value="number:3">03
+                                                                            </option>
+                                                                            <option label="04" value="number:4">04
+                                                                            </option>
+                                                                            <option label="05" value="number:5">05
+                                                                            </option>
+                                                                            <option label="06" value="number:6">06
+                                                                            </option>
+                                                                            <option label="07" value="number:7">07
+                                                                            </option>
+                                                                            <option label="08" value="number:8">08
+                                                                            </option>
+                                                                            <option label="09" value="number:9">09
+                                                                            </option>
+                                                                            <option label="10" value="number:10">10
+                                                                            </option>
+                                                                            <option label="11" value="number:11">11
+                                                                            </option>
+                                                                            <option label="12" value="number:12">12
+                                                                            </option>
+                                                                        </select>
+
+                                                                        <select name="CardYear" class="card_year">
+                                                                            <option label="2024" value="number:2024"
+                                                                                selected="selected">2024</option>
+                                                                            <option label="2025" value="number:2025">
+                                                                                2025</option>
+                                                                            <option label="2026" value="number:2026">
+                                                                                2026</option>
+                                                                            <option label="2027" value="number:2027">
+                                                                                2027</option>
+                                                                            <option label="2028" value="number:2028">
+                                                                                2028</option>
+                                                                            <option label="2029" value="number:2029">
+                                                                                2029</option>
+                                                                            <option label="2030" value="number:2030">
+                                                                                2030</option>
+                                                                            <option label="2031" value="number:2031">
+                                                                                2031</option>
+                                                                            <option label="2032" value="number:2032">
+                                                                                2032</option>
+                                                                            <option label="2033" value="number:2033">
+                                                                                2033</option>
+                                                                            <option label="2034" value="number:2034">
+                                                                                2034</option>
+                                                                            <option label="2035" value="number:2035">
+                                                                                2035</option>
+                                                                            <option label="2036" value="number:2036">
+                                                                                2036</option>
+                                                                            <option label="2037" value="number:2037">
+                                                                                2037</option>
+                                                                            <option label="2038" value="number:2038">
+                                                                                2038</option>
+                                                                            <option label="2039" value="number:2039">
+                                                                                2039</option>
+                                                                        </select>
+                                                                        <div class="caption">
+                                                                            月份/年份
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="">
+                                                                    <label class="id_number">
+                                                                        驗證碼
+                                                                    </label>
+                                                                    <div class="three_number">
+                                                                        <input type="text" class=" form-control" name="CVC2"
+                                                                            card-cvc="" required="" maxlength="3">
+                                                                        <div class="caption_text">
+                                                                            卡片背面末 3 碼
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </li>
                                                     <li>
+
                                                         <div class="control-group radio">
                                                             <div class="controls">
                                                                 <label class="radio payment-method-label">
@@ -240,7 +342,7 @@
                             </tr>
                             <tr class="highlight">
                                 <th class="total">總金額</th>
-                                <td class="" colspan="2">TWD$3,680</td>
+                                <td class="total-price" colspan="2">TWD$3,680</td>
                             </tr>
                         </tfoot>
                     </table>
@@ -249,27 +351,27 @@
                 </div>
             </form>
 
-    </div>
-    <div class="submit_group control-group">
-        <div class="btn_submit">
-            <button type="submit" class="btn btn_submit" id="btn_submit"
-                style="background-color:var(--main-color);color: white;border:none;" disabled="disabled">
-                <span>
-                    <i class="fa fa-check-circle"></i>
-                </span>
-                <span class="confirm">
-                    確認訂單並繳費
-                </span>
-                TWD$3,680
-            </button>
         </div>
-    </div>
+        <div class="submit_group control-group">
+            <div class="btn_submit">
+                <button type="submit" class="btn btn_submit" id="btn_submit"
+                    style="background-color:var(--main-color);color: white;border:none;" disabled="disabled">
+                    <span>
+                        <i class="fa fa-check-circle"></i>
+                    </span>
+                    <span class="confirm">
+                        確認訂單並繳費
+                    </span>
+                    TWD$3,680
+                </button>
+            </div>
+        </div>
 
-    </section>
+        </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
 </body>
 
 </html>
