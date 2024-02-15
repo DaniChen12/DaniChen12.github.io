@@ -186,6 +186,9 @@ li {
     border-radius: 5px;
     padding: 5px 10px;
 }
+.order_cardtype{
+    display: none;
+}
 .caption{
 display: inline-block;
 padding-left: 8px;
@@ -212,7 +215,7 @@ padding-left: 8px;
 th,
 th.fee,
 th.ticket {
-    padding-left: 20px;
+    /* padding-left: 20px; */
     font-weight: bold;
 }
 

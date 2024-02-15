@@ -14,12 +14,64 @@
 </head>
 
 <body>
+    <!-- <button class="button_modal btn btn-primary" data-bs-toggle="modal" data-bs-target="#info_modal">info_modal</button> -->
+
+    <!-- logged-in-header-nav -->
+    <!-- <nav id="header-nav" class="d-flex logged-in-nav">
+        <input type="checkbox" id="nav-checkbox" class="d-none">
+        <div id="header-nav-wrap" class="width">
+            <div id="header-nav-logo-and-menu-button-wrap" class="d-flex align-items-center justify-content-between">
+                <h1><a href="" id="header-nav-logo"><img src="./imgs/nav_logo.png" alt=""></a></h1>
+                <label id="nav-checkbox-label" for="nav-checkbox"></label>
+            </div>
+            <div id="header-functions" class="">
+                <div id="header-functions-left" class="">
+                    <a href="">我的票券</a>
+                    <a href="">探索活動</a>
+                    <div id="header-nav-search-div" class="d-flex align-items-center">
+                        <img src="./imgs/magnifier_icon.svg" alt="" id="header-nav-magnifier-icon">
+                        <input type="text" id="header-nav-search-input" placeholder="搜尋活動">
+                    </div>
+                </div>
+                <div id="header-functions-right" class="">
+                    <a id="new-event" class="" href="#"><i class="fa-solid fa-circle-plus"></i>建立活動</a>
+                    <div id="org-select-wrap" class="d-block dropdown btn-group">
+                        <a id="org-select" class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">選擇組織</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <p>組織列表</p>
+                            <li><a href="" class="dropdown-item org">BS</a></li>
+                            <li><a href="" class="dropdown-item org">BS2</a></li>
+                            <li><a href="" class="dropdown-item org">
+                                    <i class="fa-solid fa-circle-plus"></i>建立新組織</a></li>
+                        </ul>
+                    </div>
+                    <div id="user-account-wrap" class="d-block align-items-center dropdown btn-group">
+                        <a id="user-account" class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false"><i class="fa-solid fa-user"></i><span>彭德・佛傑</span></a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a id="user-name" class="dropdown-item d-inline-flex flex-column" href="#"><img
+                                        src="./imgs/magnifier_icon.svg" alt="user's photo">彭德・佛傑</a>
+                            </li>
+                            <li><a id="nav-user-setting" class="dropdown-item" href="#">
+                                    <i class="fa-solid fa-gear"></i>設定</a></li>
+                            <li><a id="nav-user-orders" class="dropdown-item" href="#">
+                                    <i class="fa-solid fa-ticket"></i>訂單</a></li>
+                            <li><a id="nav-logout" class="dropdown-item" href="#">
+                                    <i class="fa-solid fa-right-from-bracket"></i>登出</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav> -->
+
     <section class="section_wrap">
         <div class="seat_area_header">
             <div class="action-bar main_wrap">
                 <div class="action-bar-left d-flex">
                     <div class="btn-cancel">
-                        
+
                         <a href="#"><i class="fa-solid fa-xmark"></i>取消購票</a>
                     </div>
                     <div class="btn-user-guide">
@@ -87,22 +139,69 @@
                             </table>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn_Confirm btn" data-bs-dismiss="modal">我知道了(選位時間剩下10:00)</button>
+                            <button type="button" class="btn_Confirm btn"
+                                data-bs-dismiss="modal">我知道了(選位時間剩下10:00)</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="main_event">
-            <!-- <button class="button_modal btn btn-primary" data-bs-toggle="modal" data-bs-target="#info_modal">info_modal</button> -->
+        <div class="main_stage_map">
+            <div class="map_area">
+                <img src="https://danichen12.github.io/00Project/booking/image/map.png" usemap="#image-map">
+                <map name="image-map" class="image-map" id="area_map">
+                    <area target="_blank" alt="floor1_a_area" title="floor1_a_area" href="#"
+                        coords="381,129,505,129,507,290,418,288,333,230" shape="poly">
+                    <area target="_blank" alt="floor1_b_area" title="floor1_b_area" href="#"
+                        coords="518,130,643,130,693,228,608,289,518,288" shape="poly">
+                    <area target="_blank" alt="floor2_a_area" title="floor2_a_area" href="#"
+                        coords="313,265,367,299,337,356,287,312" shape="poly">
+                    <area target="_blank" alt="floor2_b_area" title="floor2_b_area" href="#"
+                        coords="375,301,417,319,392,416,369,405,339,363" shape="poly">
+                    <area target="_blank" alt="floor2_c_area" title="floor2_c_area" href="#"
+                        coords="425,318,469,329,463,424,400,413" shape="poly">
+                    <area target="_blank" alt="floor2_d_area" title="floor2_d_area" href="#"
+                        coords="476,329,545,330,553,428,469,425" shape="poly">
+                    <area target="_blank" alt="floor2_e_area" title="floor2_e_area" href="#"
+                        coords="553,329,600,320,623,417,559,427" shape="poly">
+                    <area target="_blank" alt="floor2_f_area" title="floor2_f_area" href="#"
+                        coords="605,316,650,301,684,368,655,410,629,416" shape="poly">
+                    <area target="_blank" alt="floor2_g_area" title="floor2_g_area" href="#"
+                        coords="656,298,711,264,738,317,689,361" shape="poly">
+                    <area target="_blank" alt="floor3_a_area" title="floor3_a_area" href="#"
+                        coords="262,373,347,417,292,518,231,434" shape="poly">
+                    <area target="_blank" alt="floor3_b_area" title="floor3_b_area" href="#"
+                        coords="353,420,409,444,367,582,301,524" shape="poly">
+                    <area target="_blank" alt="floor3_c_area" title="floor3_c_area" href="#"
+                        coords="416,445,461,455,453,606,377,582" shape="poly">
+                    <area target="_blank" alt="floor3_d_area" title="floor3_d_area" href="#"
+                        coords="467,454,557,456,561,608,461,608" shape="poly">
+                    <area target="_blank" alt="floor3_e_area" title="floor3_e_area" href="#"
+                        coords="563,452,606,444,652,586,567,606" shape="poly">
+                    <area target="_blank" alt="floor3_f_area" title="floor3_f_area" href="#"
+                        coords="614,442,673,420,725,522,660,582" shape="poly">
+                    <area target="_blank" alt="floor3_g_area" title="floor3_g_area" href="#"
+                        coords="678,418,761,372,795,436,733,521" shape="poly">
+                </map>
+            </div>
+        </div>
+        <div class="rwd-fixed-btns">
+            <div class="btn-cancel">
+                <a href="#"><i class="fa-solid fa-circle-xmark"></i>取消購票</a>
+            </div>
+            <div class="btn-confirm" data-bs-toggle="modal" data-bs-target="#btn-confirm">
+                <a href="#">確認座位</a>
+            </div>
 
         </div>
+
 
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
+
 </body>
 
 </html>
