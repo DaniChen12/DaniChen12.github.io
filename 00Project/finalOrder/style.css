@@ -154,7 +154,7 @@ li {
 }
 
 .id_number input {
-    width: 30%;
+    width: 250px;
 }
 
 .text_warning {
@@ -388,7 +388,7 @@ a.btn_submit {
         min-width: 254px;
     }
     input.idNumber{
-        width: 60%;
+        width: 150px;
     }
     .card_number_input input{
         width: 80%;
