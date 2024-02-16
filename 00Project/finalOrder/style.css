@@ -355,12 +355,12 @@ p.step_text {
 
 .btn_submit i,
 .confirm,
-button {
+a {
     padding-right: 8px;
     letter-spacing: 1px;
 }
 
-button.btn_submit {
+a.btn_submit {
     min-width: 293px;
 }
 
@@ -401,7 +401,7 @@ button.btn_submit {
         width: 100%;
     }
 
-    button#btn_submit {
+    a#btn_submit {
         width: 100%;
         display: inline-block;
         font-size: 1.2rem;
