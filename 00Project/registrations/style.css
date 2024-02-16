@@ -366,7 +366,7 @@ span.formError {
     padding: 11px 70px;
 }
 
-button.btn_save {
+a.btn_save {
     min-width: 293px;
 }
 
@@ -403,7 +403,7 @@ button.btn_save {
         width: 100%;
     }
 
-    button#btn_save {
+    a#btn_save {
         width: 100%;
         display: inline-block;
         font-size: 1.2rem;
