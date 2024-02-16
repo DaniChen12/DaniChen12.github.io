@@ -149,6 +149,7 @@ select#sex {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    list-style: none;
 }
 
 .option-group div+div {
@@ -181,6 +182,7 @@ li input{
 .subscribe-group li {
     display: flex;
     text-decoration: none;
+    list-style: none;
 }
 
 .subscribe-group li label {
