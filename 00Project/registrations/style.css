@@ -313,7 +313,9 @@ td.tfoot_price_total {
 .contact_info input {
     width: 50%;
 }
-
+a{
+    text-decoration: none;
+}
 abbr {
     color: #c07525;
 }
