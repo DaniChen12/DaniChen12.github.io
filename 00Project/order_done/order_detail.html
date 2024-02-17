@@ -18,15 +18,35 @@
         <div class="main_event_order">
             <div class="order_statius main_wrap">
                 <div class="register_message">
+                    <!-- <div class="display-table-row">
+                        <div class="icon_wrapper order_pay">
+                            <i class="fa fa-exclamation-circle"></i>
+                        </div>
+                        <div class="message_wrapper">
+                            <h1 class="statius_title pay_h1">尚未繳費完成</h1>
+                            <p class="statius_content">訂單已完成，請儘速完成繳費程序。</p>
+                        </div>
+                    </div> -->
+
                     <div class="display-table-row">
                         <div class="icon_wrapper order_canceled">
                             <i class="fa fa-info-circle"></i>
                         </div>
                         <div class="message_wrapper">
-                            <h1 class="statius_title">您的訂單已取消。</h1>
+                            <h1 class="statius_title canceled_h1">您的訂單已取消。</h1>
                             <p class="statius_content">您的訂單已取消。如果需要退款，請與 KKTIX 聯絡退款事宜。</p>
                         </div>
                     </div>
+
+                    <!-- <div class="display-table-row" >
+                        <div class="icon_wrapper order_finished">
+                            <i class="fa fa-check"></i>
+                        </div>
+                        <div class="message_wrapper">
+                            <h1 class="statius_title finished_h1">恭喜！您已完成訂單</h1>
+                            <p class="statius_content">建議將活動加入行事曆，以免錯過精采活動喔！</p>
+                        </div>
+                    </div> -->
                 </div>
             </div>
             <div class="title main_wrap">
@@ -196,7 +216,45 @@
                         </table>
                     </div>
                 </div>
-                <button class="btn_print btn" id="btn_print">列印報名資料</button>
+
+                <div class="pickup_payment_info">
+                    <div class="pickup_info">
+                        <h3 class="pickup_type">取票方式：電子票券</h3>
+                        <p class="pickup_text">你選擇的取票方式為電子票券，如你是以「會員身份」購買或報名活動，請先至我的票券中票券資料頁，點「顯示 QR Code」驗票入場，亦可以下載
+                            KKTIX iOS/android App 查看電子票；如非會員或未登入購買也可以現場出示訂單成立信或列印訂單的 QR Code 票券入場。若有任何存取問題，敬請務必來信或來電確認。
+                        </p>
+                        <div class="links_group">
+                            <a href="#" class="itunes">
+                                <img ng-src="/assets/apps/cht-itunes-custom@2x.png" alt="iTunes Download" width="180"
+                                    height="60" src="/assets/apps/cht-itunes-custom@2x.png">
+                            </a>
+                            <a href="#" class="google">
+                                <img ng-src="/assets/apps/cht-android-custom@2x.png" alt="Google Play Download"
+                                    width="180" height="60" src="/assets/apps/cht-android-custom@2x.png">
+                            </a>
+                        </div>
+                        <hr>
+                        <div class="pickup_caption">
+                            <p>容我們提醒您：</p>
+                            <ol>
+                                <li>每張電子票券限一人及該場次使用一次，無法重複使用。</li>
+                                <li>本電子票券視同無記名有價證券，請持票人善盡保管之責，並請注意任何憑證皆無法取代電子票券本身，恕無法持任何憑證要求入場。補發電子票券或是退票皆需酌收手續費，詳情請洽 <a href="#">ShowNest 客服中心</a>。
+                                </li>
+
+                                <li>持優待票者，請憑此票券及相關證件入場。</li>
+                                <li>本公司僅為委託代售票務單位，關於活動內容、品質、相關權益異動等事宜，一概與本公司無涉，請持票人洽詢主辦單位，並請依照主辦單位所發出之通知與規定辦理。</li>
+                                <li>因主辦單位及演出場館各有所不同，皆有其需注意事項，未盡事宜請遵照各單位相關規定遵守辦理。</li>
+                                <li>部分節目因演出需要並無再入場機會，如因遲到或中途離席而無法入場，不得以此要求退票或補票。</li>
+                                <li>部分規則因營運地區而有所不同，請參考: <a href="#">台灣規範</a> <a  href="#">香港規範</a>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <!-- <button class="btn_print btn" id="btn_print">列印報名資料</button> -->
+                <button class="btn_print btn" id="btn_modify" ><i class="fa fa-pencil"
+                    aria-hidden="true"></i> 修改表單內容</button>
+                    <button class="btn_print btn btn_cancelled" id="btn_cancelled" ></i> 取消訂單</button>
                 <div class="contact_info_contaner">
                     <div class="contact_info">
                         <h3 class="contact_title">聯絡人資料</h3>
@@ -236,6 +294,18 @@
                                     <h3 class="Header">
                                         全票 第 1 張
                                     </h3>
+                                    <!-- <div class="ticket-status cancelled" >
+                                        已退票
+                                    </div> -->
+                                    <div class="ticket-number">
+                                        票號：#99153964
+                                    </div>
+                                    <div class="ticket-info">
+                                        <div class="ticket_wrap">
+                                            <h1>電子票券</h1>請先至我的票券中 <a href="#">票券資料</a> 頁，點「顯示 QR Code」驗票入場
+                                        </div>
+                                    </div>
+
                                     <div class="">
                                         <div class="control-group">
                                             <label class="control-label">活動名稱</label>
@@ -268,11 +338,11 @@
                                             <div class="controls ">
                                                 主辦：EVE FUN TOGETHER/星月文創執行
                                                 <br>
-                                                禁止外食及違禁物，禁止全場錄影及直播，未盡事宜詳閱開售頁面
+                                                禁止外食及違禁物，禁止全場錄影及直播，未盡事宜詳閱開售頁面。
                                                 <br>
-                                                一人一票，憑票入場，票券視同有價票券，遺失、損毀等無法辨識狀況，恕不補發或退換
+                                                一人一票，憑票入場，票券視同有價票券，遺失、損毀等無法辨識狀況，恕不補發或退換。
                                                 <br>
-                                                退票限購票後3日內，以郵戳為憑，酌收票面金額5%手續費，請詳閱該節目頁退換票規定
+                                                退票限購票後3日內，以郵戳為憑，酌收票面金額5%手續費，請詳閱該節目頁退換票規定。
                                             </div>
                                         </div>
                                     </div>

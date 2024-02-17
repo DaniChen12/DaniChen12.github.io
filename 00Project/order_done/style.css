@@ -170,15 +170,18 @@ th {
     left: -5px;
 }
 
+.pickup_payment_info a,
 .collapse a,
 .show_detail a {
     color: var(--main-color);
     text-decoration: none;
 }
 
+.pickup_payment_info a:hover,
 .collapse a:hover,
 .show_detail a:hover {
-    color: var(--main-color-hover);
+    color: var(--function-color-hover);
+    text-decoration:underline;
 }
 
 .collapse th,
@@ -214,11 +217,50 @@ th {
     display: table;
 }
 
+/* -------pickup_payment_info---------- */
+.pickup_payment_info {
+    background: #fff;
+    padding: 15px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.pickup_info p {
+    color: #333333;
+    line-height: 1.5;
+}
+.pickup_payment_info h3{
+    margin-top: 8px;
+    margin-bottom: 5px;
+}
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #77737380;
+}
+
+.pickup_caption ol,
+.pickup_caption li {
+    list-style: decimal;
+    margin-left: 20px;
+
+}
+
+.pickup_caption {
+    padding-bottom: 8px;
+    line-height: 1.5;
+}
+
 /* -------button---------- */
 .btn_print.btn {
     box-shadow: 0px 0px 2px 1px rgb(184, 179, 179);
     margin-right: 5px;
     color: #333333;
+}
+
+.btn_cancelled.btn {
+    color: #b94a48;
 }
 
 .btn:hover {
@@ -276,7 +318,7 @@ th {
 }
 
 /* ---------tickets_with_info------- */
-.tickets_with_info_contaner{
+.tickets_with_info_contaner {
     padding-bottom: 20px;
 }
 
@@ -327,6 +369,34 @@ th {
     right: 10px
 }
 
+.ticket-number {
+    color: #999;
+    position: absolute;
+    top: 46px;
+    right: 10px
+}
+
+.ticket_wrap {
+    width: 150px;
+    padding-top: 20px;
+}
+
+.ticket-info {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    background-color: #eee;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 72px;
+    right: 10px
+}
+
+.ticket-info h1 {
+    font-weight: bolder;
+}
+
 /* -------register_message---------- */
 .register_message {
     background: #fff;
@@ -337,7 +407,7 @@ th {
 
 .message_wrapper,
 .icon_wrapper {
-    display: table-cell
+    display: table-cell;
 }
 
 .order_canceled {
@@ -351,16 +421,63 @@ th {
     position: relative
 }
 
+.statius_content {
+    line-height: 1.5;
+}
+
+.message_wrapper {
+    padding: 5px 15px;
+    vertical-align: middle
+}
+
+.canceled_h1,
+.pay_h1,
+.finished_h1 {
+    margin-bottom: 0px;
+}
+
+.register_message .canceled_h1 {
+    color: #00aed6;
+}
+
+.order_pay {
+    display: table-cell;
+    color: #fff;
+    background-color: #f0851c;
+    width: 15%;
+    overflow: hidden;
+    text-align: center;
+    vertical-align: middle;
+    position: relative
+}
+
+.register_message .pay_h1 {
+    color: #f0851c;
+}
+
+.order_finished {
+    display: table-cell;
+    color: #fff;
+    background-color: #64c025;
+    width: 15%;
+    overflow: hidden;
+    text-align: center;
+    vertical-align: middle;
+    position: relative
+}
+
+.register_message .finished_h1 {
+    color: #64c025;
+}
+
 .message_wrapper {
     padding: 0 15px;
     height: 68px;
     vertical-align: middle
 }
-.order_statius{
-    /* padding-bottom: 5px; */
-}
-.register_message h1 {
-    color: #00aed6
+
+.icon_wrapper {
+    width: 70px;
 }
 
 .icon_wrapper i {
@@ -381,14 +498,18 @@ th {
     max-width: 1200px;
     margin: auto;
 }
-@media screen and (max-width:1200px){
-    .seat{
+
+@media screen and (max-width:1200px) {
+    .seat {
         padding-left: 13px;
     }
-    .total_price{
+
+    .total_price {
         padding-right: 16px;
     }
-    td.price_total,.total_price{
+
+    td.price_total,
+    .total_price {
         width: 157px;
     }
 }
@@ -399,7 +520,21 @@ th {
         line-height: 1.5;
         display: flex;
         flex-direction: column;
-        
+    }
+
+    .ticket-info {
+        width: 100%;
+        position: static;
+    }
+
+    .ticket-number {
+        top: 35px;
+        position: static;
+    }
+
+    .ticket_wrap {
+        /* width: 265px; */
+        padding-top: 40px;
     }
 
     /* -------------final Order details---------------- */
@@ -532,32 +667,44 @@ th {
     .seat_info_group td:last-child {
         border-bottom: none;
     }
+
 }
-@media screen and (max-width:768px){
-    td.price_total{
+
+@media screen and (max-width:768px) {
+    td.price_total {
         display: flex;
         flex-direction: column;
         text-align: left;
         padding-left: 12px;
     }
-    .order_canceled{
+
+    .order_canceled {
         padding: 0 20px;
     }
+
     .contact_info:before {
         display: none;
     }
-    .contact_info{
-        border-left:#00aed6 5px solid ;
+
+    .contact_info {
+        border-left: #00aed6 5px solid;
     }
-    .tickets_with_info li:before{
+
+    .tickets_with_info li:before {
         display: none;
     }
-    .tickets_with_info li{
+
+    .tickets_with_info li {
         border-left: #64c025 5px solid;
     }
 }
-@media screen and (max-width:567px){
-    .cart-ticket-list-subtable th, .cart-ticket-list-subtable td{
+
+@media screen and (max-width:567px) {
+
+    .cart-ticket-list-subtable th,
+    .cart-ticket-list-subtable td {
         display: inline;
     }
+
+
 }
