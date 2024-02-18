@@ -170,14 +170,15 @@ th {
     left: -5px;
 }
 
-.pickup_payment_info a,
+
+.pickup_caption a,
 .collapse a,
 .show_detail a {
     color: var(--main-color);
     text-decoration: none;
 }
 
-.pickup_payment_info a:hover,
+.pickup_caption a:hover,
 .collapse a:hover,
 .show_detail a:hover {
     color: var(--function-color-hover);
@@ -218,8 +219,8 @@ th {
 }
 
 /* -------pickup_payment_info---------- */
-.pickup_payment_info {
-    background: #fff;
+.finished_pickup_payment_info {
+    background-color: white;
     padding: 15px;
     margin-bottom: 15px;
     line-height: 1.5;
@@ -229,7 +230,7 @@ th {
     color: #333333;
     line-height: 1.5;
 }
-.pickup_payment_info h3{
+.finished_pickup_payment_info h3{
     margin-top: 8px;
     margin-bottom: 5px;
 }
@@ -250,7 +251,26 @@ hr {
 .pickup_caption {
     padding-bottom: 8px;
     line-height: 1.5;
+    background-color: white;
 }
+/* -------unpay_payment_info---------- */
+.unpay_payment_info{
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+.pickup_info dt{
+    font-weight: bold;
+}
+.pickup_info dd{
+    margin-bottom: 5px
+}
+.note_block{
+    color: #b94a48;
+    max-width: 750px;
+}
+
 
 /* -------button---------- */
 .btn_print.btn {
