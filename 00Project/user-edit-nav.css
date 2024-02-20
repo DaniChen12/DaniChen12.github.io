@@ -1,0 +1,15 @@
+@media screen and (max-width: 768px) {
+    .nav-tabs .nav-link {
+        background-color: none;
+        border: 1px solid transparent;
+        border-radius: 5rem;
+        margin: 5px;
+    }
+
+    .nav-tabs .nav-link.active {
+        color: #fff;
+        background-color: var(--main-color);
+        border: 1px solid #3b7555;
+        border-radius: 5rem;
+    }
+}
