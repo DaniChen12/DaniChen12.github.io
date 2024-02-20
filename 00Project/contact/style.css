@@ -1,0 +1,221 @@
+:root {
+    --main-color: #3b7555;
+    --main-color-hover: #3b7555;
+    --main-font-size: 15px;
+    --common-border: 1px #ddd solid;
+    --function-color-hover: #518f6d;
+    --button-clicked-color: #1d5545;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Helvetica Neue", Arial, "Heiti TC", "Apple LiGothic Medium", "新微軟正黑體", "微軟正黑體", sans-serif;
+    font-size: 15px;
+    color: #333333;
+}
+
+/* change bootstrap nav color start */
+.nav-tabs {
+    --bs-nav-tabs-link-active-color: var(--bs-emphasis-color);
+    --bs-emphasis-color: #333333
+}
+
+ul.nav li a,
+ul.nav li a:visited {
+    color: var(--main-color);
+}
+
+ul.nav li a:hover,
+ul.nav li a:active {
+    color: var(--main-color);
+    background-color: #FAFAFA;
+    text-decoration: none;
+}
+
+ul.nav li.active a {
+    color: var(--main-color);
+}
+
+/* change bootstrap nav color end */
+
+
+/* main Body */
+.section_wrap {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.main-wrap {
+    width: 75%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.title {
+    display: block;
+    line-height: 2;
+    align-items: center;
+    vertical-align: middle;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+.form-content {
+    margin-bottom: 10px;
+}
+
+.content-wrapper {
+    padding-top: 20px;
+}
+
+.form_contaner {
+    display: grid;
+    grid-template-columns: 3fr 8fr;
+    margin-bottom: 10px;
+}
+
+.form-content {
+    padding-bottom: 10px;
+}
+
+/* inputs and textarea */
+.content-wrapper input,
+.content-wrapper textarea {
+    width: 340px;
+}
+
+label {
+    display: inline-block;
+    padding: 10px 0px;
+    margin-right: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: right;
+}
+
+
+p {
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    color: gray;
+    font-size: 14px;
+}
+
+/* border */
+div.border {
+    border-bottom: 1px solid #333333;
+    margin-top: 20px;
+}
+
+/* submit button */
+.submit_group {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0px;
+}
+
+.button_submit {
+    display: inline-block;
+    padding: 0 10px;
+}
+
+.button_wrap {
+    display: grid;
+    grid-template-columns: 6.8fr 2fr;
+}
+
+.btn-primary {
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: var(--function-color-hover);
+}
+
+.btn-light {
+    background-color: none;
+    border: 1px solid var(--main-color);
+    color: var(--main-color);
+}
+
+.btn-light:hover {
+    color: var(--main-color);
+    background-color: #eee;
+}
+
+
+@media screen and (max-width:768px) {
+    .main-wrap {
+        width: 90%;
+    }
+
+    .title {
+        text-align: center;
+    }
+
+    .form_contaner {
+        display: flex;
+        flex-direction: column;
+        /* margin: auto; */
+    }
+
+    .form_contaner input,
+    textarea#contact_opinion{
+        width: 100%;
+    }
+
+    .textarea{
+        padding-bottom: 50px;
+    }
+
+    label {
+        min-width: 98px;
+        display: flex;
+        text-align: left;
+    }
+
+    .button_wrap {
+        display: block;
+    }
+
+    .submit_group {
+        flex-direction: column;
+    }
+
+    .button_submit,
+    .button_back {
+        width: 100%;
+        padding: 0px;
+    }
+
+    .border{
+        display: none;
+    }
+
+    .btn-primary,
+    .btn-light {
+        display: block;
+        width: 100%;
+        font-size: 1.2rem;
+        position: fixed;
+        bottom: 0%;
+        border-radius: 0px;
+    }
+
+    .btn-primary{
+        bottom: 43px;
+        border-radius: 0px;
+    }
+}
