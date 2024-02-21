@@ -1,15 +1,19 @@
 :root {
-    --main-color: #3b7555;
-    --main-color-hover: #3b7555;
-    --main-font-size: 15px;
-    --common-border: 1px #ddd solid;
-    --function-color-hover: #518f6d;
-    --button-clicked-color: #1d5545;
+	--light-green: #82b99b;
+	--main-green: #3b7555;
+	--dark-green: #1d5545;
+	--light-gray: #ddd;
+	--dark-gray: #888;
+	--main-font-size: 15px;
+	--common-border: 1px #ddd solid;
+	--dark-border: 1px #999EA2 solid;
+	--common-border-radius: 5px;
 }
 
-
 body {
-   
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 
 /* change bootstrap nav color start */
@@ -20,28 +24,34 @@ body {
 
 ul.nav li a,
 ul.nav li a:visited {
-    color: var(--main-color);
-    text-decoration: none;
+    color: var(--main-green);
 }
 
 ul.nav li a:hover,
 ul.nav li a:active {
-    color:var(--main-color);
+    color: var(--main-green);
     background-color: #FAFAFA;
+    text-decoration: none;
 }
 
 ul.nav li.active a {
-    color:var(--main-color);
+    color: var(--main-green);
 }
 
 /* change bootstrap nav color end */
 
-
 /* main Body */
+.section_wrap {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .main-wrap {
     width: 75%;
-    margin: auto;
-    margin-top: 20px;
 }
 
 .title {
@@ -95,7 +105,7 @@ p {
     margin-top: 5px;
     margin-bottom: 10px;
     line-height: 1.5;
-    color: gray;
+    color: var(--dark-gray);
     font-size: 14px;
 }
 
@@ -105,7 +115,7 @@ p {
 
 input {
     padding: 6px 8px;
-    color: #555555;
+    color:var(--dark-gray);
     border-radius: 4px;
 }
 
@@ -122,19 +132,19 @@ ul {
 
 .form-floating label {
     font-weight: 400;
-    color: #555555;
+    color:var(--dark-gray);;
 }
 
 select#sex {
     padding: 6px 10px;
     border-radius: 5px;
-    border: 1px solid #e0e0e0;
+    border: 1px solid var(--light-gray);
 }
 
 .form-content select {
     padding: 6px 10px;
     border-radius: 5px;
-    border: 1px solid #e0e0e0;
+    border: 1px solid var(--light-gray);
 }
 
 .option-group {
@@ -155,7 +165,7 @@ select {
 
 select:focus {
     outline: none;
-    border: 1px solid #e0e0e0;
+    border: 1px solid var(--light-gray);
 }
 .option-group ul{
     list-style: none;
@@ -210,20 +220,18 @@ li input{
 
 a {
     text-decoration: none;
-    color: var(--main-color);
+    color: var(--main-green);
 }
-
 a:hover {
-    color: rgb(85, 212, 104);
-    text-decoration: underline solid rgb(85, 212, 104);
+    color:var(--light-green);
+    text-decoration: underline solid var(--light-green);
 }
 .link-oauth a:hover{
     text-decoration: none;
-    /* color: white; */
 }
 
 div.border {
-    border: 1px solid gray;
+    border: 1px solid var(--dark-gray);
 }
 
 .btn-save {
@@ -234,7 +242,8 @@ div.border {
 
 .div-wrap {
     display: grid;
-    grid-template-columns: 4fr 3fr;
+    grid-template-columns: 2.5fr 3fr;
+    padding-bottom: 20px;
 }
 
 .img-container img {
@@ -255,17 +264,9 @@ div.border {
     width: 85%;
 }
 
-.wrap {
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
-}
+
 
 @media screen and (max-width:768px) {
-    .wrap {
-        max-width: 960px;
-    }
-
     .main-form {
         display: flex;
         flex-direction: column;
@@ -276,7 +277,9 @@ div.border {
         display: flex;
         flex-direction: column;
     }
-
+    .contect-group{
+        flex-direction: column;
+    }
     .main-wrap {
         width: 90%;
     }
