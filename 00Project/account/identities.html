@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>identities</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://fonts.cdnfonts.com/css/helvetica-neue-5" rel="stylesheet">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="wrap">
+        <div id="" class="main-wrap ">
+
+            <!-- Insert Navigation -->
+            <!--  Account Navigation -->
+            <ul class="nav nav-tabs mt-3 mb-3">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="https://danichen12.github.io/00Project/edit/edit.html">帳號設定</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://danichen12.github.io/00Project/prefills/prefills.html">報名預填資料</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://danichen12.github.io/00Project/change_password/change_password.html">修改密碼</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="https://danichen12.github.io/00Project/identities/identities.html">身份認證</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://libclf.github.io/practice/account/orders.html">個人帳務清單</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://danichen12.github.io/00Project/joined_organizations/joined_organizations.html">成為粉絲的組織</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://danichen12.github.io/00Project/reclaim_orders/reclaim_orders.html">訂單歸戶</a>
+                </li>
+            </ul>
+            <!-- Account Navigation End-->
+
+            <!----------- Title------------>
+            <div class="title">
+                <h2 id="title">身分認證</h2>
+            </div>
+
+            <!----------- Form------------>
+            <form id="identities" action="">
+                <div class="main-form">
+                    <div class="content-wrapper">
+                        <div class="form_contaner">
+                            <!-- ----------------------目前密碼----------------  -->
+                            <label for="collapse">身心障礙者身份認證 <br> (僅供台灣使用)</label>
+                            <div class="collapse-group">
+                                <p class="d-inline-flex gap-1">
+                                    <button class="ident-collapse btn" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapse-example" aria-expanded="false"
+                                        aria-controls="collapse-example">
+                                        進行認證
+                                        <p>使用身心障礙者身份進行購票，請於購票前一日完成身份認證，入場時出示身心障礙證明，需與陪同者同時入場</p>
+                                    </button>
+                                </p>
+                                <div class="collapse" id="collapse-example">
+                                    <div class="id-contaner">
+                                        <label for="">身份證字號</label>
+                                        <div class="form-content input-group-sm">
+                                            <input class="form-control" id="id-number" type="text" name="id-number"
+                                                placeholder="請輸入身心障礙者身分證字號">
+                                            <div class="disabled-people-check mt-2">
+                                                <ul>
+                                                    <li>
+                                                        <div class="checkbox-group">
+                                                            <input class="disabled-check" id="wheelchair-seat"
+                                                                type="checkbox" name="wheelchair-seat"
+                                                                value="wheelchair-seat"><label
+                                                                for="wheelchair-seat">需購買輪椅席</label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="checkbox-group">
+                                                            <input class="disabled-check" id="consent" type="checkbox"
+                                                                name="consent" value="consent">
+                                                            <label for="consent">我瞭解並同意
+                                                                ShowNest利用本人之個人資料向主管機關進行線上身心障礙者身份認證</label>
+                                                        </div>
+                                                    </li>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </form>
+            <!-- ---------------界線-------------- -->
+            <div class="border"></div>
+            <!-- ---------------儲存個人資料按鈕-------------- -->
+            <div class="div-wrap">
+                <div class="btn-save">
+                    <button type="button" class="btn"
+                        style="background-color:var(--main-color);color: white;border:none;">認證
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

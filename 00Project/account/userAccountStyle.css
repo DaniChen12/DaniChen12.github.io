@@ -1,0 +1,292 @@
+:root {
+	--light-green: #82b99b;
+	--main-green: #3b7555;
+	--dark-green: #1d5545;
+	--light-gray: #ddd;
+	--dark-gray: #888;
+	--main-font-size: 15px;
+	--common-border: 1px #ddd solid;
+	--dark-border: 1px #999EA2 solid;
+	--common-border-radius: 5px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* change bootstrap nav color start */
+.nav-tabs {
+    --bs-nav-tabs-link-active-color: var(--bs-emphasis-color);
+    --bs-emphasis-color: #333333
+}
+
+ul.nav li a,
+ul.nav li a:visited {
+    color: var(--main-green);
+}
+
+ul.nav li a:hover,
+ul.nav li a:active {
+    color: var(--main-green);
+    background-color: #FAFAFA;
+    text-decoration: none;
+}
+
+ul.nav li.active a {
+    color: var(--main-green);
+}
+
+/* change bootstrap nav color end */
+
+
+/* main Body */
+.section_wrap {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-wrap {
+    width: 75%;
+}
+
+#user_edit.main-form{
+    display: flex;
+    gap: 40px;
+}
+/* titles */
+.title {
+    display: block;
+    line-height: 2;
+    vertical-align: middle;
+}
+
+#user_edit h1,
+h2 {
+    font-size: 30px;
+    text-align: left;
+}
+/* inputs */
+#change_password.content-wrapper input{
+    width: 50%;
+}
+/* div and wraps */
+.form-content {
+    margin-bottom: 10px;
+}
+.content-wrapper{
+    padding-top: 20px;
+}
+#change_password.form_contaner {
+    display: grid;
+    grid-template-columns: 3fr 8fr;
+    margin-bottom: 10px;
+}
+.form-content{
+    padding-bottom: 10px;
+}
+label {
+    display: inline-block;
+    padding: 10px 0px;
+    margin-right: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: right;
+}
+p {
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    color: var(--dark-gray);
+    font-size:var(--main-font-size);
+}
+a {
+    text-decoration: none;
+    color: var(--main-green);
+}
+a:hover {
+    color:var(--light-green);
+    text-decoration: underline solid var(--light-green);
+}
+ul{
+    list-style: none;
+}
+
+abbr {
+    color: #c07525;
+}
+div.border{
+    border-bottom:1px solid var(--dark-gray);
+    margin-top: 20px;
+}
+.btn-save {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0px;
+}
+.div-wrap{
+    display: grid;
+    grid-template-columns: 5.8fr 3fr;
+}
+
+/* -------------------user_edit-------------------------- */
+#user_edit.form_contaner{
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    padding-top: 20px;
+}
+#user_edit.contect-group {
+    font-weight: 400;
+    display: flex;
+    flex-direction: row;
+}
+#user_edit.form-control {
+    display: inline;
+}
+#user_edit input {
+    padding: 6px 8px;
+    color: var(--dark-gray);
+    border-radius: 4px;
+}
+#user_edit ul {
+    direction: none;
+}
+#user_edit.phone-num {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+}
+#user_edit.form-floating label {
+    font-weight: 400;
+    color: var(--dark-gray);
+}
+#user_edit select#sex {
+    padding: 6px 10px;
+    border-radius: 5px;
+    border: 1px solid var(--light-gray);
+}
+#user_edit.form-content select {
+    padding: 6px 10px;
+    border-radius: 5px;
+    border: 1px solid var(--light-gray);
+}
+#user_edit.option-group {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    list-style: none;
+}
+#user_edit.option-group div+div {
+    margin-top: 10px;
+}
+#user_edit select {
+    cursor: pointer;
+}
+#user_edit select:focus {
+    outline: none;
+    border: 1px solid var(--light-gray);
+}
+
+#user_edit .option-group li {
+    display: flex;
+    text-decoration: none;
+    cursor: pointer;
+}
+#user_edit li input{
+    margin-right: 5px;
+}
+#user_edit.option-group li label {
+    cursor: pointer;
+}
+#user_edit.subscribe-group li {
+    display: flex;
+    text-decoration: none;
+    list-style: none;
+}
+#user_edit.subscribe-group li label {
+    margin-left: 5px;
+    cursor: pointer;
+}
+#user_edit.link-oauth {
+    font-size: 15px;
+    color: #333333;
+    vertical-align: bottom;
+    /* position: relative; */
+    line-height: 1.8em;
+    margin-top: -2px;
+    margin-bottom: 15px;
+}
+#user_edit.name {
+    font-size: 15px;
+    color: #333333;
+    line-height: 1.8em;
+    box-sizing: border-box;
+    /* position: absolute; */
+    display: inline-block;
+    width: 90px;
+    font-weight: bold;
+}
+#user_edit.btn-info {
+    color: white;
+}
+#user_edit.link-oauth a:hover{
+    text-decoration: none;
+    /* color: white; */
+}
+
+#user_edit.div-wrap {
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+}
+
+.img-container img {
+    width: fit-content;
+}
+
+#user_edit.help-block p {
+    max-width: 340px;
+    min-width: 230px;
+    width: 100%;
+}
+#user_edit.image-upload input {
+    cursor: pointer;
+}
+#user_edit.file-upload{
+    width: 85%;
+}
+
+
+
+
+@media screen and (max-width:768px) {
+    .wrap {
+        max-width: 960px;
+    }
+    h2{
+        text-align: center;
+    }
+    .form_contaner{
+        display: flex;
+        flex-direction: column;
+        /* margin: auto; */
+    }
+    .form_contaner input{
+        width: 100%;
+    }
+    label {
+        min-width: 98px;
+        display: flex;
+        text-align: left;
+    }
+    .div-wrap{
+        display: block;
+    }
+}

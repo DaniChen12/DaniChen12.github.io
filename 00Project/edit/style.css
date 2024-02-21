@@ -7,16 +7,9 @@
     --button-clicked-color: #1d5545;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 body {
-    font-family: "Helvetica Neue", Arial, "Heiti TC", "Apple LiGothic Medium", "新微軟正黑體", "微軟正黑體", sans-serif;
-    font-size: 15px;
-    color: #333333;
+   
 }
 
 /* change bootstrap nav color start */

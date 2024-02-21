@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>user_edit</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://fonts.cdnfonts.com/css/helvetica-neue-5" rel="stylesheet">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="../user-edit-nav.css">
+    <link rel="stylesheet" href="https://songwchen.github.io/web/ShowNest/shownest-general-environment-style.css">
+    <link rel="stylesheet" href="https://songwchen.github.io/web/ShowNest/shownest-header-nav-style.css">
+    <link rel="stylesheet" href="https://songwchen.github.io/web/ShowNest/shownest-footer-style.css">
+    <link rel="stylesheet" href="userAccountStyle.css">
+    <script src="https://kit.fontawesome.com/d928366fbc.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+
+<body>
+    <!-- logged-in-header-nav -->
+    <nav id="header-nav" class="d-flex logged-in-nav">
+        <input type="checkbox" id="nav-checkbox" class="d-none">
+        <div id="header-nav-wrap" class="width">
+            <div id="header-nav-logo-and-menu-button-wrap" class="d-flex align-items-center justify-content-between">
+                <h1><a href="https://songwchen.github.io/web/ShowNest/home.html" id="header-nav-logo"><img
+                            src="../shownest-logo.png" alt="logo"></a></h1>
+                <label id="nav-checkbox-label" for="nav-checkbox"></label>
+            </div>
+            <div id="header-functions" class="">
+                <div id="header-functions-left" class="">
+                    <a href="">我的票券</a>
+                    <a href="https://songwchen.github.io/web/ShowNest/events.htmll">探索活動</a>
+                    <div id="header-nav-search-div" class="d-flex align-items-center">
+                        <i class="fa-solid fa-magnifying-glass" id="header-nav-magnifier-icon"></i>
+                        <input type="text" id="header-nav-search-input" placeholder="搜尋活動">
+                    </div>
+                </div>
+                <div id="header-functions-right" class="">
+                    <a id="new-event" class="" href="https://avelineshie.github.io/KKTIK/CreateActivity.html"><i
+                            class="fa-solid fa-circle-plus"></i>建立活動</a>
+                    <div id="org-select-wrap" class="d-block dropdown btn-group">
+                        <a id="org-select" class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">選擇組織</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <p>組織列表</p>
+                            <li><a href="" class="dropdown-item org">BS</a></li>
+                            <li><a href="" class="dropdown-item org">BS2</a></li>
+                            <li><a href="" class="dropdown-item org">
+                                    <i class="fa-solid fa-circle-plus"></i>建立新組織</a></li>
+                        </ul>
+                    </div>
+                    <div id="user-account-wrap" class="d-block align-items-center dropdown btn-group">
+                        <a id="user-account" class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false"><i class="fa-solid fa-user"></i><span>彭德・佛傑</span></a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a id="user-name" class="dropdown-item d-inline-flex flex-column" href="#"><img
+                                        src="https://picsum.photos/300/200/?random=10" alt="user's photo">彭德・佛傑</a>
+                            </li>
+                            <li><a id="nav-user-setting" class="dropdown-item"
+                                    href="https://danichen12.github.io/00Project/edit/edit.html">
+                                    <i class="fa-solid fa-gear"></i>設定</a></li>
+                            <li><a id="nav-user-orders" class="dropdown-item"
+                                    href="https://libclf.github.io/practice/account/orders.html">
+                                    <i class="fa-solid fa-ticket"></i>訂單</a></li>
+                            <li><a id="nav-logout" class="dropdown-item" href="#">
+                                    <i class="fa-solid fa-right-from-bracket"></i>登出</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section_wrap">
+        <div id="user_edit" class="main-wrap ">
+
+            <!-- Insert Navigation -->
+            <!--  Account Navigation -->
+            <ul class="nav nav-tabs mt-3 mb-3">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page"
+                        href="https://danichen12.github.io/00Project/edit/edit.html">帳號設定</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://danichen12.github.io/00Project/prefills/prefills.html">報名預填資料</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"
+                        href="https://danichen12.github.io/00Project/change_password/change_password.html">修改密碼</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"
+                        href="https://danichen12.github.io/00Project/identities/identities.html">身份認證</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://libclf.github.io/practice/account/orders.html">個人帳務清單</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"
+                        href="https://danichen12.github.io/00Project/joined_organizations/joined_organizations.html">成為粉絲的組織</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"
+                        href="https://danichen12.github.io/00Project/reclaim_orders/reclaim_orders.html">訂單歸戶</a>
+                </li>
+            </ul>
+            <!-- Account Navigation End-->
+
+            <!----------- Title------------>
+            <div class="title">
+                <h1 id="title">修改帳號設定</h1>
+            </div>
+
+            <!----------- Form------------>
+            <form id="user_edit" action="">
+                <!-- <div class="main-form col-8 form-horizontal"> -->
+                <div class="main-form">
+                    <div class="content-wrapper">
+                        <div class="form_contaner">
+                            <!-- ----------------使用者名稱----------------  -->
+                            <label for="">使用者名稱</label>
+                            <div class="form-content input-group-sm">
+                                <input class="form-control col-12" id="" type="text" name="" placeholder="">
+                                <p class="caption">您可以用此帳號登入 ShowNest 帳號只能使用字母、數字或底線且不能與其他 會員重複。</p>
+                            </div>
+                            <!-- -------------------暱稱-------------------  -->
+                            <label for="">暱稱</label>
+                            <div class="form-content input-group-sm">
+                                <input class="form-control col-12" id="" type="text" name="" placeholder="">
+                                <p class="caption">您的暱稱會顯示在個人頁面、活動頁面等地方</p>
+                            </div>
+                            <!--  ----------------聯絡方式------------------  -->
+                            <label for="">聯絡方式</label>
+                            <div class="form-content">
+                                <div class="contect-group input-group-sm">
+                                    <label class="px-2" for="Email">Email</label>
+                                    <input type="email" class="form-control mb-4" id="" type="text" name=""
+                                        placeholder="Email">
+                                    <p></p>
+                                </div>
+                                <div class="contect-group">
+                                    <label for="phone-number">手機號碼</label>
+                                    <div class="num-group">
+                                        <div class="phone-num">
+                                            <span class="Country-codes">
+                                                <select name="" id="" aria-placeholder="">
+                                                    <option value="+886">+886</option>
+                                                </select>
+                                            </span>
+                                            <span class="numbers input-group-sm">
+                                                <input class="form-control" type="tel" id="" type="text" name=""
+                                                    placeholder="phone number">
+                                            </span>
+                                        </div>
+                                        <p>修改聯絡資料需要重新驗證方能啟用。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ---------------出生年月日------------------  -->
+                            <label for="">出生年月日</label>
+                            <div class="form-content input-group-sm">
+                                <input class="form-control" id="birthday" type="date" name="">
+                            </div>
+                            <!-- ----------------生理性別-------------------- -->
+                            <label for="">生理性別</label>
+                            <div class="form-content input-group-sm">
+                                <select name="sex" id="sex">
+                                    <option value="男">男</option>
+                                    <option value="女">女</option>
+                                </select>
+                            </div>
+                            <!-- ------------------偏好活動地區-------------- -->
+                            <label for="">偏好活動地區</label>
+                            <div class="form-content input-group-sm">
+                                <div class="option-group">
+                                    <ul>
+                                        <li><input class="add-option" id="northern-region" type="radio"
+                                                name="address-option" value="northern">
+                                            <label for="northern-region">北北基宜地區</label>
+                                        </li>
+
+                                        <li><input class="add-option" id="taozhumiao-area" type="radio"
+                                                name="address-option" value="taozhumiao">
+                                            <label for="taozhumiao-area">桃竹苗地區</label>
+                                        </li>
+
+                                        <li><input class="add-option" id="yunjianan-area" type="radio"
+                                                name="address-option" value="yunjianan-area">
+                                            <label for="yunjianan-area">雲嘉南地區</label>
+                                        </li>
+                                        <li><input class="add-option" id="southern-region " type="radio"
+                                                name="address-option" value="southern-region "><label
+                                                for="southern-region ">高屏地區</label></li>
+                                        <li><input class="add-option" id="central-region" type="radio"
+                                                name="address-option" value="central-region"><label
+                                                for="central-region">中彰投地區</label></li>
+                                        <li><input class="add-option" id="east-area" type="radio" name="address-option"
+                                                value="east-area"><label for="east-area">花東地區</label></li>
+                                        <li><input class="add-option" id="outer-island-area" type="radio"
+                                                name="address-option" value="outer-island-area"><label
+                                                for="outer-island-area">澎金馬地區</label></li>
+                                        <li><input class="add-option" id="hong-kong" type="radio" name="address-option"
+                                                value="hong-kong"><label for="hong-kong">香港</label></li>
+                                        <li><input class="add-option" id="macao" type="radio" name="address-option"
+                                                value="macao"><label for="macao">澳門</label></li>
+                                        <li><input class="add-option" id="other" type="radio" name="address-option"
+                                                value="other"><label for="other">其他地區</label></li>
+                                    </ul>
+                                </div>
+                                <p>我們將以此為您推薦該地區活動</p>
+                            </div>
+                            <!-- ------------------個人網站------------------ -->
+                            <label for="">個人網站</label>
+                            <div class="form-content input-group-sm">
+                                <input class="form-control" id="" type="url" name="" placeholder="">
+                            </div>
+                            <!-- ------------------個人簡介------------------ -->
+                            <label for="">個人簡介</label>
+                            <div class="form-content form-floating input-group-sm">
+                                <textarea name="" class="description-content form-control" placeholder="個人簡介輸入這裡"
+                                    id="floating-textarea" rows="6"></textarea>
+                                <label for="floating-textarea">個人簡介輸入這裡</label>
+                                <p id="" class="caption">剩餘160字</p>
+                            </div>
+                            <!-- ----------------國家與時區----------------- -->
+                            <label for="">國家與時區</label>
+                            <div class="form-content input-group-sm">
+                                <select name="area" id="area">
+                                    <option value="台灣">台灣</option>
+                                </select>
+                                <select name="GMT" id="">
+                                    <option value="GMT08">(GMT+08:00)</option>
+                                </select>
+                            </div>
+                            <!-- -------------------連結-------------------- -->
+                            <label for="">連結</label>
+                            <div class="form-content input-group-sm">
+                                <div class="link-oauth link-fb mt-2">
+                                    <span class="name">Facebook</span>
+                                    <a href="#" type="button" class="btn btn-primary">連結</a>
+                                </div>
+                                <div class="link-oauth link-kkbox">
+                                    <span class="name">KK ID</span>
+                                    <a href="#" type="button" class="kkLink btn btn-info">連結</a>
+                                </div>
+                            </div>
+                            <!-- ---------------進階帳號管理----------------- -->
+                            <label for="">進階帳號管理</label>
+                            <div class="form-content input-group-sm">
+                                <div class="checkbox-group">
+                                    <a class="delete-acc" href="#">我要刪除帳號</a>
+                                    <div class="subscribe-group mt-2">
+                                        <ul>
+                                            <li>
+                                                <input class="sub-option" id="sub-news" type="checkbox"
+                                                    name="subscribe-option" value="sub-news"><label class=""
+                                                    for="sub-news">訂閱 ShowNest 的最新消息</label>
+                                            </li>
+                                            <li>
+                                                <input class="sub-option" id="restric-opt" type="checkbox"
+                                                    name="Search-restric-option" value="restric-opt"><label class=""
+                                                    for="restric-opt">搜尋時，排除限制級活動</label>
+                                            </li>
+                                            <li>
+                                                <input class="sub-option" id="pers-page" type="checkbox"
+                                                    name="personal-page" value="pers-page"><label class=""
+                                                    for="pers-page">啟用個人頁面</label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image-upload">
+                        <div class="img-container">
+                            <img src="https://picsum.photos/200/150/?random=10">
+                        </div>
+                        <a class="file-input ">
+                            <input class="file-upload form-control form-control-sm" type="file" id="form-control-sm">
+                        </a>
+                        <span class="help-block pb-4">
+                            <p>建議圖片尺寸為 250x250 以上正方形圖片，最大檔案容量為2MB。如果沒有上傳，會使用系統預設圖片。</p>
+                        </span>
+                    </div>
+
+                </div>
+        </div>
+        </form>
+        <div class="border"></div>
+        <!-- ---------------儲存個人資料按鈕-------------- -->
+        <div class="div-wrap">
+            <div class="btn-save">
+                <button type="button" class="btn "
+                    style="background-color:var(--main-color);color: white;border:none;">儲存個人資料</button>
+            </div>
+        </div>
+
+        <!-- ---------------footer-------------- -->
+        <section id="footer-section">
+            <footer>
+                <div id="footer-links" class="width">
+                    <ul>
+                        <p>參與活動</p>
+                        <li><a href="">常見問題</a></li>
+                        <li><a href="">購票流程說明</a></li>
+                        <li><a href="">探索所有活動</a></li>
+                        <li><a href="">下載 App</a></li>
+                    </ul>
+                    <ul>
+                        <p>舉辦活動</p>
+                        <li><a href="">主辦單位專區</a></li>
+                        <li><a href="">如何舉辦活動</a></li>
+                        <li><a href="">定價方式</a></li>
+                    </ul>
+                    <ul>
+                        <p>關於 KKTIX</p>
+                        <li><a href="">聯絡我們</a></li>
+                        <li><a href="">媒體素材</a></li>
+                        <li><a href="">加入 KKTIX</a></li>
+                        <li><a href="">隱私權政策</a></li>
+                        <li><a href="">服務條款</a></li>
+                    </ul>
+                    <ul id="footer-icon-ul">
+                        <p>追蹤 KKTIX</p>
+                        <li class="footer-icon-li d-flex flex-column">
+                            <span href="">台灣</span>
+                            <span><a href="" class="footer-icon-a"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="" class="footer-icon-a"><i class="fa-brands fa-instagram"></i></a></span>
+                        </li>
+                        <li class="footer-icon-li d-flex flex-column">
+                            <a href="">香港</a>
+                            <span><a href="" class="footer-icon-a"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="" class="footer-icon-a"><i class="fa-brands fa-instagram"></i></a></span>
+                        </li>
+                        <li><a href="">部落格</a></li>
+                    </ul>
+                </div>
+                <div id="footer-end" class="width">
+                    <div>
+                        <img id="footer-logo" src="../shownest-logo.png" alt="logo">
+                        <!-- <span>OOXX娛樂股份有限公司</span> -->
+                        <span>ShowNest Entertainment Limited</span>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-earth-asia"></i>
+                        <a href="" class="footer-lang-active">繁體中文</a>
+                        <a href="">English</a>
+                        <a href="">日本語</a>
+                    </div>
+                </div>
+            </footer>
+        </section>
+
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
