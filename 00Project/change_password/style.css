@@ -1,8 +1,25 @@
 
+:root {
+	--light-green: #82b99b;
+	--main-green: #3b7555;
+	--dark-green: #1d5545;
+	--light-gray: #ddd;
+	--dark-gray: #888;
+	--main-font-size: 15px;
+	--common-border: 1px #ddd solid;
+	--dark-border: 1px #999EA2 solid;
+	--common-border-radius: 5px;
+}
+
 body {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
+	font-family: sans-serif;
+	font-size: var(--main-font-size);
+	background-color: #fafafa;
+}
+
+
+* {
+    box-sizing: border-box;
 }
 
 /* change bootstrap na                                                v color start */
@@ -127,5 +144,24 @@ div.border{
     }
     .div-wrap{
         display: block;
+    }
+    .nav-tabs .nav-link {
+        background-color: none;
+        border: 1px solid transparent;
+        border-radius: 5rem;
+        margin: 5px;
+    }
+
+    .nav-tabs .nav-link.active {
+        color: #fff;
+        background-color: var(--main-green);
+        border: 1px solid var(--main-green);
+        border-radius: 5rem;
+    }
+    .btn-save button{
+        display: block;
+        width: 100%;
+        border-radius: 3px;
+        text-align: center;
     }
 }
