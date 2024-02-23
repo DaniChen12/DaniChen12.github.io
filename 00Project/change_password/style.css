@@ -5,7 +5,7 @@ body {
     height: 100vh;
 }
 
-/* change bootstrap nav color start */
+/* change bootstrap na                                                v color start */
 .nav-tabs {
     --bs-nav-tabs-link-active-color: var(--bs-emphasis-color);
     --bs-emphasis-color: #333333
