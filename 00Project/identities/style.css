@@ -146,12 +146,12 @@ p {
     margin-top: 5px;
     margin-bottom: 10px;
     line-height: 1;
-    color: gray;
+    color: var(--dark-gray);
     font-size: 15px;
 }
 
 div.border {
-    border-bottom: 1px solid #333333;
+    border-bottom: 1px solid var(--dark-gray);
     margin-top: 20px;
 }
 
