@@ -1,30 +1,27 @@
 :root {
-    --main-color: #3b7555;
-    --main-color-hover: #3b7555;
-    --main-font-size: 15px;
-    --common-border: 1px #ddd solid;
-    --function-color-hover: #518f6d;
-    --button-clicked-color: #1d5545;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	--light-green: #82b99b;
+	--main-green: #3b7555;
+	--dark-green: #1d5545;
+	--light-gray: #ddd;
+	--dark-gray: #888;
+	--main-font-size: 15px;
+	--common-border: 1px #ddd solid;
+	--dark-border: 1px #999EA2 solid;
+	--common-border-radius: 5px;
 }
 
 body {
-    font-family: "Helvetica Neue", Arial, "Heiti TC", "Apple LiGothic Medium", "新微軟正黑體", "微軟正黑體", sans-serif;
-    font-size: 15px;
-    color: #333333;
-    background-color: #f1f1f18b;
+	font-family: sans-serif;
+	font-size: var(--main-font-size);
+	background-color: #fafafa;
+}
+
+
+* {
+    box-sizing: border-box;
 }
 
 /* main Body */
-.count_down_group {
-    background-color: rgb(240, 240, 240);
-    padding: 10px;
-}
 
 .main_wrap {
     width: 75%;
@@ -33,6 +30,10 @@ body {
     line-height: 1.5em;
 }
 
+.count_down_group {
+    background-color: rgb(240, 240, 240);
+    padding: 10px;
+}
 .count_down_timer {
     background-color: #DB4455;
     color: #fff;
@@ -62,7 +63,7 @@ p {
     margin-top: 5px;
     margin-bottom: 10px;
     line-height: 1;
-    color: #888;
+    color: var(--dark-gray);
     font-size: 15px;
 }
 
@@ -77,7 +78,7 @@ label {
 }
 
 .event_detail_collapse {
-    color: var(--main-color);
+    color: var(--main-green);
 }
 
 .event_detail_collapse.btn::after {
@@ -123,7 +124,7 @@ table {
 td.price_total {
     width: 5%;
     text-align: right;
-    color: #888;
+    color: var(--dark-gray);
     font-weight: 300;
     padding-right: 20px;
 }
@@ -163,8 +164,8 @@ li {
 }
 
 .form-wrapper {
-    background: #eee;
-    border: #ddd 1px solid;
+    background: var(--light-gray);
+    border:var(--common-border);
     border-radius: 4px;
     margin-top: 5px;
     padding: 15px;
@@ -201,7 +202,7 @@ padding-left: 8px;
 }
 
 .fee_text {
-    color: #888;
+    color: var(--dark-gray);
 }
 
 .payments label {
@@ -230,17 +231,17 @@ th.ticket {
 
 /* -------collapse---------- */
 .collapse a {
-    color: var(--main-color);
+    color: var(--main-green);
     text-decoration: none;
 }
 
 .collapse a:hover {
-    color: var(--main-color-hover);
+    color: var(--light-green);
 }
 
 .collapse th {
     padding: 2px 15px 2px 0;
-    color: #888;
+    color: var(--dark-gray);
     min-width: 75px;
     font-weight: bold;
 }
@@ -283,7 +284,7 @@ th.ticket {
 
 p.step_text {
     margin-top: 10px;
-    color: var(--main-color);
+    color: var(--main-green);
     line-height: 2;
     width: 150px;
     vertical-align: bottom;
@@ -297,17 +298,17 @@ p.step_text {
     border-radius: 100%;
     line-height: 2;
     width: 30px;
-    border: 1px solid var(--function-color-hover);
+    border: 1px solid var(--light-green);
     background-color: white;
-    color: var(--button-clicked-color);
+    color: var(--main-green);
     display: inline-block;
     transition: background-color 500ms;
 }
 
 .step.progressing {
-    color: var(--main-color);
-    background-color: var(--main-color);
-    border: 3px solid var(--button-clicked-color);
+    color: var(--main-green);
+    background-color: var(--main-green);
+    border: 3px solid var(--light-green);
 }
 
 .step.progressing p {
@@ -315,7 +316,7 @@ p.step_text {
 }
 
 .step.progressing span {
-    color: var(--function-color-hover);
+    color: var(--light-green);
 }
 
 .step.disabled::after {
@@ -336,7 +337,7 @@ p.step_text {
 }
 
 .disabled .number {
-    color: var(--function-color-hover);
+    color: var(--light-green);
 }
 
 .disabled p {
@@ -455,9 +456,9 @@ a.btn_submit {
     .number {
         margin-left: 10px;
         border-radius: 100%;
-        border: 1px solid var(--button-clicked-color);
+        border: 1px solid var(--light-green);
         background-color: white;
-        color: var(--button-clicked-color);
+        color: var(--light-green);
     }
 
     .step.progressing {
@@ -475,7 +476,7 @@ a.btn_submit {
     /* -------------final Order details---------------- */
 
     .ticket_info_list th {
-        background-color: #ddd;
+        background-color: var(--light-gray);
     }
     td.ticket_name {
         padding-left: 20px;
@@ -493,7 +494,7 @@ a.btn_submit {
 
     table th,
     tfoot th {
-        background: #ddd
+        background: var(--light-gray);
     }
 
     .cart-ticket-list-subtable tr {
@@ -530,7 +531,7 @@ a.btn_submit {
     }
 
     .ticket_name {
-        background: #eee;
+        background: var(--dark-gray);
         width: 100%
     }
 
@@ -568,7 +569,7 @@ a.btn_submit {
     td.price_total {
         width: 100%;
         text-align: right;
-        color: #888;
+        color: var(--dark-gray);
         padding-right: 20px;
     }
     .fee_group th,.fee_group td{
@@ -590,7 +591,7 @@ a.btn_submit {
         flex-direction: column;
     }
     .seat_info_group td{
-        border-bottom:1px solid #ddd ;
+        border-bottom:1px solid var(--dark-gray) ;
         vertical-align: middle;
     }
     .seat_info_group td:last-child{
