@@ -11,9 +11,14 @@
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
+	font-family: sans-serif;
+	font-size: var(--main-font-size);
+	background-color: #fafafa;
+}
+
+
+* {
+    box-sizing: border-box;
 }
 
 /* change bootstrap nav color start */
@@ -45,13 +50,16 @@ ul.nav li.active a {
     width: 100%;
     max-width: 1200px;
     margin: auto;
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 .main-wrap {
     width: 75%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.main-form {
+    display: flex;
+    gap: 40px;
 }
 
 .title {
@@ -63,11 +71,6 @@ ul.nav li.active a {
 
 h1 {
     font-size: 30px;
-}
-
-.main-form {
-    display: flex;
-    gap: 40px;
 }
 
 .form-content {
@@ -245,7 +248,9 @@ div.border {
     grid-template-columns: 2.5fr 3fr;
     padding-bottom: 20px;
 }
-
+.img-container{
+    padding-bottom: 10px;
+}
 .img-container img {
     width: fit-content;
 }
@@ -277,23 +282,17 @@ div.border {
         display: flex;
         flex-direction: column;
     }
-    .contect-group{
-        flex-direction: column;
-    }
+
     .main-wrap {
         width: 90%;
     }
-
-    .image-upload {
-        max-width: 33.333%;
+    .img-container{
+        display: flex;
         justify-content: center;
     }
 #form-control-sm{
     min-width: 100%;
 }
-    .img-container {
-        max-width: 50%;
-    }
 
     label {
         min-width: 90px;
@@ -305,6 +304,25 @@ div.border {
 
     .div-wrap {
         display: block;
+    }
+    .nav-tabs .nav-link {
+        background-color: none;
+        border: 1px solid transparent;
+        border-radius: 5rem;
+        margin: 5px;
+    }
+
+    .nav-tabs .nav-link.active {
+        color: #fff;
+        background-color: var(--main-green);
+        border: 1px solid var(--main-green);
+        border-radius: 5rem;
+    }
+    .btn-save button{
+        display: block;
+        width: 100%;
+        border-radius: 3px;
+        text-align: center;
     }
 
 }
