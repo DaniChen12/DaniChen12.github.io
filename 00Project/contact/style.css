@@ -1,23 +1,26 @@
 :root {
-    --main-color: #3b7555;
-    --main-color-hover: #3b7555;
-    --main-font-size: 15px;
-    --common-border: 1px #ddd solid;
-    --function-color-hover: #518f6d;
-    --button-clicked-color: #1d5545;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	--light-green: #82b99b;
+	--main-green: #3b7555;
+	--dark-green: #1d5545;
+	--light-gray: #ddd;
+	--dark-gray: #888;
+	--main-font-size: 15px;
+	--common-border: 1px #ddd solid;
+	--dark-border: 1px #999EA2 solid;
+	--common-border-radius: 5px;
 }
 
 body {
-    font-family: "Helvetica Neue", Arial, "Heiti TC", "Apple LiGothic Medium", "新微軟正黑體", "微軟正黑體", sans-serif;
-    font-size: 15px;
-    color: #333333;
+	font-family: sans-serif;
+	font-size: var(--main-font-size);
+	background-color: #f1f1f18b;
 }
+
+
+* {
+    box-sizing: border-box;
+}
+
 
 /* change bootstrap nav color start */
 .nav-tabs {
@@ -27,18 +30,18 @@ body {
 
 ul.nav li a,
 ul.nav li a:visited {
-    color: var(--main-color);
+    color: var(--main-green);
 }
 
 ul.nav li a:hover,
 ul.nav li a:active {
-    color: var(--main-color);
+    color: var(--main-green);
     background-color: #FAFAFA;
     text-decoration: none;
 }
 
 ul.nav li.active a {
-    color: var(--main-color);
+    color: var(--main-green);
 }
 
 /* change bootstrap nav color end */
@@ -107,7 +110,7 @@ p {
     margin-top: 5px;
     margin-bottom: 10px;
     line-height: 1.5;
-    color: gray;
+    color: var(--dark-gray);
     font-size: 14px;
 }
 
@@ -135,24 +138,24 @@ div.border {
 }
 
 .btn-primary {
-    background-color: var(--main-color);
+    background-color: var(--main-green);
     color: white;
     border: none;
 }
 
 .btn-primary:hover {
-    background-color: var(--function-color-hover);
+    background-color: var(--light-green);
 }
 
 .btn-light {
     background-color: none;
-    border: 1px solid var(--main-color);
-    color: var(--main-color);
+    border: 1px solid var(--main-green);
+    color: var(--main-green);
 }
 
 .btn-light:hover {
-    color: var(--main-color);
-    background-color: #eee;
+    color: var(--main-green);
+    background-color: var(--light-gray);
 }
 
 
