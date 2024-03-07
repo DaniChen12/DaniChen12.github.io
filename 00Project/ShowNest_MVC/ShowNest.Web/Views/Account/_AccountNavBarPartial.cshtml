@@ -1,0 +1,32 @@
+@using ShowNest.Web.ViewModels.UserAccount;
+@model List<TabStatusViewModel>;
+
+<ul class="nav nav-tabs mt-3 mb-4">
+    <li class="nav-item">
+        <a class="nav-link @(Model[0].IsActive ? "active" : "")" asp-controller="Account" asp-action="UserEdit">帳號設定</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link @(Model[1].IsActive ? "active" : "")" asp-controller="Account" asp-action="Prefills">報名預填資料</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link @(Model[2].IsActive ? "active" : "")" asp-controller="Account" asp-action="ChangePassword">修改密碼</a>
+    </li>
+        <li class="nav-item">
+            <a class="nav-link @(Model[3].IsActive ? "active" : "")" asp-controller="Account" asp-action="Identities">身份認證</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link @(Model[4].IsActive ? "active" : "")" asp-controller="Account" asp-action="Orders">個人帳務清單</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link @(Model[5].IsActive ? "active" : "")" asp-controller="Account" asp-action="JoinedOrganizations">成為粉絲的組織</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link @(Model[6].IsActive ? "active" : "")" asp-controller="Account" asp-action="ReclaimOrders">訂單歸戶</a>
+        </li>
+        <template>
+            <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            </li>
+        </template>
+</ul>
+

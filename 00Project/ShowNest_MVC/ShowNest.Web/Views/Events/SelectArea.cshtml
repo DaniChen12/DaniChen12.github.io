@@ -1,0 +1,68 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@section topCSS {
+    <link href="~/css/_Partial/_SeatSelectionActionBarPartial.css" rel="stylesheet" />
+    <link href="~/css/events/selectarea.css" rel="stylesheet" />
+}
+
+@section Scripts {
+    <script src="~/js/Events/_SeatSelectionActionBarPartial.js"></script>
+}
+
+
+@await Html.PartialAsync("_SeatSelectionActionBarPartial")
+<section class="section_wrap width">
+       
+      
+    <div class="main_stage_map">
+            <div class="map_area">
+                <img src="https://danichen12.github.io/00Project/booking/image/map.png" usemap="#image-map">
+                <map name="image-map" class="image-map" id="area_map">
+                    <area target="_blank" alt="floor1_a_area" title="floor1_a_area" href="SelectSeats"
+                          coords="381,129,505,129,507,290,418,288,333,230" shape="poly">
+                    <area target="_blank" alt="floor1_b_area" title="floor1_b_area" href="SelectSeats"
+                          coords="518,130,643,130,693,228,608,289,518,288" shape="poly">
+                    <area target="_blank" alt="floor2_a_area" title="floor2_a_area" href="SelectSeats"
+                          coords="313,265,367,299,337,356,287,312" shape="poly">
+                    <area target="_blank" alt="floor2_b_area" title="floor2_b_area" href="SelectSeats"
+                          coords="375,301,417,319,392,416,369,405,339,363" shape="poly">
+                    <area target="_blank" alt="floor2_c_area" title="floor2_c_area" href="SelectSeats"
+                          coords="425,318,469,329,463,424,400,413" shape="poly">
+                    <area target="_blank" alt="floor2_d_area" title="floor2_d_area" href="SelectSeats"
+                          coords="476,329,545,330,553,428,469,425" shape="poly">
+                    <area target="_blank" alt="floor2_e_area" title="floor2_e_area" href="SelectSeats"
+                          coords="553,329,600,320,623,417,559,427" shape="poly">
+                    <area target="_blank" alt="floor2_f_area" title="floor2_f_area" href="SelectSeats"
+                          coords="605,316,650,301,684,368,655,410,629,416" shape="poly">
+                    <area target="_blank" alt="floor2_g_area" title="floor2_g_area" href="SelectSeats"
+                          coords="656,298,711,264,738,317,689,361" shape="poly">
+                    <area target="_blank" alt="floor3_a_area" title="floor3_a_area" href="SelectSeats"
+                          coords="262,373,347,417,292,518,231,434" shape="poly">
+                    <area target="_blank" alt="floor3_b_area" title="floor3_b_area" href="SelectSeats"
+                          coords="353,420,409,444,367,582,301,524" shape="poly">
+                    <area target="_blank" alt="floor3_c_area" title="floor3_c_area" href="SelectSeats"
+                          coords="416,445,461,455,453,606,377,582" shape="poly">
+                    <area target="_blank" alt="floor3_d_area" title="floor3_d_area" href="SelectSeats"
+                          coords="467,454,557,456,561,608,461,608" shape="poly">
+                    <area target="_blank" alt="floor3_e_area" title="floor3_e_area" href="SelectSeats"
+                          coords="563,452,606,444,652,586,567,606" shape="poly">
+                    <area target="_blank" alt="floor3_f_area" title="floor3_f_area" href="SelectSeats"
+                          coords="614,442,673,420,725,522,660,582" shape="poly">
+                    <area target="_blank" alt="floor3_g_area" title="floor3_g_area" href="SelectSeats"
+                          coords="678,418,761,372,795,436,733,521" shape="poly">
+                </map>
+            </div>
+        </div>
+        <div class="rwd-fixed-btns">
+            <div class="btn-cancel">
+                <a href="#"><i class="fa-solid fa-circle-xmark"></i>取消購票</a>
+            </div>
+            <div class="btn-confirm" data-bs-toggle="modal" data-bs-target="#btn-confirm">
+                <a href="#">確認座位</a>
+            </div>
+
+        </div>
+
+
+    </section>

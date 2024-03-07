@@ -1,0 +1,43 @@
+@{
+    ViewData["Title"] = "SignUp";
+}
+
+@section topCSS {
+    <link rel="stylesheet" href="~/css/Account/SignUp.css">
+}
+
+<div class="wallpaper">
+
+    <div class="container">
+        <div class="wrap">
+            <div class="tab">
+                <div class="log-in"><a href="LogIn">登入</a></div>
+                <div class="sign-up">註冊</div>
+            </div>
+            <div class="input-area">
+                <h3>建立 ShowNest 帳號</h3>
+                <div class="user-name">
+                    <input type="text" placeholder="使用者名稱" required>
+                </div>
+                <div class="email">
+                    <input type="email" placeholder="Email" required>
+                </div>
+                <div class="passwords">
+                    <input type="password" id="pass" name="password" minlength="8" required placeholder="密碼" />
+                </div>
+                <div class="passwords">
+                    <input type="password" id="pass" name="password" minlength="8" required placeholder="再次輸入密碼" />
+                </div>
+                <div class="birthday">
+                    <input type="date" name="birthday" id="" value="" required>
+                </div>
+                <div class="submit"><a href="">註冊</a></div>
+                <div class="other-log-in-methods">使用第三方帳號進行註冊</div>
+                <div class="third-party-log-in">
+                    <div class="google-icon"><img src="https://res.cloudinary.com/dwn2iafcc/image/upload/v1708967805/google-web-light-rd-na_wtcjhg.svg" alt="third-party-signup:Google"></div>
+                    <div class="line-icon"><img src="https://res.cloudinary.com/dwn2iafcc/image/upload/v1708967803/LINE_APP_Android_i0mrgo.png" alt="third-party-signup:line"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

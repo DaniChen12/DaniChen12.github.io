@@ -1,0 +1,419 @@
+﻿
+@section topCSS {
+    <link href="~/css/events/orderdetail.css" rel="stylesheet" />
+
+}
+
+
+    <section class="section_wrap">
+        <div class="main_event_order">
+            <div class="order_statius main_wrap width">
+                <div class="register_message">
+
+                    <!-- 未繳款 -->
+                    <div class="display-table-row">
+                        <div class="icon_wrapper order_pay">
+                            <i class="fa fa-exclamation-circle"></i>
+                        </div>
+                        <div class="message_wrapper">
+                            <h1 class="statius_title pay_h1">尚未繳費完成</h1>
+                            <p class="statius_content">訂單已完成，請儘速完成繳費程序。</p>
+                        </div>
+                    </div>
+
+                    <!-- 取消訂單 -->
+                    <!-- <div class="display-table-row">
+                        <div class="icon_wrapper order_canceled">
+                            <i class="fa fa-info-circle"></i>
+                        </div>
+                        <div class="message_wrapper">
+                            <h1 class="statius_title canceled_h1">您的訂單已取消。</h1>
+                            <p class="statius_content">您的訂單已取消。如果需要退款，請與 KKTIX 聯絡退款事宜。</p>
+                        </div>
+                    </div> -->
+                    <!-- 訂單完成 -->
+                    <!-- <div class="display-table-row" >
+                        <div class="icon_wrapper order_finished">
+                            <i class="fa fa-check"></i>
+                        </div>
+                        <div class="message_wrapper">
+                            <h1 class="statius_title finished_h1">恭喜！您已完成訂單</h1>
+                            <p class="statius_content">建議將活動加入行事曆，以免錯過精采活動喔！</p>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        <div class="title main_wrap width">
+                <h2>【ALTA】theLOOP presents : PSY.P 臺灣個人巡演預熱戰</h2>
+                <a class="event_link" target="_blank" href="#">
+                    <i class="fa fa-external-link fa-front"></i>
+                    活動頁面
+                </a>
+            </div>
+        <div class="event_details main_wrap width">
+                <div class="collapse_group">
+                    <p class="d-inline-flex gap-1">
+                        <button class="event_detail_collapse btn" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#order-details" aria-expanded="false" aria-controls="collapse-example">
+                            顯示活動詳細資料
+                        </button>
+                    </p>
+                    <table class="show_detail" id="showDetailTable">
+                        <tbody>
+                            <tr>
+                                <th class="start_time">開始時間</th>
+                                <td class="time">
+                                    2024/02/16 22:30 (+0800)
+                                    <a class="is_following binding" href="#" target="_blank">
+                                        <i class="fa fa-calendar fa-front"></i>
+                                        加入行事曆
+                                    </a>
+                                </td>
+                            </tr>
+                            <!-- location -->
+                            <tr class="">
+                                <th class="event_location">活動地點</th>
+                                <td class="location">
+                                    ALTA NIGHTCLUB / 台中市西屯區青海南街59號
+                                    <a class="is_following binding " target="_blank" href="#">
+                                        <i class="fa fa-map-marker fa-front"></i>
+                                        檢視地圖
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="collapse" id="order-details">
+                        <table class="details">
+                            <tbody>
+                                <!-- <tr>
+                                    <th class="start_time">開始時間</th>
+                                    <td class="time">
+                                        2024/02/16 22:30 (+0800)
+                                        <a class="is_following binding" href="#" target="_blank" href="#">
+                                            <i class="fa fa-calendar fa-front"></i>
+                                            加入行事曆
+                                        </a>
+                                    </td>
+                                </tr> -->
+                                <!-- location -->
+                                <!-- <tr class="">
+                                    <th class="event_location">活動地點</th>
+                                    <td class="location">
+                                        ALTA NIGHTCLUB / 台中市西屯區青海南街59號
+                                        <a class="is_following binding " target="_blank" href="#">
+                                            <i class="fa fa-map-marker fa-front"></i>
+                                            檢視地圖
+                                        </a>
+                                    </td>
+                                </tr> -->
+                                <!-- event.co_organizer -->
+                                <tr>
+                                    <th class="co_organizer">主辦單位</th>
+                                    <td class="co_organizer_name">歐達休閒娛樂有限公司</td>
+                                </tr>
+                                <!--  pickup_types -->
+                                <tr class="pickup_types_group">
+                                    <th class="pickup_types">票券種類</th>
+                                    <td class="type_names">台灣全家 FamiPort 取票</td>
+                                </tr>
+                                <!--payment_terms -->
+                                <tr class="payment_terms_group">
+                                    <th class="payment_terms">付款方式</th>
+                                    <td class="payment_names">
+                                        ATM 虛擬帳號、信用卡
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="order_number ">
+                    <h2>訂單編號 : #135502876</h2>
+                </div>
+                <div class="collapse_group">
+                    <p class="d-inline-flex gap-1">
+                        <button class="event_detail_collapse btn" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse-example" aria-expanded="false" aria-controls="collapse-example">
+                            顯示訂單詳細資料
+                        </button>
+                    </p>
+                    <div class="order_detail_collapse" id="collapse-example">
+                        <table class="order_detail">
+                            <tbody id="ticket-info-list" ng-controller="OrderItemListCtrl" class="">
+                                <tr>
+                                    <th class="ticket_type">票券</th>
+                                    <td colspan="2" class="ticket_wrapper_td">
+                                        <table class="cart-ticket-list">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="ticket_name ">全票</td>
+                                                    <td class="ticket-data" colspan="2">
+                                                        <table class="cart-ticket-list-subtable with-seat">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>
+                                                                        <ul>
+                                                                            <li class="seat">
+                                                                                B2 區 16 排 4 號
+                                                                            </li>
+                                                                        </ul>
+                                                                    </td>
+                                                                    <td class="price_count ">
+                                                                        <span class="price">TWD$3,680</span> x 1
+                                                                    </td>
+                                                                    <td class="price_total ">TWD$3,680</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tbody class="pickup-and-payment-block">
+                                <tr class="pickup_type">
+                                    <th class="pickup_type">票券種類</th>
+                                    <td colspan="2">
+                                        <div class="purchase-options">
+                                            <div class="data-body">
+                                                <div class="pickup ">
+                                                    台灣全家 FamiPort 取票
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="payment_method">
+                                    <th class="payment">付款方式</th>
+                                    <td class="" colspan="2">
+                                        <div class="purchase_options">
+                                            <div class="data-body">
+                                                <div class="paymentMethodType">
+                                                    ATM 虛擬帳號
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr class="highlight">
+                                    <th class="total">總金額</th>
+                                    <td class="total_price " colspan="2">
+                                        <strong>TWD$3,680</strong>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- 待繳款 -->
+                <div class="unpay_payment_info">
+                    <div class="pickup_info">
+                        <h3 class="pickup_text">
+                            付款方式：ATM 虛擬帳號
+                        </h3>
+                        <dl class="info-list">
+                            <dt class="bank_number">銀行代碼</dt>
+                            <dd>808</dd>
+                            <dt class="bank_id">銀行帳號</dt>
+                            <dd>
+                                9555804923573789
+                                <div class="note_block">
+                                    本虛擬帳號僅對應到您的報名資料，請勿重複轉入到同一帳號
+                                </div>
+                            </dd>
+                            <dt class="area">分行名稱</dt>
+                            <dd class="area_address">
+                                玉山銀行營業部
+                            </dd>
+                            <dt class="company_name">帳戶名稱</dt>
+                            <dd>
+                                華娛網路娛樂股份有限公司
+                            </dd>
+                            <dt class="money">金額</dt>
+                            <dd>TWD$500</dd>
+                            <dt>繳款期限</dt>
+                            <dd>
+                                2024/02/18 22:33 (+0800)
+                                <div class="note_block">
+                                    系統以款項實際入帳時間為準，繳費期限前未入帳者訂單皆一律取消。因為各家銀行轉帳入帳時間不同，為保障您的權益，請及早付款。
+                                </div>
+                            </dd>
+                        </dl>
+                        <h3 class="pickup_type">取票方式：電子票券</h3>
+                        <hr>
+                        <div class="pickup_caption">
+                            <p>容我們提醒您：</p>
+                            <ol>
+                                <li>每張電子票券限一人及該場次使用一次，無法重複使用。</li>
+                                <li>
+                                    本電子票券視同無記名有價證券，請持票人善盡保管之責，並請注意任何憑證皆無法取代電子票券本身，恕無法持任何憑證要求入場。補發電子票券或是退票皆需酌收手續費，詳情請洽 <a href="#">ShowNest 客服中心</a>。
+                                </li>
+
+                                <li>持優待票者，請憑此票券及相關證件入場。</li>
+                                <li>本公司僅為委託代售票務單位，關於活動內容、品質、相關權益異動等事宜，一概與本公司無涉，請持票人洽詢主辦單位，並請依照主辦單位所發出之通知與規定辦理。</li>
+                                <li>因主辦單位及演出場館各有所不同，皆有其需注意事項，未盡事宜請遵照各單位相關規定遵守辦理。</li>
+                                <li>部分節目因演出需要並無再入場機會，如因遲到或中途離席而無法入場，不得以此要求退票或補票。</li>
+                                <li>
+                                    部分規則因營運地區而有所不同，請參考: <a href="#">台灣規範</a> <a href="#">香港規範</a>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- 訂單完成 -->
+                <!-- <div class="finished_pickup_payment_info">
+                    <div class="pickup_info">
+                        <h3 class="pickup_type">取票方式：電子票券</h3>
+                        <p class="pickup_text">你選擇的取票方式為電子票券，如你是以「會員身份」購買或報名活動，請先至我的票券中票券資料頁，點「顯示 QR Code」驗票入場，亦可以下載
+                            KKTIX iOS/android App 查看電子票；如非會員或未登入購買也可以現場出示訂單成立信或列印訂單的 QR Code 票券入場。若有任何存取問題，敬請務必來信或來電確認。
+                        </p>
+                        <div class="links_group">
+                            <a href="#" class="itunes">
+                                <img src="https://danichen12.github.io/00Project/order_done/image/cht-itunes-custom@2x.png"
+                                    alt="iTunes Download" width="180" height="60"
+                                    src="https://danichen12.github.io/00Project/order_done/image/cht-itunes-custom@2x.png">
+                            </a>
+                            <a href="#" class="google">
+                                <img src="https://danichen12.github.io/00Project/order_done/image/cht-android-custom@2x.png"
+                                    alt="Google Play Download" width="180" height="60"
+                                    src="https://danichen12.github.io/00Project/order_done/image/cht-android-custom@2x.png">
+                            </a>
+                        </div>
+
+                        <hr>
+                        <div class="pickup_caption">
+                            <p>容我們提醒您：</p>
+                            <ol>
+                                <li>每張電子票券限一人及該場次使用一次，無法重複使用。</li>
+                                <li>本電子票券視同無記名有價證券，請持票人善盡保管之責，並請注意任何憑證皆無法取代電子票券本身，恕無法持任何憑證要求入場。補發電子票券或是退票皆需酌收手續費，詳情請洽 <a
+                                        href="#">ShowNest 客服中心</a>。
+                                </li>
+
+                                <li>持優待票者，請憑此票券及相關證件入場。</li>
+                                <li>本公司僅為委託代售票務單位，關於活動內容、品質、相關權益異動等事宜，一概與本公司無涉，請持票人洽詢主辦單位，並請依照主辦單位所發出之通知與規定辦理。</li>
+                                <li>因主辦單位及演出場館各有所不同，皆有其需注意事項，未盡事宜請遵照各單位相關規定遵守辦理。</li>
+                                <li>部分節目因演出需要並無再入場機會，如因遲到或中途離席而無法入場，不得以此要求退票或補票。</li>
+                                <li>部分規則因營運地區而有所不同，請參考: <a href="#">台灣規範</a> <a href="#">香港規範</a>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- <button class="btn_print btn" id="btn_print">列印報名資料</button> -->
+                <button class="btn_print btn" id="btn_modify">
+                    <i class="fa fa-pencil" aria-hidden="true"></i>
+                    修改表單內容
+                </button>
+                <button class="btn_print btn btn_cancelled" id="btn_cancelled"> 取消訂單</button>
+                <div class="contact_info_contaner">
+                    <div class="contact_info">
+                        <h3 class="contact_title">聯絡人資料</h3>
+                        <div class="contact_info_group">
+                            <div class="name">
+                                <label id="label_name" class="label_name">
+                                    姓名
+                                </label>
+                                <div id="contact_name" name="contact_name" class="contact_name">
+                                    <span class="name">張靚瑩</span>
+                                </div>
+                            </div>
+                            <div class="email">
+                                <label id="label_email" class="label_email">
+                                    Email
+                                </label>
+                                <div id="contact_email" name="contact_email" class="contact_email">
+                                    <span class="email">1234@gmail.com</span>
+                                </div>
+                            </div>
+                            <div class="tel">
+                                <label id="label_tel" class="label_tel">
+                                    手機
+                                </label>
+                                <div id="contact_tel" name="contact_tel" class="contact_tel">
+                                    <span class="tel">0912345678</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tickets_with_info_contaner">
+                    <ul class="tickets_with_info ">
+                        <li class=" icon">
+                            <div>
+                                <div class="attendee-info">
+                                    <h3 class="Header">
+                                        全票 第 1 張
+                                    </h3>
+                                    <!-- <div class="ticket-status cancelled" >
+                                        已退票
+                                    </div> -->
+                                    <div class="ticket-number">
+                                        票號：#99153964
+                                    </div>
+                                    <div class="ticket-info">
+                                        <div class="ticket_wrap">
+                                            <h2>電子票券</h2>請先至我的票券中 <a href="#">票券資料</a> 頁，點「顯示 QR Code」驗票入場
+                                        </div>
+                                    </div>
+
+                                    <div class="">
+                                        <div class="control-group">
+                                            <label class="control-label">活動名稱</label>
+                                            <div class="controls">【ALTA】theLOOP presents : PSY.P 臺灣個人巡演預熱戰</div>
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <div class="control-group">
+                                            <label class="control-label ">座位資訊</label>
+                                            <div class="controls  ">B2 區 16 排 4 號</div>
+                                        </div>
+                                    </div>
+                                    <div class="number_check">
+                                        <div class="control-group">
+                                            <label class="control-label ">檢查碼</label>
+                                            <div class="controls ">7288</div>
+                                        </div>
+                                    </div>
+                                    <div class="fee_tex">
+                                        <div class="control-group">
+                                            <label class="control-label ">娛樂稅</label>
+                                            <div class="controls ">
+                                                <br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="control-group">
+                                            <label class="control-label " for="">注意事項</label>
+                                            <div class="controls ">
+                                                主辦：EVE FUN TOGETHER/星月文創執行
+                                                <br>
+                                                禁止外食及違禁物，禁止全場錄影及直播，未盡事宜詳閱開售頁面。
+                                                <br>
+                                                一人一票，憑票入場，票券視同有價票券，遺失、損毀等無法辨識狀況，恕不補發或退換。
+                                                <br>
+                                                退票限購票後3日內，以郵戳為憑，酌收票面金額5%手續費，請詳閱該節目頁退換票規定。
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="ticket-status cancelled  ">
+                                已退票
+                            </div> -->
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </section>
+

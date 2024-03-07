@@ -1,0 +1,12 @@
+@using ShowNest.Web.ViewModels.UserAccount;
+@model List<TabStatusViewModel>;
+
+<ul class="nav nav-tabs mt-3 mb-4">
+    <li class="nav-item">
+        <a class="nav-link @(Model[0].IsActive ? "active" : "")" asp-controller="Account" asp-action="MyTicketList">我的票卷</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link @(Model[1].IsActive ? "active" : "")" asp-controller="Account" asp-action="PastTicketList">過去的票卷</a>
+    </li>
+</ul>
+

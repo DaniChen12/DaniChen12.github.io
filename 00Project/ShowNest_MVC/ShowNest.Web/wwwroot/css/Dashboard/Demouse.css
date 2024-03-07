@@ -1,0 +1,296 @@
+
+
+
+/* 組織名稱欄 */
+.header-title {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px #ccc solid;
+}
+
+.organize {
+    color: #999;
+    line-height: 40px;
+    font-size: 22px;
+    margin-right: 20px;
+    margin-left: 30px;
+}
+
+.name {
+    line-height: 37px;
+    font-size: 22px;
+    color: var(--main-green);
+}
+
+
+/* 正式版面 */
+.wrap {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-bottom: 90px;
+}
+
+#tabs {
+    margin: auto;
+}
+
+.container {
+    color: #333333;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* 左半邊 */
+.main-content {
+    padding-right: 30px;
+}
+
+/* 麵包屑 */
+.breadcrumb {
+    background-color: #edecec;
+    padding: 10px 8px;
+    border-radius: 4px;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+    .breadcrumb a {
+        display: inline-block;
+        padding: 0;
+        color: #333;
+        margin-left: 10px;
+    }
+
+a {
+    text-decoration: none;
+}
+
+li:first-child > a {
+    color: var(--light-green);
+}
+
+/* 所有小標 */
+.essential-input, h4 {
+    margin-bottom: 5px;
+    padding: 3px;
+    font-weight: bold;
+}
+
+/* 所有附註說明 */
+span.note, .map-note {
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 3px;
+    color: #737373;
+}
+
+span.org-note {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 3px;
+    color: #737373;
+}
+/* 所有必填欄位 */
+.essential-input::before {
+    content: "*";
+    display: inline-block;
+    color: #c07525;
+    margin-right: 5px;
+}
+
+/* 所有小區塊 */
+.online-log, .log {
+    display: block;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+/* 所有radio */
+.form-check-label {
+    display: contents;
+}
+
+
+/*網址長度*/
+
+.mb-3 {
+    margin-bottom: 0;
+}
+
+.input-group-text {
+    font-size: 15px;
+    padding: 6px;
+}
+
+.input-group > .form-control {
+    width: 180px;
+    line-height: 15px;
+}
+
+/*Boostrap change*/
+.input-group:not(.has-validation) > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu) {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.OK {
+    color: var(--light-green);
+    padding-top: 5px;
+}
+
+
+.date-time {
+    font-size: 15px;
+    margin: 10px;
+    line-height: 34px;
+    border: solid #ced4da 1px;
+    color: #555555;
+    width: 200px;
+    border-radius: 5px;
+}
+
+.end-time {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.number-of-people {
+    height: 30px;
+    border: #ced4da 1px solid;
+    border-radius: 5px;
+}
+
+.unlimited {
+    margin-left: 13px;
+}
+
+.form-control {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+#update-map {
+    display: inline-block;
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+}
+
+
+.ck-editor__editable_inline {
+    min-height: 300px;
+}
+
+/*#ckeditor-area {
+    background-color:red;
+    border-bottom: 1px solid #dee2e6
+}*/
+
+.pages-change {
+    display: flex;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+
+/* 右欄 */
+
+.log > img {
+    margin-bottom: 18px;
+}
+
+.btn-outline-secondary {
+    margin-right: 10px;
+}
+
+.advanced-settings {
+    border-bottom: 3px solid var(--dark-gray);
+    display: block;
+    padding: 5px;
+}
+
+.tag-pool {
+    margin-top: 15px;
+}
+
+.tag {
+    display: inline-block;
+    border-radius: 5px;
+    background-color: var(--light-green);
+    line-height: 20px;
+    font-size: 15px;
+    padding: 3px;
+    color: #f5f5f5;
+    margin: 3px;
+}
+
+    .tag:hover {
+        box-shadow: 0 1px 1px rgba(0,0,0,0.06);
+        background-color: var(--light-green);
+        cursor: pointer;
+    }
+
+/* MOBILE */
+@media (max-width:768px) {
+    .wrap {
+        width: 90%;
+        margin: 0px auto;
+        margin-bottom: 20px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
+
+/* DESKTOP */
+@media (min-width:769px) {
+
+    @media (min-width:769px) and (max-width:1200px) {
+        .container {
+            display: flex;
+            flex-direction: row;
+            margin: 0;
+        }
+
+        .input-group > .form-control {
+            width: 180px;
+            line-height: 15px;
+        }
+    }
+
+    <<<<<<< HEAD
+    @media (min-width:1201px) {
+        .wrap
+
+{
+    width: 80%;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+======= > > > > > > > 968512d53d312107f8ea68702bc5a96793782de7
+}
+
+.wrap {
+    max-width: 1200px;
+    margin: 0px auto;
+}
+
+.input-group > .form-control {
+    width: 180px;
+    line-height: 15px;
+}
+}

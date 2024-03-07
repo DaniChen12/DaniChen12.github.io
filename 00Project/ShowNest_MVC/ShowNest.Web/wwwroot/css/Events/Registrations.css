@@ -1,0 +1,611 @@
+﻿
+body {
+   
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+/* main Body */
+.count_down_group {
+    background-color: rgb(240, 240, 240);
+    padding: 10px;
+}
+
+.main_wrap {
+    margin-top: 20px;
+    line-height: 1.5em;
+}
+
+.count_down_timer {
+    background-color: #DB4455;
+    color: #fff;
+    line-height: 2.5em;
+    border-radius: 4px;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    width: 75%;
+}
+
+h2 {
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+p {
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    line-height: 1;
+    color: var(--dark-gray);
+}
+
+label {
+    font-weight: bold;
+    padding: 8px 0;
+}
+
+.control-group {
+    margin-bottom: 15px;
+}
+/*-----collapse group-----*/
+.collapse_group {
+    padding-bottom: 10px;
+}
+.event_detail_collapse {
+    color: var(--main-green);
+}
+
+    .event_detail_collapse.btn.collapsed::after {
+        content: "▵";
+        left: -5px;
+    }
+
+    .event_detail_collapse.btn::after {
+        content: "▿";
+        left: -5px;
+    }
+
+    .event_detail_collapse:focus,
+    .btn:focus,
+    .btn:active:focus,
+    .event_detail_collapse.btn:hover {
+        box-shadow: none;
+        background-color: none;
+    }
+
+.collapse a {
+    color: var(--main-green);
+    text-decoration: none;
+}
+
+    .collapse a:hover {
+        color: var(--light-green);
+    }
+
+.collapse th {
+    padding: 2px 15px 2px 0;
+    color: var(--dark-gray);
+    min-width: 75px;
+    font-weight: bold;
+}
+
+.collapse td {
+    padding: 2px 0 2px 15px;
+    font-weight: 400;
+}
+
+.collapse tr {
+    display: table-row;
+    vertical-align: top;
+    color: #333333;
+}
+
+.btn_cancel.btn {
+    box-shadow: 0px 0px 2px 1px var(--light-gray);
+    margin-right: 5px;
+    color: #333333;
+}
+
+ .btn_cancel:hover {
+     background-color: var(--light-gray);
+ }
+
+    .btn:hover:first-child {
+        background-color: none;
+    }
+
+/*progress_container*/
+.progress_container {
+    padding-bottom: 20px;
+}
+
+
+/*progress_container*/
+
+/*
+    .progress_container {
+    margin: 20px auto 0 auto;
+    padding: 40px;
+}
+    .step_progress_bar {
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.step {
+    text-align: center;
+    background-color: rgb(240, 240, 240);
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    position: relative;
+    border: 3px solid rgb(218, 218, 218);
+}
+
+p.step_text {
+    margin-top: 10px;
+    color: var(--main-green);
+    line-height: 2;
+    width: 150px;
+    vertical-align: bottom;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 8px;
+}
+
+.number {
+    margin-left: 10px;
+    border-radius: 100%;
+    line-height: 2;
+    width: 30px;
+    border: 1px solid var(--function-color-hover);
+    background-color: white;
+    color: var(--button-clicked-color);
+    display: inline-block;
+    transition: background-color 500ms;
+}
+
+.step.progressing {
+    color: var(--main-green);
+    background-color: var(--main-green);
+    border: 3px solid var(--light-green);
+}
+
+    .step.progressing p {
+        color: white;
+    }
+
+    .step.progressing span {
+        color: var(--light-green);
+    }
+
+    .step.progressing::after {
+        content: '';
+        position: absolute;
+        height: 6px;
+        width: 67%;
+        background-color: var(--light-gray);
+        left: 100%;
+        bottom: 43%;
+        z-index: -1;
+    }
+
+.step.disabled::after {
+    content: '';
+    position: absolute;
+    height: 6px;
+    width: 67%;
+    background-color: hsla(0, 3%, 71%, 0.5);
+    left: 100%;
+    bottom: 43%;
+    z-index: -1;
+}
+
+.disabled {
+    color: var(--light-gray);
+    border: 3px solid hsl(162, 17%, 50%);
+    background-color: hsl(148, 17%, 60%);
+}
+
+    .disabled .number {
+        color: var(--function-color-hover);
+    }
+
+    .disabled p {
+        color: white;
+        font-weight: 400;
+    }*/
+/*progress_container end*/
+
+
+.order_details {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+    .order_details ul {
+        list-style: none;
+    }
+
+    .order_details tr {
+        display: table-row;
+        vertical-align: top;
+        color: #333333;
+    }
+
+.highlight th {
+    background-color: hsla(60, 100%, 50%, 0.104);
+}
+
+.highlight td {
+    background-color: hsla(60, 100%, 50%, 0.104);
+}
+
+.table thead {
+    font-weight: bold;
+}
+
+tr.gray_block th {
+    background-color: var(--dark-gray);
+    color: white;
+}
+
+
+
+th.ticket_type {
+    padding-left: 20px;
+}
+
+td.ticket_name {
+    padding-left: 20px;
+}
+
+td.price_total {
+    text-align: right;
+    color: var(--dark-gray);
+    font-weight: 300;
+    padding-right: 20px;
+}
+
+td.price_count span {
+    text-align: right;
+    padding-left: 150px;
+}
+
+.cart_ticket_list_subtable_with_seat tr {
+    color: var(--dark-gray);
+    font-weight: 300;
+}
+
+.seat_detail_group {
+    display: flex;
+   justify-content:space-between;
+}
+
+
+
+th.price {
+    text-align: right;
+    padding-right: 20px;
+}
+
+th.total {
+    padding-left: 20px;
+    font-weight: bold;
+}
+
+td.tfoot_price_total {
+    text-align: right;
+    padding-right: 20px;
+    min-width:76px
+}
+
+.contact_info input {
+    width: 50%;
+}
+
+a {
+    text-decoration: none;
+}
+
+abbr {
+    color: #c07525;
+}
+
+.contact_info {
+    background: #fff;
+    border-left: #00aed6 40px solid;
+    padding: 15px 15px 5px;
+    position: relative;
+    padding-bottom: 30px
+}
+
+    .contact_info:before {
+        content: '\f007';
+        font-family: 'FontAwesome';
+        font-weight: normal;
+        color: #fff;
+        position: absolute;
+        display: block;
+        width: 40px;
+        text-align: center;
+        top: 50%;
+        left: -40px;
+        font-size: 26px;
+        margin-top: -17px
+    }
+
+.registration_info {
+    padding-bottom: 20px;
+}
+
+.control-group label {
+    cursor: pointer;
+}
+
+span.formError {
+    color: hsl(31, 68%, 45%);
+}
+
+.input-group-sm {
+    padding-bottom: 8px;
+}
+
+.btn_save {
+    display: flex;
+    justify-content: center;
+    padding:20px;
+}
+
+a.btn_save {
+    min-width: 293px;
+    padding:10px 70px;
+}
+
+.section_wrap {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+@media screen and (max-width:900px) {
+
+    .title {
+        text-align: center;
+        line-height: 1.5;
+    }
+
+    .contact_info input {
+        width: 100%;
+    }
+
+    .count_down_timer {
+        width: 100%;
+        max-width: 1070px;
+        line-height: 1.5;
+        flex-wrap: wrap;
+        align-content: center;
+        padding: 10px;
+        min-width: 254px;
+    }
+
+    /* -------save button--------- */
+    .btn_save {
+     width:100%
+    }
+    .btn_submit.btn {
+        border: 5px solid var(--light-gray);
+    }
+
+    a#btn_save {
+        width: 100%;
+        display: block;
+        font-size: 1.2rem;
+        border-radius: var(--common-border-radius);
+    }
+
+    .save_group {
+        padding: 10px;
+    }
+
+
+
+    /* -------progress bar--------- */
+/*
+    .progress_container {
+        margin: 0;
+        padding: 20px 0;
+    }
+    .registration_info {
+        width: 100%;
+        min-width: 210px;
+    }
+
+    .step_progress_bar {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0px;
+    }
+
+    .step {
+        border: none;
+        padding: 10px 0px;
+        border-radius: 0px;
+    }
+
+        .step:first-child {
+            border-radius: 10px 10px 0 0;
+        }
+
+        .step:last-child {
+            border-radius: 0 0 10px 10px;
+        }
+
+    p.step_text {
+        margin-top: 10px;
+        line-height: 0;
+        font-weight: bold;
+        text-align: left;
+        padding-left: 8px;
+    }
+
+    .number {
+        margin-left: 10px;
+        border-radius: 100%;
+        border: 1px solid var(--light-green);
+        background-color: white;
+        color: var(--light-green);
+    }
+
+    .step.progressing {
+        border: none;
+    }
+
+        .step.progressing::after {
+            display: none;
+        }
+
+    .step.disabled::after {
+        display: none;
+    }*/
+
+    /* -------------order details---------------- */
+
+
+
+    td.ticket_name {
+        padding-left: 20px;
+        width: 100%;
+        display: block;
+    }
+
+    td.price_count span {
+        padding-left: 50px;
+    }
+
+    .seat_detail_group {
+        display: flex;
+    }
+
+}
+
+@media screen and (max-width:768px) {
+    body {
+        position: relative;
+    }
+
+    .section_wrap {
+        max-width: 960px;
+    }
+    .collapse td{
+        padding:0px;
+    }
+    th {
+        min-width:80px;
+        padding: 5px 0;
+    }
+
+        th.seat {
+            display: none
+        }
+
+    table {
+        display: table;
+        width: 100%
+    }
+
+    td.price_total,
+    td.ticket_name,
+    li.seat-info,
+    td.price_count,
+    td.ticket-data,
+    tr.gray_block {
+        display: block;
+    }
+
+    td.price-count,
+    td.price-total {
+        width: 50%;
+    }
+
+    td.ticket_name{
+        background-color: var(--light-gray: #ddd);
+        width: 100%
+    }
+
+    table.ticket_table_data_list tr {
+        display: block;
+        width: 100%;
+        overflow: hidden
+    }
+
+    .highlight td:nth-last-of-type(2) {
+        display: none;
+    }
+
+    td.price_count,
+    td.price_total {
+        border-top: #ddd 1px solid;
+    }
+
+    tbody {
+        width: 100%;
+        display: table-row-group;
+    }
+
+    .ticket-data td {
+        padding: 10px 0;
+    }
+
+    li.seat-info {
+        padding-left: 10px;
+    }
+
+    td.price_count span {
+        text-align: left;
+        padding-left: 10px;
+    }
+
+    th.total,
+    td.tfoot_price_total {
+        width: 10%;
+        display: table-cell;
+    }
+    th.total {
+        min-width: 80px;
+    }
+
+    .seat_detail_group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    th.price, th.ticket_type {
+        width: 7%;
+        display: table-cell;
+    }
+}
+@media screen and (max-width:290px) {
+    a.btn_save {
+        min-width:none;
+        display:inline-block;
+    }
+    .btn_save{
+        padding:0px;
+    }
+}

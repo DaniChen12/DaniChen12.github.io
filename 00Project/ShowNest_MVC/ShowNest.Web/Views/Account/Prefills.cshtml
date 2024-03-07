@@ -1,0 +1,152 @@
+﻿@*
+For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@section topCSS {
+    <link href="~/css/_partial/_accountnavbarpartial.css" rel="stylesheet" />
+    <link href="~/css/account/prefills.css" rel="stylesheet" />
+}
+
+    <section class="section_wrap">
+    <div id="" class="width">
+        <div class="account-navigation-wrap">
+            @await Html.PartialAsync("_AccountNavBarPartial", new List<TabStatusViewModel>
+            {
+            new TabStatusViewModel { IsActive = false},
+            new TabStatusViewModel { IsActive = true},
+            new TabStatusViewModel { IsActive = false},
+            new TabStatusViewModel { IsActive = false},
+            new TabStatusViewModel { IsActive = false},
+            new TabStatusViewModel { IsActive = false},
+            new TabStatusViewModel { IsActive = false}
+            })
+        </div>
+
+            <!----------- Title------------>
+            <div class="title">
+                <h2 id="title">修改預填資料</h2>
+            </div>
+
+            <!----------- Form------------>
+            <form id="account_prefills" action="">
+                <div class="main-form">
+                    <div class="content-wrapper">
+                        <div class="form_contaner">
+                            <!-- ----------------------姓名----------------  -->
+                            <label for="name">姓名</label>
+                            <div class="form-content input-group-sm">
+                                <input class="form-control" id="name" type="text" name="name" placeholder="姓名">
+                            </div>
+                            <!-- ----------------------電話-------------------  -->
+                            <label for="tel">電話</label>
+                            <div class="form-content input-group-sm">
+                                <input class="tel form-control col-12" id="tel" type="tel" name="tel" placeholder="">
+                            </div>
+                            <!--  --------------------縣市------------------  -->
+                            <label for="county-and-city">縣市</label>
+                            <div class="form-content">
+                                <div class="contect-group btn-group">
+                                    <select class="btn-sm dropdown-toggle col-12" type="button"
+                                        data-bs-toggle="dropdown" name="" id="CountyAndCity"
+                                        aria-placeholder="CountyAndCity">
+                                        <option value="選擇縣市">選擇縣市</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!--  --------------------地區------------------  -->
+                            <label for="area">地區</label>
+                            <div class="form-content">
+                                <div class="contect-group input-group-sm">
+                                    <select class="col-12" name="area" id="area" aria-placeholder="area">
+                                        <option value="選擇地區">選擇地區</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- -------------------郵遞區號----------------  -->
+                            <label for="zipcode">郵遞區號</label>
+                            <div class="form-content input-group-sm">
+                                <input class="zipcode form-control" id="zipcode" type="text" name="zipcode"
+                                    placeholder="郵遞區號">
+                            </div>
+                            <!-- --------------------地址----------------  -->
+                            <label for="address">地址</label>
+                            <div class="form-content input-group-sm">
+                                <input class="address form-control" id="address" type="text" name="address"
+                                    placeholder="地址">
+                            </div>
+                            <!-- ----------------公司或組織名稱----------------  -->
+                            <label for="org-name">公司或組織名稱</label>
+                            <div class="form-content input-group-sm">
+                                <input class="org-name form-control" id="org-name" type="text" name="org-name"
+                                    placeholder="公司或組織名稱">
+                            </div>
+                            <!-- ----------------------職稱----------------  -->
+                            <label for="job-title">職稱</label>
+                            <div class="form-content input-group-sm">
+                                <input class="job-title form-control" id="job-title" type="text" name="job-title"
+                                    placeholder="職稱">
+                            </div>
+                            <!-- ------------------公司郵遞區號----------------  -->
+                            <label for="org-zipcode">公司郵遞區號</label>
+                            <div class="form-content input-group-sm">
+                                <input class="org-zipcode form-control" id="org-zipcode" type="text" name="org-zipcode"
+                                    placeholder="公司郵遞區號">
+                            </div>
+                            <!-- -------------------公司地址----------------  -->
+                            <label for="org-address">公司地址</label>
+                            <div class="form-content input-group-sm">
+                                <input class="org-address form-control" id="org-address" type="text" name="org-address"
+                                    placeholder="公司地址">
+                            </div>
+                        </div>
+                    </div>
+                    <!----------- Title------------>
+                    <div class="title">
+                        <h3 id="title">發票資訊</h3>
+                    </div>
+                    <div class="content-wrapper">
+                        <div class="form_contaner">
+                            <!-- -------------------公司統一編號-------------------  -->
+                            <label for="vat">公司統一編號</label>
+                            <div class="form-content input-group-sm">
+                                <input class="vat form-control" id="vat" type="vat" name="vat" placeholder="公司統一編號">
+                            </div>
+                            <!--  ----------------捐贈碼載具------------------  -->
+                            <label for="donate-e-invoice">捐贈碼載具</label>
+                            <div class="form-content">
+                                <select class="col-12" name="donate-e-invoice" id="donate-e-invoice">
+                                    <option value="選擇捐贈碼載具">選擇捐贈碼載具</option>
+                                </select>
+                            </div>
+                            <!--  ----------------手機載具------------------  -->
+                            <label for="e-invoice">手機載具</label>
+                            <div class="form-content input-group-sm">
+                                <input class="form-control col-12" id="e-invoice" type="text" name="e-invoice"
+                                    placeholder="輸入手機載具">
+                                <span class="link">
+                                    <p>此為與財政部電子發票平台申請的條碼，請勿填寫手機號碼</p>
+                                    <a href="#">申請手機載具條碼</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ---------------儲存個人資料按鈕-------------- -->
+                </div>
+                <div class="expository">
+                    <div class="gray-wrap">
+                        <p>您可在此填寫常見的報名表資料，下次利用 KKTIX 便可自動填入。</p>
+                        <p>自動填入後，您還是可以修改資料，再送出報名表。</p>
+                    </div>
+                </div>
+            </form>
+            <div class="border"></div>
+            <div class="div-wrap">
+                <div class="btn-save">
+                    <button type="button" class="btn"
+                        style="background-color:var(--main-green);color: white;border:none;">
+                        儲存預填資料
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+

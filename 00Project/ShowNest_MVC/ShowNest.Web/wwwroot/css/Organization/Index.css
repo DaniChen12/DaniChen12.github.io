@@ -1,0 +1,327 @@
+﻿/* 共用 */
+body {
+    font-family: sans-serif;
+}
+
+.wrapper {
+    padding: 60px 0px 60px 0px;
+    width: 100%;
+}
+
+li {
+    list-style-type: none;
+}
+
+.org-avatar,
+.org-title {
+    text-align: center
+}
+
+    .org-avatar img {
+        width: 240px;
+        height: 240px;
+    }
+
+.org-title {
+    font-size: 28px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.btn-dark {
+    background-color: var(--main-green);
+    border: var(--main-green);
+}
+/* main-content */
+.main-content a {
+    color: #000;
+    text-decoration: none;
+}
+
+.main-content .fa {
+    color: #787575;
+}
+
+.info-org-webfb {
+    width: 180px;
+}
+
+    .info-org-webfb i {
+        padding: 10px;
+    }
+
+.side-block .info-org-webfb a:hover {
+    color: #787575;
+}
+
+/* description-block */
+
+
+.description-block p {
+    font-size: 20px;
+    color: rgb(78, 86, 101);
+    font-family: helvetica, arial, sans-serif;
+    padding: 5px 10px;
+    line-height: 1.5em;
+}
+/*行事曆*/
+#calendar {
+}
+/* container-head近期公開活動 */
+.container-head {
+    display: flex;
+    margin: 50px 0px;
+    padding: 5px;
+    align-items: center;
+}
+
+    .container-head h2 {
+        font-size: 24px;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    .container-head i {
+        margin-left: 10px;
+    }
+
+.fa-rss-square {
+    color: #E3780F;
+}
+
+.switch-block {
+    display: flex;
+    width: 220px;
+    padding: 5px;
+    align-items: center;
+    justify-content: end;
+}
+
+    .switch-block .fa-calendar {
+        font-size: 20px;
+        padding: 5px 10px;
+        color: #aaa;
+        border: 1px solid #aaa;
+        border-radius: 5px;
+        margin-left: 5px;
+    }
+
+
+/* org-event-list近期活動卡牌 */
+.org-event-list {
+    font-size: 15px;
+}
+
+    .org-event-list a {
+        text-decoration: none;
+        color: #000;
+    }
+
+        .org-event-list a:hover {
+            color: #504f4ffd;
+        }
+
+    .org-event-list .date {
+        color: #aaa;
+        margin: 5px 0px;
+    }
+
+    .org-event-list .fa {
+        margin-right: 10px;
+    }
+
+    .org-event-list h2 {
+        font-size: 20px;
+        font-weight: bold;
+        padding: 5px 0px;
+        margin-top: 30px;
+        line-height: 1.5em;
+    }
+
+.img-wrapper img {
+    vertical-align: top;
+    width: 100%;
+}
+
+
+
+.img-btn {
+    text-align: center;
+    padding: 8px 0;
+    border: 1px solid #aaa;
+}
+
+.description {
+    line-height: 1.8em;
+    border-bottom: 1px solid #aaa;
+    padding-bottom: 30px;
+}
+
+/* history-events曾經舉辦的活動 */
+.history-events {
+    padding: 50px 12px;
+}
+
+.history-container {
+    max-width: 600px;
+    margin: auto;
+}
+
+    .history-container h2 {
+        font-size: 24px;
+        font-weight: bold;
+        margin: 30px 0px;
+    }
+
+    .history-container h3 {
+        font-size: 20px;
+        margin-top: 30px;
+    }
+
+.history-wrapper a {
+    text-decoration: none;
+    color: #64C06B;
+}
+
+    .history-wrapper a:hover {
+        color: #2c8b34;
+    }
+
+.table-wrapp {
+    display: flex;
+    height: 65px;
+    vertical-align: middle;
+    align-items: center;
+}
+
+.title-wrapp {
+    line-height: 1.5em;
+}
+
+.history-list-past {
+    position: relative;
+}
+
+    .history-list-past .date {
+        display: inline-block;
+        box-sizing: border-box;
+        border-radius: 20px;
+        background: #fff;
+        border: 1px solid #d6d6d6;
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 38px;
+        text-align: center;
+        margin-right: 30px;
+    }
+
+    .history-list-past::after {
+        content: "";
+        background: #e5e5e5;
+        width: 4px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 18px;
+        z-index: -1;
+    }
+
+
+
+@media (min-width:768px) {
+    .page-content {
+        max-width: 850px;
+        margin: auto;
+    }
+
+    .attend-btn-wrapper {
+        max-width: 600px;
+        margin: auto;
+    }
+
+    /* 粉絲 聯絡主辦 組織介紹 */
+    .main-content {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+    /* 近期活動卡牌 */
+
+    .org-event-list li {
+        display: grid;
+        grid-template-columns: 30% 70%;
+        margin-bottom: 40px;
+        align-items: start;
+    }
+
+    .org-event-list h2 {
+        grid-column: 2 / 2;
+        margin-top: 0px;
+    }
+
+    .org-event-list .date {
+        grid-column: 2 / 2;
+    }
+
+    .org-event-list .img-wrapper {
+        grid-row-start: 1;
+        grid-row-end: 5;
+        margin-right: 15px;
+        overflow: hidden;
+    }
+
+        .org-event-list .img-wrapper img {
+            transition: transform 0.3s ease;
+        }
+
+    .img-wrapper:hover img {
+        transform: scale(1.5);
+    }
+
+    .img-wrapper .img-btn {
+        transition: opacity 0.3s ease;
+    }
+
+    .img-wrapper:hover .img-btn {
+        transform: translate(0, -210%);
+        border: none;
+        color: #fff;
+    }
+
+    .img-wrapper:focus img,
+    .img-wrapper:focus .img-btn {
+        transform: scale(1.5);
+    }
+
+    .org-event-list .description {
+        grid-column: 2 / 2;
+        padding-bottom: 0px;
+        border: none;
+    }
+
+    /* 曾舉辦的活動 */
+    .history-container {
+        padding: 15px;
+        max-width: 900px;
+    }
+
+    .history-events .history-wrapper {
+        padding-left: 200px;
+        position: relative;
+    }
+
+        .history-events .history-wrapper h3 {
+            margin: 20px 0 0;
+            font-weight: 400;
+            position: absolute;
+            left: 5px;
+        }
+
+    .history-list-past:last-child {
+        padding-bottom: 40px;
+    }
+}

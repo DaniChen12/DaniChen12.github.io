@@ -1,0 +1,317 @@
+﻿
+@{
+    ViewData["Title"] = "ActivitiesList";
+}
+
+@section topCSS {
+    <link href="~/css/Dashboard/ActivitiesList.css" rel="stylesheet" />
+}
+
+<body>
+
+    <div class="wrap">
+        <div class="container">
+            <!------------ side menu start ------------>
+            <input type="checkbox" name="" id="sideMenu-active" />
+            <div class="sideBarMenu">
+                <nav>
+                    <div class="dropdown" id="sidemenu-dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false" id="publish-btn">
+                            未發佈
+                        </button>
+                        <ul class="dropdown-menu" >
+                            <li><a class="dropdown-item" href="#">發佈活動</a></li>
+                        </ul>
+                    </div>
+
+                    <div><a href="#"><i class="fa-solid fa-arrow-up-right-from-square fa-sm"></i>活動公開頁面</a></div>
+                    <div><a href="#"><i class="fa-solid fa-gauge-simple"></i>活動主控台</a></div>
+                    <p>活動資訊</p>
+                    <div><a href="#"><i class="fa-solid fa-users fa-sm"></i>報名人列表</a></div>
+                    <div><a href="#"><i class="fa-solid fa-cart-arrow-down fa-sm"></i>訂單</a></div>
+                    <div><a href="#"><i class="fa-regular fa-clipboard fa-sm"></i>簽到簿</a></div>
+
+                    <p>活動設定</p>
+                    <div><a href="#"><i class="fa-solid fa-circle-info fa-sm"></i>基本資料</a></div>
+                    <div><a href="#"><i class="fa-solid fa-location-dot fa-sm"></i>活動地點</a></div>
+                    <div><a href="#"><i class="fa-solid fa-tags fa-sm"></i>票種資訊</a></div>
+                    <div><a href="#"><i class="fa-regular fa-pen-to-square fa-sm"></i>報名表單</a></div>
+                    <div><a href="#"><i class="fa-solid fa-envelope fa-sm"></i>通知信件</a></div>
+                    <div><a href="#"><i class="fa-solid fa-circle-arrow-up fa-sm"></i>升級活動</a></div>
+                </nav>
+            </div>
+            <!--------- side menu end ------------>
+            <!---------- main content  start------------->
+            <div class="main-content">
+                <!----- header and subheader start ----->
+                <header>
+                    <h2 class="header-h2">
+                        <a href="" class="back-Btn" title="回到組織頁面"><i class="fa-solid fa-arrow-left"></i></a>
+                        <span class="activitiesName">活動名稱</span>
+                        <span class="activitiesTitle">半暝三點半搶銀行 (暫)</span>
+                    </h2>
+                </header>
+                <div class="subheader">
+                    <div class="overview">
+                        <h2 class="title">綜覽</h2>
+                    </div>
+                    <div class="ticket-sales">
+                        <div class="sales-data">
+                            <span class="in-block">可售</span>
+                            <span class="block-number">50</span>
+                        </div>
+                        <div class="sales-data">
+                            <span class="sold">已售</span>
+                            <span class="sold-number">5</span>
+                        </div>
+                        <div class="sales-data">
+                            <span class="remain">剩餘</span>
+                            <span class="remain-number">45</span>
+                        </div>
+                    </div>
+                    <img src="~/img/Dashboard/pie-chart.png" alt="icon" class="pie-chart">
+                </div>
+                <!----- header and subheader end ----->
+                <!-- date and place  -->
+                <div class="date-place">
+                    <p><i class="fa-solid fa-calendar-days"></i>2024/04/24 13:00(+0800)(暫)</p>
+                    <p><i class="fa-solid fa-location-dot"></i>Build School / 106台北市大安區忠孝東路三段96號11號樓之1(暫)</p>
+                </div>
+
+                <!----- sales lists start ----->
+                <div class="sales-list">
+                    <div class="tickets-sales-status">
+                        <h3>票種銷售狀況</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>票種</th>
+                                    <th>販售時間</th>
+                                    <th>狀態</th>
+                                    <th>價格</th>
+                                    <th>數量</th>
+                                    <th>已付款</th>
+                                    <th>待繳費</th>
+                                    <th>剩餘</th>
+                                    <th class="text-muted">無效票</th>
+                                    <th class="text-muted">廢票</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>搖滾區</td>
+                                    <td>2024/02/08 00:40(+0800) ~ 2024/04/10 00:40(+0800)</td>
+                                    <td>販售中</td>
+                                    <td>TWD$30,000</td>
+                                    <td>20</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>20</td>
+                                    <td class="text-muted">0</td>
+                                    <td class="text-muted">0</td>
+                                </tr>
+                                <tr>
+                                    <td>一般票</td>
+                                    <td>2024/02/08 00:00(+0800) ~ 2024/04/10 00:00(+0800)</td>
+                                    <td>販售中</td>
+                                    <td>TWD$350</td>
+                                    <td>不限定數量</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>不限定數量</td>
+                                    <td class="text-muted">0</td>
+                                    <td class="text-muted">0</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="5"></td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td></td>
+                                    <td class="text-muted">0</td>
+                                    <td class="text-muted">0</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2"></td>
+                                    <td>總金額</td>
+                                    <td colspan="2"></td>
+                                    <td>TWD$0</td>
+                                    <td colspan="4"></td>
+                                </tr>
+                            </tfoot>
+
+                        </table>
+                    </div>
+
+                    <div class="sales-method-statistics">
+                        <h3>售出方式數量統計</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>票種</th>
+                                    <th>價格</th>
+                                    <th>全家 FamiPort 購票</th>
+                                    <th>全家 FamiPort 代碼繳費</th>
+                                    <th>主辦調票</th>
+                                    <th>ATM</th>
+                                    <th>信用卡</th>
+                                    <th>Paypal</th>
+                                    <th>現金</th>
+                                    <th>免繳費</th>
+                                    <th>小計</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>搖滾區</td>
+                                    <td>TWD$30,000</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>一般票</td>
+                                    <td>TWD$350</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="2">小計</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+
+                    <div class="amount-statistics">
+                        <div class="amount-statistics-head">
+                            <h3>售出方式金額統計</h3>
+                            <span>幣別：TWD</span>
+                        </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>票種</th>
+                                    <th>價格</th>
+                                    <th>全家 FamiPort 購票</th>
+                                    <th>全家 FamiPort 代碼繳費</th>
+                                    <th>主辦調票</th>
+                                    <th>ATM</th>
+                                    <th>信用卡</th>
+                                    <th>Paypal</th>
+                                    <th>現金</th>
+                                    <th>免繳費</th>
+                                    <th>文化幣</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>搖滾區</td>
+                                    <td>$30,000</td>
+                                    <td>$0</td>
+                                    <td>$0</td>
+                                    <td>$0</td>
+                                    <td>$0</td>
+                                    <td>$0</td>
+                                    <td>$0</td>
+                                    <td>$0</td>
+                                    <td>$0</td>
+                                    <td>$0</td>
+                                </tr>
+                                <tr>
+                                    <td>一般票</td>
+                                    <td>$350</td>
+                                    <td>$0</td>
+                                    <td>$0</td>
+                                    <td>$0</td>
+                                    <td>$0</td>
+                                    <td>$0</td>
+                                    <td>$0</td>
+                                    <td>$0</td>
+                                    <td>$0</td>
+                                    <td>$0</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="2">小計</td>
+                                    <td>$0</td>
+                                    <td>$0</td>
+                                    <td>$0</td>
+                                    <td>$0</td>
+                                    <td>$0</td>
+                                    <td>$0</td>
+                                    <td>$0</td>
+                                    <td>$0</td>
+                                    <td>$0</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <div class="current-order">
+                        <h3>最近訂單</h3>
+                        <div class="subscriber-data">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>訂單編號</th>
+                                        <th>聯絡人姓名</th>
+                                        <th>聯絡人Email</th>
+                                        <th>聯絡人電話</th>
+                                        <th>票數</th>
+                                        <th>金額</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>123456789</td>
+                                        <td>李**</td>
+                                        <td>Hello@yahoo.com.tw</td>
+                                        <td>0988333777</td>
+                                        <td>1</td>
+                                        <td>$2000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>120456489</td>
+                                        <td>林**</td>
+                                        <td>NoBug@yahoo.com.tw</td>
+                                        <td>0988333555</td>
+                                        <td>2</td>
+                                        <td>$300</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!----- sales lists end -------->
+            </div>
+        </div>
+
+
+</body>

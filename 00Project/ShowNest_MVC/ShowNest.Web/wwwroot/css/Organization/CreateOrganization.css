@@ -1,0 +1,113 @@
+﻿body {
+    font-size: 15px;
+}
+
+.name {
+    margin-top: 60px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    font-size: 20.4px;
+    color: #999;
+}
+.orgNameHr {
+    margin-top: 7px;
+    margin-bottom:14px;
+    border-width: 1px;
+}
+h3 {
+    margin: 20px 0px 10px;
+    font-size: 30px;
+    
+}
+.log {
+    min-height: 300px;
+}
+.main-wrap {
+    width: 75%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.main-form {
+    display: flex;
+    gap: 40px;
+}
+
+.lined {
+    border-bottom: #666 2px solid;
+    padding-bottom: 3px;
+    margin: 30px 0 15px;
+}
+
+.input_group {
+    padding-bottom: 15px;
+}
+
+.contact_org_radio label {
+    padding-bottom: 8px;
+}
+
+.contact_org_radio label,
+.agree_check {
+    cursor: pointer;
+    line-height: 1.5;
+}
+
+.form_text_underline {
+    line-height: 1.5;
+    font-size: 15px;
+    color: #666;
+}
+
+label {
+    font-weight: bold;
+    padding-left: 4px;
+}
+
+.button-submit button {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+/* 手機版 */
+@media screen and (max-width:768px) {
+    .wrap {
+        max-width: 768px;
+    }
+
+    .main-form {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .form_contaner {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-wrap {
+        width: 90%;
+    }
+
+    .image-upload {
+        max-width: 33.333%;
+        justify-content: center;
+    }
+
+    #form-control-sm {
+        min-width: 100%;
+    }
+
+    .img-container {
+        max-width: 50%;
+    }
+
+    label {
+        min-width: 90px;
+    }
+
+    .button-submit button {
+        width: 100%;
+        padding: 0px;
+    }
+}

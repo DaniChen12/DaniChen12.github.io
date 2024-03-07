@@ -1,0 +1,225 @@
+﻿
+@{
+    ViewData["Title"] = "RegistrationList";
+}
+@section topCSS {
+    <link href="~/css/Dashboard/RegistrationList.css" rel="stylesheet" />
+}
+
+<div class="wrap">
+    <div class="container">
+        <!------------ side menu start ------------>
+        <div class="sideBarMenu">
+            <nav>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false" id="publish-btn">
+                        未發佈
+                    </button>
+                    <ul class="dropdown-menu" id="publish-btn-modal">
+                        <li><a class="dropdown-item" href="#">發佈活動</a></li>
+                    </ul>
+                </div>
+
+                <div><a href="#"><i class="fa-solid fa-arrow-up-right-from-square fa-sm"></i>活動公開頁面</a></div>
+                <div><a href="#"><i class="fa-solid fa-gauge-simple"></i>活動主控台</a></div>
+                <p>活動資訊</p>
+                <div><a href="#"><i class="fa-solid fa-users fa-sm"></i>報名人列表</a></div>
+                <div><a href="#"><i class="fa-solid fa-cart-arrow-down fa-sm"></i>訂單</a></div>
+                <div><a href="#"><i class="fa-regular fa-clipboard fa-sm"></i>簽到簿</a></div>
+
+                <p>活動設定</p>
+                <div><a href="#"><i class="fa-solid fa-circle-info fa-sm"></i>基本資料</a></div>
+                <div><a href="#"><i class="fa-solid fa-location-dot fa-sm"></i>活動地點</a></div>
+                <div><a href="#"><i class="fa-solid fa-tags fa-sm"></i>票種資訊</a></div>
+                <div><a href="#"><i class="fa-regular fa-pen-to-square fa-sm"></i>報名表單</a></div>
+                <div><a href="#"><i class="fa-solid fa-envelope fa-sm"></i>通知信件</a></div>
+                <div><a href="#"><i class="fa-solid fa-circle-arrow-up fa-sm"></i>升級活動</a></div>
+            </nav>
+            </nav>
+        </div>
+        <!--------- side menu end ------------>
+        <!---------- main content  start------------->
+        <div class="main-content">
+            <!----- header and subheader start ----->
+            <header>
+                <h1>
+                    <a href="" class="back-Btn" title="回到組織頁面"><i class="fa-solid fa-arrow-left"></i></a>
+                    <span class="activitiesName">活動名稱</span>
+                    <span class="activitiesTitle">半暝三點半搶銀行 (暫)</span>
+                </h1>
+            </header>
+            <div class="subheader">
+                <div class="overview">
+                    <h2>報名人列表</h2>
+                </div>
+            </div>
+            <!----- header and subheader end ----->
+
+            <div class="content-wrapper">
+                <!------- tag-header start ------->
+                <div class="tag-area">
+                    <div class="tag-header">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-primary" id="send-email"><i class="fa-solid fa-envelope"></i>寄信</button>
+                            <button type="button" class="btn btn-primary" id="tag"><i class="fa-solid fa-tags"></i>標籤</button>
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">新增標籤到指定的 0 個報名人</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <input class="form-control" type="text" placeholder="請輸入新標籤" aria-label="default input example">
+                                        </div>
+                                        <div class="modal-footer">
+                                            <span>請先勾選報名人再新增標籤！</span>
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                                            <button type="button" class="btn btn-primary">新增標籤</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="view-select">
+                            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                                <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                                <label class="btn btn-outline-primary" for="btnradio1">已付費</label>
+                                <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btnradio2">待繳費</label>
+
+                                <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btnradio3" id="all">全部</label>
+                                <div class="dropdown">
+                                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="show-list">
+                                        顯示欄位
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <div class="select-all">
+                                        <li>
+                                            <input type="checkbox" id="select-all" name="select-all" checked />
+                                            <label for="select-all">選擇全部</label>
+                                        </li>
+                                </div>
+                                <li>
+                                    <input type="checkbox" id="registration-id" name="registration-id" checked />
+                                    <label for="registration-id">報名序號</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="name" name="name" checked />
+                                    <label for="name">姓名</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="email" name="email" checked />
+                                    <label for="email">Email</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="cell-phone" name="cell-phone" checked />
+                                    <label for="cell-phone">手機</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="contact-name" name="contact-name" checked />
+                                    <label for="contact-name">聯絡人姓名</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="contact-email" name="contact-email" checked />
+                                    <label for="contact-email">聯絡人Email</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="ticket-type" name="ticket-type" checked />
+                                    <label for="ticket-type">票種</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="tag" name="tag" checked />
+                                    <label for="tag">標籤</label>
+                                </li>
+                                <div class="submit">
+                                    <input class="btn btn-primary" type="submit" value="動作">
+                                </div>
+                                </ul>
+                            </div>
+                            <div class="search">
+                                <span>Search：<input type="text" class="search-input"></span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!------- tag-header end ------->
+            <!------ registration list  start------>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col"><input type="checkbox"></th>
+                        <th scope="col">報名序號</th>
+                        <th scope="col">姓名</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">手機</th>
+                        <th scope="col">聯絡人姓名</th>
+                        <th scope="col">聯絡人Email</th>
+                        <th scope="col">票種</th>
+                        <th scope="col">標籤</th>
+                        <th scope="col">動作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="col"><input type="checkbox"></th>
+                        <td>135506220</td>
+                        <td>Mark</td>
+                        <td>777666ABC@gmial.com</td>
+                        <td>0988555666</td>
+                        <td>Mark阿嬤</td>
+                        <td>MarkGrandma@gmail.com</td>
+                        <td>一般票</td>
+                        <td></td>
+                        <td>
+                            <button>明細</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="col"><input type="checkbox"></th>
+                        <td>135506228</td>
+                        <td>Mary</td>
+                        <td>888222ABC@gmial.com</td>
+                        <td>0977555444</td>
+                        <td>Maryㄟ阿拔</td>
+                        <td>MaryDad@gmail.com</td>
+                        <td>搖滾區</td>
+                        <td></td>
+                        <td>
+                            <button>明細</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="table-foot">
+                <div class="page-infro">
+                    每頁顯示 <select class="show-select">
+                        <option selected>10</option>
+                        <option value="1">10</option>
+                        <option value="2">25</option>
+                        <option value="3">50</option>
+                        <option value="4">100</option>
+                    </select> 筆記錄顯示
+                </div>
+                <div class="statistics">
+                    1 至 2 筆，總共 2 筆資料。
+                </div>
+            </div>
+            <div class="output">
+                <span>
+                    匯出報名人資料：
+                    <button>EXCEL</button>
+                    <button>CSV</button>
+                </span>
+            </div>
+            <!------ registration list end------>
+        </div>
+    </div>
+
+</div>
+    

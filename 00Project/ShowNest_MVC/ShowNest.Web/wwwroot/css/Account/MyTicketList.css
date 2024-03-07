@@ -1,0 +1,205 @@
+:root {
+    --function-color-hover: #518f6d;
+}
+
+.title {
+    line-height: 1.5;
+}
+h2 {
+    color: var(--main-green);
+    margin: 50px auto;
+}
+
+.events-tickets-list .header {
+    display: flex;
+    font-weight: bold;
+    border-bottom: var(--common-border);
+}
+
+.data-row {
+    display: flex;
+    margin: 10px 0px;
+}
+
+.event-name {
+    width: 50%;
+    padding: 5px;
+}
+
+.event-start-time {
+    width: 30%;
+    padding: 5px;
+}
+
+.ticket-amount {
+    width: 20%;
+    text-align: right;
+    padding: 5px;
+}
+
+.action-btns {
+    display: flex;
+    padding-bottom: 10px;
+    border-bottom: var(--common-border);
+}
+
+.action-btns a {
+    display: inline-block;
+    background-color: var(--main-green);
+    color: #fff;
+    height: 2.5em;
+    line-height: 1em;
+    width: 130px;
+    border: var(--common-border);
+    border-radius: 4px;
+    padding: 10px 10px;
+    text-align: center;
+    vertical-align: baseline;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.action-btns a:hover {
+    background-color: var(--function-color-hover);
+}
+
+.ticket-detail a::before {
+    content: url(https://res.cloudinary.com/dwn2iafcc/image/upload/v1708967800/ticket-alt-solid_nwzeuv.svg);
+    padding-right: 5px;
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.event-page a::before {
+    content: url(https://res.cloudinary.com/dwn2iafcc/image/upload/v1708967798/external-link-alt-solid_dcqtur.svg);
+    padding-right: 5px;
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.cards {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.single-card {
+    box-shadow: 0px 2px 6px 2px #ddd;
+    border-radius: var(--common-border-radius);
+    background-color: #fff;
+}
+
+.card-name {
+    position: relative;
+    background-color: #fff;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.card-name img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.card-name p {
+    color: #fff;
+    background: linear-gradient(to top, #515153, transparent);
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: end;
+    transition: .3s ease-out;
+}
+
+.single-card:hover .card-name p {
+    height: 90%;
+    padding-bottom: 13%;
+    transition: .3s ease-out;
+}
+
+.card-info {
+    color: #fff;
+    background-color: var(--main-green);
+    border-radius: 0 0 4px 4px;
+    padding: 10px;
+    text-align: right;
+}
+
+.card-event-date::before {
+    content: url(https://res.cloudinary.com/dwn2iafcc/image/upload/v1708967796/calendar-alt-solid_shhhga.svg);
+    padding-right: 5px;
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* MOBILE */
+@media (max-width:768px) {
+    h2 {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .width {
+        width: 90%;
+        margin: 0px auto;
+    }
+
+    .wrap {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .action-btns {
+        justify-content: center;
+    }
+
+    .cards {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+/* DESKTOP */
+@media (min-width:769px) {
+
+    @media (min-width:769px) and (max-width:1200px) {
+        .width {
+            width: 90%;
+        }
+
+        .wrap {
+            width: 90%;
+            margin: 50px auto
+        }
+    }
+
+    @media (min-width:1201px) {
+        .width {
+            width: 75%;
+        }
+
+        .wrap {
+            width: 75%;
+            margin: 50px auto;
+        }
+    }
+
+    .width {
+        max-width: 1200px;
+        margin: 0px auto;
+    }
+
+    .wrap {
+        max-width: 1200px;
+        margin: 50px auto;
+    }
+
+}

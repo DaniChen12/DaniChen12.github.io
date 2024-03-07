@@ -1,0 +1,225 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@section topCSS {
+    <link href="~/css/_partial/_accountnavbarpartial.css" rel="stylesheet" />
+    <link href="~/css/account/useredit.css" rel="stylesheet" />
+}
+
+    <section class="section_wrap">
+    <div id="UserEdit" class="width">
+        <div class="account-navigation-wrap">
+            @await Html.PartialAsync("_AccountNavBarPartial", new List<TabStatusViewModel>
+            {
+            new TabStatusViewModel { IsActive = true},
+            new TabStatusViewModel { IsActive = false},
+            new TabStatusViewModel { IsActive = false},
+            new TabStatusViewModel { IsActive = false},
+            new TabStatusViewModel { IsActive = false},
+            new TabStatusViewModel { IsActive = false},
+            new TabStatusViewModel { IsActive = false}
+            })
+        </div>
+            <!----------- Title------------>
+            <div class="title">
+                <h2 id="title">修改帳號設定</h2>
+            </div>
+
+            <!----------- Form------------>
+            <form id="user_edit" action="">
+                <!-- <div class="main-form col-8 form-horizontal"> -->
+                <div class="main-form">
+                    <div class="content-wrapper">
+                        <div class="form_contaner">
+                            <!-- ----------------使用者名稱----------------  -->
+                            <label for="">使用者名稱</label>
+                            <div class="form-content input-group-sm">
+                                <input class="form-control col-12" id="" type="text" name="" placeholder="">
+                                <p class="caption">您可以用此帳號登入 ShowNest 帳號只能使用字母、數字或底線且不能與其他 會員重複。</p>
+                            </div>
+                            <!-- -------------------暱稱-------------------  -->
+                            <label for="">暱稱</label>
+                            <div class="form-content input-group-sm">
+                                <input class="form-control col-12" id="" type="text" name="" placeholder="">
+                                <p class="caption">您的暱稱會顯示在個人頁面、活動頁面等地方</p>
+                            </div>
+                            <!--  ----------------聯絡方式------------------  -->
+                            <label for="">聯絡方式</label>
+                            <div class="form-content">
+                                <div class="contect-group input-group-sm">
+                                    <label class="email" for="Email">Email</label>
+                                    <input type="email" class="form-control mb-4" id="" type="text" name=""
+                                           placeholder="Email">
+                                    <p></p>
+                                </div>
+                                <div class="contect-group">
+                                    <label for="phone-number">手機號碼</label>
+                                    <div class="num-group">
+                                        <div class="phone-num">
+                                            <span class="Country-codes">
+                                                <select name="" id="" aria-placeholder="">
+                                                    <option value="+886">+886</option>
+                                                </select>
+                                            </span>
+                                            <span class="numbers input-group-sm">
+                                                <input class="form-control" type="tel" id="" type="text" name=""
+                                                       placeholder="phone number">
+                                            </span>
+                                        </div>
+                                        <p>修改聯絡資料需要重新驗證方能啟用。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ---------------出生年月日------------------  -->
+                            <label for="">出生年月日</label>
+                            <div class="form-content input-group-sm">
+                                <input class="form-control" id="birthday" type="date" name="">
+                            </div>
+                            <!-- ----------------生理性別-------------------- -->
+                            <label for="">生理性別</label>
+                            <div class="form-content input-group-sm">
+                                <select name="sex" id="sex">
+                                    <option value="男">男</option>
+                                    <option value="女">女</option>
+                                </select>
+                            </div>
+                            <!-- ------------------偏好活動地區-------------- -->
+                            <label for="">偏好活動地區</label>
+                            <div class="form-content input-group-sm">
+                                <div class="option-group">
+                                    <ul>
+                                        <li>
+                                            <input class="add-option" id="northern-region" type="checkbox" name="address-option" value="northern">
+                                            <label for="northern-region">北北基宜地區</label>
+                                        </li>
+
+                                        <li>
+                                        <input class="add-option" id="taozhumiao-area" type="checkbox" name="address-option" value="taozhumiao">
+                                            <label for="taozhumiao-area">桃竹苗地區</label>
+                                        </li>
+
+                                        <li>
+                                        <input class="add-option" id="yunjianan-area" type="checkbox" name="address-option" value="yunjianan-area">
+                                            <label for="yunjianan-area">雲嘉南地區</label>
+                                        </li>
+                                        <li>
+                                        <input class="add-option" id="southern-region " type="checkbox"
+                                                   name="address-option" value="southern-region "><label for="southern-region ">高屏地區</label>
+                                        </li>
+                                        <li>
+                                        <input class="add-option" id="central-region" type="checkbox"
+                                                   name="address-option" value="central-region"><label for="central-region">中彰投地區</label>
+                                        </li>
+                                        <li>
+                                        <input class="add-option" id="east-area" type="checkbox" name="address-option"
+                                                   value="east-area"><label for="east-area">花東地區</label>
+                                        </li>
+                                        <li>
+                                        <input class="add-option" id="outer-island-area" type="checkbox"
+                                                   name="address-option" value="outer-island-area"><label for="outer-island-area">澎金馬地區</label>
+                                        </li>
+                                        <li>
+                                        <input class="add-option" id="hong-kong" type="checkbox" name="address-option"
+                                                   value="hong-kong"><label for="hong-kong">香港</label>
+                                        </li>
+                                        <li>
+                                        <input class="add-option" id="macao" type="checkbox" name="address-option"
+                                                   value="macao"><label for="macao">澳門</label>
+                                        </li>
+                                        <li>
+                                        <input class="add-option" id="other" type="checkbox" name="address-option"
+                                                   value="other"><label for="other">其他地區</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <p>我們將以此為您推薦該地區活動</p>
+                            </div>
+                            <!-- ------------------個人網站------------------ -->
+                            <label class="website" for="">個人網站</label>
+                            <div class="form-content input-group-sm">
+                                <input class="form-control" id="" type="url" name="" placeholder="">
+                            </div>
+                            <!-- ------------------個人簡介------------------ -->
+                            <label for="">個人簡介</label>
+                            <div class="form-content form-floating input-group-sm">
+                                <textarea name="" class="description-content form-control" placeholder="個人簡介輸入這裡"
+                                          id="floating-textarea" rows="6"></textarea>
+                                <label for="floating-textarea">個人簡介輸入這裡</label>
+                                <p id="" class="caption">剩餘160字</p>
+                            </div>
+                            <!-- ----------------國家與時區----------------- -->
+                        <label class="time_zone" for="">國家與時區</label>
+                        <div class="form-content input-group-sm time_zone">
+                                <select name="area" id="area">
+                                    <option value="台灣">台灣</option>
+                                </select>
+                                <select name="GMT" id="">
+                                    <option value="GMT08">(GMT+08:00)</option>
+                                </select>
+                            </div>
+                            <!-- -------------------連結-------------------- -->
+                        <label class="media_link" for="">連結</label>
+                        <div class="form-content input-group-sm media_link_group">
+                                <div class="link-oauth link-fb">
+                                    <span class="name">Facebook</span>
+                                    <a href="#" type="button" class="btn btn-primary">連結</a>
+                                </div>
+                                <div class="link-oauth link-kkbox">
+                                    <span class="name">KK ID</span>
+                                    <a href="#" type="button" class="kkLink btn btn-info">連結</a>
+                                </div>
+                            </div>
+                            <!-- ---------------進階帳號管理----------------- -->
+                            <label for="">進階帳號管理</label>
+                            <div class="form-content input-group-sm">
+                                <div class="checkbox-group">
+                                    <a class="delete-acc" href="#">我要刪除帳號</a>
+                                    <div class="subscribe-group mt-2">
+                                        <ul>
+                                            <li>
+                                                <input class="sub-option" id="sub-news" type="checkbox"
+                                                       name="subscribe-option" value="sub-news"><label class=""
+                                                       for="sub-news">訂閱 ShowNest 的最新消息</label>
+                                            </li>
+                                            <li>
+                                                <input class="sub-option" id="restric-opt" type="checkbox"
+                                                       name="Search-restric-option" value="restric-opt"><label class=""
+                                                       for="restric-opt">搜尋時，排除限制級活動</label>
+                                            </li>
+                                            <li>
+                                                <input class="sub-option" id="pers-page" type="checkbox"
+                                                       name="personal-page" value="pers-page"><label class=""
+                                                       for="pers-page">啟用個人頁面</label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image-upload">
+                        <div class="img-container">
+                            <img src="https://picsum.photos/200/150/?random=10">
+                        </div>
+                        <a class="file-input ">
+                            <input class="file-upload form-control form-control-sm" type="file" id="form-control-sm">
+                        </a>
+                        <span class="help-block pb-4">
+                            <p>建議圖片尺寸為 250x250 以上正方形圖片，最大檔案容量為2MB。如果沒有上傳，會使用系統預設圖片。</p>
+                        </span>
+                    </div>
+
+                </div>
+            </form>
+            <div class="border"></div>
+            <!-- ---------------儲存個人資料按鈕-------------- -->
+            <div class="div-wrap">
+                <div class="btn-save">
+                    <button type="button" class="btn "
+                            style="background-color:var(--main-green);color: white;border:none;">
+                        儲存個人資料
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>

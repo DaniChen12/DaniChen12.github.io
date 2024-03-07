@@ -1,0 +1,348 @@
+
+
+body {
+    position: relative;
+}
+
+#header-nav-wrap {
+    height:46px;
+}
+
+.wrap {
+    margin: 0;
+    width: 100%;
+    
+}
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    padding: 0;
+    margin: 0;
+}
+/* ==============side menu start============== */
+.sideBarMenu {
+    width: 200px;
+    background-color: #518f6d;
+    flex-direction: column;
+}
+
+
+.sideBarMenu #publish-btn {
+    width: 140px;
+    margin: 10px;
+    background-color: #fff;
+    color: var(--main-green);
+    border-radius: 5px;
+}
+
+.sideBarMenu a {
+    padding-left: 20px;
+    padding-bottom: 12px;
+}
+
+nav a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    position: relative;
+    color: #fff;
+}
+
+    nav a:hover {
+        background-color: #1d5545;
+        color:#fff;
+    }
+
+    nav a > i {
+        margin-right: 15px;
+    }
+
+nav p {
+    background-color: #3b7555;
+    display: block;
+    padding: 12px;
+    margin-bottom: 0;
+    position: relative;
+    color: #fff;
+    padding: 12px 35px;
+    font-weight: bold;
+}
+
+/* 未發佈按鈕置中 */
+.sideBarMenu .dropdown {
+    text-align: center;
+}
+
+/*change boostrap dropdown btn color*/
+#sidemenu-dropdown.dropdown-item:active, #sidemenu-dropdown a.dropdown-item:active {
+    color: #333333;
+    background-color: #fff;
+}
+
+#sidemenu-dropdown ul.dropdown-menu.show {
+    min-width: 8.8rem;
+    padding-left: 15px;
+    color:var(--main-green);
+}
+
+#publish-btn:focus {
+    border-color: transparent;
+    box-shadow: none;
+}
+
+.btn:focus {
+    box-shadow: 0 0 0 0.1rem #ddd, 0 0 0 0.25rem transparent;
+}
+
+nav .fa-cart-arrow-down {
+    margin-right: 16.75px;
+}
+
+nav .fa-clipboard {
+    margin-left: 3px;
+    margin-right: 17.25px;
+}
+
+nav .fa-location-dot {
+    margin-right: 18.5px;
+}
+
+#sideMenu-active {
+    display: none;
+}
+
+/* ----------side menu end----------- */
+
+/* ------------main content------------ */
+.main-content {
+    position: relative;
+    color: #333333;
+    margin-bottom: 80px;
+    margin-left: 35px;
+    width: calc(100% - 200px);
+    flex: 1;
+}
+
+.activitiesName {
+    margin-right: 14px;
+    margin-left: 14px;
+    color: #999;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.activitiesTitle {
+    color: var(--main-green);
+    font-size: 26px;
+    font-weight: 500;
+}
+
+.back-Btn {
+    width: 40px;
+    height: 40px;
+    font-size: 15px;
+    border: #ccc 1px solid;
+    box-shadow: #f2f2f2 0 -3px 0 inset;
+    color: var(--main-green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+h2.header-h2{
+    display: flex;
+    padding: 20px 0px 15px 0px;
+    line-height: 1.5;
+}
+    /*----------header end---------- */
+    /* ----------.subheader start------ */
+    .subheader {
+    display: flex;
+    justify-content: space-between;
+    min-height: 20px;
+    padding: 20px 19px 19px 0;
+    background-color: #f5f5f5;
+    border: 1px solid #e3e3e3;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+    position: absolute;
+    width: 100%;
+    }
+
+    .subheader.title {
+        padding-left:10px;
+    }
+
+    .subheader .overview {
+        flex-grow: 1; /* 讓 h2 元素能夠佔據剩餘的空間 */
+        margin-left:15px;
+        margin-top:10px;
+            
+    }
+
+    .subheader .overview h2 {
+        color: #333;
+        font-size: 26px;
+        text-align: start;
+        font-weight: 400;
+            
+    }
+
+    .subheader .pie-chart {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-left: auto; /* 將這兩個元素推到右側 */
+    }
+
+.sales-data {
+    float: right;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.in-block, .sold, .remain {
+    display: block;
+    padding-top: 4px;
+    padding-right: 3px;
+    font-size: 13px;
+    line-height: 1.1em;
+    color: #b7b7b7;
+    letter-spacing: 0.94px;
+    margin-bottom: -2px;
+}
+
+;
+
+span .block-number {
+    font-size: 22px;
+    color: #a1a1a1;
+    font-family: 'Times New Roman';
+    font-weight: bold;
+    display: block;
+    margin-top: 4px;
+}
+
+.sold-number {
+    font-size: 22px;
+    color: var(--main-green);
+    font-family: 'Times New Roman';
+    font-weight: bold;
+    display: block;
+    margin-top: 4px;
+}
+
+.remain-number {
+    font-size: 22px;
+    color: #a1a1a1;
+    font-family: 'Times New Roman';
+    font-weight: bold;
+    display: block;
+    margin-top: 4px;
+}
+
+.block-number {
+    font-size: 22px;
+    color: var(--light-green);
+    font-family: 'Times New Roman';
+    font-weight: bold;
+    display: block;
+    margin-top: 4px;
+}
+
+
+/* ----------.subheader end ----------*/
+
+.fa-calendar-days, .fa-location-dot {
+    margin-right: 10px;
+}
+
+.date-place {
+    margin-top: 100px;
+}
+
+    .date-place p {
+        margin: 10px;
+    }
+
+/* ----- sales lists start ----- */
+.sales-list {
+    padding-bottom: 20px;
+}
+
+.tickets-sales-status, .sales-method-statistics, .amount-statistics, .subscriber-data {
+    margin-top: 20px;
+}
+
+    .tickets-sales-status > table, .sales-method-statistics > table, .amount-statistics > table, .subscriber-data > table {
+        width: 100%;
+        ;
+        text-align: end;
+    }
+
+table > thead > tr > th {
+    border-bottom: #ccc 1px solid;
+    line-height: 1.33333333;
+    vertical-align: middle;
+    padding: 6px 3px;
+
+}
+
+table > tbody > tr > td, table > tfoot > tr > td {
+    border-top: #efefefed 1px solid;
+    line-height: 1.33333333;
+    vertical-align: middle;
+    word-break: break-all;
+    padding: 3px 5px;
+}
+
+td, th {
+    text-align: right; /* 將文字靠右對齊 */
+    white-space: nowrap; /* 避免文字折行 */
+}
+
+
+.tickets-sales-status > h3, .sales-method-statistics > h3, .amount-statistics > .amount-statistics-head > h3, .current-order > h3 {
+    font-size: 24px;
+    font-weight: 400;
+    display: inline-block;
+    border-bottom: 1px solid #999;
+    color: #333;
+    margin: 15px 0px;
+}
+
+.current-order > h3 {
+    margin-bottom: -20px;
+}
+
+.current-order {
+    width: 100%;
+}
+
+.subscriber-data {
+    line-height: 1.33333333;
+    margin-bottom: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #f5f5f5;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+}
+
+.amount-statistics > .amount-statistics-head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-muted {
+    background-color: #e2dfdf;
+}
+
+/* ----- sales lists end ----- */
+
+#footer{
+    position: absolute;
+    width:100%;
+}
+
+}

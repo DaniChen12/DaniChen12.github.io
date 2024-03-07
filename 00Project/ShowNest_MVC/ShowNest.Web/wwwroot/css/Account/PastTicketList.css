@@ -1,0 +1,109 @@
+:root {
+    --function-color-hover: #518f6d;
+}
+
+h2 {
+    color: var(--main-green);
+    margin: 50px auto;
+}
+.title {
+    line-height: 1.5;
+}
+.events-tickets-list .header {
+    display: flex;
+    font-weight: bold;
+    border-bottom: var(--common-border);
+}
+
+.data-row {
+    display: flex;
+    margin: 10px 0;
+}
+
+.event-name {
+    width: 50%;
+    padding: 5px;
+}
+
+.event-start-time {
+    width: 30%;
+    padding: 5px;
+}
+
+.ticket-amount {
+    width: 20%;
+    text-align: right;
+    padding: 5px;
+}
+
+.action-btns {
+    display: flex;
+    padding-bottom: 10px;
+    border-bottom: var(--common-border);
+}
+
+.action-btns a {
+    display: inline-block;
+    background-color: var(--main-green);
+    color: #fff;
+    height: 2.5em;
+    line-height: 1em;
+    width: 130px;
+    border: var(--common-border);
+    border-radius: 4px;
+    padding: 10px 10px;
+    text-align: center;
+    vertical-align: baseline;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.action-btns a:hover {
+    background-color: var(--function-color-hover);
+}
+
+.ticket-detail a::before {
+    content: url(https://res.cloudinary.com/dwn2iafcc/image/upload/v1708967800/ticket-alt-solid_nwzeuv.svg);
+    padding-right: 5px;
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* MOBILE */
+@media (max-width:768px) {
+    h2 {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .wrap {
+        margin: 20px auto;
+    }
+
+    .action-btns {
+        justify-content: center;
+    }
+
+}
+
+/* DESKTOP */
+@media (min-width:769px) {
+
+    @media (min-width:769px) and (max-width:1200px) {
+        .wrap {
+            margin: 50px auto
+        }
+    }
+
+    @media (min-width:1201px) {
+        .wrap {
+            margin: 50px auto;
+        }
+    }
+    
+    .wrap {
+        margin: 50px auto;
+    }
+
+}

@@ -1,0 +1,326 @@
+h2 {
+    text-align: left;
+}
+
+.wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* start ---- event img */
+.event-img-bgc {
+    background-color: #EEEEEE;
+    border-bottom: var(--common-border);
+}
+
+.event-img {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.event-img img {
+    display: block;
+    width: 100%;
+    /*max-height: auto;*/
+}
+
+/* end ---- event img */
+
+/* start ---- event name & event-detail ---- */
+h2 {
+    color: var(--main-green);
+    font-size: 30px;
+    font-weight: bold;
+    padding: 20px 0px;
+}
+
+.event-detail tr {
+    line-height: 2em;
+}
+
+.event-detail th {
+    width: 95px;
+    color: #999999;
+    font-weight: bold;
+}
+
+.event-detail td {
+    color: #333333;
+}
+
+.event-detail table a {
+    color: var(--main-green);
+}
+
+#add-to-calendar,
+#view-the-map {
+    display: inline-block;
+}
+
+#add-to-calendar::before {
+    content: url(https://res.cloudinary.com/dwn2iafcc/image/upload/v1708682216/calendar-alt-solid_azh1zr.svg);
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin: 0 5px 0 15px;
+}
+
+#view-the-map::before {
+    content: url(https://res.cloudinary.com/dwn2iafcc/image/upload/v1708682216/map-marker-alt-solid_pqjnsi.svg);
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin: 0 5px 0 15px;
+}
+
+/* end ---- event name & event-detail ---- */
+
+/* start ---- seats area chart img */
+.seats-areas-chart {
+    display: block;
+    max-width: 1200px;
+    padding: 15px;
+    margin: 15px auto;
+}
+
+.seats-areas-chart img {
+    display: block;
+    width: 100%;
+}
+
+/* end ---- seats area chart img */
+
+/* start ---- ticket-price */
+.ticket-price-table {
+    margin-bottom: 30px;
+}
+
+.ticket-price-title {
+    display: flex;
+    border-bottom: 2px solid #333333;
+    padding: 5px;
+}
+
+.ticket-price-title .ticket-type {
+    width: 40%;
+}
+
+.ticket-price-title .seats-select-type {
+    width: 20%;
+}
+
+.ticket-price-title .the-price {
+    width: 15%;
+    text-align: right;
+}
+
+.ticket-data-row {
+    display: flex;
+    align-items: center;
+    height: 4em;
+    line-height: 1em;
+    margin-top: 10px;
+    border: var(--common-border);
+    border-left: 3px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.area {
+    flex-direction: column;
+    width: 40%;
+    vertical-align: middle;
+}
+
+.area span {
+    display: block;
+    width: 90%;
+    font-size: 13px;
+    color: #999999;
+    margin-top: 5px;
+}
+
+.select-type {
+    width: 20%;
+}
+
+.ticket-price {
+    width: 15%;
+    text-align: right;
+}
+
+.amount {
+    width: 24%;
+    text-align: right;
+    line-height: 2em;
+    vertical-align: middle;
+}
+
+#input-ticket-amount {
+    width: 50px;
+    height: 2em;
+    text-align: center;
+    padding-inline-start: 0px;
+    border: 1px solid #999999;
+}
+
+#btn-minus,
+#btn-plus {
+    width: 2em;
+    height: 2em;
+    margin-inline: -6px;
+    padding-inline: 0px 0px;
+    background: #FFF;
+    border: 1px solid #999999;
+    font-weight: bold;
+}
+
+#btn-minus {
+    border-radius: 4px 0px 0px 4px;
+    opacity: 0.5;
+}
+
+#btn-plus {
+    border-radius: 0px 4px 4px 0px;
+}
+
+input {
+    line-height: normal;
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* hide input number arrows Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* hide input number arrows Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+/* align input number */
+input[type=button] {
+    -webkit-appearance: auto;
+}
+
+/* end ---- ticket-price */
+
+/* start ---- agreement */
+.agreement {
+    margin-bottom: 30px;
+}
+
+.agreement a {
+    color: var(--main-green);
+}
+
+/* end ---- agreement */
+
+/* start ---- btn-next-step */
+.btn-next-step {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.btn-next-step a {
+    display: inline-block;
+    background-color: var(--main-green);
+    color: #fff;
+    height: 2.5em;
+    line-height: 1em;
+    width: 30%;
+    border: var(--common-border);
+    border-radius: 4px;
+    padding: 10px 10px;
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: middle;
+}
+
+@media only screen and (max-width:768px) {
+    
+    .event-img {
+        width: 100%;
+    }
+    .seats-areas-chart img {
+        max-width: 100%;
+    }
+
+    .ticket-price-title {
+        display: none;
+    }
+
+    .ticket-data-row {
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 13em;
+        margin: auto 5px;
+        align-items: normal;
+        justify-content: center;
+    }
+
+    .area {
+        width: 65%;
+        height: 3.5em;
+    }
+
+    .select-type {
+        width: 40%;
+        line-height: 3em;
+        height: 3em;
+        text-align: left;
+    }
+
+    .ticket-price {
+        width: 40%;
+        line-height: 3em;
+        height: 3em;
+        text-align: left;
+    }
+
+    .amount {
+        width: 35%;
+        line-height: 3em;
+        height: 3em;
+        padding-right: 5px;
+        text-align: right;
+    }
+
+    .agreement {
+        line-height: 2em;
+        margin: 30px 10px;
+    }
+
+    .btn-next-step a {
+        display: inline-block;
+        width: 100%;
+    }
+}
+
+@media (min-width: 280px) and (max-width: 450px) {
+    .ticket-data-row {
+        flex-wrap: nowrap;
+        height: 15em;
+    }
+
+    .area {
+        padding: 5px 0px;
+        height: 5em;
+    }
+
+    .area span {
+        width: 100%;
+    }
+
+    .area,
+    .amount,
+    .select-type,
+    .ticket-price {
+        width: 100%;
+    }
+}

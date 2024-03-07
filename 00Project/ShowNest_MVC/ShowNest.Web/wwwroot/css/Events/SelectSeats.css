@@ -1,0 +1,284 @@
+:root {
+    --function-color-hover: #518f6d;
+}
+
+body {
+    font-family: sans-serif;
+    /*font-size: 15px;*/
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrap {
+    position: relative;
+}
+
+/* seat areas btns and showcase */
+.seat-areas-and-showcases {
+    background-color: #ddd;
+}
+
+/* display seat area & current area */
+.display-seat-area {
+    display: inline-block;
+    max-width: 70%;
+    height: 3em;
+    line-height: 3em;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+
+.display-seat-area a {
+    display: inline-block;
+    background-color: var(--main-green);
+    color: #fff;
+    height: 2.5em;
+    line-height: 1em;
+    width: 100px;
+    border: var(--common-border);
+    border-radius: 4px;
+    padding: 10px 10px;
+    text-align: center;
+    vertical-align: baseline;
+}
+
+.display-seat-area-chart a:hover {
+    background-color: var(--function-color-hover);
+}
+
+.display-seat-area-chart a::before {
+    content: url(https://res.cloudinary.com/dwn2iafcc/image/upload/v1708682216/compass-regular_uaaqzh.svg);
+    padding-right: 5px;
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.current-area {
+    color: var(--function-color-hover);
+    display: inline-block;
+    height: 3em;
+    line-height: 3em;
+}
+
+.current-area p::before {
+    content: url(https://res.cloudinary.com/dwn2iafcc/image/upload/v1708682216/street-view-solid_lej3bk.svg);
+    margin-left: 20px;
+    padding-right: 10px;
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.showcases {
+    display: inline-block;
+    height: 3em;
+    line-height: 3em;
+    margin-left: auto;
+}
+
+.showcase-selected {
+    margin-right: 10px;
+}
+
+.showcase-selected::before {
+    content: "●";
+    color: var(--main-green);
+    margin-right: 1px;
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.showcase-available {
+    margin-right: 10px;
+}
+
+.showcase-available::before {
+    content: "●";
+    color: #FFFFFF;
+    margin-right: 1px;
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.showcase-occupied {
+    margin-right: 10px;
+}
+
+.showcase-occupied::before {
+    content: "●";
+    color: #AAAAAA;
+    margin-right: 1px;
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+/* stage, select seats & zoom functions */
+.select-seats {
+    --select-seat-bgc: #888888;
+    background-color: var(--select-seat-bgc);
+    position: relative;
+    height: 600px;
+    flex-grow: 1;
+}
+
+/* stage */
+.stage {
+    height: 5em;
+    line-height: 5em;
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    color: #FFFFFF;
+    position: relative;
+    top: 3px;
+    left: 0;
+    z-index: 1;
+}
+
+/* trapezoid */
+.stage::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 3em;
+    bottom: 0;
+    left: 3em;
+    background-color: #333333;
+    z-index: -1;
+    transform: perspective(0.5em) rotateX(-0.4deg);
+    border-radius: .5rem;
+    margin-bottom: -10px;
+}
+
+
+/* zoom in & zoom out */
+.zoom-in-zoom-out {
+    padding: 0 15px;
+    position: relative;
+    top: -60px;
+}
+
+.zoom-in-zoom-out img {
+    display: inline-block;
+    box-sizing: content-box;
+    background-color: #FFFFFF;
+    width: 20px;
+    border: var(--dark-border);
+    margin-top: -1px;
+    padding: 10px;
+    border-radius: 4px;
+    opacity: 0.9;
+}
+
+.zoom-in-zoom-out img:hover {
+    opacity: 1;
+}
+
+.seats-group {
+    background-color: var(--select-seat-bgc);
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+/* display seats */
+.row {
+    background-color: var(--select-seat-bgc);
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+}
+
+.seat {
+    display: inline-block;
+    background: url(https://res.cloudinary.com/dwn2iafcc/image/upload/v1708682216/available_armchair_icon_iqgtzt.svg);
+    height: 30px;
+    width: 30px;
+}
+
+.seat:hover {
+    background: url(https://res.cloudinary.com/dwn2iafcc/image/upload/v1708682217/hover_armchair_icon_f6iupf.svg);
+    cursor: pointer;
+}
+
+.selected-seat {
+    display: inline-block;
+    background: url(https://res.cloudinary.com/dwn2iafcc/image/upload/v1708682218/selected_armchair_icon_tx0yfb.svg);
+    height: 30px;
+    width: 30px;
+}
+
+.occupied-seat {
+    display: inline-block;
+    background: url(https://res.cloudinary.com/dwn2iafcc/image/upload/v1708682217/occupied_armchair_icon_yeubih.svg);
+    height: 30px;
+    width: 30px;
+}
+
+.disabled {
+    pointer-events: none;
+    background: local;
+}
+
+/* mobile */
+@media screen and (max-width: 768px) {
+    .wrap {
+        width: 100%;
+    }
+
+    .display-seat-area {
+        justify-content: space-between;
+        margin-left: auto;
+    }
+
+    .current-area p {
+        margin-left: auto;
+    }
+
+    .showcases div {
+        display: none;
+    }
+
+    .select-seats {
+        overflow-x: auto;
+        overflow-y: clip;
+        height: 900px;
+        padding-bottom: 5em;
+    }
+
+    .stage {
+        min-width: 575px;
+        margin: 0 auto;
+    }
+
+    .zoom-in-zoom-out img {
+        display: none;
+    }
+
+    .seats-group {
+        width: 575px;
+        position: relative;
+        transform: none;
+        top: 4em;
+        left: -2em;
+        right: -2em;
+    }
+
+    .seat {
+        height: 30px;
+        width: 30px;
+        background-repeat: no-repeat;
+    }    
+}
+

@@ -1,0 +1,97 @@
+@model IEnumerable<EventCardViewModel>
+
+@{
+	ViewData["Title"] = "Index";
+}
+
+@section topCSS {
+	<link rel="stylesheet" href="~/css/Index/home_style.css">
+    <link rel="stylesheet" href="~/css/_Partial/_EventCards_Partial.css">
+    <link href="~/css/_partial/_categorytags_partial.css" rel="stylesheet" />
+}
+
+<!-- slogan -->
+<section>
+	<h2 id="events-slogan">探索活動發掘精彩從此開始！</h2>
+</section>
+<!-- event-search -->
+<section>
+	<div id="event-search" class="width d-flex">
+		<div id="event-search-search-div" class="d-flex align-items-center">
+			<i class="fa-solid fa-magnifying-glass" id="header-nav-magnifier-icon"></i>
+			<input type="text" id="event-search-search-input" placeholder="搜索一場精彩活動">
+		</div>
+		<div id="event-search-filter">
+			<div id="filter-fee-wrap" class="d-inline-block align-items-center dropdown btn-group">
+				<a id="filter-fee" class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+					aria-expanded="false"><span>最低費用</span></a>
+				<ul class="dropdown-menu dropdown-menu-end">
+					<li><a id="filter-fee-all" class="dropdown-item" href="#">全部費用</a></li>
+					<li><a id="filter-fee-free" class="dropdown-item" href="#">免費</a></li>
+					<li>
+						<a id="filter-fee-to-1000" class="dropdown-item" href="#">
+							<i class="fa-solid fa-dollar-sign"></i>1 - 1000
+						</a>
+					</li>
+					<li>
+						<a id="filter-fee-to-2000" class="dropdown-item" href="#">
+							<i class="fa-solid fa-dollar-sign"></i>1000 - 2000
+						</a>
+					</li>
+					<li>
+						<a id="filter-fee-to-3000" class="dropdown-item" href="#">
+							<i class="fa-solid fa-dollar-sign"></i>2000 - 3000
+						</a>
+					</li>
+					<li>
+						<a id="filter-fee-3000-up" class="dropdown-item" href="#">
+							<i class="fa-solid fa-dollar-sign"></i>3000 up
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div id="filter-time-wrap" class="d-inline-block align-items-center dropdown btn-group">
+				<a id="filter-time" class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+					aria-expanded="false"><span>參加時間</span></a>
+				<ul class="dropdown-menu dropdown-menu-end">
+					<li><a id="nav-user-setting" class="dropdown-item" href="#">全部時間</a></li>
+					<li><a id="nav-user-setting" class="dropdown-item" href="#">今天</a></li>
+					<li><a id="nav-user-setting" class="dropdown-item" href="#">一周內</a></li>
+					<li><a id="nav-user-setting" class="dropdown-item" href="#">一個月內</a></li>
+					<li><a id="nav-user-setting" class="dropdown-item" href="#">兩個月內</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- categories tags -->
+<section>
+	<div id="categories-tags-wrap" class="width d-flex">
+		<p class="">活動類別</p>
+		<div id="categories-tags-div" class="d-flex">
+			@for(int i = 0; i < 15; i++)
+			{
+				@await Html.PartialAsync("~/PartialViews/_CategoryTags_Partial.cshtml");
+			}
+		</div>
+	</div>
+</section>
+<!-- cards -->
+<section>
+	<div class="cards-wrap width">
+		<div class="cards">
+			@foreach (var card in Model)
+			{
+				@await Html.PartialAsync("~/PartialViews/_EventCards_Partial.cshtml", card);
+			}
+		</div>
+	</div>
+	<div id="page-index" class="width">
+		<a href="" class="index active-index">1</a>
+		<a href="" class="index">2</a>
+		<a href="" class="index">3</a>
+		<a href="" class="index">4</a>
+		<a href="" class="index">5</a>
+		<a href="" class="index">></a>
+	</div>
+</section>

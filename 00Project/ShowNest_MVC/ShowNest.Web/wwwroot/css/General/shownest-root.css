@@ -1,0 +1,11 @@
+﻿:root {
+    --light-green: #82b99b;
+    --main-green: #3b7555;
+    --dark-green: #1d5545;
+    --light-gray: #ddd;
+    --dark-gray: #888;
+    --main-font-size: 16px;
+    --common-border: 1px #ddd solid;
+    --dark-border: 1px #999EA2 solid;
+    --common-border-radius: 5px;
+}

@@ -1,0 +1,210 @@
+@using ShowNest.Web.ViewModels.UserAccount;
+@model TabStatusViewModel;
+@{
+    ViewData["Title"] = "Orders";
+}
+
+@section topCSS {
+    <link rel="stylesheet" href="~/css/Account/Orders.css">
+    <link rel="stylesheet" href="~/css/_Partial/_AccountNavBarPartial.css">
+}
+
+<div class="wrap width">
+    <!-- account navigation -->
+    <div class="account-navigation-wrap">
+    @await Html.PartialAsync("_AccountNavBarPartial", new List<TabStatusViewModel>
+    {
+        new TabStatusViewModel { IsActive = false},
+        new TabStatusViewModel { IsActive = false},
+        new TabStatusViewModel { IsActive = false},
+        new TabStatusViewModel { IsActive = false},
+        new TabStatusViewModel { IsActive = true},
+        new TabStatusViewModel { IsActive = false},
+        new TabStatusViewModel { IsActive = false}
+    })
+    </div>
+    <div class="title"><h2>個人帳務清單</h2></div>
+    <div class="orders-list-title">
+        <div class="orders-id-header">
+            <p>訂單編號</p>
+        </div>
+        <div class="events-title-header">
+            <p>活動名稱 / 描述</p>
+        </div>
+    </div>
+    <div class="order-detail">
+        <div class="order-id-with-pic">
+            <div class="order-id">#645920</div>
+            <div class="event-pic"><img src="https://picsum.photos/250/131/?random=10" alt="event image"></div>
+        </div>
+        <div class="order-event-detail">
+            <div class="event-title">
+                <a href="#">WebConf Taiwan 2013</a>
+            </div>
+            <div class="event-detail">
+                <table>
+                    <tr>
+                        <th>開始時間</th>
+                        <td>2013/01/12 09:00</td>
+                    </tr>
+                    <tr>
+                        <th>活動地點</th>
+                        <td>中央研究院人文社會科學館 / 台北市南港區研究院路二段128號</td>
+                    </tr>
+                    <tr>
+                        <th>主辦單位</th>
+                        <td>WebConf Taiwan</td>
+                    </tr>
+                    <tr>
+                        <th>狀態</th>
+                        <td class="ticket-payment-pending">待付款</td>
+                    </tr>
+                    <tr>
+                        <th>票劵類型</th>
+                        <td>電子票券</td>
+                    </tr>
+                    <tr>
+                        <th>票劵數量</th>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <th>總價</th>
+                        <td>TWD$1,300</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="order-btns">
+            <div class="btn-edit-order">
+                <a asp-controller="Events" asp-action="OrderDetail">查看/修改資料</a>
+            </div>
+            <div class="btn-contact-organizer">
+                <a asp-controller="Organizations" asp-action="ContactOrganization">聯絡主辦單位</a>
+            </div>
+            <div class="btn-contact-customer-service">
+                <a href="#">聯絡客服</a>
+            </div>
+            <div class="btn-cancel-order">
+                <a href="#">取消訂單</a>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="order-detail">
+        <div class="order-id-with-pic">
+            <div class="order-id">#645920</div>
+            <div class="event-pic"><img src="https://picsum.photos/250/131/?random=101"></div>
+        </div>
+        <div class="order-event-detail">
+            <div class="event-title">
+                <a href="#">WebConf Taiwan 2013</a>
+            </div>
+            <div class="event-detail">
+                <table>
+                    <tr>
+                        <th>開始時間</th>
+                        <td>2013/01/12 09:00</td>
+                    </tr>
+                    <tr>
+                        <th>活動地點</th>
+                        <td>中央研究院人文社會科學館 / 台北市南港區研究院路二段128號</td>
+                    </tr>
+                    <tr>
+                        <th>主辦單位</th>
+                        <td>WebConf Taiwan</td>
+                    </tr>
+                    <tr>
+                        <th>狀態</th>
+                        <td class="ticket-cancel">取消</td>
+                    </tr>
+                    <tr>
+                        <th>票劵類型</th>
+                        <td>電子票券</td>
+                    </tr>
+                    <tr>
+                        <th>票劵數量</th>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <th>總價</th>
+                        <td>TWD$1,300</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="order-btns">
+            <div class="btn-edit-order">
+                <a id="btn-edit-order" href="http://">查看/修改資料</a>
+            </div>
+            <div class="btn-contact-organizer">
+                <a href="http://">聯絡主辦單位</a>
+            </div>
+            <div class="btn-contact-customer-service">
+                <a href="http://">聯絡客服</a>
+            </div>
+            <div class="btn-cancel-order">
+                <a href="http://">取消訂單</a>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="order-detail">
+        <div class="order-id-with-pic">
+            <div class="order-id">#645920</div>
+            <div class="event-pic"><img src="https://picsum.photos/250/131/?random=100"></div>
+        </div>
+        <div class="order-event-detail">
+            <div class="event-title">
+                <a href="#">WebConf Taiwan 2013WebConf Taiwan 2013WebConf Taiwan 2013WebConf Taiwan 2013WebConf
+                    Taiwan 2013</a>
+            </div>
+            <div class="event-detail">
+                <table>
+                    <tr>
+                        <th>開始時間</th>
+                        <td>2013/01/12 09:00</td>
+                    </tr>
+                    <tr>
+                        <th>活動地點</th>
+                        <td>中央研究院人文社會科學館 / 台北市南港區研究院路二段128號</td>
+                    </tr>
+                    <tr>
+                        <th>主辦單位</th>
+                        <td>WebConf Taiwan</td>
+                    </tr>
+                    <tr>
+                        <th>狀態</th>
+                        <td class="ticket-paid">已付款</td>
+                    </tr>
+                    <tr>
+                        <th>票劵類型</th>
+                        <td>電子票券</td>
+                    </tr>
+                    <tr>
+                        <th>票劵數量</th>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <th>總價</th>
+                        <td>TWD$1,300</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="order-btns">
+            <div class="btn-edit-order">
+                <a id="btn-edit-order" href="http://">查看/修改資料</a>
+            </div>
+            <div class="btn-contact-organizer">
+                <a href="http://">聯絡主辦單位</a>
+            </div>
+            <div class="btn-contact-customer-service">
+                <a href="http://">聯絡客服</a>
+            </div>
+            <div class="btn-cancel-order">
+                <a href="http://">取消訂單</a>
+            </div>
+        </div>
+    </div>
+    <hr>
+</div>

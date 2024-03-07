@@ -1,0 +1,73 @@
+﻿@*
+For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@section topCSS {
+    <link href="~/css/_partial/_accountnavbarpartial.css" rel="stylesheet" />
+    <link href="~/css/account/joinedorg.css" rel="stylesheet" />
+}
+
+    <section class="section_wrap">
+    <div id="joined_organizations" class="width ">
+
+        <div class="account-navigation-wrap">
+            @await Html.PartialAsync("_AccountNavBarPartial", new List<TabStatusViewModel>
+            {
+            new TabStatusViewModel { IsActive = false},
+            new TabStatusViewModel { IsActive = false},
+            new TabStatusViewModel { IsActive = false},
+            new TabStatusViewModel { IsActive = false},
+            new TabStatusViewModel { IsActive = false},
+            new TabStatusViewModel { IsActive = true},
+            new TabStatusViewModel { IsActive = false}
+            })
+        </div>
+
+            <!----------- Title------------>
+            <div class="title">
+                <h2 id="title">成為粉絲的組織</h2>
+            </div>
+            <div class="main-content ">
+                <div class="org-list-title mt-2">
+                    <div class="org-name col-4">
+                        <p>組織名稱</p>
+                    </div>
+                    <div class="org-join-time col-8">
+                        <p>加入時間</p>
+                    </div>
+                </div>
+                <div class="org-list-group">
+                    <div class="list-names">
+                        <div class="name-col col-4">
+                            <p>KKLIVE Taiwan</p>
+                        </div>
+                        <div class="join-time-col col-8">
+                            <span class="date-time-group">
+                                <p class="date">2024/02/01</p>
+                                <p class="time">00:58</p>
+                                <p class="area-time">(+0800)</p>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="button-group">
+                        <button class="btn-quit-org btn btn-sm">退出組織</button>
+                        <button class="btn-org btn btn-sm">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>組織頁面
+                        </button>
+                    </div>
+                </div>
+                <div class="page-col">
+                    <div class="pages col-12">
+                        <div class="btn-toolbar d-flex pt-4 justify-content-end" role="toolbar"
+                            aria-label="Toolbar with button groups">
+                            <div class="btn-group me-2" role="group" aria-label="First group">
+                                <button type="button" class="btn">1</button>
+                                <button type="button" class="btn">2</button>
+                                <button type="button" class="btn">3</button>
+                                <button type="button" class="btn">4</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>

@@ -1,0 +1,56 @@
+.main-content {
+    flex-grow: 1;
+    padding-left: 20px;
+}
+
+header {
+    border-bottom: var(--common-border);
+
+}
+
+.header-h1 {
+
+    color: #999;
+    font-size: 24px;
+}
+
+.org-title {
+    color: var(--main-green);
+    font-size: 26px;
+}
+
+.subheader {
+    display: flex;
+    justify-content: space-between;
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #e3e3e3;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    /* position: absolute; */
+    width: 100%;
+}
+
+
+.section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-bottom: -10px;
+    margin-top:20px;
+}
+
+button {
+    margin-left: 10px;
+}
+
+.subheader {
+    margin-top: 10px;
+}
+
+.section,.content{
+    display: block;
+    padding: 10px;
+}

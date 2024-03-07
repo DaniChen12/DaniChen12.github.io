@@ -1,0 +1,66 @@
+﻿@{
+    ViewData["Title"] = "Eventslist";
+}
+
+
+@section topCSS {
+    <link href="~/css/Dashboard/_SideMenu.css" rel="stylesheet" />
+ 
+    <link href="~/css/Dashboard/Demouse.css" rel="stylesheet" />
+}
+<section class="d-flex">
+
+    <div class="sideBarMenu">
+        <nav>
+            <div><a href="#"><i class="fa-solid fa-arrow-up-right-from-square fa-sm"></i>組織公開頁面</a></div>
+            <div><a href="Organizations/?viewType=Overview"><i class="fa-solid fa-gauge-simple"></i>綜覽</a></div>
+            <div><a href="Organizations/?viewType=Eventslist"><i class="fa-solid fa-users fa-sm"></i>活動列表</a></div>
+            <div><a href="#"><i class="fa-solid fa-cart-arrow-down fa-sm"></i>組織帳務</a></div>
+
+            <p>組織設定</p>
+            <div><a href="Organizations/?viewType=info"><i class="fa-solid fa-circle-info fa-sm"></i>一般資訊</a></div>
+            <div><a href="#"><i class="fa-solid fa-location-dot fa-sm"></i>帳務設定</a></div>
+            <div><a href="#"><i class="fa-solid fa-tags fa-sm"></i>權限管理</a></div>
+            <div><a href="#"><i class="fa-regular fa-pen-to-square fa-sm"></i>繳費紀錄</a></div>
+            <div><a href="#"><i class="fa-solid fa-envelope fa-sm"></i>升級組織</a></div>
+
+            <p>組織佈景主題</p>
+            <div><a href="#"><i class="fa-solid fa-circle-arrow-up fa-sm"></i>設定佈景主題</a></div>
+        </nav>
+
+    </div>
+
+    <div class="main-content">
+        <header>
+            <h1 class="header-h1">
+                <span class="org-name">組織名稱</span>
+                <span class="org-title">測試2(暫)</span>
+            </h1>
+        </header>
+
+        <div class="section">    
+            <h2>活動列表</h2>
+        </div>
+
+        <div class="content">
+            <span>正在舉辦的活動</span> <button>建立活動</button>
+            <div class="wall">
+                <div class="subheader">
+
+                    <p>目前沒有正在舉辦的活動</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <span>已結束的活動</span> 
+            <div class="wall">
+                <div class="subheader">
+
+                    <p>目前沒有已結束的活動</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>

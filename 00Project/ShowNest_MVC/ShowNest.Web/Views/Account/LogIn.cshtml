@@ -1,0 +1,34 @@
+@{
+    ViewData["Title"] = "LogIn";
+}
+
+@section topCSS {
+    <link rel="stylesheet" href="~/css/Account/LogIn.css">
+}
+
+<div class="wallpaper">
+
+        <div class="container">
+            <div class="wrap">
+                <div class="tab">
+                    <div class="log-in">登入</div>
+                    <div class="sign-up"><a asp-controller="Account" asp-action="SignUp">註冊</a></div>
+                </div>
+                <div class="input-area">
+                    <div class="user-name-or-email">
+                        <input type="text" placeholder="使用者名稱或 email" required>
+                    </div>
+                    <div class="passwords">
+                        <input type="password" id="pass" name="password" minlength="8" required placeholder="密碼" />
+                    </div>
+                    <div class="submit"><a href="">登入</a></div>
+                    <div class="forget-passwords"><a asp-controller="Account" asp-action="ForgetPassword">忘記密碼</a></div>
+                    <div class="other-log-in-methods">使用第三方帳號進行登入</div>
+                    <div class="third-party-log-in">
+                        <div class="google-icon"><img src="https://res.cloudinary.com/dwn2iafcc/image/upload/v1708967805/google-web-light-rd-na_wtcjhg.svg" alt="third-party-login:Google"></div>
+                        <div class="line-icon"><img src="https://res.cloudinary.com/dwn2iafcc/image/upload/v1708967803/LINE_APP_Android_i0mrgo.png" alt="third-party-login:line"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

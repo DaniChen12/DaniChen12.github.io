@@ -1,0 +1,215 @@
+﻿
+@{
+    ViewData["Title"] = "SetActivity";
+}
+
+@section topCSS {
+    
+    <link href="~/css/Dashboard/Demouse.css" rel="stylesheet" />
+    <script src="https://cdn.ckeditor.com/ckeditor5/41.1.0/classic/ckeditor.js"></script>
+}
+
+<body>
+        <div class="header-title">
+        <div class="organize">
+            組織名稱
+        </div>
+        <div class="name">
+            Mafia
+        </div>
+    </div>
+    <div class="wrap">
+        <!--分頁-->
+        <div>
+            <nav aria-label="breadcrumb" id="tabs">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="https://localhost:7156/Dashboard/Events?viewType=SetActivity">設定資料活動</a></li>
+                    <li class="breadcrumb-item"><a href="https://localhost:7156/Dashboard/Events?viewType=SetTicket">設定票種</a></li>
+                    <li class="breadcrumb-item" aria-current="page"><a href="https://localhost:7156/Dashboard/Events?viewType=SetTable">設定表單</a></li>
+                </ol>
+            </nav>
+        </div>
+        <div class="container">
+
+            <div class="main-content">
+                <!-- 活動名稱 -->
+                <div class="log">
+                    <div class="mb-3">
+                        <h4 class="essential-input">活動名稱</h4>
+                        <input type="text" class="form-control h-50" id="formGroupExampleInput" placeholder=" ">
+                    </div>
+                </div>
+
+                <!-- 網址 -->
+                <div class="log">
+                    <h4 class="essential-input">網址</h4>
+                    <div class="input-group mb-3 h-50 w-75">
+                        <span class="input-group-text " id="basic-addon3">https://bs-test.shownest.cc/events/</span>
+                        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                        <span class="OK">
+                            <i class="fa-solid fa-circle-check"></i> 可以使用
+                        </span>
+                    </div>
+                    <span class="note">
+                        3 到 16 個小寫英文或數字。
+                    </span>
+                </div>
+
+                <!-- 活動時間 -->
+                <div class="log">
+                    <h4 class="essential-input">活動舉辦時間</h4>
+                    <input type="datetime-local" value="2024-02-21 7:30" class="date-time">
+                    <div class="space">至</div>
+                    <input type="datetime-local" value="2024-03-02 7:30" class="date-time">
+                    <div>
+                        <!-- 勾選後時間截止日與預計時間長度會隱藏 -->
+                        <div class="end-time">
+                            <input type="checkbox" name="checkbox" id="checkbox">
+                            不提供結束時間
+                        </div>
+                        <span class="note">如果你沒有提供結束時間，系統不會顯示結束時間。活動會在開始時間到時結束販售。</span>
+                    </div>
+                </div>
+
+                <!-- 活動人數 -->
+                <div class="log">
+                    <h4>活動人數</h4>
+                    <input type="number" value="30" min="10" max="1000" step="10" class="number-of-people">
+                    <input type="checkbox" name="" class="unlimited">不限定數量
+                </div>
+
+                <!-- 活動形式：線上則活動地址欄，實體則關線上選項欄 -->
+                <div class="log">
+                    <h4>活動形式</h4>
+                    <select class="form-select h-50" aria-label="Default select example">
+                        <option selected>實體活動</option>
+                        <option value="1">線上活動</option>
+                    </select>
+                </div>
+
+                    <!-- 實體活動＆地址欄（有地圖） -->
+                    <div class="place-log">
+                        <div class="log">
+                            <h4>場地名稱</h4>
+                            <input type="text" class="form-control h-50" id="formGroupExampleInput" placeholder=" ">
+                        </div>
+                        <div class="log">
+                            <h4>活動地址</h4>
+                            <input type="text" class="form-control w-50 h-50" id="formGroupExampleInput" placeholder=" ">
+                            <button type="button" class="h-25 btn btn-outline-secondary " id="upadte-map">更新地圖</button>
+                            <!-- <button type="button" class="update-map">更新地圖</button> -->
+                        </div>
+                        <!--地圖 -->
+                        <div id="map"></div>
+                        <span class="map-note">
+                            位置不對怎麼辦？您可以手動拖曳地圖上的標示，移動到指定位置
+                        </span>
+                    </div>
+
+                    <!-- 線上活動欄 -->
+                    <div class="online-log">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                其他串流平台 (可於 主控台>活動地點 設定電子票券之線上活動連結)
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                SHOWNEST Live
+                                <span class="note">SHOWNEST Live 提供多元方案應援你的線上活動創意，點此查看詳情或請來信 biz@shownest.com 洽詢，將有專人提供報價</span>
+                            </label>
+                        </div>
+                    </div>
+
+                <!-- 活動簡介欄 -->
+                <div class="log">
+                    <h4>活動簡介（填入100字以內的活動描述介紹你的活動吧！）</h4>
+                    <div class="form-floating">
+                        <textarea class="form-control" placeholder="" id="floatingTextarea2" style="height: 100px"></textarea>
+                        <label for="floatingTextarea2">e.g. 今年陣容最堅強的演唱會。名額有限，錯過不再。快揪朋友一起報名！</label>
+                    </div>
+                    <span class="note">說明：輸入簡短活動描述能優化你的活動頁面，讓你的活動連結在社群網站分享時能更清楚宣傳你的資訊。<i class="fa-solid fa-circle-info"></i></span>
+                </div>
+
+                <!-- 描述欄位（CKeditor） -->
+                <div class="log" id="ckeditor-area">
+                    <h4>描述</h4>
+                    <div id="editor"></div>
+                    <script>
+                            ClassicEditor
+                                    .create( document.querySelector( '#editor' ) )
+                                    .then( editor => {
+                                            console.log( editor );
+                                    } )
+                                    .catch( error => {
+                                            console.error( error );
+                                    } );
+                    </script>
+                </div>
+                <div class="pages-change">
+                    <button type="button" class="btn btn-outline-secondary" onclick="window.location.href='https://localhost:7156/Dashboard/Events?viewType=CreateActivity'">上一頁</button>
+                    <button type="button" class="btn btn-outline-secondary" onclick="window.location.href='https://localhost:7156/Dashboard/Events?viewType=SetTicket'">下一頁</button>
+                </div>
+            </div>
+            <div class="other-setting">
+                <!-- (右邊)圖片上傳區 -->
+                <div class="log">
+                    <h4>社群分享圖片</h4>
+                    <img src="https://picsum.photos/300/200/?random=10">
+                    <div>
+                        <button type="button" class="btn btn-outline-secondary">選擇圖片</button>
+                        <button type="button" class="btn btn-outline-secondary">還原原圖</button>
+                    </div>
+                </div>
+                <span class="note">請提供尺寸為 1200 x 630 px 且 檔案格式為 png.、jpg. 之圖片。</span>
+
+                <!-- 隱私設定區 -->
+                <div class="log">
+                    <h4>活動隱私</h4>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                        <label class="form-check-label" for="inlineRadio1">公開</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                        <label class="form-check-label" for="inlineRadio2">私人</label>
+                    </div>
+                    <div>
+                        <span class="note">私人活動不會出現在我們的公開頁面。</span>
+                    </div>
+                </div>
+
+                <!-- 活動分類(標籤) -->
+                <div class="log">
+                    <h4>活動分類</h4>
+                    <span class="note">你可以選擇最多 3 個分類。</span>
+                    <div class="tag-pool">
+                        <div class="tag">演唱會</div>
+                        <div class="tag">課程講座</div>
+                        <div class="tag">研討會</div>
+                        <div class="tag">社群展覽</div>
+                        <div class="tag">電影</div>
+                        <div class="tag">音樂會</div>
+                        <div class="tag">藝人見面會</div>
+                        <div class="tag">遊戲競賽</div>
+                        <div class="tag">親子</div>
+                        <div class="tag">聯誼</div>
+                        <div class="tag">職場工作術</div>
+                        <div class="tag">科技資訊</div>
+                        <div class="tag">休閒</div>
+                        <div class="tag">運動</div>
+                        <div class="tag">心靈成長</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    @section Scripts {
+        <script src="~/js/Dashboard/SetActivity.js"></script>
+
+    }
+</body>
+

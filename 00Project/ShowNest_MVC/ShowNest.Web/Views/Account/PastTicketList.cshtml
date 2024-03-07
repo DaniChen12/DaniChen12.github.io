@@ -1,0 +1,50 @@
+@{
+    ViewData["Title"] = "PastTicketList";
+}
+
+@section topCSS {
+    <link rel="stylesheet" href="~/css/Account/PastTicketList.css">
+    <link rel="stylesheet" href="~/css/_Partial/_MyTicketNavBarPartial.css">
+}
+
+<div class="wrap width">
+    <div class="progress_container">
+        @await Html.PartialAsync("_MyTicketNavBarPartial", new List<TabStatusViewModel>
+             {
+                 new TabStatusViewModel { IsActive = false },
+                 new TabStatusViewModel { IsActive = true }
+             })
+    </div>
+    <div class="title"><h2>過去的票券</h2></div>
+    <div class="events-tickets-list">
+        <div class="header">
+            <div class="event-name">活動名稱</div>
+            <div class="event-start-time">活動舉辦時間</div>
+            <div class="ticket-amount">張數</div>
+        </div>
+        <div class="data-row">
+            <div class="event-name">2024 Whee In 1ST WORLD TOUR: WHEE IN THE MOOD〔BEYOND〕IN TAIPEI</div>
+            <div class="event-start-time">2024/04/20(六) 18:00</div>
+            <div class="ticket-amount">2</div>
+        </div>
+        <div class="action-btns">
+            <div class="ticket-detail"><a href="http://">票券資料</a></div>
+        </div>
+        <div class="data-row">
+            <div class="event-name">SUPER JUNIOR-L.S.S. THE SHOW : TH3EE GUYS</div>
+            <div class="event-start-time">2024/04/13(六) 19:30</div>
+            <div class="ticket-amount">2</div>
+        </div>
+        <div class="action-btns">
+            <div class="ticket-detail"><a href="http://">票券資料</a></div>
+        </div>
+        <div class="data-row">
+            <div class="event-name">索夫波 呈獻 梁詠琪 時間遇上我們演唱會 台北站</div>
+            <div class="event-start-time">2024/04/27(六) 18:00</div>
+            <div class="ticket-amount">2</div>
+        </div>
+        <div class="action-btns">
+            <div class="ticket-detail"><a href="http://">票券資料</a></div>
+        </div>
+    </div>
+</div>

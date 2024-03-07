@@ -1,0 +1,226 @@
+body {
+    font-family: sans-serif;
+    font-size: var(--main-font-size);
+    color: #333333;
+}
+
+a {
+    text-decoration: none;
+}
+
+.title {
+    display: block;
+    line-height: 2;
+}
+
+h2 {
+    margin: 25px 0;
+    line-height: 1.5;
+}
+
+hr {
+    margin-bottom: 10px;
+}
+
+tr {
+    line-height: 1.5em;
+}
+
+th {
+    width: 95px;
+    color: #999999;
+}
+
+td {
+    display: block;
+    width: 100%;
+}
+
+.wrap {
+    margin-bottom: 50px;
+}
+
+/* account orders list title */
+.orders-list-title {
+    display: flex;
+    font-weight: 500;
+    border-bottom: 2px solid;
+    padding: 12px 0;
+}
+
+.orders-id-header {
+    min-width: 265px;
+}
+
+.events-title-header {
+    width: 100%;
+    margin-left: 5%;
+}
+
+/* Order Detail*/
+.order-id-with-pic {
+    width: 265px;
+}
+
+.order-detail {
+    display: flex;
+    padding-bottom: 10px;
+    margin: auto;
+}
+
+.order-id {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 20px;
+}
+
+.event-pic img {
+    min-width: 100%;
+    vertical-align: center;
+    padding: 5px;
+    border: 1px solid #E5E5E5;
+}
+
+.order-event-detail {
+    width: 100%;
+    margin-left: 5%;
+    margin-right: 5%;
+    box-sizing: border-box;
+}
+
+.event-title {
+    width: 90%;
+    margin: 20px 0;
+}
+
+.event-title a {
+    color: var(--main-color);
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.event-title a:hover {
+    color: #598987;
+    text-decoration: underline;
+}
+
+.ticket-paid {
+    font-weight: bold;
+    color: #598987;
+}
+
+.ticket-cancel {
+    font-weight: bold;
+    color: #F2A854;
+}
+
+.ticket-payment-pending {
+    font-weight: bold;
+    color: #DB4455;
+}
+
+
+.order-btns {
+    width: 180px;
+    margin: auto;
+}
+
+.order-btns a {
+    color: #333333;
+    display: block;
+    height: 2.5em;
+    width: 180px;
+    border: var(--common-border);
+    border-radius: 4px;
+    margin-top: -1px;
+    padding: 10px 10px;
+    text-decoration: none;
+}
+
+.order-btns a:hover {
+    background-color: #E5E5E5;
+}
+
+.order-btns .btn-edit-order {
+    border-radius: 4px;
+    margin-right: auto;
+}
+
+.order-btns .btn-edit-order a::before {
+    content: url(https://res.cloudinary.com/dwn2iafcc/image/upload/v1708764402/pencil-alt-solid_g0wcew.svg);
+    padding-right: 10px;
+}
+
+.order-btns .btn-contact-organizer a::before {
+    content: url(https://res.cloudinary.com/dwn2iafcc/image/upload/v1708764404/envelope-solid_sohnut.svg);
+    padding-right: 10px;
+}
+
+.order-btns .btn-contact-customer-service a::before {
+    content: url(https://res.cloudinary.com/dwn2iafcc/image/upload/v1708764403/paper-plane-solid_xywgkq.svg);
+    padding-right: 10px;
+}
+
+.order-btns .btn-cancel-order a::before {
+    content: url(https://res.cloudinary.com/dwn2iafcc/image/upload/v1708682220/circle-xmark-solid_filbbn.svg);
+    padding-right: 10px;
+}
+
+/* mobile */
+@media screen and (max-width: 768px) {
+
+    td {
+        width: 90%;
+    }
+
+    .wrap {
+        margin: 25px auto;
+    }
+    
+    .orders-list-title {
+        display: none;
+    }
+
+    .order-detail {
+        display: block;
+    }
+
+    .order-id {
+        font-size: 24px;
+    }
+
+    .event-pic img {
+        display: none;
+    }
+
+    .order-event-detail {
+        margin-bottom: 20px;
+    }
+
+    .order-btns,
+    .order-btns a {
+        width: 90%;
+        margin: auto 10px;
+    }
+}
+
+/* ipad */
+@media (min-width:769px) {
+
+
+    @media (min-width:769px) and (max-width:1150px) {
+
+        /* start-li0 */
+        .wrap {
+            margin: 50px auto;
+        }
+    }
+
+    @media (min-width:1151px) {
+        .wrap {
+            width: 75%;
+            margin: 50px auto;
+        }
+    }
+}

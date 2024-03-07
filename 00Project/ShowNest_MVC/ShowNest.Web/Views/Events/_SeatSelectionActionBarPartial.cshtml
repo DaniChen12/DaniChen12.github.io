@@ -1,0 +1,128 @@
+
+<div class="action-bar wrap width">
+    <div class="action-bar-left d-flex">
+        <div class="btn-cancel">
+            <a href="#">取消購票</a>
+        </div>
+        <div class="btn-user-guide">
+            <!-- Button trigger modal -->
+            <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal">操作說明</a>
+        </div>
+    </div>
+    <div class="count-down-timer">
+        您還有 10:00 可以選擇座位
+    </div>
+    <div class="btn-confirm">
+        <a href="#">確認座位</a>
+    </div>
+</div>
+
+<div class="seat-areas-and-showcases wrap d-flex width">
+    <div class="confirm-wrap" style="display: none">
+        <div class="display-total-amount">
+            <div class="total-amount">
+                <span>總金額</span>
+                <p>TWD$3,800</p>
+            </div>
+            <div class="seats-selection-complete">
+                <a href="Registrations">完成選位</a>
+            </div>
+        </div>
+        <div class="selected-tickets">
+            選購的票券
+        </div>
+        <div class="ticket-detail">
+            <div class="price">TWD$3,800</div>
+            <div class="ticket-with-seat-detail">
+                <div class="seat-location">紫 2D 區 3 排 14 號</div>
+                <div class="ticket-type">全票</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="rwd-fixed-btns">
+        <div class="btn-cancel">
+            <a href="#">取消購票</a>
+        </div>
+        <div class="btn-confirm" data-bs-toggle="modal" data-bs-target="#btn-confirm">
+            <a href="#">確認座位</a>
+        </div>
+</div>
+
+<!-- Modal user-guide -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title fs-5" id="exampleModalLabel">座位圖使用說明</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h6>基本操作</h6>
+                <p>座位圖操作方式如下：</p>
+                <ol>
+                    <img src="https://res.cloudinary.com/dwn2iafcc/image/upload/v1708682220/seat_operation_1_otxkzc.jpg"
+                        alt="">
+                    <li>座位圖的左上角有 及 圖示，點選 圖示可放大座位圖；點選 圖示可縮小座位圖。
+                    </li>
+                    <img src="https://res.cloudinary.com/dwn2iafcc/image/upload/v1708682218/seat_operation_2_zxh8bm.jpg"
+                        alt="">
+                    <li>位圖中沒有座位的空白區域，可看見滑鼠指標變更為十字形，此時可拉動座位圖調整顯示範圍。</li>
+                </ol>
+                <h6>換位說明</h6>
+                <p>若想變更已選定的座位，可依下列步驟進行換位：</p>
+                <p>請注意：僅支援相同票種及金額座位的操作。</p>
+                <ol>
+                    <img src="https://res.cloudinary.com/dwn2iafcc/image/upload/v1708682216/change_seat_1_zh-TW_vzt94v.jpg"
+                        alt="">
+                    <li>點選目前已選但想更換的座位，將會看見「您正在更改座位」的提示訊息。
+                    </li>
+                    <img src="https://res.cloudinary.com/dwn2iafcc/image/upload/v1708682219/change_seat_2_zh-TW_yeezxs.jpg"
+                        alt="">
+                    <li>將滑鼠移至想更換的目標座位上，可從提示訊息中看見該位置的排號。
+                    </li>
+                    <img src="https://res.cloudinary.com/dwn2iafcc/image/upload/v1708682219/change_seat_3_zh-TW_rg1c8b.jpg"
+                        alt="">
+                    <li>若確認無誤，點選該座位即完成換位。
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-success">知道了</button>
+        </div>
+    </div>
+</div>
+<!-- Modal rwd-btn-confirm -->
+<div class="modal fade" id="btn-confirm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="selected-tickets">
+                    選購的票券
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="ticket-detail">
+                    <div class="price">TWD$3,800</div>
+                    <div class="ticket-with-seat-detail">
+                        <div class="seat-location">紫 2D 區 3 排 14 號</div>
+                        <div class="ticket-type">全票</div>
+                    </div>
+                </div>
+                <div class="display-total-amount">
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="total-amount">
+                    <span>總金額</span>
+                    <p>TWD$3,800</p>
+                </div>
+                <div class="seats-selection-complete">
+                    <a href="Registrations">完成選位</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

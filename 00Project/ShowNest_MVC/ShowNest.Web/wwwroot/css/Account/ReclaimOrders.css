@@ -1,0 +1,139 @@
+﻿
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* main Body */
+.section_wrap {
+    flex-grow: 1;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+
+
+.title {
+    display: block;
+    line-height: 1.5;
+}
+
+
+
+#reclaim_orders {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.form-content {
+    margin-bottom: 10px;
+}
+
+.content-wrapper {
+    padding-top: 20px;
+}
+
+.contect-group {
+    font-weight: 400;
+    display: flex;
+    flex-direction: row;
+}
+
+#ReclaimOrders label {
+    display: inline-block;
+    padding: 10px 0px;
+    margin-right: 20px;
+    font-weight: bold;
+    text-align: right;
+}
+
+p {
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    color: var(--dark-gray);
+}
+
+input {
+    padding: 6px 8px;
+    color: var(--dark-gray);
+    border-radius: 4px;
+}
+
+div.border {
+    border-bottom: 1px solid var(--dark-gray);
+    margin: 20px 0px;
+}
+
+.btn-save {
+    display: flex;
+    justify-content: center;
+    padding-bottom:20px;
+}
+
+.div-wrap {
+    display: grid;
+    grid-template-columns: 3.3fr 9fr;
+}
+
+.caption {
+    width: 40%;
+    min-width: 180px;
+}
+
+.gray-wrap {
+    background-color: #f5f5f5;
+    border: 1px solid var(--light-gray);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+@media screen and (max-width:768px) {
+
+    .title {
+        text-align: center;
+    }
+
+    #reclaim_orders {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form_contaner {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: auto;
+    }
+
+    .caption {
+        width: 100%;
+        padding-bottom: 10px;
+    }
+
+    #ReclaimOrders label {
+        min-width: 98px;
+        display: flex;
+        text-align: left;
+    }
+
+    .div-wrap {
+        display: block;
+    }
+
+    .btn-save button {
+        display: block;
+        width: 100%;
+        border-radius: 3px;
+        text-align: center;
+    }
+}

@@ -1,0 +1,374 @@
+﻿@using ShowNest.Web.ViewModels.Events
+
+@section topCSS {
+    <link href="~/css/_Partial/_PurchaseStepsPartial.css" rel="stylesheet" />
+    <link href="~/css/events/paymentinfo.css" rel="stylesheet" />
+}
+
+
+    <div class="count_down_group">
+        <div class="count_down_timer main_wrap width d-flex">
+            您的訂單已保留，請在 10:00 內完成填寫資料並確認訂單。若超過時限，系統將自動取消。
+        </div>
+</div>
+<section class="section_wrap">
+ <div class="main_event_order">
+    <div class="title main_wrap width">
+            <h2>【ALTA】theLOOP presents : PSY.P 臺灣個人巡演預熱戰</h2>
+        </div>
+    <div class="event_details main_wrap width">
+            <div class="collapse_group">
+                <p class="d-inline-flex gap-1">
+                    <button class="event_detail_collapse btn" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse-example" aria-expanded="false" aria-controls="collapse-example" stlye="box-shadow: none; background-color:none;">
+                        顯示活動詳細資料
+                    </button>
+                </p>
+                <div class="collapse" id="collapse-example">
+                    <table class="details">
+                        <tbody>
+                            <tr class="">
+                                <th class="start_time">開始時間</th>
+                                <td class="time">
+                                    2024/02/16 22:30 (+0800)
+                                    <a class="is_following binding" href="#" target="_blank" >
+                                        <i class="fa fa-calendar fa-front"></i>
+                                        加入行事曆
+                                    </a>
+                                </td>
+                            </tr>
+                            <!-- location -->
+                            <tr class="">
+                                <th class="event_location">活動地點</th>
+                                <td class="location">
+                                    ALTA NIGHTCLUB / 台中市西屯區青海南街59號
+                                    <a class="is_following binding " target="_blank" href="#">
+                                        <i class="fa fa-map-marker fa-front"></i>
+                                        檢視地圖
+                                    </a>
+                                </td>
+                            </tr>
+                            <!-- event.co_organizer -->
+                            <tr>
+                                <th class="co_organizer">主辦單位</th>
+                                <td class="co_organizer_name">歐達休閒娛樂有限公司</td>
+                            </tr>
+                            <!--  pickup_types -->
+                            <tr class="pickup_types_group">
+                                <th class="pickup_types">票券種類</th>
+                                <td class="type_names">台灣全家 FamiPort 取票</td>
+                            </tr>
+                            <!--payment_terms -->
+                            <tr class="payment_terms_group">
+                                <th class="payment_terms">付款方式</th>
+                                <td class="payment_names">
+                                    ATM 虛擬帳號、信用卡
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="progress_container">
+                @await Html.PartialAsync("_PurchaseStepsPartial", new List<StepStatusViewModel> {
+                new StepStatusViewModel { InProgress = false, IsDisabled = true },
+                new StepStatusViewModel { InProgress = false, IsDisabled = true },
+                new StepStatusViewModel { InProgress = false, IsDisabled = true },
+                new StepStatusViewModel { InProgress = true, IsDisabled = false }
+                })
+            </div>
+            <form name="finalOrder" class="">
+                <div class="final_order_list_title">
+                    <h3 class="order_number">訂單編號 : 135510253</h3>
+                </div>
+
+                <div class="final_order_list">
+                    <table class="table">
+                        <tbody id="ticket_info_list" class="ticket_info_list">
+                            <tr>
+                                <th class="ticket_type">票券</th>
+                                <td colspan="2" class="ticket_wrapper_td">
+                                    <table class="cart_ticket_list">
+                                        <tbody>
+                                            <tr>
+                                                <td class="ticket_name">全票</td>
+                                                <td class="ticket-data" colspan="2">
+                                                    <table class="cart-ticket-list-subtable with-seat">
+                                                        <tbody>
+                                                            <tr class="seat_info_group">
+                                                                <td class="seat_info">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <span class="seat">
+                                                                                B2 區 16 排 4 號
+                                                                            </span>
+                                                                        </li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="price_count">
+                                                                    <span class="price">TWD$3,680</span>
+                                                                    x 1
+                                                                </td>
+                                                                <td class="price_total">
+                                                                    TWD$3,680
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tbody class="pickup-and-payment-block">
+                            <tr>
+                                <th class="required">
+                                    取票方式
+                                </th>
+                                <td colspan="2">
+                                    <div class="purchase_options">
+                                        <div class="data-body">
+                                            <div class="pickup">
+                                                <ul>
+                                                    <li>
+                                                        <div class="control-group checkbox">
+                                                            <div class="controls bachelor-pickup">
+                                                                <label class="checkbox">
+                                                                    <input type="checkbox" value="famiport"
+                                                                           name="pickupType" required="">
+                                                                    台灣全家 FamiPort 取票
+                                                                </label>
+                                                                <div class="fee_text">
+                                                                    取票時額外付 TWD$30 給櫃檯。
+                                                                    <div class="form-wrapper">
+                                                                        <div class="control-group">
+                                                                            <label class="control-label">
+                                                                                請輸入您的 <strong class="text-danger">
+                                                                                    身分證字號
+                                                                                </strong>
+                                                                                供取票時使用，外籍人士請輸入
+                                                                                <strong class="text-danger">
+                                                                                    護照號碼
+                                                                                </strong>
+                                                                            </label>
+                                                                            <div class="id_number">
+                                                                                <input class="form-control idNumber"
+                                                                                       name="idNumber" type="text"
+                                                                                       required="">
+                                                                                <div class="text_warning">
+                                                                                    身分證字號或護照號碼格式不符，限阿拉伯數字與英文字母，長度 6 - 10
+                                                                                    個字
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr id="payment-type-block">
+                                <th class="required">
+                                    付款方式
+                                </th>
+                                <td colspan="2">
+                                    <div class="purchase_options">
+                                        <div class="data-body">
+                                            <div class="payments">
+                                                <ul>
+                                                    <li>
+                                                        <div class="payments_radio">
+                                                            <label class="radio payment-method-label">
+                                                                <input type="radio" value="CREDITCARD"
+                                                                       name="paymentMethodType" required="">
+                                                                信用卡
+                                                            </label>
+                                                            <div class="form-wrapper order_cardtype">
+                                                                <div class="control-group">
+                                                                    <label class="control-label">
+                                                                        信用卡卡號
+                                                                    </label>
+                                                                    <div class="card_number_input">
+                                                                        <input name="card_number_input" required=""
+                                                                               type="text" class="card-number form-control">
+                                                                        <div class="card-type supported-type">
+                                                                            <span class="visa"></span>
+                                                                            <span class="mastercard"></span>
+                                                                            <span class="jcb"></span>
+                                                                        </div>
+                                                                        <div class="card-status" style="display: block">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="control-group">
+                                                                    <label class="control-label">
+                                                                        有效期限
+                                                                    </label>
+                                                                    <div class="controls">
+                                                                        <select name="CardMonth" class="card_month">
+                                                                            <option label="01" value="number:1"
+                                                                                    selected="selected">01</option>
+                                                                            <option label="02" value="number:2">
+                                                                                02
+                                                                            </option>
+                                                                            <option label="03" value="number:3">
+                                                                                03
+                                                                            </option>
+                                                                            <option label="04" value="number:4">
+                                                                                04
+                                                                            </option>
+                                                                            <option label="05" value="number:5">
+                                                                                05
+                                                                            </option>
+                                                                            <option label="06" value="number:6">
+                                                                                06
+                                                                            </option>
+                                                                            <option label="07" value="number:7">
+                                                                                07
+                                                                            </option>
+                                                                            <option label="08" value="number:8">
+                                                                                08
+                                                                            </option>
+                                                                            <option label="09" value="number:9">
+                                                                                09
+                                                                            </option>
+                                                                            <option label="10" value="number:10">
+                                                                                10
+                                                                            </option>
+                                                                            <option label="11" value="number:11">
+                                                                                11
+                                                                            </option>
+                                                                            <option label="12" value="number:12">
+                                                                                12
+                                                                            </option>
+                                                                        </select>
+
+                                                                        <select name="CardYear" class="card_year">
+                                                                            <option label="2024" value="number:2024"
+                                                                                    selected="selected">2024</option>
+                                                                            <option label="2025" value="number:2025">
+                                                                                2025
+                                                                            </option>
+                                                                            <option label="2026" value="number:2026">
+                                                                                2026
+                                                                            </option>
+                                                                            <option label="2027" value="number:2027">
+                                                                                2027
+                                                                            </option>
+                                                                            <option label="2028" value="number:2028">
+                                                                                2028
+                                                                            </option>
+                                                                            <option label="2029" value="number:2029">
+                                                                                2029
+                                                                            </option>
+                                                                            <option label="2030" value="number:2030">
+                                                                                2030
+                                                                            </option>
+                                                                            <option label="2031" value="number:2031">
+                                                                                2031
+                                                                            </option>
+                                                                            <option label="2032" value="number:2032">
+                                                                                2032
+                                                                            </option>
+                                                                            <option label="2033" value="number:2033">
+                                                                                2033
+                                                                            </option>
+                                                                            <option label="2034" value="number:2034">
+                                                                                2034
+                                                                            </option>
+                                                                            <option label="2035" value="number:2035">
+                                                                                2035
+                                                                            </option>
+                                                                            <option label="2036" value="number:2036">
+                                                                                2036
+                                                                            </option>
+                                                                            <option label="2037" value="number:2037">
+                                                                                2037
+                                                                            </option>
+                                                                            <option label="2038" value="number:2038">
+                                                                                2038
+                                                                            </option>
+                                                                            <option label="2039" value="number:2039">
+                                                                                2039
+                                                                            </option>
+                                                                        </select>
+                                                                        <div class="caption">
+                                                                            月份/年份
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="">
+                                                                    <label class="id_number">
+                                                                        驗證碼
+                                                                    </label>
+                                                                    <div class="three_number">
+                                                                        <input type="text" class=" form-control" name="CVC2"
+                                                                               card-cvc="" required="" maxlength="3">
+                                                                        <div class="caption_text">
+                                                                            卡片背面末 3 碼
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+
+                                                        <div class="control-group radio">
+                                                            <div class="controls">
+                                                                <label class="radio payment-method-label">
+                                                                    <input type="radio" value="ATM"
+                                                                           name="paymentMethodType" required="">
+                                                                    ATM 虛擬帳號（僅適用於台灣）
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr class="fee_group">
+                                <th class="fee">取票手續費</th>
+                                <td colspan="2">
+                                    TWD$0
+                                </td>
+                            </tr>
+                            <tr class="highlight">
+                                <th class="total">總金額</th>
+                                <td class="total-price" colspan="2">TWD$3,680</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <div>
+                </div>
+            </form>
+     </div>
+  </div>
+        <div class="submit_group control-group">
+            <div class="btn_submit width">
+                <a type="submit" class="btn btn_submit" id="btn_submit" href="OrderDetail"
+               style="background-color:var(--main-green);color: white;" disabled="">
+                    <span>
+                        <i class="fa fa-check-circle"></i>
+                    </span>
+                    <span class="confirm">
+                        確認訂單並繳費
+                    </span>
+                    TWD$3,680
+                </a>
+            </div>
+        </div>
+</section>

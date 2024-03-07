@@ -1,0 +1,326 @@
+﻿@using ShowNest.Web.ViewModels.Events;
+@model EventPageViewModel;
+
+@{
+    Layout = null;
+}
+@{
+    Layout = "_LayoutForEventPage";
+}
+
+@section topCSS {
+    <link href="~/css/share/reset.css" rel="stylesheet" />
+    <link href="~/css/events/eventpage.css" rel="stylesheet" />
+
+}
+@section endJS {
+    <script src="~/js/events/eventpage.js"></script>
+}
+
+
+
+<div class="warp">
+    <!-- 活動頁 -->
+    <div class="content-wrapper">
+        <!-- 活動header頁 開始-->
+        <div class="header-container">
+            <div class="header">
+                <div class="header-title">
+                    <h1>@Model.EventDetail.EventName</h1>
+                </div>
+            </div>
+            <!-- 活動資訊 -->
+            <div class="event-info">
+                <ul class="info">
+                    <li>
+                        <p class="info-desc">
+                            <i class="fa fa-solid fa-calendar-days"></i>
+                            @Model.EventDetail.StartTime.ToString("yyyy/MM/dd HH:mm(+0800)")
+                            @* 2024/04/24(周三) 13:00(+0800) *@
+                            (
+                            <a href="#">iCal/Outlook</a>,
+                            <a href="#" target="_blank">
+                                Google 日曆
+                            </a>
+                            )
+                        </p>
+                    </li>
+                    <li>
+                        <p class="info-desc">
+                            <i class="fa fa-solid fa-location-dot"></i>
+                            @Model.EventDetail.EventLocation / @Model.EventDetail.EventAddress
+                        </p>
+                    </li>
+                    <li>
+                        <p class="info-count">
+                            <i class="fa fa-solid fa-person"></i>
+                            0/@Model.EventDetail.EventAttendance
+                        </p>
+                    </li>
+                    <li class="pc-hide">
+                        <p class="info-besiness">
+                            <i class="fa fa-solid fa-sitemap mobi"></i>
+                            @Model.EventDetail.EventLocation
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <!-- --活動圖片-- -->
+            <div class="og-banner">
+                <img src="@Model.EventDetail.MainImage" alt="ActivityMainImg">
+            </div>
+            <div class="organizers mobi-hide">
+                <i class="fa-solid fa-sitemap"></i>
+                主辦單位
+                <a asp-controller="Organizations" asp-action="Index">Build School</a>
+                <!-- asp-controller="Organizations" asp-action="Index" -->
+            </div>
+            <!-- 活動header頁 結束-->
+        </div>
+        <!-- --手機板 下一步--- -->
+        <div id="pc-btn-success" class="p-3 d-flex justify-content-center pc-hide">
+            <a asp-controller="Events" asp-action="TicketTypeSelection" class="btn btn-success w-50"
+               type="button">下一步</a>
+        </div>
+        <!-- 活動main 開始-->
+        <div class="main">
+            <div class="description">
+                <h2>活動資訊</h2>
+
+                <p>活動日期：2024年2月24日（六）～ 2024年2月25日（日）</p>
+
+                <p>活動地點：BS教室</p>
+
+                <p>主辦單位：Give me fives team</p>
+
+                <p>承辦單位：BS</p>
+
+                <p>執行單位：ShowNest LIVE</p>
+
+                <h2>實名認證須知</h2>
+
+                <ol>
+                    <li>每位ShowNest會員僅限購買4張，VIP區無法與其他區域同筆訂單訂購，若欲購買VIP區請分開購票。</li>
+                    <li>
+                        VIP區採「實名制認證」，請在購票過程中於票券的「姓名」、「手機」、「身分證字號（海外觀眾寫護照號碼）」欄位中正確填寫每一張票券入場人的資料，一旦確認表單資料送出後，即「無法事後修改或補填」，請務必於送出前再次確認票券入場人資料正確無誤。
+                    </li>
+                    <li>
+                        演出當天入場將會核對每張票券上印製姓名與入場人法定證件是否相符（有效且附有照片之個人證件正本，例如身分證/健保卡/駕照/護照擇一；外籍人士憑護照），確認無誤後方可入場，如不符或無法提供姓名證明者將無法入場。
+                    </li>
+                    <li>
+                        姓名僅限「繁體中文」與「英文」，外籍人士請填寫「護照姓名」，請勿使用特殊符號與字元。（如以下圖示）
+                        <img src="~/img/events/實名圖檔.jpg">
+                    </li>
+                </ol>
+                <h2>購票方式說明</h2>
+
+                <p>
+                    您的ShowNest會員需完成"電子郵件地址及手機號碼驗證"才能進行購票流程，請至
+                    <a asp-controller="Account" asp-action="UserEdit" target="_blank">
+                        ShowNest帳號設定
+                    </a>確認是否您的電子郵件及手機號碼已經認證完畢。提醒您請勿使用Yahoo、Hotmail信箱註冊及驗證，以避免驗證信未能寄達。
+                </p>
+
+                <ol>
+                    <li>
+                        本節目網站購票僅接受已完成手機號碼及電子郵件地址驗證之會員購買，購票前請先"<a href="#" target="_blank">加入會員</a>
+                        "並盡早完成"
+                        <a asp-controller="Account" asp-action="UserEdit" target="_blank">手機號碼及電子郵件地址</a>
+                        "驗證，以便進行購票流程，建議可於會員"設定"中的"
+                        <a asp-controller="Account" asp-action="Prefills" target="_blank">報名預填資料</a>"先行存檔「姓名」和「手機」，可減少購票時間快速進行下一步。
+                    </li>
+                    <li>為了確保您的權益，強烈建議您，在註冊會員或是結帳時填寫的聯絡人電子郵件，盡量不要使用Yahoo或Hotmail郵件信箱，以免因為擋信、漏信，甚至被視為垃圾郵件而無法收到『訂單成立通知信』。</li>
+                    <li>
+                        訂單成立通知信可能因其他因素未能寄達，僅提供交易通知之用，未收到訂單成立通知信不代表交易沒有成功，又或是刷卡付款失敗，請於付款期限之內再次嘗試刷卡（即便收到銀行的授權成功的簡訊或電子郵件），若訂單逾期取消，則表示訂單真的沒有成立，請再重新訂購。一旦無法確認於網站上的訂單是否交易成功，請至會員帳戶的"<a href="Orders" target="_blank">訂單</a>"查詢您的消費資料，只要是成功的訂單，皆會顯示您所消費的票券明細，若查不到您所訂購的票券，表示交易並未成功，請重新訂票。
+                    </li>
+                    <li>本節目在全家FamiPort購票為「自動配位」，若需自行選擇座位請於網站上購票。</li>
+                    <li>ShowNest系統沒有固定的清票時間，只要消費者沒有於期限內完成付款，未付款的座位就會陸陸續續釋放出來，消費者可隨時留意網頁或是機台是否有釋出可售票券張數。</li>
+                    <li>
+                        ShowNest網站購票：
+                        <ul>
+                            <li>
+                                需<a href="#" target="_blank">加入會員</a>並通過"<a href="UserEdit" target="_blank">手機號碼及電子郵件地址</a>"驗證，每位ShowNest會員限購4張，請務必在活動啟售前24小時完成驗證，售票當天無法保證能驗證成功，24小時之內才驗證手機成功的帳號恕無法確保能順利購票。
+                            </li>
+                            <li>
+                                進行手機號碼驗證，但收不到簡訊怎麼辦？<a href="#" target="_blank">請點我</a>
+                            </li>
+                            <li>系統會先配好最適座位，可以在規定時間內更改座位</li>
+                            <li>付款方式：信用卡(VISA/MASTER/JCB)</li>
+                            <li>
+                                為強化信用卡網路付款安全，ShowNest售票系統網站導入了更安全的信用卡 3D 驗證服務，會員購票時，將取得簡訊驗證碼，確保卡號確實為持卡人所有，以提供持卡人更安全的網路交易環境。<a href="#" target="_blank">信用卡3D驗證流程為何？</a>
+                            </li>
+                            <li>取票方式：全家取票(手續費每筆$30/4張為限，請於全家便利商店繳納給櫃檯)</li>
+                            <li>
+                                ShowNest購票流程圖示說明 <a href="#" target="_blank">請點我</a>
+                            </li>
+                            <li>
+                                全家便利商店FamiPort取票說明 <a href="#" target="_blank">請點我</a>
+                            </li>
+                            <li>
+                                選擇全家便利商店FamiPort取票請留意：請勿在啟售當天於網站訂購完成後馬上至全家便利商店取票，極有可能因系統繁忙無法馬上取票，只要訂購成功票券在演出前皆可取票，請擇日再至全家便利商店取票。
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        全家便利商店FamiPort購票：(VIP區不適用)
+                        <ul>
+                            <li>無需加入會員，每筆訂單限購4張</li>
+                            <li>為系統自動配位，選擇區域後系統將自動配至購買票價的最適區域及座位，且可能與選擇的區域不同，無法自行選區域及座位</li>
+                            <li>付款方式：僅接受現金</li>
+                            <li>取票方式：付款完畢直接於全家便利商店櫃檯現場取票，免手續費</li>
+                            <li>
+                                全家便利商店店鋪查詢 <a href="#" target="_blank">請點我</a>
+                            </li>
+                            <li>
+                                全家便利商店FamiPort購票流程圖示說明 <a href="#" target="_blank">請點我</a>
+                            </li>
+                            <li>於全家便利商店FamiPort列印繳費單後，需在10分鐘內在該店櫃檯完成結帳，若無法在時間內完成結帳取票，訂單將會被取消，原本購買的座位將釋回到系統中重新銷售。</li>
+                            <li>於全家便利商店之購票動作皆於結帳取票後方能保證座位，請注意單憑列印繳費單無法保證其座位。</li>
+                        </ul>
+                    </li>
+                    <li>
+                        身心障礙票券說明：
+                        <ul>
+                            <li>
+                                僅限 ShowNest 網站購票，需<a href="#" target="_blank">加入會員</a>並通過"<a href="UserEdit"
+                                                                                             target="_blank">手機號碼及電子郵件地址</a>"驗證，請務必在活動啟售前24小時完成「<a href="#"
+                                                                                                                                                   target="_blank">身心障礙者身份認證</a>」，售票當天無法保證能認證成功，24小時之內才認證的帳號恕無法確保能順利購票。
+                            </li>
+                            <li>
+                                進行手機號碼驗證，但收不到簡訊怎麼辦？<a href="#" target="_blank">請點我</a>
+                            </li>
+                            <li>
+                                如何進行身心障礙者身份認證？<a href="#" target="_blank">請點我</a>
+                            </li>
+                            <li>通過身份認證之帳號，僅可購買身心障礙證明「有效期限」晚於「活動日」之票券。</li>
+                            <li>每位身心障礙人士含必要陪同者限購最多2張票券，「必要陪伴者優惠措施」須通過主管機關身分認證始能購買陪同席票。</li>
+                            <li>身心障礙優先席以主辦單位／場館規劃區域、座位、優惠票價配位銷售，售完為止，票價每席 2,640 元。</li>
+                            <li>系統會先配好最適座位，恕無法跨區選位或換位，敬請見諒。</li>
+                            <li>進場時須出示有效身心障礙證明正本，若有必要陪伴者，須一同入場（恕無法單獨持票進場），以利查驗。入場時如有不合規定或非身心障礙證明持有者，可拒絕入場並拒絕任何退換票要求。</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <h2>注意事項</h2>
+
+                <ol>
+                    <li>
+                        退票方式：消費者請求退換票之時限為演出日前10日(不含演出日)，但消費者於退換票時限屆至前購買,迄於時限屆至後始收受票券或於開演前仍未收受票券者，亦得退換票，全家取票因購買當日便可取票則不適用此規範；請求退換票日期以實體票券寄達日為準，退票需酌收票面金額10%手續費，限2024/2/7(含)前寄達至ShowNest郵政信箱，請詳閱
+                        <a href="#" target="_blank">ShowNest退換票規定</a>。
+                    </li>
+                    <li>
+                        請勿於拍賣網站或是其他非ShowNest正式授權售票之通路、網站購票、也不要透過陌生代購進行購票，主辦單位與ShowNest均無法保證票券真實性。除可能衍生詐騙案件或交易糾紛外，以免影響自身權益，若發生演出現場無法入場或是其他問題，主辦單位及ShowNest概不負責。
+                    </li>
+                    <li>
+                        若有任何形式非供自用而加價轉售（無論加價名目為代購費、交通費、補貼等均包含在內）之情事者，已違反社會秩序維護法第64條第2款；且依文化創意產業發展法第十條之一第二項規定，將票券超過票面金額或定價販售者，按票券張數，由直轄市政府、縣（市）政府處每張票面金額之十倍至五十倍罰鍰，請勿以身試法！
+                    </li>
+                    <li>購票前請詳閱注意事項，一旦購票成功視為同意上述所有活動注意事項。</li>
+                </ol>
+
+            </div>
+            <ul class="tags-item ">
+                <li><a href="#">美食</a></li>
+                <li><a href="#">動漫</a></li>
+                <li><a href="#">測試</a></li>
+
+
+            </ul>
+        </div>
+        <!-- 地圖   開始 -->
+        <div class="location">
+
+            <div class="map-wrapper">
+                <div class="btn-wrapper" id="map">
+                </div>
+                <div class="address mobi-hide">
+                    ShowNest Live / @Model.EventDetail.EventAddress
+                </div>
+            </div>
+            <div class="side-content">
+                <div class="btn-group">
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=106台北市大安區忠孝東路三段96號11號樓之1" target="_blank"
+                       type="button" class="btn  btn-success">規劃路線</a>
+                    <a href="https://www.google.com/maps/search/?api=1&query=25.0415706%2C121.5363193" target="_blank"
+                       type="button" class="btn btn-success">檢視較大地圖</a>
+                </div>
+
+
+            </div>
+
+        </div>
+        <!-- 活動票券 開始-->
+        <div class="tickets">
+            <h2>活動票券</h2>
+            <table class="tickets-wrapper">
+                <thead class="ticket-title mobi-hide">
+                    <tr>
+                        <th class="name">票種</th>
+                        <th class="period">販售時間</th>
+                        <th class="price">售價</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var ticket in @Model.AllTickets)
+                    {
+                        <tr>
+                            <td>@ticket.TicketTypeName</td>
+                            <td class="period-time">
+                                <span class="timezoneSuffix">@ticket.TicketSalseBegin.ToString("yyyy/MM/dd HH:mm(+0800)")</span>
+                                ~
+                                <span class="timezoneSuffix">@ticket.TicketSalseEnd.ToString("yyyy/MM/dd HH:mm(+0800)")</span>
+                            </td>
+                            <td class="price">
+                                <span class="currency">TWD$</span>
+                                <span class="currency-value">@ticket.TicketPrice.ToString("N0")</span>
+                            </td>
+                        </tr>
+                    }
+                    @* <tr>
+                        <td>搖滾區</td>
+                        <td class="period-time">
+                            <span class="timezoneSuffix">2024/02/08 00:40(+0800)</span>
+                            ~
+                            <span class="timezoneSuffix">2024/04/10 00:40(+0800)</span>
+                        </td>
+                        <td class="price">
+                            <span class="currency">TWD$</span>
+                            <span class="currency-value">30,000</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>一般區</td>
+                        <td class="period-time">
+                            <span class="timezoneSuffix">2024/02/08 00:00(+0800)</span>
+                            ~
+                            <span class="timezoneSuffix">2024/04/10 00:00(+0800)</span>
+                        </td>
+                        <td class="price">
+                            <span class="currency">TWD$</span>
+                            <span class="currency-value">350</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>角落區</td>
+                        <td class="period-time">
+                            <span class="timezoneSuffix">2024/02/08 00:00(+0800)</span>
+                            ~
+                            <span class="timezoneSuffix">2024/04/10 00:00(+0800)</span>
+                        </td>
+                        <td class="price">
+                            <span class="currency">TWD$</span>
+                            <span class="currency-value">200</span>
+                        </td>
+                    </tr> *@
+                </tbody>
+            </table>
+
+            <div id="pc-btn-success" class="p-3 d-flex justify-content-center">
+                <a asp-controller="Events" asp-action="TicketTypeSelection" class="btn btn-success w-50"
+                   type="button">下一步</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

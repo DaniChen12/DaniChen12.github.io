@@ -1,0 +1,198 @@
+﻿@using ShowNest.Web.ViewModels.Events
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@section topCSS {
+    <link href="~/css/_Partial/_PurchaseStepsPartial.css" rel="stylesheet" />
+    <link href="~/css/events/registrations.css" rel="stylesheet" />
+
+}
+
+
+    <div class="count_down_group">
+        <div class="count_down_timer main_wrap width d-flex">
+            您的訂單已保留，請在 10:00 內完成填寫資料並確認訂單。若超過時限，系統將自動取消。
+        </div>
+</div>
+<section class="section_wrap">
+
+  
+    <div class="main_event_order main_wrap width">
+    <div class="title">
+         <h2>【ALTA】theLOOP presents : PSY.P 臺灣個人巡演預熱戰</h2>
+    </div>
+    <div class="event_details">
+            <div class="collapse_group">
+                <p class="d-inline-flex gap-1">
+                    <button class="event_detail_collapse btn" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse-example" aria-expanded="false" aria-controls="collapse-example" stlye="box-shadow: none; background-color:none;">
+                        顯示活動詳細資料
+                    </button>
+                </p>
+                <div class="collapse" id="collapse-example">
+                    <table class="details">
+                        <tbody>
+                            <tr class="">
+                                <th class="start_time">開始時間</th>
+                                <td class="time">
+                                    2024/02/16 22:30 (+0800)
+                                    <a class="is_following binding" href="#" target="_blank" >
+                                        <i class="fa fa-calendar fa-front"></i>
+                                        加入行事曆
+                                    </a>
+                                </td>
+                            </tr>
+                            <!-- location -->
+                            <tr class="">
+                                <th class="event_location">活動地點</th>
+                                <td class="location">
+                                    ALTA NIGHTCLUB / 台中市西屯區青海南街59號
+                                    <a class="is_following binding " target="_blank" href="#">
+                                        <i class="fa fa-map-marker fa-front"></i>
+                                        檢視地圖
+                                    </a>
+                                </td>
+                            </tr>
+                            <!-- event.co_organizer -->
+                            <tr>
+                                <th class="co_organizer">主辦單位</th>
+                                <td class="co_organizer_name">歐達休閒娛樂有限公司</td>
+                            </tr>
+                            <!--  pickup_types -->
+                            <tr class="pickup_types_group">
+                                <th class="pickup_types">票券種類</th>
+                                <td class="type_names">台灣全家 FamiPort 取票</td>
+                            </tr>
+                            <!--payment_terms -->
+                            <tr class="payment_terms_group">
+                                <th class="payment_terms">付款方式</th>
+                                <td class="payment_names">
+                                    ATM 虛擬帳號、信用卡
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="progress_container">
+                @await Html.PartialAsync("_PurchaseStepsPartial", new List<StepStatusViewModel> {
+                new StepStatusViewModel { InProgress = false, IsDisabled = true },
+                new StepStatusViewModel { InProgress = false, IsDisabled = true },
+                new StepStatusViewModel { InProgress = true, IsDisabled = false },
+                new StepStatusViewModel { InProgress = false, IsDisabled = false }
+                })
+            </div>
+            </div>
+            <button class="btn_cancel btn" id="btn_cancel">取消購票</button>
+            <div class="order_details">
+                <table class="ticket_table_data_list table cart-ticket-list">
+                    <thead>
+                        <tr class="gray_block">
+                            <th class="ticket_type">票種</th>
+                            <th class="seat">座位</th>
+                            <th class="price ">金額</th>
+                        </tr>
+                    </thead>
+                    <tbody class="item_in_order">
+                        <tr>
+                            <td class="ticket_name">全票</td>
+                            <td class="ticket-data">
+                                <table class="seat_detail_group cart_ticket_list_subtable_with_seat">
+                                    <tbody class="seat_detail_group">
+                                        <tr>
+                                            <td class="seat_details">
+                                                <ul>
+                                                    <li class="seat-info">B2 區 17 排 8 號</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody class="price_group">
+                                        <tr>
+                                            <td class="price_count">
+                                                <span class="seat_price">TWD $3,680</span> x 1
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td class="price_total ">TWD $3,680</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr class="highlight">
+                            <th class="total">總金額</th>
+                            <td></td>
+                            <td class="tfoot_price_total">TWD$3,680</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <div class="registration_info">
+                <div class="contact_info">
+                    <div class=" input-group-sm">
+                        <h3 class="contact_title">聯絡人資料</h3>
+                        <div id="label_name" class="control-group name">
+                            <label class="control-label ">
+                                <abbr title="required">*</abbr>
+                                姓名
+                            </label>
+                            <div class="controls form-inline">
+                                <div class="input-group-sm">
+                                    <input type="text" id="contact_name" name="contact_name"
+                                           class="contact_name form-control" maxlength="1024">
+                                </div>
+                                <span class="formError" aria-hidden="true">不可輸入空白</span>
+                            </div>
+                        </div>
+                        <div id="label_email" class="control-group email">
+                            <label class="control-label">
+                                <abbr title="required">*</abbr>
+                                Email
+                            </label>
+                            <div class="controls form-inline">
+                                <div class="input-group-sm">
+                                    <input type="text" id="contact_email" email-suggestion="1234@gmail.com"
+                                           name="contact_email" class="contact_email form-control " maxlength="1024">
+                                </div>
+                                <span class="formError" aria-hidden="true"></span>
+                            </div>
+                        </div>
+                        <div id="label_tel" class="control-group">
+                            <label class="control-label">
+                                <abbr title="required">*</abbr>
+                                手機
+                            </label>
+                            <div class="controls form-inline">
+                                <div class="input-group-sm">
+                                    <input type="text" id="contact_tel" name="contact_tel"
+                                           class="contact_tel form-control" maxlength="1024">
+                                </div>
+                                <span class="formError" aria-hidden="true"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="additional_info">
+                <div class="control-group">
+                    <label class="checkbox-inline">
+                        <input type="checkbox" id="additional_check" class="additional_check">
+                        在公開頁面顯示您參加了本活動
+                        <i class="fa fa-info-circle fa-last" rel="tooltip" title="勾選後，可以讓別人從活動頁或您的個人頁面上得知您參加了這個活動。"></i>
+                    </label>
+                </div>
+            </div>
+    </div>
+
+    <div class="save_group control-group">
+        <div class="btn_save">
+            <a type="button" class="btn btn_save" id="btn_save"
+               href="PaymentInfo"
+               style="background-color:var(--main-green);color: white;">
+                確認表單資料
+            </a>
+        </div>
+    </div>
+
+    </section>

@@ -1,0 +1,277 @@
+﻿
+@{
+    ViewData["Title"] = "SetTable";
+}
+
+@section topCSS {
+    <link href="~/css/Dashboard/SetTable.css" rel="stylesheet" />
+}
+
+<body>
+    <div class="header-title">
+        <div class="organize">
+            組織名稱
+        </div>
+        <div class="name">
+            Mafia
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="container">
+            <!-- 分頁 -->
+            <div>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="https://localhost:7156/Dashboard/Events?viewType=SetActivity">設定資料活動</a></li>
+                        <li class="breadcrumb-item"><a href="https://localhost:7156/Dashboard/Events?viewType=SetTicket">設定票種</a></li>
+                        <li class="breadcrumb-item" aria-current="page"><a href="https://localhost:7156/Dashboard/Events?viewType=SetTable" id="set-table">設定表單</a></li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="data-collection">
+                <!-- 如果只需聯絡人資料，報名人資料會隱藏 -->
+                <h4>收集資料類型</h4>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        只需要聯絡人資料
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        需要報名人資料
+                    </label>
+                </div>
+            </div>
+
+            <div class="data-log">
+                <!-- 聯絡人資料 -->
+                <div class="contact-person">
+                    <h3>聯絡人資料</h3>
+                    <div class="table-log">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                個人資料選項
+                            </li>
+                            <li class="list-group-item">
+                                <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                姓名
+                            </li>
+                            <li class="list-group-item">
+                                <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                Email
+                            </li>
+                            <li class="list-group-item">
+                                <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                身分證字號
+                            </li>
+                            <li class="list-group-item">
+                                <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                手機
+                            </li>
+                            <li class="list-group-item">
+                                <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                聯絡電話
+                            </li>
+                            <li class="list-group-item">
+                                <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                郵遞區號
+                            </li>
+                            <li class="list-group-item">
+                                <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                地址
+                            </li>
+                        </ul>
+                        <!-- 欄位選項 -->
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col" colspan="2">欄位</th>
+                                    <th scope="col">是否必填</th>
+                                    <th scope="col">刪除</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row"></th>
+                                    <td>姓名 <span>單行文字</span></td>
+                                    <td><input class="form-check-input me-1" type="checkbox" value="" aria-label="..." disabled></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"></th>
+                                    <td>Email <span>Email</span></td>
+                                    <td><input class="form-check-input me-1" type="checkbox" value="" aria-label="..." disabled></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"></th>
+                                    <td>身分證字號<span>身分證字號</span></td>
+                                    <td><input class="form-check-input me-1" type="checkbox" value="身分證字號" aria-label="..."></td>
+                                    <td><button class="delete"><i class="fa-solid fa-x"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"></th>
+                                    <td>手機<span>單行文字</span></td>
+                                    <td><input class="form-check-input me-1" type="checkbox" value="手機" aria-label="..."></td>
+                                    <td><button class="delete"><i class="fa-solid fa-x"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"></th>
+                                    <td>連絡電話<span>單行文字</span></td>
+                                    <td><input class="form-check-input me-1" type="checkbox" value="" aria-label="..."></td>
+                                    <td><button class="delete"><i class="fa-solid fa-x"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"></th>
+                                    <td>郵遞區號<span>單行文字</span></td>
+                                    <td><input class="form-check-input me-1" type="checkbox" value="" aria-label="..."></td>
+                                    <td><button class="delete"><i class="fa-solid fa-x"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"></th>
+                                    <td>地址<span>單行文字</span></td>
+                                    <td><input class="form-check-input me-1" type="checkbox" value="" aria-label="..."></td>
+                                    <td><button class="delete"><i class="fa-solid fa-x"></i></button></td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                </div>
+                <!-- 報名人資料 -->
+                <div class="applicants">
+                    <h3>報名人資料</h3>
+                    <div class="table-log">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                個人資料選項
+                            </li>
+                            <li class="list-group-item">
+                                <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                姓名
+                            </li>
+                            <li class="list-group-item">
+                                <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                Email
+                            </li>
+                            <li class="list-group-item">
+                                <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                身分證字號
+                            </li>
+                            <li class="list-group-item">
+                                <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                暱稱
+                            </li>
+                            <li class="list-group-item">
+                                <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                手機
+                            </li>
+                            <li class="list-group-item">
+                                <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                聯絡電話
+                            </li>
+                            <li class="list-group-item">
+                                <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                郵遞區號
+                            </li>
+                            <li class="list-group-item">
+                                <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                地址
+                            </li>
+                        </ul>
+                        <!-- 欄位選項 -->
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col" colspan="2">欄位</th>
+                                    <th scope="col">是否必填</th>
+                                    <th scope="col">刪除</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row"></th>
+                                    <td>姓名 <span>單行文字</span></td>
+                                    <td><input class="form-check-input me-1" type="checkbox" value="" aria-label="..."></td>
+                                    <td><button class="delete"><i class="fa-solid fa-x"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"></th>
+                                    <td>Email <span>Email</span></td>
+                                    <td><input class="form-check-input me-1" type="checkbox" value="" aria-label="..."></td>
+                                    <td><button class="delete"><i class="fa-solid fa-x"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"></th>
+                                    <td>身分證字號<span>身分證字號</span></td>
+                                    <td><input class="form-check-input me-1" type="checkbox" value="" aria-label="..."></td>
+                                    <td><button class="delete"><i class="fa-solid fa-x"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"></th>
+                                    <td>手機<span>單行文字</span></td>
+                                    <td><input class="form-check-input me-1" type="checkbox" value="" aria-label="..."></td>
+                                    <td><button class="delete"><i class="fa-solid fa-x"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"></th>
+                                    <td>連絡電話<span>單行文字</span></td>
+                                    <td><input class="form-check-input me-1" type="checkbox" value="" aria-label="..."></td>
+                                    <td><button class="delete"><i class="fa-solid fa-x"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"></th>
+                                    <td>郵遞區號<span>單行文字</span></td>
+                                    <td><input class="form-check-input me-1" type="checkbox" value="" aria-label="..."></td>
+                                    <td><button class="delete"><i class="fa-solid fa-x"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"></th>
+                                    <td>地址<span>單行文字</span></td>
+                                    <td><input class="form-check-input me-1" type="checkbox" value="" aria-label="..."></td>
+                                    <td><button class="delete"><i class="fa-solid fa-x"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"></th>
+                                    <td>公司/組織名稱<span>單行文字</span></td>
+                                    <td><input class="form-check-input me-1" type="checkbox" value="" aria-label="..."></td>
+                                    <td><button class="delete"><i class="fa-solid fa-x"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"></th>
+                                    <td>職稱<span>單行文字</span></td>
+                                    <td><input class="form-check-input me-1" type="checkbox" value="" aria-label="..."></td>
+                                    <td><button class="delete"><i class="fa-solid fa-x"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"></th>
+                                    <td>公司地址<span>單行文字</span></td>
+                                    <td><input class="form-check-input me-1" type="checkbox" value="" aria-label="..."></td>
+                                    <td><button class="delete"><i class="fa-solid fa-x"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"></th>
+                                    <td>公司電話<span>單行文字</span></td>
+                                    <td><input class="form-check-input me-1" type="checkbox" value="" aria-label="..."></td>
+                                    <td><button class="delete"><i class="fa-solid fa-x"></i></button></td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+            <span class="note"><i class="fa-solid fa-circle-info"></i>  如果您的活動應適用文化部成年禮金「文化幣」折抵，請在建立活動後聯絡 SHOWNEST 審查開通。</span>
+            <div class="pages-change">
+                <button type="button" class="btn btn-outline-secondary" onclick="window.location.href='https://localhost:7156/Dashboard/Events?viewType=SetTicket'">上一頁</button>
+                <button type="button" class="btn btn-outline-secondary" onclick="window.location.href='https://localhost:7156/Dashboard/Events?viewType=ActivitiesList'" id="send">送出</button>
+            </div>
+        </div>
+    </div>
+</body>
+

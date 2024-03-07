@@ -1,0 +1,84 @@
+﻿@{
+    ViewData["Title"] = "SetTicket";
+}
+
+@section topCSS {
+    <link href="~/css/Dashboard/SetTicket.css" rel="stylesheet" />
+}
+
+<body>
+    <div class="header-title">
+        <div class="organize">
+            組織名稱
+        </div>
+        <div class="name">
+            Mafia
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="container">
+            <div>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="https://localhost:7156/Dashboard/Events?viewType=SetActivity">設定資料活動</a></li>
+                        <li class="breadcrumb-item"><a href="https://localhost:7156/Dashboard/Events?viewType=SetTicket">設定票種</a></li>
+                        <li class="breadcrumb-item" aria-current="page"><a href="https://localhost:7156/Dashboard/Events?viewType=SetTable">設定表單</a></li>
+                    </ol>
+                </nav>
+            </div>
+
+            <div class="table-log">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="color-label"></th>
+                            <th scope="col">票種名稱</th>
+                            <th scope="col">販售時間</th>
+                            <th scope="col">價格</th>
+                            <th scope="col">數量</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="color-label"></td>
+                            <td>一般票</td>
+                            <td>2024/02/02 00:00 (+0800) ~ 2024/02/06 00:00 (+0800)</td>
+                            <td>TWD$350</td>
+                            <td>不限定數量</td>
+                            <td>
+                                <button>編輯</button>
+                                <button class="delete">刪除</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="color-label"></td>
+                            <td colspan="5" id="sale-note"><span class="note">販售數量 1 ~ 1張。 販售單位 1張。</span></td>
+                        </tr>
+                        <tr>
+                            <td class="color-label"></td>
+                            <td>搖滾區</td>
+                            <td>2024/02/05 00:00 (+0800) ~ 2024/02/07 00:00 (+0800)</td>
+                            <td>TWD$3000</td>
+                            <td>100</td>
+                            <td>
+                                <button>編輯</button>
+                                <button class="delete">刪除</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="color-label"></td>
+                            <td colspan="5" id="sale-note"><span class="note">販售數量 1 ~ 1張。 販售單位 1張。</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button type="button" class="btn btn-outline-secondary btn-sm" id="add-ticket">新增票種</button>
+            </div>
+            <div class="pages-change">
+                <button type="button" class="btn btn-outline-secondary" onclick="window.location.href='https://localhost:7156/Dashboard/Events?viewType=SetActivity'">上一頁</button>
+                <button type="button" class="btn btn-outline-secondary" onclick="window.location.href='https://localhost:7156/Dashboard/Events?viewType=SetTable'">下一頁</button>
+            </div>
+        </div>
+    </div>
+</body>
+

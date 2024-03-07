@@ -1,0 +1,47 @@
+h2 {
+    margin: 25px 0;
+}
+
+.account-navigation-wrap {
+    margin-top: 50px;
+}
+.nav-tabs {
+    --bs-nav-tabs-link-active-color: var(--bs-emphasis-color);
+    --bs-emphasis-color: #333333;
+}
+
+ul.nav li a,
+ul.nav li a:visited {
+    color: var(--main-green);
+}
+
+ul.nav li a:hover,
+ul.nav li a:active {
+    color: var(--function-color-hover);
+    background-color: #FAFAFA;
+}
+
+ul.nav li.active a {
+    color: var(--main-color-hover);
+}
+
+/* change bootstrap nav color end */
+@media screen and (max-width: 768px) {
+    .nav-tabs {
+        padding-bottom: 10px;
+    }
+
+    .nav-tabs .nav-link {
+        background-color: none;
+        border: 1px solid transparent;
+        border-radius: 5rem;
+        margin: 5px;
+    }
+
+    .nav-tabs .nav-link.active {
+        color: #fff;
+        background-color: var(--main-green);
+        border: 1px solid #3b7555;
+        border-radius: 5rem;
+    }
+}

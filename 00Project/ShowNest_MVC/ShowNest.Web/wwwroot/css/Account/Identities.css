@@ -1,0 +1,171 @@
+﻿
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+
+
+/* main Body */
+.section_wrap {
+    /*flex-grow: 1;*/
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+
+.title {
+    display: block;
+    line-height: 1.5;
+    vertical-align: middle;
+}
+
+.btn {
+    text-align: left;
+}
+
+h2 {
+    text-align: left;
+}
+
+.form_contaner {
+    display: grid;
+    grid-template-columns: 3fr 8fr;
+    margin-bottom: 10px;
+}
+
+.id-contaner {
+    padding-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+}
+
+.id-contaner input {
+        margin-top: 10px;
+        margin-right: 3px;
+    }
+
+.disabled-people-check {
+    text-align: left;
+    padding: 10px;
+}
+
+    .disabled-people-check .checkbox-group {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: baseline;
+    }
+
+    .disabled-people-check ul {
+        list-style: none;
+    }
+
+    .disabled-people-check li label {
+        text-align: left;
+        cursor: pointer;
+    }
+
+.label_name,
+.checkbox-group label{
+    display: inline-block;
+    padding-top: 14px;
+    margin-right: 20px;
+    font-weight: bold;
+    text-align: right;
+    color: #333333;
+    min-width: 80px;
+    line-height: 1.5;
+}
+
+.collapse-group button {
+    color: #333333;
+}
+
+.collapse-group button:hover {
+        color: var(--function-color-hover);
+    }
+
+.ident-collapse.btn::before {
+    content: "▿";
+    left: -5px;
+}
+
+.ident-collapse.btn.collapsed::before {
+    content: "▵";
+    left: -5px;
+}
+
+p {
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    color: var(--dark-gray);
+}
+
+div.border {
+    border-bottom: 1px solid var(--dark-gray);
+    margin-top: 20px;
+}
+
+.btn-save {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0px;
+}
+
+.div-wrap {
+    display: grid;
+    grid-template-columns: 4.9fr 3fr;
+}
+
+
+
+@media screen and (max-width:768px) {
+
+    .title h2 {
+        text-align: center;
+    }
+
+    .form_contaner {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .id-contaner {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .id-contaner {
+        width: 100%;
+    }
+
+    .label_name {
+        min-width: 75px;
+        text-align: center;
+    }
+
+    .disabled-people-check .checkbox-group input {
+        width: auto;
+    }
+
+    .div-wrap {
+        display: block;
+    }
+
+    .btn-save button {
+        display: block;
+        width: 100%;
+        border-radius: 3px;
+        text-align: center;
+    }
+}

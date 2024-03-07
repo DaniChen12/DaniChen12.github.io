@@ -1,0 +1,94 @@
+@{
+    ViewData["Title"] = "MyTicketList";
+}
+
+@section topCSS {
+    <link rel="stylesheet" href="~/css/Account/MyTicketList.css">
+    <link rel="stylesheet" href="~/css/_Partial/_MyTicketNavBarPartial.css">
+}
+
+<div class="wrap">
+    <div class="progress_container">
+        @await Html.PartialAsync("_MyTicketNavBarPartial", new List<TabStatusViewModel>
+        {
+            new TabStatusViewModel { IsActive = true },
+            new TabStatusViewModel { IsActive = false }
+        })
+    </div>
+    <div class="title"><h2>我的票券</h2></div>
+    <div class="events-tickets-list">
+        <div class="header">
+            <div class="event-name">活動名稱</div>
+            <div class="event-start-time">活動舉辦時間</div>
+            <div class="ticket-amount">張數</div>
+        </div>
+        <div class="data-row">
+            <div class="event-name">2024 Whee In 1ST WORLD TOUR: WHEE IN THE MOOD〔BEYOND〕IN TAIPEI</div>
+            <div class="event-start-time">2024/04/20(六) 18:00</div>
+            <div class="ticket-amount">2</div>
+        </div>
+        <div class="action-btns">
+            <div class="ticket-detail"><a asp-controller="Account" asp-action="MyTickets">票券資料</a></div>
+            <div class="event-page"><a asp-controller="Events" asp-action="EventPage">活動頁面</a></div>
+        </div>
+        <div class="data-row">
+            <div class="event-name">SUPER JUNIOR-L.S.S. THE SHOW : TH3EE GUYS</div>
+            <div class="event-start-time">2024/04/13(六) 19:30</div>
+            <div class="ticket-amount">2</div>
+        </div>
+        <div class="action-btns">
+            <div class="ticket-detail"><a asp-controller="Account" asp-action="MyTickets">票券資料</a></div>
+            <div class="event-page"><a asp-controller="Events" asp-action="EventPage">活動頁面</a></div>
+        </div>
+        <div class="data-row">
+            <div class="event-name">索夫波 呈獻 梁詠琪 時間遇上我們演唱會 台北站</div>
+            <div class="event-start-time">2024/04/27(六) 18:00</div>
+            <div class="ticket-amount">2</div>
+        </div>
+        <div class="action-btns">
+            <div class="ticket-detail"><a asp-controller="Account" asp-action="MyTickets">票券資料</a></div>
+            <div class="event-page"><a asp-controller="Events" asp-action="EventPage">活動頁面</a></div>
+        </div>
+    </div>
+    <h2>推薦活動</h2>
+    <div class="recommend-events">
+        <div class="cards">
+            <a href="" class="single-card">
+                <div class="card-name">
+                    <img src="https://picsum.photos/300/200/?random=9" alt="">
+                    <p>2024 BORN NAKED KINO LIVE IN TAIPEI</p>
+                </div>
+                <div class="card-info">
+                    <p class="card-event-date">2024/03/10 (日)</p>
+                </div>
+            </a>
+            <a href="" class="single-card">
+                <div class="card-name">
+                    <img src="https://picsum.photos/300/200/?random=11" alt="">
+                    <p>2024 BORN NAKED KINO LIVE IN TAIPEI</p>
+                </div>
+                <div class="card-info">
+                    <p class="card-event-date">2024/03/10 (日)</p>
+                </div>
+            </a>
+            <a href="" class="single-card">
+                <div class="card-name">
+                    <img src="https://picsum.photos/300/200/?random=12" alt="">
+                    <p>2024 BORN NAKED KINO LIVE IN TAIPEI</p>
+                </div>
+                <div class="card-info">
+                    <p class="card-event-date">2024/03/10 (日)</p>
+                </div>
+            </a>
+            <a href="" class="single-card">
+                <div class="card-name">
+                    <img src="https://picsum.photos/300/200/?random=13" alt="">
+                    <p>2024 BORN NAKED KINO LIVE IN TAIPEI</p>
+                </div>
+                <div class="card-info">
+                    <p class="card-event-date">2024/03/10 (日)</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>

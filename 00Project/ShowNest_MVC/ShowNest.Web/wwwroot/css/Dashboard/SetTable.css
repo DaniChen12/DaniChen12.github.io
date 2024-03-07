@@ -1,0 +1,230 @@
+
+
+/* 組織名稱欄 */
+.header-title {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px #ccc solid;
+}
+
+.organize {
+    color: #999;
+    line-height: 40px;
+    font-size: 22px;
+    margin-right: 20px;
+    margin-left: 30px;
+}
+
+.name {
+    line-height: 37px;
+    font-size: 22px;
+    color: var(--main-color);
+}
+
+/* 正式版面 */
+.wrap {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.container {
+    color: #333333;
+    flex-direction: column;
+    margin-bottom: 90px;
+}
+
+/* 麵包屑 */
+.breadcrumb {
+    background-color: #edecec;
+    padding: 10px 8px;
+    border-radius: 4px;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.breadcrumb a {
+    display: inline-block;
+    padding: 0;
+    color: #333333;
+    margin-left: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+#set-table{
+    color: var(--main-color-hover);
+}
+
+/* 麵包屑吃完 */
+
+h4 {
+    display: inline-block;
+    margin: 15px;
+    margin-bottom: 15px;
+    padding: 3px;
+    font-weight: bold;
+    border-bottom: #ccc solid 2px;
+}
+
+.data-log {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.contact-person, .applicants {
+    margin-bottom: 50px;
+}
+
+h3 {
+    display: block;
+    padding: 10px;
+    background-color: #edecec;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.table-log {
+    display: flex;
+    flex-direction: row;
+}
+
+.list-group {
+    width: 50%;
+    border-radius: 0%;
+}
+
+.table {
+    margin-bottom: 0;
+    margin-left: 30px;
+    border: #ccc solid 1px;
+}
+
+/* 小標粗體 */
+thead > tr > th {
+    font-weight: bold;
+    border-bottom: #ccc solid 1px;
+    ;
+}
+
+.table > tbody > tr > th {
+    background-color: #5ec4db;
+}
+
+td > .delete {
+    padding: 5px 10px;
+    font-size: 13px;
+    line-height: 1.5;
+    border-radius: 2px;
+    border: #ccc 1px solid;
+    box-shadow: #f2f2f2 0 -3px 0 inset;
+    background-color: #fff;
+}
+
+.delete:hover {
+    background-color: #f2f2f2;
+}
+
+.delete > i {
+    color: #b1564a;
+}
+
+li.list-group-item:first-child {
+    font-weight: bold;
+}
+
+td > span {
+    color: #737373;
+    margin-left: 15px;
+}
+
+
+.note {
+    color: var(--main-color);
+}
+
+.form-check-input[type=checkbox] {
+    border-radius: 0.25em;
+    border: solid #b0b0b0 1px;
+}
+
+.form-check {
+    vertical-align: center;
+    height: 1.5em;
+    line-height: 1.5em;
+    margin: 5px;
+}
+
+.list-group-item:nth-child(n+2) {
+    height: 2.5em;
+    line-height: 23px;
+}
+
+.pages-change{
+    margin-top: 20px;
+    
+}
+
+#send{
+    margin-left: 8px;
+}
+
+/* MOBILE */
+@media (max-width:768px) {
+    body{
+        width:1000px;
+    }
+
+    .wrap {
+        width: 90%;
+        margin: 0px auto;
+        margin-bottom: 20px;
+    }
+
+}
+
+/* DESKTOP */
+@media (min-width:769px) {
+
+    @media (min-width:769px) and (max-width:1200px) {
+        body {
+            max-width: 1200px;
+        }
+
+        .wrap {
+            width: 90%;
+            margin-bottom: 20px;
+        }
+
+        #header-functions a {
+            padding: 14px 6px;
+        }
+
+        .input-group > .form-control {
+            width: 180px;
+            line-height: 15px;
+        }
+    }
+
+    @media (min-width:1201px) {
+        .wrap {
+            width: 80%;
+        }
+    }
+
+    .wrap {
+        max-width: 1200px;
+        margin: 0px auto;
+    }
+
+    .input-group > .form-control {
+        width: 180px;
+        line-height: 15px;
+    }
+}

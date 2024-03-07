@@ -1,0 +1,95 @@
+
+/*.empty{
+    display:block;
+    height:60px;
+}*/
+
+/* Activity Container */
+.ActivityContainer{
+/*    display: flex;*/
+    flex-direction: column;
+    min-height: 520px;
+    margin: 0 auto;
+    padding: 10px;
+    max-width: 800px;
+    margin-top:80px;
+}
+
+.ActivityContainer>*{
+    padding: 10px;
+    color: #333333;
+
+}
+
+.ActivityContainer:not(h1,.select-organizer,h3){
+    font-size: var(--main-font-size);
+}
+
+.ActivityContainer>h2{
+    font-size: 30px;
+    margin-bottom: -5px;
+}
+
+
+.select-organizer{
+    font-size: 24px;
+    font-weight: 400;
+    text-align: left;
+}
+
+h3{
+    font-size: 20px;
+}
+
+h3::after{
+    width: 100px;
+    content: "";
+    border-top: 1px solid black;
+}
+
+.activity-select>.notice {
+    display:inline-block;
+    padding: 10px;
+    background-color: rgb(231, 229, 228);
+    border-radius: 3px;
+}
+
+.lined {
+    font-size: 18px;
+    border-bottom: #666 1px solid;
+    padding-bottom: 3px;
+    margin: 20px 0 20px 0;
+    font-weight: 400;
+    text-align:left;
+}
+
+#organizeList{
+    display: inline-block;
+    font-size: 15px;
+    width: 200px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+/*    border: solid #ced4da 1px;*/
+}
+
+.TOSzone a{
+    color: var(--light-green);
+    display: inline-block;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+
+.establishBtn{
+    width: 70px;
+    height: 35px;
+    line-height: 10px;
+    background-color:var(--main-green);
+    color:white;
+    border:none;
+    border-radius:5px;
+    margin-left: 10px;
+    margin-top: 15px;
+}
+

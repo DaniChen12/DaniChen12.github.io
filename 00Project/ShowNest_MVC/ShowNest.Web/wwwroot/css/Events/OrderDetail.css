@@ -1,0 +1,714 @@
+﻿
+
+body {
+  
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+/* main Body */
+.section_wrap {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.main_wrap {
+    margin:auto;
+    margin-top: 20px;
+    line-height: 1.5em;
+}
+
+
+h2 {
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.ticket_wrap h2 {
+    font-size: 20px;
+    font-weight:bold;
+}
+
+h3{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+p {
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    line-height: 1;
+    color: var(--dark-gray);
+}
+
+.title {
+    display: flex;
+}
+
+    .title a {
+        padding: 0 10px;
+        color: var(--main-green);
+    }
+
+.control-group {
+    margin-bottom: 15px;
+}
+
+
+.final_order_list_title {
+    background: #666;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 10px 10px 0 0;
+}
+
+.order_detail {
+    width: 100%;
+}
+
+.cart_ticket_list {
+    width: 100%;
+    border: none;
+}
+
+.ticket_wrapper_td {
+    padding: 8px 0px;
+}
+
+.order_detail {
+    background-color: white;
+}
+    .order_number{
+        line-height:1.5;
+    }
+
+    .order_detail tbody + tbody,
+    .order_detail tfoot tr,
+    tr.payment_method {
+        border-top: 2px solid #333333;
+    }
+
+    .order_detail th {
+        padding: 8px
+    }
+
+td.price_total,
+.total_price {
+    text-align: right;
+    padding-right:10px;
+    display: table-cell;
+}
+
+.total_price {
+    padding-right: 10px;
+}
+
+
+td.price_count span {
+    text-align: right;
+}
+
+li {
+    list-style: none;
+}
+
+.highlight th {
+    background-color: hsla(60, 100%, 50%, 0.104);
+}
+
+.highlight td {
+    background-color: hsla(60, 100%, 50%, 0.104);
+    margin: 0 10px;
+}
+
+label {
+    color: #333333;
+}
+
+.fee_text {
+    color: var(--dark-gray);
+}
+
+.payment-method-label {
+    cursor: pointer;
+}
+
+th {
+    padding-left: 20px;
+    font-weight: bold;
+}
+
+/* -------collapse---------- */
+.collapse_group {
+    padding: 20px 0;
+}
+
+.event_detail_collapse {
+    color: var(--main-green);
+}
+
+    .event_detail_collapse.btn.collapsed::after {
+        content: "▵";
+        left: -5px;
+    }
+
+    .event_detail_collapse.btn::after {
+        content: "▿";
+        left: -5px;
+    }
+   
+
+.pickup_caption a,
+.collapse a,
+.show_detail a {
+    color: var(--main-green);
+    text-decoration: none;
+}
+
+    .pickup_caption a:hover,
+    .collapse a:hover,
+    .show_detail a:hover {
+        color: var(--light-green);
+        text-decoration: underline;
+    }
+
+.collapse th,
+.show_detail th {
+    padding: 2px 15px 2px 0;
+    color: var(--dark-gray);
+    min-width: 75px;
+    font-weight: bold;
+}
+
+.order_detail_collapse th {
+    padding: 10px 10px;
+}
+
+.order_detail_collapse {
+    width: 100%;
+}
+
+.event_detail_collapse td,
+.show_detail td {
+    padding-right: 20px;
+    font-weight: 400;
+}
+
+.collapse tr,
+.show_detail tr {
+    display: table-row;
+    vertical-align: top;
+    color: #333333;
+}
+
+#showDetailTable {
+    display: table;
+}
+
+/* -------pickup_payment_info---------- */
+.finished_pickup_payment_info {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.pickup_info p {
+    color: #333333;
+    line-height: 1.5;
+}
+
+.finished_pickup_payment_info h3 {
+    margin-top: 8px;
+    margin-bottom: 5px;
+}
+
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid var(--dark-gray);
+}
+
+.pickup_caption ol,
+.pickup_caption li {
+    list-style: decimal;
+    margin-left: 20px;
+}
+
+.pickup_caption {
+    padding-bottom: 8px;
+    line-height: 1.5;
+    background-color: white;
+}
+/* -------unpay_payment_info---------- */
+.unpay_payment_info {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.pickup_info dt {
+    font-weight: bold;
+}
+
+.pickup_info dd {
+    margin-bottom: 5px
+}
+
+.note_block {
+    color: #b94a48;
+    max-width: 750px;
+}
+.order_detail_collapse table{
+    width:100%;
+}
+/* -------button---------- */
+.btn_print.btn {
+    box-shadow: 0px 0px 2px 1px rgb(184, 179, 179);
+    margin-right: 5px;
+    color: #333333;
+}
+
+.btn_cancelled.btn {
+    color: #b94a48;
+}
+
+.btn:hover {
+    background-color: var(--light-gray);
+}
+
+/* -------contact info---------- */
+.contact_info {
+    background: #fff;
+    border-left: #00aed6 40px solid;
+    padding: 15px 15px 5px;
+    position: relative;
+    padding-bottom: 30px
+}
+
+    .contact_info:before {
+        content: '\f007';
+        font-family: 'FontAwesome';
+        font-weight: normal;
+        color: #fff;
+        /* color: #333333; */
+        position: absolute;
+        display: block;
+        width: 40px;
+        text-align: center;
+        top: 50%;
+        left: -40px;
+        font-size: 26px;
+        margin-top: -17px
+    }
+
+.contact_email,
+.contact_name,
+.contact_tel {
+    font-weight: 400;
+}
+
+.contact_info_contaner {
+    padding: 20px 0;
+}
+
+.contact_info_group div {
+    padding: 5px 0;
+}
+
+.contact_info_group label {
+    font-weight: bold;
+}
+
+/* ---------order_detail_collapse color------- */
+.order_detail_collapse th,
+.order_detail_collapse td {
+    color: #333333;
+}
+
+/* ---------tickets_with_info------- */
+.tickets_with_info_contaner {
+    padding-bottom: 20px;
+}
+
+.tickets_with_info li {
+    background: #fff;
+    border-left: #64c025 40px solid;
+    position: relative;
+    padding: 15px 10px 5px 15px;
+    margin-bottom: 15px;
+    min-height: 150px
+}
+
+    .tickets_with_info li:before {
+        content: '\f145';
+        font-family: 'FontAwesome';
+        font-weight: normal;
+        color: #fff;
+        position: absolute;
+        display: block;
+        width: 40px;
+        text-align: center;
+        top: 50%;
+        left: -40px;
+        font-size: 26px;
+        margin-top: -17px
+    }
+
+.control-label {
+    margin-bottom: 10px;
+    display: block
+}
+
+.number_check,
+.fee_tex {
+    display: none;
+}
+
+.cancelled {
+    color: #fff;
+    background: #b94a48;
+}
+
+.ticket-status {
+    padding: 4px 16px;
+    border-radius: 3px;
+    position: absolute;
+    top: 12px;
+    right: 10px
+}
+
+.ticket-number {
+    color: var(--dark-gray);
+    position: absolute;
+    top: 46px;
+    right: 10px
+}
+
+.ticket_wrap {
+    width: 150px;
+    margin:auto 0;
+}
+
+.ticket-info {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    background-color: var(--light-gray);
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 72px;
+    right: 10px
+}
+
+    .ticket-info h1 {
+        font-weight: bolder;
+    }
+
+/* -------register_message---------- */
+.register_message {
+    background: #fff;
+    margin-bottom: 15px;
+    display: table;
+    width: 100%
+}
+
+.message_wrapper,
+.icon_wrapper {
+    display: table-cell;
+}
+
+.order_canceled {
+    display: table-cell;
+    color: #fff;
+    background-color: #00aed6;
+    width: 15%;
+    overflow: hidden;
+    text-align: center;
+    vertical-align: middle;
+    position: relative
+}
+
+.statius_content {
+    line-height: 1.5;
+}
+
+.message_wrapper {
+    padding: 5px 15px;
+    vertical-align: middle
+}
+
+.canceled_h1,
+.pay_h1,
+.finished_h1 {
+    margin-bottom: 0px;
+}
+
+.register_message .canceled_h1 {
+    color: #00aed6;
+}
+
+.order_pay {
+    display: table-cell;
+    color: #fff;
+    background-color: #f0851c;
+    width: 15%;
+    overflow: hidden;
+    text-align: center;
+    vertical-align: middle;
+    position: relative
+}
+
+.register_message .pay_h1 {
+    color: #f0851c;
+}
+
+.order_finished {
+    display: table-cell;
+    color: #fff;
+    background-color: #64c025;
+    width: 15%;
+    overflow: hidden;
+    text-align: center;
+    vertical-align: middle;
+    position: relative
+}
+
+.register_message .finished_h1 {
+    color: #64c025;
+}
+
+.message_wrapper {
+    padding: 0 15px;
+    height: 68px;
+    vertical-align: middle
+}
+
+.icon_wrapper {
+    width: 70px;
+}
+
+    .icon_wrapper i {
+        display: contents;
+        position: absolute;
+        font-size: 42px;
+        width: 42px;
+        height: 42px;
+        margin-top: -20px;
+        top: 50%;
+        left: 14px;
+        text-align: center;
+    }
+/* -------event_detail_collapse hover and focus---------- */
+
+.event_detail_collapse:focus,
+.btn:focus,
+.btn:active:focus,
+.event_detail_collapse.btn:hover {
+    box-shadow: none;
+    background-color: none;
+}
+
+@media screen and (max-width:1200px) {
+ 
+
+    .total_price {
+        padding-right: 16px;
+    }
+
+    td.price_total,
+    .total_price {
+        width: 157px;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .title {
+        text-align: center;
+        line-height: 1.5;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ticket-info {
+        width: 100%;
+        position: static;
+    }
+
+    .ticket-number {
+        top: 35px;
+        position: static;
+    }
+
+    .ticket_wrap {
+        padding-top: 10px;
+    }
+
+    /* -------------final Order details---------------- */
+
+    .ticket_info_list th {
+        background-color: var(--light-gray);
+    }
+
+    td.ticket_name {
+        padding-left: 20px;
+        width: 100%;
+        display: block;
+        background-color: hsla(0, 0%, 53%, 0.2);
+    }
+
+    th,
+    td {
+        display: table-cell;
+        vertical-align: middle;
+        padding: 8px
+    }
+
+    table th,
+    tfoot th {
+        background: var(--light-gray);
+    }
+
+    .cart-ticket-list-subtable tr {
+        display: table-row
+    }
+
+    .cart-ticket-list-subtable tbody {
+        display: table-row-group
+    }
+
+    .cart-ticket-list-subtable th,
+    .cart-ticket-list-subtable td {
+        display: table-cell;
+        vertical-align: middle;
+        padding: 8px
+    }
+
+    table {
+        display: table;
+        width: 100%
+    }
+
+    .final_order_list tbody,
+    tfoot,
+    tr,
+    th,
+    td {
+        display: block
+    }
+
+        td.price-count,
+        td.price-total {
+            width: 50%;
+        }
+
+    .ticket_name {
+        background: var(--light-gray);
+        width: 100%
+    }
+
+    tbody {
+        width: 100%;
+        display: table-row-group;
+    }
+
+
+
+    td.price_count span {
+        text-align: left;
+    }
+
+    .highlight th,
+    .highlight td {
+        display: table-cell;
+        width: 100%;
+        padding: 8px 8px;
+    }
+
+    th.price,
+    th.ticket_type {
+        width: 100%;
+        display: table-cell;
+        display: block;
+        padding-left: 20px;
+    }
+
+    td.price_total {
+        text-align: right;
+        color: var(--dark-gray);
+    }
+
+    .fee_group th,
+    .fee_group td {
+        display: table-cell;
+        width: 100%;
+        padding: 8px 8px;
+    }
+
+    .purchase_options {
+        padding: 8px;
+    }
+
+    td.ticket_wrapper_td {
+        display: block;
+        padding: 0px;
+    }
+
+    tr.seat_info_group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .seat_info_group td {
+        border-bottom: 1px solid var(--light-gray);
+        vertical-align: middle;
+    }
+
+        .seat_info_group td:last-child {
+            border-bottom: none;
+        }
+}
+
+@media screen and (max-width:768px) {
+    .main_wrap {
+        width: 90%
+    }
+ 
+
+    .order_canceled {
+        padding: 0 20px;
+    }
+
+    .contact_info:before {
+        display: none;
+    }
+
+    .contact_info {
+        border-left: #00aed6 5px solid;
+    }
+
+    .tickets_with_info li:before {
+        display: none;
+    }
+
+    .tickets_with_info li {
+        border-left: #64c025 5px solid;
+    }
+}
+
+@media screen and (max-width:567px) {
+
+    .cart-ticket-list-subtable th,
+    .cart-ticket-list-subtable td {
+        display: block;
+    }
+    td.price_total{
+        text-align:left;
+    }
+}

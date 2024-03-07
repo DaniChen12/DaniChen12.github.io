@@ -1,0 +1,8 @@
+.categories-tag {
+    color: inherit;
+    border: 1px var(--light-green) solid;
+    padding: 4px 6px;
+    margin: 0px 2px;
+    border-radius: var(--common-border-radius);
+    box-shadow: 3px 0px 0px 0px var(--light-green);
+}

@@ -1,0 +1,180 @@
+﻿@{
+    ViewData["Title"] = "SetActivity";
+}
+
+@section topCSS {
+    <link href="~/css/Dashboard/SetActivity.css" rel="stylesheet" />
+    <script src="https://cdn.ckeditor.com/ckeditor5/41.1.0/classic/ckeditor.js"></script>
+}
+
+<body>
+    <div class="header-title">
+        <div class="organize">
+            組織名稱
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="container">
+
+            <div class="main-content">
+                <h3>
+                    <span class="setOrgData">設定組織資料</span>
+                </h3>
+                <!-- 組織名稱 -->
+                <div class="log">
+                    <div class="mb-3">
+                        <h4 class="essential-input">組織名稱</h4>
+                        <input type="text" class="form-control h-50" id="formGroupExampleInput" placeholder=" ">
+                    </div>
+                </div>
+
+                <!-- 網址 -->
+                <div class="log">
+                    <h4 class="essential-input">網址</h4>
+                    <div class="input-group mb-3 h-50 w-75">
+
+                        <input type="text" class="form-control" id="website" aria-label="Website Url"
+                            aria-describedby="website">
+                        <div class="input-group-text" id="website">shownest.cc</div>
+                        <span class="org-note">
+                            3 到 16 個小寫英文或數字。
+                        </span>
+                        @* <span class="OK">
+                        <i class="fa-solid fa-circle-check"></i> 可以使用
+                        </span> *@
+                    </div>
+
+                </div>
+                <!-- 網站名稱 -->
+                <div class="log">
+                    <div class="mb-3">
+                        <h4 class="input">網站</h4>
+                        <input type="text" class="form-control h-50" id="formGroupExampleInput" placeholder=" ">
+                    </div>
+                </div>
+                <!-- 描述欄位（CKeditor） -->
+                <div class="log">
+                    <label for="" class="form-label">描述</label>
+                    <div id="editor"></div>
+                    <script>
+                        ClassicEditor
+                            .create(document.querySelector('#editor'))
+                            .then(editor => {
+                                console.log(editor);
+                            })
+                            .catch(error => {
+                                console.error(error);
+                            });
+                    </script>
+                    <!-- Facebook 粉絲團網址 -->
+                    <div class="log">
+                        <div class="mb-3">
+                            <h4 class="input">Facebook 粉絲團網址</h4>
+                            <input type="text" class="form-control h-50" id="formGroupExampleInput" placeholder=" ">
+                        </div>
+                    </div>
+                    <!-- Twitter 帳號 -->
+                    <div class="log">
+                        <div class="mb-3">
+                            <h4 class="input">Twitter 帳號</h4>
+                            <input type="text" class="form-control h-50" id="formGroupExampleInput" placeholder=" ">
+                        </div>
+                    </div>
+
+                    <!-- Flickr 相簿網址 -->
+                    <div class="log">
+                        <div class="mb-3">
+                            <h4 class="input">Flickr 相簿網址</h4>
+                            <input type="text" class="form-control h-50" id="formGroupExampleInput" placeholder=" ">
+                        </div>
+                    </div>
+
+                    <!-- 回覆 E-mail 地址 -->
+                    <div class="log">
+                        <div class="mb-3">
+                            <h4 class="essential-input">回覆 E-mail 地址</h4>
+                            <input type="text" class="form-control h-50" id="formGroupExampleInput" placeholder=" ">
+                        </div>
+                    </div>
+                    <!-- 隱私權政策 -->
+                    <div class="log">
+                        <div class="mb-3">
+                            <h4 class="input">隱私權政策</h4>
+                            <input type="text" class="form-control h-50 mb-3" id="formGroupExampleInput"
+                                placeholder=" ">
+                            <span class="form_text_underline mb-3" id="">設定後，所有活動將此採取此網址作為預設隱私權政策</span>
+                        </div>
+                    </div>
+
+                    <!-- 顯示/隱藏 「聯絡主辦單位」 -->
+                    <div class="input_group contact_org_radio log">
+                        <h4 class="essential-input">顯示/隱藏 「聯絡主辦單位」</h4>
+                        <label>
+                            <input type="radio" id="organizeShowContact" name="organizeShowContact" value="true"
+                                checked> 顯示
+                        </label>
+                        <label>
+                            <input type="radio" id="organizeShowContact" name="organizeShowContact" value="false">
+                            隱藏
+                        </label>
+                    </div>
+                    <!-- 閱讀條款、政策 -->
+                    <div class="log">
+                        <input type="checkbox" name="agree_terms" id="agree_consent_check" value="agree_consent_check">
+                        <label class="agree_check" for="agree_consent_check">我已經閱讀並同意</label>
+                        <a href="/org_terms.html" target="_blank">主辦單位服務條款</a>
+                        與
+                        <a href="/policy.html" target="_blank">隱私權政策</a>
+                    </div>
+
+
+                </div>
+
+
+
+            </div>
+            <div class="other-setting">
+                <!-- (右邊)圖片上傳區 -->
+                <div class="log">
+                    <h4>社群分享圖片</h4>
+                    <img src="https://picsum.photos/300/200/?random=10">
+                    <a class="file-input ">
+                        <input class="file-upload form-control form-control-sm" type="file" id="form-control-sm">
+                    </a>
+                    @* <div>
+                    <button type="button" class="btn btn-outline-secondary">選擇圖片</button>
+                    <button type="button" class="btn btn-outline-secondary">還原原圖</button>
+                    </div> *@
+                </div>
+                <h3>
+                    <span class="advanced-settings">進階設定</span>
+                </h3>
+                <div class="input_group">
+                    <div class="input_text form-content input-group-sm">
+                        <label class="typein mt-2 mb-3">預設時區</label>
+                        <div class="controls">
+                            <select class="form-select" aria-label="Default select example">
+                                <option value="Asia/Hong_Kong">(GMT+08:00) Asia/Hong_Kong</option>
+                                <option selected="selected" value="Asia/Taipei">(GMT+08:00) Asia/Taipei</option>
+                                <option value="Asia/Tokyo">(GMT+09:00) Asia/Tokyo</option>
+                                <option value="Asia/Seoul">(GMT+09:00) Asia/Seoul</option>
+                                <!-- 其他時區待補-->
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </div>
+        <div class="button-submit mb-4">
+            <button class="btn btn-success" type="submit">送出</button>
+        </div>
+    </div>
+    @section Scripts {
+        <script src="~/js/Dashboard/SetActivity.js"></script>
+
+    }
+</body>

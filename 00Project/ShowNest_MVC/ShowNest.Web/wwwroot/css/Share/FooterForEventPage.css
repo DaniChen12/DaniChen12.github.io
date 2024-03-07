@@ -1,0 +1,63 @@
+﻿/* 底部 */
+
+footer {
+    width: 100%;
+    height: 200px;
+    background-color: #323530;
+    text-align: center;
+    font-size: 14px;
+    color: #aaa;
+}
+
+#footer-end {
+    padding: 10px;
+    width: auto;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+footer a {
+    text-decoration: none;
+    padding: 10px;
+    color: #aaa;
+}
+
+#logo {
+    margin: 0px;
+}
+
+footer img {
+    width: 200px;
+    padding: 10px;
+    margin: 30px;
+    color: #aaa;
+}
+
+
+
+.language {
+    padding: 15px;
+    font-family: sans-serif;
+}
+
+
+.current {
+    border-bottom: 2px solid #64c025;
+    color: #fff;
+    padding: 8px;
+}
+
+.language a:hover {
+    color: #fff;
+}
+
+@media (min-width:768px) {
+    /* 底部 */
+
+
+
+    .language > a:nth-of-type(-n+3) {
+        margin: 10px;
+    }
+}

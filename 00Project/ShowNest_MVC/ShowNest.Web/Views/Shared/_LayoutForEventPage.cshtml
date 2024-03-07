@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>@ViewBag.Title</title>
+	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+	<link href="~/css/general/shownest-root.css" rel="stylesheet" />
+	<link href="~/css/share/footerforeventpage.css" rel="stylesheet" />
+	<script src="https://kit.fontawesome.com/d928366fbc.js" crossorigin="anonymous"></script>
+	@await RenderSectionAsync("topCSS", required: false)
+
+
+</head>
+<body>
+
+	@RenderBody()
+
+	<footer id="footer">
+		<div id="footer-end" class="d-flex align-items-center">
+			<div class="language">
+				Language:
+				<a href="#" class="current">繁體中文</a>
+				<a href="#">English</a>
+				<a href="#">日本語</a>
+			</div>
+			<div id="loge">
+				<a asp-controller="Home" asp-action="Index">
+					<img src="~/img/dashboard/shownest-logo.png" alt="loge">
+				</a>
+			</div>
+		</div>
+	</footer>
+
+	@await RenderSectionAsync("endJS", required: false)
+</body>
+
+</html>

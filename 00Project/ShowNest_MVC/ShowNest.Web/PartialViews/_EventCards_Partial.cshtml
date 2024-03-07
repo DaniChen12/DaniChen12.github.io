@@ -1,0 +1,44 @@
+@model EventCardViewModel
+
+@functions {
+    public string SetStatus()
+    {
+        if (Model.EventStatus == EventStatus.Selling)
+        {
+            return "green-status";
+        }
+        else
+        {
+            return "black-status";
+        }
+    }
+
+    public string SetStatusName()
+    {
+        switch (Model.EventStatus)
+        {
+            case EventStatus.Selling:
+                return "開賣中";
+            case EventStatus.ViewEvent:
+                return "檢視活動";
+            case EventStatus.Ended:
+                return "已結束";
+            default:
+                return "";
+        }
+    }
+}
+
+@* <a asp-controller="Events" asp-action="EventPage" class="single-card selling"> *@
+<a href="@Model.EventLink" class="single-card @SetStatus()">
+    <div class="card-name">
+        <img src="@Model.EventImgUrl" alt="">
+        <p>@Model.EventName</p>
+    </div>
+    <div class="card-info">
+        <p class="card-event-date">@Model.EventTime</p>
+        <p class="card-ticket-status">@SetStatusName()</p>
+        @* <p class="card-ticket-status">檢視活動</p>*@
+        @* <p class="card-ticket-status">20小時候開賣</p>*@
+    </div>
+</a>

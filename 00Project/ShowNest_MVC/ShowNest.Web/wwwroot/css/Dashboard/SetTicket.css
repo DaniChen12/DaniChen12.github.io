@@ -1,0 +1,156 @@
+
+
+/* 組織名稱欄 */
+.header-title {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px #ccc solid;
+    
+}
+
+.organize{
+    color: #999;
+    line-height: 40px;
+    font-size: 22px;
+    margin-right: 20px;
+    margin-left: 30px;
+}
+
+.name{
+    line-height: 37px;
+    font-size: 22px;
+    color: var(--main-color);
+}
+
+
+/* 正式版面 */
+.wrap{
+    width:75%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.container {
+    color: #333333;
+    flex-direction: column;
+    margin-bottom: 90px;
+}
+
+/* 麵包屑 */
+.breadcrumb {
+    background-color: #edecec;
+    padding: 10px 8px;
+    border-radius: 4px;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.breadcrumb a {
+    display: inline-block;
+    padding: 0;
+    color: #333333;
+    margin-left: 10px;
+    
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.breadcrumb-item:nth-child(2) a {
+    color: var(--main-color-hover)
+}
+
+
+/* 表單 */
+th{
+    font-weight: bold;
+    border-bottom: #999 solid 1px;
+}
+
+#sale-note{
+    border-bottom: #ccc solid 1px;
+    color: #737373;
+}
+
+td>button{
+    border: #ccc 1px solid;
+    box-shadow: #f2f2f2 0 -3px 0 inset;
+    background-color: #fff;
+    padding: 6px 12px;
+    font-size: 15px;
+    line-height: 1.33333333;
+    border-radius: 2px;
+    color: var(--main-color);
+}
+
+.delete {
+    color: #b1564a;
+    margin-left: 5px;
+}
+
+.table-log{
+    margin-bottom: 30px;
+}
+
+td.color-label{
+    background-color: #3dbad6;
+    border-bottom: #3dbad6;
+}
+
+#add-ticket{
+    background-color: var(--main-color-hover);
+    border-color: #fff;
+    color: #fff;
+}
+
+.btn-outline-secondary {
+    margin-right: 10px;
+}
+
+/* MOBILE */
+@media (max-width:768px) {
+    body{
+        width:1200px;
+    }
+
+    .wrap {
+        margin: 0px auto;
+    }
+
+
+}
+
+/* DESKTOP */
+@media (min-width:769px) {
+
+    @media (min-width:769px) and (max-width:1200px) {
+/*
+        body {
+            max-width: 1200px;
+        }*/
+
+        #header-functions a {
+            padding: 14px 8px;
+        }
+
+        @media (min-width:1201px) {
+          /*  .wrap {
+            width: 75%;*/
+        }
+    }
+/*
+    body {
+        width: 1200px;
+    }
+
+    .wrap {
+        margin: 0px auto;
+    }*/
+
+    #header-functions a {
+        padding: 14px 15px;
+    }

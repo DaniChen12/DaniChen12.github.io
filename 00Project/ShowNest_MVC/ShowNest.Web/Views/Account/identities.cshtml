@@ -1,0 +1,93 @@
+﻿@*
+For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@section topCSS {
+    <link href="~/css/_partial/_accountnavbarpartial.css" rel="stylesheet" />
+    <link href="~/css/account/identities.css" rel="stylesheet" />
+}
+
+
+
+    <section class="section_wrap">
+    <div id="" class="width ">
+        <div class="account-navigation-wrap">
+            @await Html.PartialAsync("_AccountNavBarPartial", new List<TabStatusViewModel>
+            {
+            new TabStatusViewModel { IsActive = false},
+            new TabStatusViewModel { IsActive = false},
+            new TabStatusViewModel { IsActive = false},
+            new TabStatusViewModel { IsActive = true},
+            new TabStatusViewModel { IsActive = false},
+            new TabStatusViewModel { IsActive = false},
+            new TabStatusViewModel { IsActive = false}
+            })
+        </div>
+
+            <!----------- Title------------>
+            <div class="title">
+                <h2 id="title">身分認證</h2>
+            </div>
+
+            <!----------- Form------------>
+            <form id="identities" action="">
+                <div class="main-form">
+                    <div class="content-wrapper">
+                        <div class="form_contaner">
+                            <!-- ----------------------目前密碼----------------  -->
+                        <label class="label_name" for="collapse">身心障礙者身份認證 <br> (僅供台灣使用)</label>
+                            <div class="collapse-group">
+                                <p class="d-inline-flex gap-1">
+                                    <button class="ident-collapse btn" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapse-example" aria-expanded="false"
+                                        aria-controls="collapse-example" style="box-shadow:none;">
+                                        進行認證
+                                        <p>使用身心障礙者身份進行購票，請於購票前一日完成身份認證，入場時出示身心障礙證明，需與陪同者同時入場</p>
+                                    </button>
+                                </p>
+                                <div class="collapse" id="collapse-example">
+                                    <div class="id-contaner">
+                                    <label class="label_name" for="">身份證字號</label>
+                                        <div class="form-content input-group-sm">
+                                            <input class="form-control" id="id-number" type="text" name="id-number"
+                                                placeholder="請輸入身心障礙者身分證字號">
+                                            <div class="disabled-people-check mt-2">
+                                                <ul>
+                                                    <li>
+                                                        <div class="checkbox-group">
+                                                            <input class="disabled-check" id="wheelchair-seat"
+                                                                type="checkbox" name="wheelchair-seat"
+                                                                value="wheelchair-seat"><label
+                                                                for="wheelchair-seat">需購買輪椅席</label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="checkbox-group">
+                                                            <input class="disabled-check" id="consent" type="checkbox"
+                                                                name="consent" value="consent">
+                                                            <label for="consent">我瞭解並同意
+                                                                ShowNest利用本人之個人資料向主管機關進行線上身心障礙者身份認證</label>
+                                                        </div>
+                                                    </li>
+                                                  <ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+            </form>
+            <!-- ---------------界線-------------- -->
+            <div class="border"></div>
+            <!-- ---------------儲存個人資料按鈕-------------- -->
+            <div class="div-wrap">
+                <div class="btn-save">
+                    <button type="button" class="btn"
+                        style="background-color:var(--main-green);color: white;border:none;">認證
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>

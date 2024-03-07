@@ -1,0 +1,24 @@
+@using ShowNest.Web.ViewModels.Events;
+@model List<StepStatusViewModel>;
+
+
+<div class="progress_container">
+    <div class="step_progress_bar" id="step_progress_bar">
+        <span class="step @(Model[0].InProgress ? "progressing" : "") @(Model[0].IsDisabled ? "disabled" : "")">
+            <span class="number ">1</span>
+            <p class="step_text">選擇票種</p>
+        </span>
+        <span class="step @(Model[1].InProgress ? "progressing" : "") @(Model[0].IsDisabled ? "disabled" : "")">
+            <span class="number ">2</span>
+            <p class="step_text">劃位</p>
+        </span>
+        <span class="step @(Model[2].InProgress ? "progressing" : "") @(Model[0].IsDisabled ? "disabled" : "")">
+            <span class="number">3</span>
+            <p class="step_text">填寫表單</p>
+        </span>
+        <span class="step @(Model[3].InProgress ? "progressing" : "") @(Model[0].IsDisabled ? "disabled" : "")">
+            <span class="number">4</span>
+            <p class="step_text">取票繳費</p>
+        </span>
+    </div>
+</div>
