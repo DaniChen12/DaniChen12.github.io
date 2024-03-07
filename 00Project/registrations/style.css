@@ -404,6 +404,7 @@ a.btn_save {
     /* -------save button--------- */
     .btn_save {
         width: 100%;
+        border: 5px solid var(--light-gray);
     }
 
     a#btn_save {
